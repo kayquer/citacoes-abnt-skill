@@ -179,7 +179,8 @@ def ler_bib(texto):
                "autores": _bib_autores(c.get("author")), "ano": c.get("year"), "doi": c.get("doi"), "url": c.get("url"),
                "volume": c.get("volume"), "numero": c.get("number"), "paginas": (c.get("pages") or "").replace("--", "-") or None,
                "editora": c.get("publisher"), "local": c.get("address"), "isbn": c.get("isbn"), "edicao": c.get("edition"),
-               "fonte": "bibtex"}
+               "tradutor": c.get("translator"), "titulo_original": c.get("origtitle"),
+               "ano_original": (c.get("origdate") or c.get("origyear") or "")[:4] or None, "fonte": "bibtex"}
         if tipo == "artigo":
             ref["periodico"] = c.get("journal")
         elif tipo == "capitulo":
@@ -210,7 +211,9 @@ def para_bib(ref):
               ("pages", str(ref["paginas"]).replace("-", "--") if ref.get("paginas") else None),
               ("publisher", ref.get("editora")), ("address", ref.get("local")), ("edition", ref.get("edicao")),
               ("school", ref.get("instituicao") if ref["tipo"] == "tese" else None),
-              ("doi", ref.get("doi")), ("url", ref.get("url")), ("urldate", ref.get("acesso")), ("isbn", ref.get("isbn"))]
+              ("doi", ref.get("doi")), ("url", ref.get("url")), ("urldate", ref.get("acesso")), ("isbn", ref.get("isbn")),
+              ("translator", " and ".join(ref["tradutor"]) if isinstance(ref.get("tradutor"), list) else ref.get("tradutor")),
+              ("origtitle", ref.get("titulo_original")), ("origdate", ref.get("ano_original"))]
     linhas = [f"  {k} = {{{v}}}" for k, v in campos if v not in (None, "")]
     return f"@{tipo}{{{ref['id']},\n" + ",\n".join(linhas) + "\n}"
 
@@ -290,7 +293,11 @@ def para_csl(ref):
             "container-title": ref.get("periodico") or ref.get("titulo_obra") or ref.get("evento"),
             "publisher": ref.get("editora"), "publisher-place": ref.get("local"), "volume": ref.get("volume"),
             "issue": ref.get("numero"), "page": ref.get("paginas"), "DOI": ref.get("doi"), "URL": ref.get("url"),
-            "ISBN": ref.get("isbn"), "issued": {"date-parts": [[int(ref["ano"])]]} if str(ref.get("ano", "")).isdigit() else None}
+            "ISBN": ref.get("isbn"), "issued": {"date-parts": [[int(ref["ano"])]]} if str(ref.get("ano", "")).isdigit() else None,
+            "translator": [{"literal": t} for t in (ref["tradutor"] if isinstance(ref.get("tradutor"), list)
+                                                     else [ref["tradutor"]])] if ref.get("tradutor") else None,
+            "original-title": ref.get("titulo_original"),
+            "original-date": {"date-parts": [[int(ref["ano_original"])]]} if str(ref.get("ano_original", "")).isdigit() else None}
     return {k: v for k, v in item.items() if v not in (None, "", [])}
 
 
@@ -311,7 +318,11 @@ def ler_csl(item):
            "organizadores": nomes(item.get("editor")) or None, "ano": partes[0] if partes else None,
            "editora": item.get("publisher"), "local": item.get("publisher-place"), "volume": item.get("volume"),
            "numero": item.get("issue"), "paginas": item.get("page"), "doi": item.get("DOI"), "url": item.get("URL"),
-           "isbn": item.get("ISBN"), "fonte": "csl"}
+           "isbn": item.get("ISBN"), "fonte": "csl",
+           "tradutor": [n.get("literal") or f"{n.get('given', '')} {n.get('family', '')}".strip()
+                        for n in item.get("translator") or []] or None,
+           "titulo_original": item.get("original-title"),
+           "ano_original": (((item.get("original-date") or {}).get("date-parts") or [[None]])[0] or [None])[0]}
     container = item.get("container-title")
     ref.update({"artigo": {"periodico": container}, "capitulo": {"titulo_obra": container},
                 "evento": {"evento": container}}.get(tipo, {}))
@@ -423,8 +434,13 @@ def cmd_citar(args, dados):
         print(f"id não encontrado: {args.id}", file=sys.stderr)
         return 1
     suf = A.sufixos_mesmo_autor_ano(dados["referencias"]).get(ref["id"], "")
-    _imprimir({"chamada": A.chamada(ref, args.pagina, args.narrativa, args.edicao_10520, suf),
-               "referencia": A.formatar_referencia(ref, edicao_6023=args.edicao_6023, max_autores=3 if args.et_al else None)})
+    resposta = {"chamada": A.chamada(ref, args.pagina, args.narrativa, args.edicao_10520, suf, args.ano_original),
+                "referencia": A.formatar_referencia(ref, edicao_6023=args.edicao_6023, max_autores=3 if args.et_al else None)}
+    if args.ano_original:
+        resposta["aviso"] = ("o ano original entre colchetes é costume (filosofia, clássicos); a NBR 10520:2023 não o prevê. "
+                             "Use só se o curso ou o orientador aceitar." if ref.get("ano_original")
+                             else "esta entrada não tem ano_original; a chamada saiu sem ele")
+    _imprimir(resposta)
     return 0
 
 
@@ -486,6 +502,7 @@ def main(argv=None):
     s = sub.add_parser("buscar"); s.add_argument("termo")
     s = sub.add_parser("remover"); s.add_argument("id")
     s = sub.add_parser("citar"); s.add_argument("id"); s.add_argument("--pagina"); s.add_argument("--narrativa", action="store_true")
+    s.add_argument("--ano-original", action="store_true", help="(Kant, 2015 [1781]): costume, fora da NBR 10520")
     s = sub.add_parser("exportar"); s.add_argument("--formato", choices=["abnt", "bib", "ris", "csl"], default="abnt")
     s.add_argument("--saida"); s.add_argument("--ids"); s.add_argument("--tag", action="append")
     s = sub.add_parser("deduplicar"); s.add_argument("--aplicar", action="store_true")

@@ -1,6 +1,6 @@
 {
   "name": "citacoes-abnt",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Biblioteca de citações, checador de referências (detecta referência inventada, quimérica e DOI divergente) e aplicação da ABNT vigente (NBR 6023:2025, 10520:2023, 14724:2024) com perfis de 50 universidades e institutos brasileiros.",
   "author": { "name": "Kayque Rotondo", "email": "kayquerocha@gmail.com", "url": "https://github.com/kayquer" },
   "homepage": "https://kayquer.github.io/citacoes-abnt-skill/",

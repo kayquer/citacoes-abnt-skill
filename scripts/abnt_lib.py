@@ -8,6 +8,7 @@ Modelo de referência (dict, campos opcionais exceto "tipo"):
     titulo, subtitulo, edicao, local, editora, ano, mes, volume, numero, paginas,
     periodico, doi, url, acesso (AAAA-MM-DD), isbn, issn,
     organizadores (lista de autores) + papel_org ("org." | "ed." | "coord."), titulo_obra, subtitulo_obra,
+    tradutor ("Ivo Korytowski" ou lista), titulo_original, ano_original (obra traduzida ou reeditada),
     tipo_trabalho ("Tese" | "Dissertação" | "Trabalho de Conclusão de Curso"), grau ("Doutorado em Educação"),
     unidade ("Faculdade de Educação"), instituicao, evento, evento_numero, evento_ano, evento_local,
     titulo_anais ("Anais"), jurisdicao, epigrafe, ementa, publicacao, nota.
@@ -196,10 +197,31 @@ def responsavel(ref, estilo, abreviar, max_autores, titulo_destacado=True):
 
 # ---------------------------------------------------------------- tipos
 
+def traducao(ref):
+    """'Tradução: Nome.' logo depois do título e antes da edição (NBR 6023)."""
+    t = ref.get("tradutor")
+    if not t:
+        return ""
+    if isinstance(t, (list, tuple)):
+        t = " e ".join([", ".join(t[:-1]), t[-1]]) if len(t) > 1 else t[0]
+    return f"Tradução: {str(t).rstrip('.')}."
+
+
+def complementos_originais(ref):
+    """Elementos complementares no fim: título original e data da publicação original."""
+    partes = []
+    if ref.get("titulo_original"):
+        partes.append(f"Título original: {str(ref['titulo_original']).rstrip('.')}.")
+    if ref.get("ano_original"):
+        partes.append(f"Publicação original: {ref['ano_original']}.")
+    return " ".join(partes)
+
+
 def _livro(ref, estilo, abreviar, max_autores):
     abertura, tit = responsavel(ref, estilo, abreviar, max_autores)
-    return juntar(abertura, tit + ".", edicao(ref), local_editora(ref) + ",", ano_de(ref) + ".",
-                  f"{ref['paginas_total']} p." if ref.get("paginas_total") else "", eletronico(ref))
+    return juntar(abertura, tit + ".", traducao(ref), edicao(ref), local_editora(ref) + ",", ano_de(ref) + ".",
+                  f"{ref['paginas_total']} p." if ref.get("paginas_total") else "", complementos_originais(ref),
+                  eletronico(ref))
 
 
 def _capitulo(ref, estilo, abreviar, max_autores):
@@ -211,9 +233,9 @@ def _capitulo(ref, estilo, abreviar, max_autores):
     else:
         quem = ""
     obra = titulo_completo(ref.get("titulo_obra") or verificar("título da obra"), ref.get("subtitulo_obra"), estilo)
-    return juntar(abertura, tit + ".", "In:", quem, obra + ".", edicao(ref), local_editora(ref) + ",",
+    return juntar(abertura, tit + ".", "In:", quem, obra + ".", traducao(ref), edicao(ref), local_editora(ref) + ",",
                   ano_de(ref) + ".", (paginas(ref) + ".") if ref.get("paginas") else verificar("páginas do capítulo") + ".",
-                  eletronico(ref))
+                  complementos_originais(ref), eletronico(ref))
 
 
 def _artigo(ref, estilo, abreviar, max_autores):
@@ -335,7 +357,7 @@ def _nome_chamada(autor, edicao_10520):
     return caixa_alta(nome) if edicao_10520 == "2002" else nome
 
 
-def chamada(ref, pagina=None, narrativa=False, edicao_10520=EDICAO_10520_PADRAO, sufixo_ano=""):
+def chamada(ref, pagina=None, narrativa=False, edicao_10520=EDICAO_10520_PADRAO, sufixo_ano="", ano_original=False):
     """Chamada autor-data.
 
     2023: (Silva, 2020, p. 15) | Silva (2020, p. 15) | (Silva; Souza, 2020) | (Silva et al., 2020)
@@ -354,10 +376,14 @@ def chamada(ref, pagina=None, narrativa=False, edicao_10520=EDICAO_10520_PADRAO,
         primeira = (ref.get("titulo") or verificar("título")).split(" ")[0]
         nomes = (caixa_alta(primeira) if edicao_10520 == "2002" else primeira.capitalize()) + " [...]"
     ano = ano_de(ref) + sufixo_ano
+    if ano_original and ref.get("ano_original"):
+        # Costume em filosofia e clássicos: (Kant, 2015 [1781]). A NBR 10520:2023 não prevê; use só se o curso aceitar.
+        ano += f" [{ref['ano_original']}]"
     loc = ""
     if pagina:
         pagina = str(pagina)
-        loc = f", {pagina}" if re.match(r"^(p\.|f\.|v\.|cap\.)", pagina) else f", p. {pagina}"
+        # "p." só para número ou intervalo; o resto já é localizador próprio (B 75, local. 264, cap. V, 9min 41s)
+        loc = f", p. {pagina}" if re.fullmatch(r"\d+([-–]\d+)?|[ivxlcdm]+", pagina) else f", {pagina}"
     if narrativa:
         if len(autores) > 1 and len(autores) <= 3:
             ultimos = [_nome_chamada(a, edicao_10520) for a in autores]

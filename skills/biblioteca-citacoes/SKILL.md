@@ -22,6 +22,7 @@ Os scripts ficam na pasta `scripts/` da raiz do plugin: `${CLAUDE_PLUGIN_ROOT}/s
    - `--json` aceita um arquivo ou o JSON inline. No Windows, grave o JSON num arquivo e passe o caminho, porque o PowerShell perde as aspas internas.
    - `importar` aceita .bib, .ris e .json. O .json pode ser CSL-JSON (Zotero) ou uma lista no formato desta biblioteca. Entradas com `tipo` inválido são recusadas e listadas.
    - Tipos aceitos: `livro`, `capitulo`, `artigo`, `tese`, `site`, `evento`, `legislacao`. Os campos estão no topo de `$SCRIPTS/abnt_lib.py`.
+   - **Obra traduzida**: preencha `tradutor` (texto ou lista), `titulo_original` e `ano_original`. Não escreva o tradutor como nota à parte: o formatador o põe depois do título e antes da edição, como pede a NBR 6023. O ano da referência é sempre o da edição consultada.
    - O id de cada obra é impresso por `adicionar`, `listar` e `buscar`. Use esse id; não monte de cabeça, porque colisões ganham sufixo `2`, `3`...
 2. **Revisar o que falta.** Rode `python3 "$SCRIPTS/biblioteca.py" faltantes`.
    - Ele sai com código 1 quando há pendência. Não é erro.
@@ -32,7 +33,7 @@ Os scripts ficam na pasta `scripts/` da raiz do plugin: `${CLAUDE_PLUGIN_ROOT}/s
    ```bash
    python3 "$SCRIPTS/biblioteca.py" citar <id> --pagina 45 [--narrativa]
    ```
-   Devolve a chamada, como `(Freire, 1987, p. 45)` ou `Freire (1987, p. 45)`, e a referência completa. Mesmo autor com duas obras no mesmo ano recebe o sufixo 2020a/2020b sozinho.
+   Devolve a chamada, como `(Freire, 1987, p. 45)` ou `Freire (1987, p. 45)`, e a referência completa. `--ano-original` produz `(Kant, 2015 [1781], p. 75)`: é costume, não está na NBR 10520:2023, e só deve ser usado se o curso pedir. Mesmo autor com duas obras no mesmo ano recebe o sufixo 2020a/2020b sozinho.
 4. **Exportar.** As opções globais vão **antes** do subcomando.
    ```bash
    python3 "$SCRIPTS/biblioteca.py" exportar --formato abnt --saida referencias.md   # .md com **negrito**, .html ou .txt

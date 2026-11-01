@@ -69,6 +69,7 @@ Quando a norma dá opção (prenome por extenso ou abreviado, et al. ou todos os
 - Tese: `AUTOR. **Título**. 2021. 210 f. Tese (Doutorado em Educação) – Faculdade, Universidade, Cidade, 2021.`
 - Evento: `AUTOR. Título. In: NOME DO EVENTO, 10., 2018, Cidade. **Anais** [...]. Local: Editora, 2018. p. 1-12.`
 - Online: acrescente `Disponível em: URL. Acesso em: 10 jan. 2024.`
+- Traduzida: `KANT, Immanuel. **Crítica da razão pura**. Tradução: Fernando Costa Mattos. 4. ed. Petrópolis: Vozes, 2015. Título original: Kritik der reinen Vernunft. Publicação original: 1781.` Na chamada, use o ano da edição consultada: `(Kant, 2015, p. 75)`.
 - Formas específicas:
   - URL sem `< >`;
   - meses abreviados (jan. fev. mar. abr. maio jun. jul. ago. set. out. nov. dez.);

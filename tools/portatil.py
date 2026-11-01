@@ -36,12 +36,14 @@ _GERADO = {}  # {Path: str|bytes} gerado nesta rodada do build; tem precedência
 def _bytes(p):
     v = _GERADO.get(p)
     if v is None:
-        return p.read_bytes()
+        v = p.read_bytes()
+        # Fonte de texto sempre com LF dentro dos pacotes, qualquer que seja o checkout
+        return v.replace(b"\r\n", b"\n") if p.suffix in (".py", ".md", ".json", ".txt", "") else v
     return v if isinstance(v, bytes) else v.encode("utf-8")
 
 
 def _texto(p):
-    return _bytes(p).decode("utf-8")
+    return _bytes(p).decode("utf-8").replace("\r\n", "\n")
 
 
 def _glob(pasta, padrao):

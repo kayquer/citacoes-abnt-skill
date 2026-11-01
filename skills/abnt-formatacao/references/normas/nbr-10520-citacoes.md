@@ -50,6 +50,9 @@
   - `(Souto, 1993, p. 46, grifo nosso)` quando o destaque é do autor do trabalho;
   - `(Candido, 1993, p. 12, grifo do autor)` quando o destaque já estava no original. A UFSCar escreve "grifo próprio", então o validador deve aceitar as variantes.
 - **Tradução feita pelo autor do trabalho**: `(Rahner, 1962, v. 4, p. 463, tradução nossa)`.
+- **Obra traduzida ou reeditada**: a chamada usa o ano da edição consultada: `(Kant, 2015, p. 75)`.
+  - A forma com o ano original entre colchetes, `(Kant, 2015 [1781], p. 75)`, é costume em filosofia e em clássicos, mas **não está na NBR 10520:2023**. Use só se o curso ou o orientador pedir, e no documento inteiro (`biblioteca.py citar <id> --ano-original`).
+  - A paginação canônica (`B 75`, `A 51`) pode entrar como localizador: `(Kant, 2015, B 75)`.
 - **Informação verbal**: `(informação verbal)` no texto, com os dados da fonte em nota de rodapé.
 - **Trabalho em elaboração**: `(em fase de elaboração)` no texto, com os dados em nota.
 

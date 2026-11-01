@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.1 (2026-11-01)
+
+- **Obra traduzida.** O formatador ganhou os campos `tradutor` (texto ou lista), `titulo_original` e `ano_original`. Pela NBR 6023, `Tradução: Nome.` vem depois do título e antes da edição; o título original e a publicação original entram no fim. Os três campos passam por BibTeX (biblatex: `translator`, `origtitle`, `origdate`) e por CSL-JSON nos dois sentidos.
+- `biblioteca.py citar --ano-original` gera `(Kant, 2015 [1781], p. 75)`. É costume, não está na NBR 10520:2023, e o script avisa isso.
+- `p.` só entra quando o localizador é número ou intervalo. Localizador próprio fica como está: `B 75`, `local. 264`, `cap. V`.
+- Fontes em LF, com `.gitattributes`, para os pacotes de `dist/` saírem iguais em qualquer sistema.
+
 ## 1.1.0 (2026-11-01)
 
 - Funciona fora do Claude Code. `tools/portatil.py` gera os pacotes de `dist/`:

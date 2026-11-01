@@ -92,6 +92,31 @@ class TestReferencias(unittest.TestCase):
                          "BRASIL. Lei nº 9.610, de 19 de fevereiro de 1998. Altera, atualiza e consolida a legislação "
                          "sobre direitos autorais. **Diário Oficial da União**, Brasília, DF, 20 fev. 1998.")
 
+    KANT = {"tipo": "livro", "autores": [{"sobrenome": "Kant", "nome": "Immanuel"}], "titulo": "Crítica da razão pura",
+            "tradutor": "Fernando Costa Mattos", "edicao": "4", "local": "Petrópolis", "editora": "Vozes", "ano": 2015,
+            "titulo_original": "Kritik der reinen Vernunft", "ano_original": 1781}
+
+    def test_livro_traduzido(self):
+        self.assertEqual(A.formatar_referencia(self.KANT),
+                         "KANT, Immanuel. **Crítica da razão pura**. Tradução: Fernando Costa Mattos. 4. ed. "
+                         "Petrópolis: Vozes, 2015. Título original: Kritik der reinen Vernunft. Publicação original: 1781.")
+
+    def test_varios_tradutores(self):
+        ref = dict(self.KANT, tradutor=["Ana Lima", "Rui Costa"], titulo_original=None, ano_original=None)
+        self.assertIn("Tradução: Ana Lima e Rui Costa. 4. ed.", A.formatar_referencia(ref))
+
+    def test_capitulo_traduzido(self):
+        ref = {"tipo": "capitulo", "autores": [SILVA], "titulo": "O texto", "titulo_obra": "Ensaios", "tradutor": "Rui Costa",
+               "local": "São Paulo", "editora": "Ática", "ano": 2010, "paginas": "1-9"}
+        self.assertIn("In: **Ensaios**. Tradução: Rui Costa. São Paulo: Ática, 2010. p. 1-9.", A.formatar_referencia(ref))
+
+    def test_chamada_ano_original_so_quando_pedido(self):
+        self.assertEqual(A.chamada(self.KANT, pagina="B 75"), "(Kant, 2015, B 75)")
+        self.assertEqual(A.chamada(self.KANT, pagina="214-215"), "(Kant, 2015, p. 214-215)")
+        self.assertEqual(A.chamada(self.KANT, pagina="local. 264"), "(Kant, 2015, local. 264)")
+        self.assertEqual(A.chamada(self.KANT, pagina=75, ano_original=True), "(Kant, 2015 [1781], p. 75)")
+        self.assertEqual(A.chamada(self.KANT, narrativa=True, ano_original=True), "Kant (2015 [1781])")
+
     def test_nao_inventa_ano(self):
         ref = {"tipo": "livro", "autores": [SILVA], "titulo": "X", "local": "A", "editora": "B"}
         self.assertIn("[VERIFICAR: ano]", A.formatar_referencia(ref))

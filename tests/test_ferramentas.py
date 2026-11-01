@@ -73,6 +73,14 @@ class TestBiblioteca(unittest.TestCase):
             self.assertEqual(artigo["periodico"], "Revista")
             self.assertEqual(B.main(["--arquivo", arq, "exportar", "--formato", "abnt", "--saida", os.path.join(d, "o.md")]), 0)
 
+    def test_traducao_ida_e_volta(self):
+        ref = dict(FREIRE, id="kant", tradutor="Fernando Costa Mattos", titulo_original="Kritik der reinen Vernunft",
+                   ano_original="1781")
+        for de_volta in (B.ler_bib(B.para_bib(ref))[0], B.ler_csl(B.para_csl(ref))):
+            self.assertIn("Fernando Costa Mattos", str(de_volta["tradutor"]))
+            self.assertEqual(de_volta["titulo_original"], "Kritik der reinen Vernunft")
+            self.assertEqual(str(de_volta["ano_original"]), "1781")
+
     def test_csl(self):
         item = B.para_csl(dict(FREIRE, id="f"))
         self.assertEqual(item["type"], "book")

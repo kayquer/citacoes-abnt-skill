@@ -219,6 +219,14 @@ Revise este quadro se a data de conferência tiver mais de 12 meses.
 - E-book online: `BESSA, Leonardo Roscoe. Código de defesa do consumidor comentado. 2. ed. Rio de Janeiro: Forense, 2021. E-book. Disponível em: https://... Acesso em: 15 jun. 2025.`
 - Elementos complementares opcionais: número de páginas (`215 p.`), tradutor (`Tradução: Ivo Korytowski.`), série, ISBN.
 
+**Obra traduzida e data original**
+- A entrada é pelo autor da obra original, não pelo tradutor.
+- `Tradução: Nome.` vem logo depois do título (e do subtítulo) e antes da edição. Com dois tradutores: `Tradução: Ana Lima e Rui Costa.`
+- O título original e a data da publicação original são complementares e vão no fim: `Título original: Kritik der reinen Vernunft. Publicação original: 1781.`
+- Exemplo: `KANT, Immanuel. **Crítica da razão pura**. Tradução: Fernando Costa Mattos. 4. ed. Petrópolis: Vozes, 2015. Título original: Kritik der reinen Vernunft. Publicação original: 1781.`
+- O ano da referência e da chamada é o da edição consultada (2015), não o original. Fonte da forma: guia da FZEA-USP (NBR 6023:2018).
+- Campos no formatador: `tradutor`, `titulo_original`, `ano_original`.
+
 **Capítulo ou parte de livro (In:)**
 `AUTOR DO CAPÍTULO. Título do capítulo. In: AUTOR DA OBRA (org.). Título da obra: subtítulo. edição. Local: Editora, ano. cap. X, p. inicial-final.`
 - `SOUZA, F. C. A teoria das representações sociais na pesquisa educacional. In: BIANCHETTI, L.; MEKSENAS, P. (org.). A trama do conhecimento: teoria, método e escrita em ciência e pesquisa. São Paulo: Papirus, 2008. cap. 5, p. 205-220.`
@@ -316,6 +324,9 @@ Revise este quadro se a data de conferência tiver mais de 12 meses.
   - `(Souto, 1993, p. 46, grifo nosso)` quando o destaque é do autor do trabalho;
   - `(Candido, 1993, p. 12, grifo do autor)` quando o destaque já estava no original. A UFSCar escreve "grifo próprio", então o validador deve aceitar as variantes.
 - **Tradução feita pelo autor do trabalho**: `(Rahner, 1962, v. 4, p. 463, tradução nossa)`.
+- **Obra traduzida ou reeditada**: a chamada usa o ano da edição consultada: `(Kant, 2015, p. 75)`.
+  - A forma com o ano original entre colchetes, `(Kant, 2015 [1781], p. 75)`, é costume em filosofia e em clássicos, mas **não está na NBR 10520:2023**. Use só se o curso ou o orientador pedir, e no documento inteiro (`biblioteca.py citar <id> --ano-original`).
+  - A paginação canônica (`B 75`, `A 51`) pode entrar como localizador: `(Kant, 2015, B 75)`.
 - **Informação verbal**: `(informação verbal)` no texto, com os dados da fonte em nota de rodapé.
 - **Trabalho em elaboração**: `(em fase de elaboração)` no texto, com os dados em nota.
 
