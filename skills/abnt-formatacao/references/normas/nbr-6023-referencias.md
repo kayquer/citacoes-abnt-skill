@@ -72,16 +72,34 @@
 - O ano da referência e da chamada é o da edição consultada (2015), não o original. Fonte da forma: guia da FZEA-USP (NBR 6023:2018).
 - Campos no formatador: `tradutor`, `titulo_original`, `ano_original`.
 
+**Outras responsabilidades (organização, revisão, prefácio, notas, ilustrações)**
+- Vão no mesmo lugar da tradução, depois do título e antes da edição, cada uma com seu rótulo: `Tradução: João Paulo Monteiro. Organização: Richard Tuck.`
+- Organizador do livro no todo (obra de vários autores) é **entrada**: `TUCK, Richard (org.).` O rótulo `Organização:` é para quem organizou a edição de um autor só, como num clássico.
+- Campos no formatador: `organizacao`, `revisao`, `prefacio`, `introducao`, `notas_de`, `ilustracao`, ou a lista livre `responsabilidades: [{"papel": "Revisão técnica", "nome": "..."}]`.
+
+**Título atribuído e entidade com sigla**
+- Obra sem título recebe um título atribuído por quem cita, entre colchetes: `SWIFT, Jonathan. [Sobre a mentira política]. **The Examiner**, London, n. 14, 9 nov. 1710.` Campo: `titulo_atribuido: true`.
+- Entidade citada pela sigla no texto, `(IBGE, 2023)`, leva a sigla depois do nome por extenso: `INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE).` Assim o leitor acha a entrada a partir da chamada. Campo: `{"entidade": "...", "sigla": "IBGE"}`.
+
 **Capítulo ou parte de livro (In:)**
 `AUTOR DO CAPÍTULO. Título do capítulo. In: AUTOR DA OBRA (org.). Título da obra: subtítulo. edição. Local: Editora, ano. cap. X, p. inicial-final.`
 - `SOUZA, F. C. A teoria das representações sociais na pesquisa educacional. In: BIANCHETTI, L.; MEKSENAS, P. (org.). A trama do conhecimento: teoria, método e escrita em ciência e pesquisa. São Paulo: Papirus, 2008. cap. 5, p. 205-220.`
-- Quando o autor do capítulo é o mesmo da obra, ele se repete depois do In: (exemplo da UFV). Não se usa traço.
+- Quando o autor do capítulo é o mesmo da obra, ele se repete depois do In: (exemplo da UFV). Não se usa traço nem `(org.)`: `FREUD, Sigmund. Luto e melancolia. In: FREUD, Sigmund. **Obras completas**. [...] 2010. v. 12, p. 170-194.` Campo: `in_mesmo_autor: true`.
+- Volume da obra no todo vem antes das páginas do capítulo: `v. 12, p. 170-194.` Campo: `volume_obra`.
 - Os guias divergem sobre `In:` em itálico. O validador deve aceitar com e sem itálico.
 
 **Artigo de periódico**
 `AUTOR. Título do artigo: subtítulo. Título do Periódico, Local, v. X, n. Y, p. inicial-final, mês ano.`
 - `MARTELETO, Regina Maria. Análise de redes sociais: aplicação nos estudos de transferência da informação. Ciência da Informação, Brasília, DF, v. 30, n. 1, p. 71-81, jan./abr. 2001.`
 - Online, com e-localização e DOI: `BENTO, Berenice. Necrobiopoder: quem pode habitar o Estado-nação? Cadernos Pagu, Campinas, n. 53, e185305, 2018. DOI: https://doi.org/10.1590/18094449201800530005. Disponível em: https://... Acesso em: 2 nov. 2020.`
+- A **e-localização** (`e185305`, `eabe5641`, `art. 428`) fica no lugar das páginas e não leva `p.`. Campo: `eloc`. O Crossref traz esse dado como `article-number`. Identificador gravado em `paginas` também sai sem `p.`, e `faltantes` avisa para movê-lo.
+- Título que termina em `?` ou `!` não ganha ponto depois: `Necrobiopoder: quem pode habitar o Estado-nação? Cadernos Pagu`.
+
+**Artigo de jornal**
+`AUTOR. Título. Nome do Jornal, Local, ano X, n. Y, dia mês ano. Caderno, p. Z.`
+- `OTTA, Lu Aiko. Parcela do Tesouro nos empréstimos do BNDES cresce 566% em oito anos. O Estado de S. Paulo, São Paulo, ano 131, n. 42656, 1 ago. 2010. Economia & Negócios, p. B1.` (forma dos guias de biblioteca, NBR 6023:2018)
+- A data é completa (dia sem zero à esquerda, mês abreviado). Online: acrescente `Disponível em:` e `Acesso em:`.
+- Campos: tipo `jornal`, `periodico` (nome do jornal), `volume` (ano do jornal), `numero`, `data` (AAAA-MM-DD), `caderno`, `paginas`. Site e relatório datados também aceitam `data`.
 
 **Tese, dissertação, TCC**
 `AUTOR. Título: subtítulo. Ano de depósito. Tipo do trabalho (Grau em Área) – Unidade, Instituição, Local, ano da defesa.`

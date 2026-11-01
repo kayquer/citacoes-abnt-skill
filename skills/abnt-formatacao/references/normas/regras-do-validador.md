@@ -9,7 +9,11 @@ A coluna **Script** diz se `conferir_citacoes.py` confere a regra. Quando a resp
 | Regra | Perfil atual | Perfil legado | Script |
 |---|---|---|---|
 | Chamada sem referência na lista | erro | erro | sim |
-| Referência na lista que nunca é citada (decorativa) | aviso | aviso | sim |
+| Referência na lista que nunca é citada, nem no texto nem em nota (decorativa) | aviso | aviso | sim |
+| Primeira citação de uma obra em nota já na forma abreviada | aviso | aviso | sim |
+| Nota que cita autor ausente da lista (`DELEUZE, 2018`) | aviso | aviso | sim |
+| *Ibid.* ou *Id.* sem nota anterior com obra | aviso | aviso | sim |
+| *Ibid.* em página diferente da nota a que se refere | aviso | aviso | não (o .docx não guarda a paginação final) |
 | Sobrenome em caixa alta dentro dos parênteses | erro (sigla é aceita) | correto | sim |
 | `s.p.`, `[s.p.]` ou `s/p` na chamada | erro | erro | sim |
 | Mesmo autor e ano sem `a`/`b` | erro | erro | sim |

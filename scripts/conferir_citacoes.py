@@ -10,7 +10,12 @@ Lê o corpo e a seção REFERÊNCIAS e aponta:
   erro   mesmo autor e ano com duas obras sem a/b
   erro   palavras-chave separadas por ponto (NBR 6028:2021)
   erro   problemas de forma na referência (URL entre < >, mês por extenso, s.d., Anais...)
-  aviso  referência nunca citada no texto ("decorativa")
+  aviso  referência nunca citada no texto nem em nota ("decorativa")
+  aviso  nota abreviada antes da completa (sistema de notas, NBR 10520:2023, 4.4)
+  aviso  nota que parece citar obra fora da lista; Ibid./Id. sem nota anterior
+
+Notas de rodapé (.docx: word/footnotes.xml e endnotes.xml; Markdown: [^n]:) são lidas sempre.
+A obra citada só em nota conta como citada. --sem-notas desliga a leitura.
   aviso  citação direta (entre aspas) sem página
   aviso  ponto final duplicado: ." (Autor, ano).
   aviso  et al. e lista completa de autores misturados
@@ -113,19 +118,95 @@ def _casa(citacao, ref):
     return primeiro in ref["cabeca"][:len(primeiro) + 40] or palavras[0] == ref["primeira"]
 
 
-def conferir(corpo, refs_texto, edicao_10520="2023"):
+RE_LATINA = re.compile(r"^\s*(Ibid\.?|Ibidem|Id\.|Idem)(?=[\s,.]|$)", re.I)
+
+
+def _titulo_inicio(ref):
+    """Até três palavras significativas do título, normalizadas, para achar a forma completa na nota."""
+    palavras = [w for w in norm(ref.get("titulo")).split() if w not in VAZIAS_TITULO]
+    return " ".join(palavras[:3])
+
+
+VAZIAS_TITULO = {"a", "o", "as", "os", "um", "uma", "de", "da", "do", "das", "dos", "e", "em", "the", "of", "and", "an"}
+
+
+def _casa_nota(texto_norm, texto_bruto, r):
+    """('completa' | 'curta' | None) para a referência r dentro do texto de uma nota."""
+    entrada = r["primeira"]
+    if not entrada:
+        return None
+    nomes = r["nomes"] or {entrada}
+    if not any(re.search(r"\b" + re.escape(n) + r"\b", texto_norm) for n in nomes):
+        return None
+    tit = _titulo_inicio(r["ref"])
+    so_palavras = " ".join(w for w in texto_norm.split() if w not in VAZIAS_TITULO)
+    if tit and len(tit.split()) >= 1 and tit in so_palavras:
+        return "completa"
+    ano = (r["ano"] or "")[:4]
+    if ano and re.search(re.escape(ano) + (r["sufixo"] or "") + r"\b", texto_bruto):
+        return "curta"
+    return None
+
+
+def conferir_notas(notas, indice, add):
+    """Sistema de notas de referência (NBR 10520, 4.4): casa notas com a lista e confere a ordem completa/abreviada."""
+    completas, anterior = set(), []
+    for nota in notas:
+        bruto = nota["texto"].replace("**", "").replace("*", "").replace("<em>", "").replace("</em>", "")
+        onde = f"nota {nota['rotulo']}: {bruto[:100]}"
+        latina = RE_LATINA.match(bruto)
+        achadas = []
+        for i, r in enumerate(indice):
+            forma = _casa_nota(norm(bruto), bruto, r)
+            if forma:
+                achadas.append((i, forma))
+        # Mesmo autor e ano sem a/b na nota: fica a que tem título casado, se houver
+        if len(achadas) > 1 and any(f == "completa" for _, f in achadas):
+            achadas = [(i, f) for i, f in achadas if f == "completa"] or achadas
+        if latina and not achadas:
+            if not anterior:
+                add("aviso", "latina_sem_anterior", f"'{latina.group(1)}' sem obra na nota anterior", onde)
+            for i in anterior:
+                indice[i]["citada"] = True
+            continue
+        for i, forma in achadas:
+            indice[i]["citada"] = True
+            if forma == "completa":
+                completas.add(i)
+            elif i not in completas:
+                add("aviso", "nota_abreviada_antes_da_completa",
+                    "primeira citação da obra em nota deve trazer a referência completa (NBR 10520:2023, 4.4)", onde)
+                completas.add(i)  # avisa uma vez por obra
+        # Entrada em MAIÚSCULAS seguida de vírgula (FREUD, / DELEUZE, 2018) sem nenhuma referência com esse nome
+        conhecidos = {w for r in indice for w in r["nomes"] | {r["primeira"]}}
+        for m in re.finditer(r"(?<![\w'])([A-ZÀ-Ý][A-ZÀ-Ý'\-]{2,}),\s+(" + ANO + r"|[A-ZÀ-Ý][a-zà-ÿ])", bruto):
+            nome = norm(m.group(1))
+            if nome and nome not in conhecidos:
+                add("aviso", "nota_sem_referencia", f"a nota cita {m.group(1)}, que não está na lista de referências", onde)
+        if achadas:
+            anterior = [i for i, _ in achadas]
+
+
+def conferir(corpo, refs_texto, edicao_10520="2023", notas=None):
     achados = []
     indice = indexar_referencias(refs_texto)
     sobrenomes_pessoais = {w.upper() for r in indice for a in r["ref"].get("autores", []) if "sobrenome" in a
                            for w in [A.sem_acento(a["sobrenome"])]}
+    notas = notas or []
     citacoes = extrair_citacoes(corpo)
+    for c in extrair_citacoes([n["texto"] for n in notas]):  # chamada autor-data dentro de nota explicativa
+        c["paragrafo"] = f"nota {notas[c['paragrafo'] - 1]['rotulo']}"
+        citacoes.append(c)
 
     def add(nivel, tipo, msg, onde=None):
         achados.append({"nivel": nivel, "tipo": tipo, "mensagem": msg, **({"onde": onde} if onde else {})})
 
+    if notas:
+        conferir_notas(notas, indice, add)
     vistos_formato = set()
     for c in citacoes:
-        onde = f"parágrafo {c['paragrafo']}: {c['texto']}"
+        lugar = c["paragrafo"] if isinstance(c["paragrafo"], str) else f"parágrafo {c['paragrafo']}"
+        onde = f"{lugar}: {c['texto']}"
         alvo = [r for r in indice if _casa(c, r)]
         if c["sufixo"]:
             alvo = [r for r in alvo if r["sufixo"] == c["sufixo"]] or alvo
@@ -181,7 +262,8 @@ def conferir(corpo, refs_texto, edicao_10520="2023"):
         for p in A.problemas_texto(r["texto"]):
             add("aviso" if "zero à esquerda" in p else "erro", "forma_referencia", p, r["texto"][:120])
         if not r["citada"]:
-            add("aviso", "referencia_nao_citada", "referência não citada no texto (decorativa): cite ou retire", r["texto"][:120])
+            add("aviso", "referencia_nao_citada", "referência não citada no texto" + (" nem em nota" if notas else "") +
+                " (decorativa): cite ou retire", r["texto"][:120])
     grupos = {}
     for r in indice:
         primeiro = sorted(r["nomes"])[0] if r["nomes"] else r["primeira"]
@@ -191,7 +273,7 @@ def conferir(corpo, refs_texto, edicao_10520="2023"):
         if len(rs) > 1 and ano and len({r["sufixo"] for r in rs}) < len(rs):
             add("erro", "mesmo_autor_ano", f"{len(rs)} obras de {autor.upper()} em {ano}: diferencie com {ano}a, {ano}b na "
                 "referência e na chamada", rs[0]["texto"][:80])
-    return {"citacoes": len(citacoes), "referencias": len(indice), "achados": achados}
+    return {"citacoes": len(citacoes), "notas": len(notas), "referencias": len(indice), "achados": achados}
 
 
 def main(argv=None):
@@ -199,15 +281,17 @@ def main(argv=None):
     ap.add_argument("arquivo")
     ap.add_argument("--edicao-10520", default=A.EDICAO_10520_PADRAO, choices=A.EDICOES_10520)
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--sem-notas", action="store_true", help="ignora as notas de rodapé (só o sistema autor-data)")
     args = ap.parse_args(argv)
     corpo, refs = D.ler(args.arquivo)
     if not refs:
         print("Aviso: seção REFERÊNCIAS não encontrada; só o corpo será conferido.", file=sys.stderr)
-    res = conferir(corpo, refs, args.edicao_10520)
+    notas = [] if args.sem_notas else D.notas(args.arquivo)
+    res = conferir(corpo, refs, args.edicao_10520, notas)
     if args.json:
         print(json.dumps(res, ensure_ascii=False, indent=2))
     else:
-        print(f"{res['citacoes']} citações, {res['referencias']} referências")
+        print(f"{res['citacoes']} citações, {res['notas']} notas, {res['referencias']} referências")
         for a in sorted(res["achados"], key=lambda x: x["nivel"] != "erro"):
             print(f"[{a['nivel'].upper()}] {a['mensagem']}")
             if a.get("onde"):

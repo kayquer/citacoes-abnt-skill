@@ -58,6 +58,8 @@ As skills seguem o padrão aberto [Agent Skills](https://agentskills.io) e funci
 | **Codex, Cursor, Copilot, opencode** | Descompacte [`citacoes-abnt-skills.zip`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/citacoes-abnt-skills.zip) em `.agents/skills/` no projeto. Sem suporte a skills, salve [`citacoes-abnt-agents.md`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/citacoes-abnt-agents.md) como `AGENTS.md`, `GEMINI.md` ou regra do Cursor |
 | **Perplexity, Copilot e outros chats** | Cole `instrucoes.txt` nas instruções do espaço e anexe os arquivos de conhecimento |
 
+No Claude Code, as skills aparecem a partir da sessão seguinte à instalação. Depois de instalar ou atualizar, reinicie o Claude Code ou abra uma nova sessão.
+
 A checagem de existência depende de acesso à internet: busca na web no chat, ou os scripts com rede. Sem acesso, o assistente avisa que não conseguiu verificar e não marca nenhuma referência como verificada. Formatar e conferir citação × referência funcionam sem internet.
 
 Para usar só os scripts:
@@ -94,6 +96,30 @@ Referência pela NBR 6023:
 + INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. **Censo 2022**. Rio de Janeiro, 2023. Disponível em: https://censo2022.ibge.gov.br. Acesso em: 10 jan. 2024.
 ```
 
+### Humanidades: tradução, obras completas, jornal e notas de rodapé
+
+O formatador tem campos para os casos que mais aparecem em livros de humanidades. Não é preciso escrever código por fora nem pôr esses dados em `nota`. O exemplo completo está em [`tests/fixtures/biblioteca-humanidades.json`](tests/fixtures/biblioteca-humanidades.json). Os dados desse arquivo servem para testar a forma: confira cada obra antes de usar como referência.
+
+| Caso | Saída |
+|---|---|
+| Capítulo nas obras completas do próprio autor (`in_mesmo_autor`, `volume_obra`) | `FREUD, Sigmund. Luto e melancolia. In: FREUD, Sigmund. **Obras completas**. Tradução: Paulo César de Souza. São Paulo: Companhia das Letras, 2010a. v. 12, p. 170-194. Publicação original: 1917.` |
+| Clássico com organizador da edição (`organizacao`, `tradutor`, `ano_original`) | `HOBBES, Thomas. **Leviatã**: [...]. Tradução: João Paulo Monteiro e Maria Beatriz Nizza da Silva. Organização: Richard Tuck. São Paulo: Martins Fontes, 2003. Título original: Leviathan. Publicação original: 1651.` |
+| Artigo com e-localização (`eloc`) e título interrogativo | `BENTO, Berenice. Necrobiopoder: quem pode habitar o Estado-nação? **Cadernos Pagu**, Campinas, n. 53, e185305, 2018. DOI: [...]` |
+| Jornal com data completa (tipo `jornal`) | `OTTA, Lu Aiko. Parcela do Tesouro [...]. **O Estado de S. Paulo**, São Paulo, ano 131, n. 42656, 1 ago. 2010. Economia & Negócios, p. B1.` |
+| Obra sem título (`titulo_atribuido`) | `SWIFT, Jonathan. [Sobre a mentira política]. **The Examiner**, London, n. 14, 9 nov. 1710.` |
+| Entidade citada pela sigla | `INDEPENDENT INVESTIGATIVE MECHANISM FOR MYANMAR (IIMM). **Annual report**. [S. l.], 27 mar. 2024. [...]` e `(IIMM, 2024)` |
+
+Notas de rodapé: a primeira citação de cada obra sai completa, e as seguintes saem abreviadas.
+
+```
+$ python3 scripts/biblioteca.py --arquivo biblioteca.json notas "freud2010luto:172, freud2010luto:180, hobbes2003leviata:cap. XIII"
+1. FREUD, Sigmund. Luto e melancolia. In: FREUD, Sigmund. **Obras completas**. [...] 2010a. v. 12, p. 172. Publicação original: 1917.
+2. FREUD, 2010a, p. 180.
+3. HOBBES, Thomas. **Leviatã**: [...]. Organização: Richard Tuck. São Paulo: Martins Fontes, 2003. cap. XIII. [...]
+```
+
+Com `--expressoes-latinas`, a segunda nota vira `*Ibid.*, p. 180.` O conferidor lê as notas do .docx e do Markdown (`[^n]:`), conta como citada a obra que só aparece em nota e avisa quando a primeira citação vem abreviada.
+
 ### Checador
 
 ```
@@ -111,22 +137,39 @@ $ python3 scripts/checar_referencias.py tests/fixtures/referencias-mistas.md
 | `verificada` | 2 ou mais bases confirmam título e autoria |
 | `parcial` | só 1 base achou (comum em livro nacional) |
 | `nao_encontrada` | nenhuma base achou: possível referência inventada |
-| `quimera` | título real, autoria errada |
+| `quimera` | título real, autoria errada (no mesmo ano e tipo) |
+| `homonimo` | só há obra de mesmo título de outro autor, em outro ano ou tipo: não indica invenção |
 | `doi_divergente` | DOI inexistente ou de outra obra |
+| `url_verificada` / `url_divergente` / `url_inacessivel` | notícia ou site: o link responde e bate, leva a outra página, ou não respondeu |
+| `nao_verificavel` | notícia sem URL ou título atribuído entre colchetes |
+| `fora_de_cobertura` | obra anterior a 1800 sem resultado nas bases |
 | `inconclusiva` / `erro_rede` | as bases não responderam |
+
+Em lista longa, `--saida checagem.jsonl` grava cada obra assim que termina e mostra o progresso (`[12/92] verificada: ...`). Se a rodada cair ou esbarrar no limite das bases, `--retomar` refaz só o que faltou. As respostas ficam em cache por 30 dias em `~/.cache/citacoes-abnt`.
 
 ### Scripts
 
 ```bash
 python3 scripts/biblioteca.py adicionar --doi 10.1590/0102-4698214500
 python3 scripts/biblioteca.py citar <id> --pagina 45
-python3 scripts/biblioteca.py exportar --formato abnt|bib|ris|csl --saida refs.md [--edicao-6023 2018] [--et-al]
-python3 scripts/checar_referencias.py trabalho.docx [--json]
-python3 scripts/conferir_citacoes.py trabalho.docx [--edicao-10520 2002]
+python3 scripts/biblioteca.py notas "id:pág, id:pág" [--expressoes-latinas]
+python3 scripts/biblioteca.py [--edicao-6023 2018] [--et-al] exportar --formato abnt|bib|ris|csl --saida refs.md
+python3 scripts/checar_referencias.py trabalho.docx [--json] [--saida checagem.jsonl [--retomar]]
+python3 scripts/conferir_citacoes.py trabalho.docx [--edicao-10520 2002] [--sem-notas]
 python3 scripts/gerar_modelo_docx.py --instituicao usp --tipo tcc|dissertacao|tese|artigo|projeto --saida modelo.docx
 ```
 
-Variáveis opcionais: `CROSSREF_MAILTO` (pool educado do Crossref), `S2_API_KEY` (limite maior no Semantic Scholar) e `GOOGLE_BOOKS_KEY` (o Google Books limita consultas anônimas). Sem elas, nada é enviado além da consulta.
+As opções globais (`--arquivo`, `--edicao-6023`, `--edicao-10520`, `--et-al`) vão antes do subcomando.
+
+Variáveis opcionais:
+
+- `CROSSREF_MAILTO`: pool educado do Crossref;
+- `OPENALEX_API_KEY`: chave gratuita do OpenAlex. Sem ela, o OpenAlex usa uma cota diária dividida por todos no mesmo IP. Quando a cota acaba, a base fica de fora da rodada;
+- `S2_API_KEY`: limite maior no Semantic Scholar;
+- `GOOGLE_BOOKS_KEY`: o Google Books limita consultas anônimas;
+- `CITACOES_ABNT_CACHE` e `CITACOES_ABNT_SEM_CACHE=1`: mudam a pasta do cache e o desligam.
+
+Sem as chaves, nada é enviado além da própria consulta.
 
 ## Instituições
 

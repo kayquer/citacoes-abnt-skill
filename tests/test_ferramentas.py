@@ -187,6 +187,173 @@ class TestChecador(unittest.TestCase):
     def test_similaridade(self):
         self.assertGreater(C.similaridade("Pedagogia do oprimido", "Pedagogia do Oprimido"), 0.95)
         self.assertLess(C.similaridade("Pedagogia do oprimido", "Pedagogia da autonomia"), 0.85)
+        # A base guarda só o título principal (Crossref: "Get the message")
+        self.assertGreaterEqual(C.similaridade("Get the message: the influence of message framing", "Get the Message"),
+                                C.LIMIAR_TITULO)
+
+    def test_homonimo_nao_vira_quimera(self):
+        livro = {"tipo": "livro", "titulo": "Nietzsche e a filosofia", "ano": "2018",
+                 "autores": [{"sobrenome": "Deleuze", "nome": "Gilles"}]}
+        artigo = {"tipo": "artigo", "titulo": "Nietzsche e a filosofia", "ano": 2011,
+                  "autores": [{"sobrenome": "Marton", "nome": "Scarlett"}]}
+        r = self._rodar(livro, {"crossref": [artigo], "openalex": [artigo], "semantic": [artigo]})
+        self.assertEqual(r["status"], "homonimo")
+        # Mesmo título, outro autor, mesmo ano e tipo: continua quimera
+        self.assertEqual(self._rodar(self.OUTRO, {"crossref": [self.CAND], "openalex": [self.CAND]})["status"], "quimera")
+
+    def test_sobrenome_comum_em_lista_longa_nao_confirma(self):
+        cand = dict(self.CAND, autores=[{"sobrenome": f"Autor{i}"} for i in range(19)] + [{"sobrenome": "Wang"}])
+        ref = dict(self.REAL, autores=[{"sobrenome": "Silva"}, {"sobrenome": "Wang"}])
+        self.assertFalse(C.autores_batem(ref, cand))
+        self.assertTrue(C.autores_batem(dict(ref, autores=[{"sobrenome": "Wang"}]), cand))
+
+    def test_sugestao_de_doi_conferida(self):
+        pre = dict(self.CAND, doi="10.2139/ssrn.123", periodico="SSRN")
+        r = self._rodar(dict(self.REAL, periodico="Nature", tipo="artigo"), {"crossref": [pre], "openalex": [self.CAND]})
+        self.assertNotIn("sugestao_doi", r)
+        self.assertTrue(any("SSRN" in a for a in r["alertas"]))
+        reedicao = dict(self.CAND, doi="10.1017/9781316", ano=2015)
+        r = self._rodar(dict(self.REAL, ano="1977"), {"crossref": [reedicao]})
+        self.assertNotIn("sugestao_doi", r)
+        ok = dict(self.CAND, doi="10.1038/nature14539")
+        self.assertEqual(self._rodar(self.REAL, {"crossref": [ok]})["sugestao_doi"], "10.1038/nature14539")
+
+    def test_noticia_confere_o_link(self):
+        nota = {"tipo": "jornal", "titulo": "Facebook whistleblower testifies", "periodico": "The Washington Post",
+                "data": "2021-10-26", "url": "https://www.washingtonpost.com/x"}
+        with mock.patch.object(C.M, "conferir_url", lambda u: {"responde": True,
+                                                              "titulo": "Facebook whistleblower testifies - The Washington Post"}):
+            r = self._rodar(nota, {"crossref": [self.CAND]})
+        self.assertEqual(r["status"], "url_verificada")
+        self.assertEqual(r["bases"].get("crossref"), None)  # nem consultou as bases acadêmicas
+        with mock.patch.object(C.M, "conferir_url", mock.Mock(side_effect=C.M.ErroRede("web: HTTP 403"))):
+            self.assertEqual(self._rodar(nota, {})["status"], "url_inacessivel")
+        self.assertEqual(self._rodar(dict(nota, url=None), {})["status"], "nao_verificavel")
+
+    def test_titulo_atribuido_e_obra_historica(self):
+        swift = {"titulo": "[Sobre a mentira política]", "ano": "1710", "autores": [{"sobrenome": "Swift"}]}
+        self.assertEqual(self._rodar(swift, {})["status"], "nao_verificavel")
+        hobbes = {"tipo": "livro", "titulo": "Leviathan or the matter forme and power of a commonwealth",
+                  "ano": "1651", "autores": [{"sobrenome": "Hobbes"}]}
+        self.assertEqual(self._rodar(hobbes, {})["status"], "fora_de_cobertura")
+
+    def test_jsonl_e_retomar(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            refs = Path(tmp) / "refs.json"
+            refs.write_text(json.dumps([dict(self.REAL, id="a", tipo="artigo"), dict(self.OUTRO, id="b", tipo="artigo")]),
+                            encoding="utf-8")
+            saida = Path(tmp) / "c.jsonl"
+            chamadas = []
+
+            def busca(*a, **k):
+                chamadas.append(a[0])
+                return [self.CAND]
+            with mock.patch.object(C.M, "crossref_buscar", busca), mock.patch.object(C.M, "openalex_buscar", busca), \
+                    mock.patch("sys.stdout", new=__import__("io").StringIO()), \
+                    mock.patch("sys.stderr", new=__import__("io").StringIO()) as err:
+                codigo = C.main([str(refs), "--bases", "crossref,openalex", "--saida", str(saida), "--json"])
+                self.assertIn("[2/2] quimera", err.getvalue())
+                self.assertEqual(codigo, 1)
+                linhas = saida.read_text(encoding="utf-8").splitlines()
+                self.assertEqual([json.loads(x)["chave"] for x in linhas], ["a", "b"])
+                antes = len(chamadas)
+                C.main([str(refs), "--bases", "crossref,openalex", "--saida", str(saida), "--retomar", "--json"])
+                self.assertEqual(len(chamadas), antes)  # nada refeito
+
+
+class TestCache(unittest.TestCase):
+    def test_cache_em_disco(self):
+        import metadados as M
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.dict(os.environ, {"CITACOES_ABNT_CACHE": tmp}), \
+                mock.patch.object(M, "CACHE_ATIVO", True):
+            get = mock.Mock(return_value=(b'{"ok": 1}', "application/json"))
+            with mock.patch.object(M, "_get", get):
+                self.assertEqual(M._json("https://api.crossref.org/works/x", "crossref"), {"ok": 1})
+                self.assertEqual(M._json("https://api.crossref.org/works/x", "crossref"), {"ok": 1})
+            self.assertEqual(get.call_count, 1)
+            falha = mock.Mock(side_effect=M.ErroRede("crossref: HTTP 429"))
+            with mock.patch.object(M, "_get", falha), self.assertRaises(M.ErroRede):
+                M._json("https://api.crossref.org/works/y", "crossref")  # erro não entra no cache
+            self.assertEqual(len(list(Path(tmp).glob("*.json"))), 1)
+
+
+class TestNotasNoDocumento(unittest.TestCase):
+    def test_markdown_com_notas(self):
+        corpo, refs = D.ler(FIX / "livro-com-notas.md")
+        self.assertEqual(len(refs), 4)  # as definições [^n]: não viram referência
+        notas = D.notas(FIX / "livro-com-notas.md")
+        self.assertEqual([n["rotulo"] for n in notas], ["1", "2", "3", "4", "5"])
+        achados = F.conferir(corpo, refs, notas=notas)["achados"]
+        por_tipo = {}
+        for a in achados:
+            por_tipo.setdefault(a["tipo"], []).append(a)
+        self.assertEqual([a["onde"][:6] for a in por_tipo["nota_abreviada_antes_da_completa"]], ["nota 3"])
+        self.assertIn("DELEUZE", por_tipo["nota_sem_referencia"][0]["mensagem"])
+        decorativas = por_tipo["referencia_nao_citada"]
+        self.assertEqual(len(decorativas), 1)  # só O mal-estar; Freud, Hobbes e Swift estão citados em nota
+        self.assertIn("mal-estar", decorativas[0]["onde"])
+        self.assertNotIn("forma_referencia", por_tipo)  # 2010a/2010b é ano válido
+
+    def test_notas_do_docx(self):
+        import zipfile
+        w = 'xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"'
+        doc = (f'<w:document {w}><w:body><w:p><w:r><w:t>Texto.</w:t></w:r>'
+               '<w:r><w:footnoteReference w:id="2"/></w:r></w:p></w:body></w:document>')
+        notas = (f'<w:footnotes {w}><w:footnote w:type="separator" w:id="-1"><w:p><w:r><w:t>--</w:t></w:r></w:p>'
+                 '</w:footnote><w:footnote w:id="2"><w:p><w:r><w:t>FREUD, Sigmund. </w:t></w:r>'
+                 '<w:r><w:t>Luto e melancolia.</w:t></w:r></w:p></w:footnote></w:footnotes>')
+        with tempfile.TemporaryDirectory() as tmp:
+            arq = Path(tmp) / "n.docx"
+            with zipfile.ZipFile(arq, "w") as z:
+                z.writestr("word/document.xml", doc)
+                z.writestr("word/footnotes.xml", notas)
+            self.assertEqual(D.notas(arq), [{"rotulo": "f2", "texto": "FREUD, Sigmund. Luto e melancolia."}])
+
+
+class TestBibliotecaHumanidades(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.arq = str(Path(self.tmp.name) / "biblioteca.json")
+        B.main(["--arquivo", self.arq, "importar", str(FIX / "biblioteca-humanidades.json")])
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def _saida(self, argv):
+        import io
+        with mock.patch("sys.stdout", new=io.StringIO()) as out:
+            B.main(["--arquivo", self.arq] + argv)
+        return out.getvalue()
+
+    def test_exportar_leva_sufixo_da_chamada(self):
+        lista = self._saida(["exportar"])
+        self.assertIn("Companhia das Letras, 2010a. v. 12, p. 170-194.", lista)
+        self.assertIn("Companhia das Letras, 2010b.", lista)
+        self.assertIn("(Freud, 2010a, p. 172)", self._saida(["citar", "freud2010luto", "--pagina", "172"]))
+
+    def test_notas_em_sequencia(self):
+        r = json.loads(self._saida(["notas", "freud2010luto:172, freud2010luto:180, hobbes2003leviata:cap. XIII"]))
+        self.assertEqual([n["forma"] for n in r["notas"]], ["completa", "curta", "completa"])
+        self.assertEqual(r["notas"][1]["nota"], "FREUD, 2010a, p. 180.")
+        r = json.loads(self._saida(["nota", "freud2010luto", "--forma", "ibid", "--pagina", "9"]))
+        self.assertEqual(r["nota"], "*Ibid.*, p. 9.")
+        self.assertIn("aviso", r)
+
+    def test_ida_e_volta_dos_campos_novos(self):
+        dados = B.carregar(self.arq)
+        for r in dados["referencias"]:
+            for nome, ida, volta, campos in (("bib", B.para_bib, lambda t: B.ler_bib(t)[0],
+                                              ("tipo", "data", "eloc", "caderno", "prefacio")),
+                                             ("csl", B.para_csl, B.ler_csl, ("tipo", "data", "caderno"))):
+                de_volta = volta(ida(r))
+                for campo in campos:
+                    if r.get(campo):
+                        self.assertEqual(str(de_volta.get(campo)), str(r[campo]), f"{nome}: {r['id']}.{campo}")
+            if r["tipo"] == "jornal":
+                ris = B.ler_ris(B.para_ris(r))[0]
+                self.assertEqual((ris["tipo"], ris["data"]), ("jornal", r["data"]))
+        com_prefacio = dict(dados["referencias"][2], prefacio="Ana Lima")
+        self.assertEqual(B.ler_bib(B.para_bib(com_prefacio))[0]["prefacio"], "Ana Lima")
 
 
 class TestModeloDocx(unittest.TestCase):

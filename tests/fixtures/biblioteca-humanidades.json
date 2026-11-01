@@ -1,0 +1,107 @@
+{
+  "versao": 1,
+  "_aviso": "Dados ilustrativos para testar o formatador. Confira cada obra na folha de rosto antes de usar como referência.",
+  "referencias": [
+    {
+      "id": "freud2010luto",
+      "tipo": "capitulo",
+      "autores": [{"sobrenome": "Freud", "nome": "Sigmund"}],
+      "titulo": "Luto e melancolia",
+      "in_mesmo_autor": true,
+      "titulo_obra": "Obras completas",
+      "volume_obra": 12,
+      "tradutor": "Paulo César de Souza",
+      "local": "São Paulo",
+      "editora": "Companhia das Letras",
+      "ano": 2010,
+      "paginas": "170-194",
+      "ano_original": 1917
+    },
+    {
+      "id": "freud2010mal",
+      "tipo": "livro",
+      "autores": [{"sobrenome": "Freud", "nome": "Sigmund"}],
+      "titulo": "O mal-estar na civilização",
+      "tradutor": "Paulo César de Souza",
+      "local": "São Paulo",
+      "editora": "Companhia das Letras",
+      "ano": 2010,
+      "ano_original": 1930
+    },
+    {
+      "id": "hobbes2003leviata",
+      "tipo": "livro",
+      "autores": [{"sobrenome": "Hobbes", "nome": "Thomas"}],
+      "titulo": "Leviatã",
+      "subtitulo": "ou matéria, forma e poder de um Estado eclesiástico e civil",
+      "organizacao": "Richard Tuck",
+      "tradutor": ["João Paulo Monteiro", "Maria Beatriz Nizza da Silva"],
+      "local": "São Paulo",
+      "editora": "Martins Fontes",
+      "ano": 2003,
+      "titulo_original": "Leviathan",
+      "ano_original": 1651
+    },
+    {
+      "id": "otta2010parcela",
+      "tipo": "jornal",
+      "autores": [{"sobrenome": "Otta", "nome": "Lu Aiko"}],
+      "titulo": "Parcela do Tesouro nos empréstimos do BNDES cresce 566% em oito anos",
+      "periodico": "O Estado de S. Paulo",
+      "local": "São Paulo",
+      "volume": 131,
+      "numero": 42656,
+      "data": "2010-08-01",
+      "caderno": "Economia & Negócios",
+      "paginas": "B1"
+    },
+    {
+      "id": "lewandowsky2012misinformation",
+      "tipo": "artigo",
+      "autores": [{"sobrenome": "Lewandowsky", "nome": "Stephan"}, {"sobrenome": "Ecker", "nome": "Ullrich K. H."},
+                  {"sobrenome": "Seifert", "nome": "Colleen M."}, {"sobrenome": "Schwarz", "nome": "Norbert"},
+                  {"sobrenome": "Cook", "nome": "John"}],
+      "titulo": "Misinformation and its correction",
+      "subtitulo": "continued influence and successful debiasing",
+      "periodico": "Psychological Science in the Public Interest",
+      "volume": 13,
+      "numero": 3,
+      "paginas": "106-131",
+      "ano": 2012,
+      "doi": "10.1177/1529100612451018"
+    },
+    {
+      "id": "bento2018necrobiopoder",
+      "tipo": "artigo",
+      "autores": [{"sobrenome": "Bento", "nome": "Berenice"}],
+      "titulo": "Necrobiopoder",
+      "subtitulo": "quem pode habitar o Estado-nação?",
+      "periodico": "Cadernos Pagu",
+      "local": "Campinas",
+      "numero": 53,
+      "eloc": "e185305",
+      "ano": 2018,
+      "doi": "10.1590/18094449201800530005"
+    },
+    {
+      "id": "swift1710mentira",
+      "tipo": "jornal",
+      "autores": [{"sobrenome": "Swift", "nome": "Jonathan"}],
+      "titulo": "Sobre a mentira política",
+      "titulo_atribuido": true,
+      "periodico": "The Examiner",
+      "local": "London",
+      "numero": 14,
+      "data": "1710-11-09"
+    },
+    {
+      "id": "iimm2024report",
+      "tipo": "site",
+      "autores": [{"entidade": "Independent Investigative Mechanism for Myanmar", "sigla": "IIMM"}],
+      "titulo": "Annual report",
+      "data": "2024-03-27",
+      "url": "https://iimm.un.org",
+      "acesso": "2026-11-01"
+    }
+  ]
+}

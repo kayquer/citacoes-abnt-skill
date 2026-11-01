@@ -43,7 +43,8 @@ Quando a norma dá opção (prenome por extenso ou abreviado, et al. ou todos os
    - **verificada**: duas ou mais fontes batem título e autoria;
    - **parcial**: só uma fonte achou;
    - **não encontrada**: nenhuma fonte achou (possível referência inventada);
-   - **quimera**: o título existe, mas os autores são outros.
+   - **quimera**: o título existe, mas os autores são outros (no mesmo ano e tipo; em outro ano ou tipo é só **homônimo**).
+   - Notícia e site: confira o link, não as bases acadêmicas.
 
    Mostre as fontes consultadas e o que cada uma retornou.
 
@@ -56,7 +57,8 @@ Quando a norma dá opção (prenome por extenso ou abreviado, et al. ou todos os
 - Dentro dos parênteses, em maiúsculas e minúsculas: `(Silva, 2020, p. 15)`. Na frase: `Silva (2020, p. 15)`.
 - Sigla continua em maiúsculas: `(IBGE, 2023)`. A forma `(SILVA, 2020)` só vale se a instituição fixar a 10520:2002.
 - Dois ou três autores: `(Silva; Souza, 2020)` e, na frase, `Silva, Souza e Costa (2020)`. Quatro ou mais: `(Silva et al., 2020)`.
-- Mesmo autor no mesmo ano: `2020a`, `2020b`. Citação de citação: `(Vianna, 1986 apud Segatto, 1995, p. 214)`.
+- Mesmo autor no mesmo ano: `2020a`, `2020b`, também na lista. Citação de citação: `(Vianna, 1986 apud Segatto, 1995, p. 214)`.
+- Notas de rodapé: a primeira citação de cada obra leva a referência completa; as seguintes, `FREUD, 2010a, p. 180.` *Ibid.* e *Id.* só na mesma página da nota anterior.
 - Não existe `s.p.`. Sem paginação, omita a página. Citação direta exige página quando o documento é paginado.
 - Ponto final só depois da chamada: `"trecho" (Silva, 2020, p. 15).`
 - Citação com mais de 3 linhas: recuo de 4 cm (ou o do perfil), fonte menor, espaço simples, sem aspas.
@@ -69,7 +71,11 @@ Quando a norma dá opção (prenome por extenso ou abreviado, et al. ou todos os
 - Tese: `AUTOR. **Título**. 2021. 210 f. Tese (Doutorado em Educação) – Faculdade, Universidade, Cidade, 2021.`
 - Evento: `AUTOR. Título. In: NOME DO EVENTO, 10., 2018, Cidade. **Anais** [...]. Local: Editora, 2018. p. 1-12.`
 - Online: acrescente `Disponível em: URL. Acesso em: 10 jan. 2024.`
-- Traduzida: `KANT, Immanuel. **Crítica da razão pura**. Tradução: Fernando Costa Mattos. 4. ed. Petrópolis: Vozes, 2015. Título original: Kritik der reinen Vernunft. Publicação original: 1781.` Na chamada, use o ano da edição consultada: `(Kant, 2015, p. 75)`.
+- Traduzida: `KANT, Immanuel. **Crítica da razão pura**. Tradução: Fernando Costa Mattos. 4. ed. Petrópolis: Vozes, 2015. Título original: Kritik der reinen Vernunft. Publicação original: 1781.` Na chamada, use o ano da edição consultada: `(Kant, 2015, p. 75)`. Organização, revisão e prefácio vão no lugar da tradução.
+- Capítulo do próprio autor: `In: FREUD, Sigmund. **Obras completas**. [...] 2010. v. 12, p. 170-194.` (sem "(org.)").
+- E-localização no lugar da página, sem `p.`: `v. 118, n. 9, e2023301118, 2021.`
+- Jornal: `**O Estado de S. Paulo**, São Paulo, 1 ago. 2010. Economia & Negócios, p. B1.`
+- Título com `?` não ganha ponto depois. Obra sem título: `[título atribuído]`.
 - Formas específicas:
   - URL sem `< >`;
   - meses abreviados (jan. fev. mar. abr. maio jun. jul. ago. set. out. nov. dez.);

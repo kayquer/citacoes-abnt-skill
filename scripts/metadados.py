@@ -8,8 +8,11 @@ Segurança:
   e de HTML antes de entrar na biblioteca.
 - A leitura de URL arbitrária recusa endereços privados, loopback e link-local
   (proteção contra SSRF) e só aceita http/https.
-- Nenhum e-mail ou chave é enviado. CROSSREF_MAILTO, S2_API_KEY e GOOGLE_BOOKS_KEY são opcionais
-  e vão só para o serviço a que pertencem.
+- Nenhum e-mail ou chave é enviado. CROSSREF_MAILTO, OPENALEX_API_KEY, S2_API_KEY e GOOGLE_BOOKS_KEY são
+  opcionais e vão só para o serviço a que pertencem. Sem chave, o OpenAlex usa uma cota diária dividida por
+  todos no mesmo IP; quando ela acaba (429 com Retry-After longo), a base fica de fora da rodada.
+- Respostas ficam em cache por 30 dias em ~/.cache/citacoes-abnt (CITACOES_ABNT_CACHE muda a pasta,
+  CITACOES_ABNT_SEM_CACHE=1 desliga). A chave da API não entra no nome do arquivo.
 
 Uso direto:
     py -3 scripts/metadados.py doi 10.1590/0102-4698214500
@@ -17,6 +20,7 @@ Uso direto:
     py -3 scripts/metadados.py url https://www.scielo.br/j/...
     py -3 scripts/metadados.py buscar "Pedagogia do oprimido" --autor Freire
 """
+import hashlib
 import html
 import ipaddress
 import json
@@ -24,11 +28,13 @@ import os
 import re
 import socket
 import sys
+import threading
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
 from html.parser import HTMLParser
+from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import abnt_lib as A  # noqa: E402
@@ -68,23 +74,75 @@ def _host_publico(url):
 ESPERAS_429 = (3, 10)  # segundos antes de cada nova tentativa quando a base limita a taxa
 
 
+class _RedirecionamentoPublico(urllib.request.HTTPRedirectHandler):
+    """Confere cada redirecionamento: uma URL pública não pode levar a um endereço interno."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        _host_publico(newurl)
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+_abrir_publico = urllib.request.build_opener(_RedirecionamentoPublico).open
+_trava_base = {}  # uma chamada por vez a cada base, mesmo com as bases consultadas em paralelo
+_trava_geral = threading.Lock()
+
+
+def _trava(base):
+    with _trava_geral:
+        return _trava_base.setdefault(base, threading.Lock())
+
+
+_bloqueada = {}   # base -> instante até quando não vale a pena chamar (cota esgotada)
+_falhas_429 = {}  # base -> rodadas seguidas que terminaram em 429
+ESPERA_LONGA = 60  # Retry-After acima disso: cota diária ou horária esgotada, não adianta esperar
+DICAS_CHAVE = {"openalex": "defina OPENALEX_API_KEY (chave gratuita: https://help.openalex.org/api/authentication/)",
+               "semantic": "defina S2_API_KEY (https://www.semanticscholar.org/product/api)",
+               "googlebooks": "defina GOOGLE_BOOKS_KEY"}
+
+
+def _erro_cota(base, segundos):
+    _bloqueada[base] = time.time() + segundos
+    dica = DICAS_CHAVE.get(base)
+    return ErroRede(f"{base}: HTTP 429 (cota esgotada; a base fica de fora por ~{max(1, round(segundos / 60))} min"
+                    + (f"; {dica}" if dica else "") + ")")
+
+
 def _get(url, base, cabecalhos=None, verificar_host=False):
     if verificar_host:
         _host_publico(url)
+    if time.time() < _bloqueada.get(base, 0):
+        raise ErroRede(f"{base}: HTTP 429 (cota esgotada nesta rodada; {DICAS_CHAVE.get(base, 'tente mais tarde')})")
+    abrir = _abrir_publico if verificar_host else urllib.request.urlopen
     req = urllib.request.Request(url, headers={"User-Agent": AGENTE, "Accept": "application/json", **(cabecalhos or {})})
+    with _trava(base):
+        return _get_serial(req, base, abrir)
+
+
+def _get_serial(req, base, abrir):
     for tentativa in range(len(ESPERAS_429) + 1):
         espera = PAUSA - (time.time() - _ultima.get(base, 0))
         if espera > 0:
             time.sleep(espera)
         try:
-            with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+            with abrir(req, timeout=TIMEOUT) as r:
+                _falhas_429[base] = 0
                 return r.read(3_000_000), r.headers.get("Content-Type", "")
         except urllib.error.HTTPError as e:
             if e.code == 404:
                 return None, ""
-            if e.code in (429, 503) and tentativa < len(ESPERAS_429):
-                time.sleep(ESPERAS_429[tentativa])
-                continue
+            if e.code in (429, 503):
+                try:
+                    pedido = float(e.headers.get("Retry-After") or 0)
+                except (TypeError, ValueError):
+                    pedido = 0
+                if pedido > ESPERA_LONGA:
+                    raise _erro_cota(base, pedido) from e
+                if tentativa < len(ESPERAS_429):
+                    time.sleep(max(ESPERAS_429[tentativa], pedido))
+                    continue
+                _falhas_429[base] = _falhas_429.get(base, 0) + 1
+                if _falhas_429[base] >= 2:  # duas obras seguidas sem resposta: deixa a base de fora por 10 min
+                    raise _erro_cota(base, 600) from e
             raise ErroRede(f"{base}: HTTP {e.code}") from e
         except (urllib.error.URLError, TimeoutError, OSError) as e:
             raise ErroRede(f"{base}: {e}") from e
@@ -93,16 +151,65 @@ def _get(url, base, cabecalhos=None, verificar_host=False):
     raise ErroRede(f"{base}: sem resposta")
 
 
+# ---------------------------------------------------------------- cache em disco
+
+CACHE_DIAS = 30
+CACHE_ATIVO = os.environ.get("CITACOES_ABNT_SEM_CACHE") != "1"
+
+
+def _arquivo_cache(url):
+    pasta = Path(os.environ.get("CITACOES_ABNT_CACHE") or Path.home() / ".cache" / "citacoes-abnt")
+    return pasta / (hashlib.sha256(url.encode("utf-8")).hexdigest() + ".json")
+
+
+def _cache_ler(url):
+    if not CACHE_ATIVO:
+        return False, None
+    p = _arquivo_cache(url)
+    try:
+        if time.time() - p.stat().st_mtime > CACHE_DIAS * 86400:
+            return False, None
+        return True, json.loads(p.read_text(encoding="utf-8"))["dados"]
+    except (OSError, ValueError, KeyError):
+        return False, None
+
+
+def _cache_gravar(url, dados):
+    if not CACHE_ATIVO:
+        return
+    p = _arquivo_cache(url)
+    try:
+        p.parent.mkdir(parents=True, exist_ok=True)
+        tmp = p.with_suffix(f".{threading.get_ident()}.tmp")
+        tmp.write_text(json.dumps({"dados": dados}, ensure_ascii=False), encoding="utf-8")
+        tmp.replace(p)
+    except OSError:
+        pass  # sem cache não é erro
+
+
 def _json(url, base, cabecalhos=None):
+    """JSON da base, com cache em disco por 30 dias (CITACOES_ABNT_SEM_CACHE=1 desliga).
+
+    Só resposta válida vai para o cache, inclusive 404 ("não existe"). Erro de rede e 429 nunca.
+    """
+    chave = url  # a chave da API não entra no nome do arquivo de cache
     if base == "googlebooks" and os.environ.get("GOOGLE_BOOKS_KEY"):
         url += "&key=" + urllib.parse.quote(os.environ["GOOGLE_BOOKS_KEY"])
+    if base == "openalex" and os.environ.get("OPENALEX_API_KEY"):
+        url += ("&" if "?" in url else "?") + "api_key=" + urllib.parse.quote(os.environ["OPENALEX_API_KEY"])
+    achou, valor = _cache_ler(chave)
+    if achou:
+        return valor
     dados, _ = _get(url, base, cabecalhos)
     if dados is None:
+        _cache_gravar(chave, None)
         return None
     try:
-        return json.loads(dados.decode("utf-8"))
+        valor = json.loads(dados.decode("utf-8"))
     except ValueError as e:
         raise ErroRede(f"{base}: resposta não é JSON") from e
+    _cache_gravar(chave, valor)
+    return valor
 
 
 def normalizar_doi(doi):
@@ -150,8 +257,12 @@ def crossref_para_ref(item):
         "volume": _limpar(item.get("volume")), "numero": _limpar(item.get("issue")),
         "paginas": _limpar(item.get("page")), "editora": _limpar(item.get("publisher")),
         "issn": (item.get("ISSN") or [None])[0], "isbn": (item.get("ISBN") or [None])[0],
+        "tradutor": [n for n in (" ".join(p for p in [_limpar(t.get("given")), _limpar(t.get("family"))] if p)
+                                 for t in item.get("translator") or []) if n] or None,
         "fonte": "crossref",
     }
+    if not ref.get("paginas") and item.get("article-number"):
+        ref["eloc"] = _limpar(item["article-number"])  # e-localização (PNAS, PLoS ONE, Nature Communications)
     if tipo == "artigo":
         ref["periodico"] = container
         ref.pop("editora")
@@ -361,6 +472,22 @@ def pagina_web(url, acesso=None):
         "ano": int(ano.group(0)) if ano else None, "url": url, "acesso": acesso, "fonte": "web",
     }
     return {k: v for k, v in ref.items() if v not in (None, "", [])}
+
+
+def conferir_url(url):
+    """{"responde": bool, "titulo": título da página ou None}. Para notícia, relatório e site.
+
+    Não usa cache: o que se quer saber é se o link responde hoje.
+    """
+    dados, tipo = _get(url, "web", {"Accept": "text/html"}, verificar_host=True)
+    if dados is None:
+        return {"responde": False, "titulo": None}
+    titulo = None
+    if "html" in tipo:
+        p = _Meta()
+        p.feed(dados.decode("utf-8", "replace"))
+        titulo = _limpar((p.meta.get("citation_title") or p.meta.get("og:title") or [p.titulo])[0])
+    return {"responde": True, "titulo": titulo}
 
 
 def main(argv):

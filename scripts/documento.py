@@ -34,10 +34,66 @@ def paragrafos_docx(caminho):
     return saida
 
 
+RE_NOTA_MD = re.compile(r"^\[\^([^\]]+)\]:\s?(.*)$")
+
+
+def _texto_sem_notas(texto):
+    """(linhas sem as definições de nota [^n]:, {rótulo: texto da nota})."""
+    linhas, notas, rotulo = [], {}, None
+    for linha in texto.splitlines():
+        m = RE_NOTA_MD.match(linha)
+        if m:
+            rotulo = m.group(1)
+            notas[rotulo] = m.group(2).strip()
+            continue
+        if rotulo and linha.startswith(("    ", "\t")) and linha.strip():
+            notas[rotulo] += " " + linha.strip()  # continuação da nota
+            continue
+        rotulo = None
+        linhas.append(linha)
+    return linhas, notas
+
+
+def notas_docx(caminho):
+    """Notas de rodapé e de fim do .docx, na ordem em que aparecem no texto."""
+    saida = []
+    with zipfile.ZipFile(caminho) as z:
+        nomes = set(z.namelist())
+        corpo = ET.fromstring(z.read("word/document.xml"))
+        for parte, marca in (("word/footnotes.xml", "footnote"), ("word/endnotes.xml", "endnote")):
+            if parte not in nomes:
+                continue
+            textos = {}
+            for n in ET.fromstring(z.read(parte)).iter(W + marca):
+                if n.get(W + "type") in ("separator", "continuationSeparator", "continuationNotice"):
+                    continue
+                textos[n.get(W + "id")] = " ".join("".join(t.text or "" for t in n.iter(W + "t")).split())
+            for ref in corpo.iter(W + marca + "Reference"):
+                nid = ref.get(W + "id")
+                if nid in textos:
+                    saida.append({"rotulo": f"{marca[0]}{nid}", "texto": textos.pop(nid)})
+    return saida
+
+
+def notas(caminho):
+    """[{"rotulo": "1", "texto": "..."}] das notas de rodapé (.docx ou [^n]: em Markdown), em ordem."""
+    caminho = str(caminho)
+    if caminho.lower().endswith(".docx"):
+        return notas_docx(caminho)
+    texto = Path(caminho).read_text(encoding="utf-8")
+    linhas, defs = _texto_sem_notas(texto)
+    ordem = []
+    for m in re.finditer(r"\[\^([^\]]+)\](?!:)", "\n".join(linhas)):
+        if m.group(1) in defs and m.group(1) not in ordem:
+            ordem.append(m.group(1))
+    ordem += [r for r in defs if r not in ordem]  # definida e não chamada: vai para o fim
+    return [{"rotulo": r, "texto": defs[r]} for r in ordem]
+
+
 def paragrafos_texto(caminho):
     texto = Path(caminho).read_text(encoding="utf-8")
     blocos, atual = [], []
-    for linha in texto.splitlines():
+    for linha in _texto_sem_notas(texto)[0]:
         if not linha.strip():
             if atual:
                 blocos.append(" ".join(atual))

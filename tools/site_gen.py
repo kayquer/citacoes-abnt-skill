@@ -78,6 +78,11 @@ FAQ_INDEX = [
      "no Gemini (Gem), no Copilot e no Perplexity, cole o arquivo instrucoes.txt nas instruções e anexe os dois arquivos de "
      "conhecimento. No Gemini CLI, instale como extensão; no Codex e em outros agentes compatíveis com Agent Skills, "
      "descompacte as skills em .agents/skills. A verificação de existência das referências precisa de busca na web ou dos scripts."),
+    ("Funciona com notas de rodapé e livros de humanidades?",
+     "Sim. A skill gera as notas de referência da NBR 10520: a primeira citação de cada obra completa e as seguintes "
+     "abreviadas, com Ibid. e Id. opcionais. O conferidor lê as notas do Word e do Markdown. O formatador tem campos para "
+     "tradução, organização da edição, capítulo nas obras completas do próprio autor, volume, artigo de jornal com data "
+     "completa, e-localização e título atribuído entre colchetes."),
     ("Preciso do Claude para usar?",
      "Não. Os scripts de Python funcionam sozinhos: formatar referência, exportar para BibTeX, RIS ou CSL-JSON, checar "
      "existência das obras, conferir citação contra referência e gerar um modelo .docx com o perfil da instituição."),

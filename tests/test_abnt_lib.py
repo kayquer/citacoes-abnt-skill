@@ -182,6 +182,129 @@ class TestTexto(unittest.TestCase):
         self.assertEqual(r["autores"][0]["sobrenome"], "Vaswani")
         self.assertEqual(r["titulo"], "Attention is all you need")
 
+    def test_ano_com_sufixo_e_anterior_a_1500(self):
+        self.assertEqual(A.problemas_texto("FREUD, Sigmund. **Outro**. São Paulo: X, 2010a."), [])
+        self.assertEqual(A.problemas_texto("ANÔNIMO. **Crônica**. Lisboa: [s. n.], 1450."), [])
+
+
+FREUD = {"sobrenome": "Freud", "nome": "Sigmund"}
+LUTO = {"id": "freud2010luto", "tipo": "capitulo", "autores": [FREUD], "titulo": "Luto e melancolia",
+        "in_mesmo_autor": True, "titulo_obra": "Obras completas", "tradutor": "Paulo César de Souza",
+        "local": "São Paulo", "editora": "Companhia das Letras", "ano": 2010, "volume_obra": 12, "paginas": "170-194"}
+
+
+class TestHumanidades(unittest.TestCase):
+    """Casos do uso real num livro de humanidades (92 obras, notas de rodapé)."""
+
+    def test_titulo_interrogativo_sem_ponto_extra(self):
+        ref = {"tipo": "artigo", "autores": [SILVA], "titulo": "Brand activism: does courting controversy help or hurt?",
+               "periodico": "Journal of Marketing", "ano": 2023}
+        self.assertIn("hurt? **Journal of Marketing**", A.formatar_referencia(ref))
+        cap = {"tipo": "capitulo", "autores": [SILVA], "titulo": "Quem fala?", "titulo_obra": "Vozes",
+               "local": "Recife", "editora": "UFPE", "ano": 2020, "paginas": "3-9"}
+        self.assertNotIn("?.", A.formatar_referencia(cap))
+
+    def test_capitulo_do_proprio_autor_com_volume(self):
+        self.assertEqual(A.formatar_referencia(LUTO),
+                         "FREUD, Sigmund. Luto e melancolia. In: FREUD, Sigmund. **Obras completas**. Tradução: Paulo "
+                         "César de Souza. São Paulo: Companhia das Letras, 2010. v. 12, p. 170-194.")
+
+    def test_responsabilidades(self):
+        ref = {"tipo": "livro", "autores": [{"sobrenome": "Hobbes", "nome": "Thomas"}], "titulo": "Leviatã",
+               "tradutor": ["João Paulo Monteiro", "Maria Beatriz Nizza da Silva"], "organizacao": "Richard Tuck",
+               "responsabilidades": [{"papel": "Revisão técnica", "nome": "Eunice Ostrensky"}],
+               "local": "São Paulo", "editora": "Martins Fontes", "ano": 2003}
+        self.assertEqual(A.formatar_referencia(ref),
+                         "HOBBES, Thomas. **Leviatã**. Tradução: João Paulo Monteiro e Maria Beatriz Nizza da Silva. "
+                         "Organização: Richard Tuck. Revisão técnica: Eunice Ostrensky. São Paulo: Martins Fontes, 2003.")
+
+    def test_eloc(self):
+        ref = {"tipo": "artigo", "autores": [SILVA], "titulo": "Redes", "periodico": "PNAS", "volume": 118,
+               "numero": 9, "eloc": "e2023301118", "ano": 2021}
+        self.assertEqual(A.formatar_referencia(ref), "SILVA, João Carlos. Redes. **PNAS**, v. 118, n. 9, e2023301118, 2021.")
+        # Identificador guardado como página: sai sem "p." e faltantes avisa
+        ref2 = dict(ref, eloc=None, paginas="eabe5641")
+        self.assertIn("n. 9, eabe5641, 2021.", A.formatar_referencia(ref2))
+        self.assertTrue(any("e-localização" in f for f in A.faltantes(ref2)))
+        self.assertIn("p. 15-30", A.formatar_referencia(dict(ref, eloc=None, paginas="15-30")))
+
+    def test_jornal_com_data_completa(self):
+        ref = {"tipo": "jornal", "autores": [{"sobrenome": "Otta", "nome": "Lu Aiko"}],
+               "titulo": "Parcela do Tesouro nos empréstimos do BNDES cresce 566% em oito anos",
+               "periodico": "O Estado de S. Paulo", "local": "São Paulo", "volume": 131, "numero": 42656,
+               "data": "2010-08-01", "caderno": "Economia & Negócios", "paginas": "B1"}
+        self.assertEqual(A.formatar_referencia(ref),
+                         "OTTA, Lu Aiko. Parcela do Tesouro nos empréstimos do BNDES cresce 566% em oito anos. "
+                         "**O Estado de S. Paulo**, São Paulo, ano 131, n. 42656, 1 ago. 2010. Economia & Negócios, p. B1.")
+        self.assertEqual(A.chamada(ref), "(Otta, 2010)")
+        self.assertIn("data", " ".join(A.faltantes(dict(ref, data=None))))
+
+    def test_site_com_data(self):
+        ref = {"tipo": "site", "autores": [{"entidade": "Pew Research Center"}], "titulo": "Social media use",
+               "local": "Washington, DC", "data": "2024-05-17", "url": "https://pew.org/x", "acesso": "2026-11-01"}
+        self.assertIn("Washington, DC, 17 maio 2024. Disponível em", A.formatar_referencia(ref))
+
+    def test_titulo_atribuido(self):
+        ref = {"tipo": "jornal", "autores": [{"sobrenome": "Swift", "nome": "Jonathan"}],
+               "titulo": "Sobre a mentira política", "titulo_atribuido": True, "periodico": "The Examiner",
+               "local": "London", "numero": 14, "data": "1710-11-09"}
+        self.assertEqual(A.formatar_referencia(ref),
+                         "SWIFT, Jonathan. [Sobre a mentira política]. **The Examiner**, London, n. 14, 9 nov. 1710.")
+
+    def test_entidade_com_sigla(self):
+        ref = {"tipo": "site", "autores": [{"entidade": "Independent Investigative Mechanism for Myanmar", "sigla": "IIMM"}],
+               "titulo": "Annual report", "data": "2024-03-27", "url": "https://iimm.un.org", "acesso": "2026-11-01"}
+        self.assertTrue(A.formatar_referencia(ref).startswith("INDEPENDENT INVESTIGATIVE MECHANISM FOR MYANMAR (IIMM). "))
+        self.assertEqual(A.chamada(ref), "(IIMM, 2024)")
+
+    def test_entrada_com_artigo_inicial(self):
+        ref = {"tipo": "livro", "titulo": "A sociedade do espetáculo", "local": "Rio de Janeiro",
+               "editora": "Contraponto", "ano": 1997}
+        self.assertEqual(A.formatar_referencia(ref), "A SOCIEDADE do espetáculo. Rio de Janeiro: Contraponto, 1997.")
+        self.assertEqual(A.chamada(ref), "(A sociedade [...], 1997)")
+        self.assertEqual(A.chamada(ref, edicao_10520="2002"), "(A SOCIEDADE [...], 1997)")
+        self.assertEqual(A.entrada_por_titulo("Em busca de um sonho"), "EM BUSCA de um sonho")
+
+    def test_local_homonimo(self):
+        ref = dict(LUTO, local="Cambridge")
+        self.assertTrue(any("homônimos" in f for f in A.faltantes(ref)))
+        self.assertFalse(any("homônimos" in f for f in A.faltantes(dict(LUTO, local="Cambridge, MA"))))
+
+
+class TestNotas(unittest.TestCase):
+    OUTRA = {"id": "freud2010mal", "tipo": "livro", "autores": [FREUD], "titulo": "O mal-estar na civilização",
+             "local": "São Paulo", "editora": "Companhia das Letras", "ano": 2010}
+
+    def test_completa_com_localizador_no_lugar_das_paginas(self):
+        nota = A.nota_referencia(dict(LUTO, ano_original=1917), "completa", "172")
+        self.assertEqual(nota, "FREUD, Sigmund. Luto e melancolia. In: FREUD, Sigmund. **Obras completas**. Tradução: "
+                               "Paulo César de Souza. São Paulo: Companhia das Letras, 2010. v. 12, p. 172. "
+                               "Publicação original: 1917.")
+
+    def test_formas_curtas(self):
+        self.assertEqual(A.nota_referencia(LUTO, "curta", "180"), "FREUD, 2010, p. 180.")
+        self.assertEqual(A.nota_referencia(LUTO, "curta", "180", maiusculas=False), "Freud, 2010, p. 180.")
+        self.assertEqual(A.nota_referencia(LUTO, "ibid", "181"), "*Ibid.*, p. 181.")
+        self.assertEqual(A.nota_referencia(LUTO, "idem", "9"), "*Id.*, 2010, p. 9.")
+        self.assertEqual(A.nota_referencia(LUTO, "opcit", "cap. 2"), "FREUD, *op. cit.*, cap. 2.")
+        self.assertEqual(A.nota_referencia(LUTO, "ibid", None, estilo="texto"), "Ibid.")
+        self.assertEqual(A.nota_referencia(LUTO, "loccit"), "FREUD, *loc. cit.*")
+        self.assertEqual(A.nota_referencia(LUTO, "opcit", estilo="texto"), "FREUD, op. cit.")
+
+    def test_sequencia(self):
+        refs = [LUTO, self.OUTRA]
+        itens = [{"id": "freud2010luto", "pagina": "172"}, {"id": "freud2010luto", "pagina": "180"},
+                 {"id": "freud2010mal", "pagina": "20"}, {"id": "freud2010luto", "pagina": "190"}]
+        sem = A.notas_em_sequencia(refs, itens)
+        self.assertEqual([n["forma"] for n in sem], ["completa", "curta", "completa", "curta"])
+        self.assertTrue(sem[0]["nota"].endswith("2010a. v. 12, p. 172."))  # mesmo autor e ano: sufixo também na nota
+        self.assertEqual(sem[3]["nota"], "FREUD, 2010a, p. 190.")
+        com = A.notas_em_sequencia(refs, itens + [{"id": "freud2010mal", "pagina": "3"}], latinas=True)
+        self.assertEqual([n["forma"] for n in com], ["completa", "ibid", "completa", "idem", "idem"])
+        self.assertEqual(com[3]["nota"], "*Id.*, 2010a, p. 190.")
+        with self.assertRaises(KeyError):
+            A.notas_em_sequencia(refs, [{"id": "nao-existe"}])
+
 
 if __name__ == "__main__":
     unittest.main()

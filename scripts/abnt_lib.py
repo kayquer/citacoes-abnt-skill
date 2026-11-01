@@ -3,12 +3,18 @@
 Só usa a biblioteca padrão. Os demais scripts importam este módulo.
 
 Modelo de referência (dict, campos opcionais exceto "tipo"):
-    id, tipo (livro | capitulo | artigo | tese | site | evento | legislacao),
-    autores: [{"sobrenome": "Silva", "nome": "João Carlos"} | {"entidade": "Universidade de São Paulo"}],
-    titulo, subtitulo, edicao, local, editora, ano, mes, volume, numero, paginas,
+    id, tipo (livro | capitulo | artigo | jornal | tese | site | evento | legislacao),
+    autores: [{"sobrenome": "Silva", "nome": "João Carlos"} | {"entidade": "Universidade de São Paulo", "sigla": "USP"}],
+    titulo, subtitulo, titulo_atribuido (true: título dado por quem cita, sai entre colchetes),
+    edicao, local, editora, ano, mes, data (AAAA-MM-DD ou AAAA-MM: jornal, site, periódico diário),
+    volume, numero, paginas, eloc (e-localização: e2023301118, art. 428), caderno (jornal),
     periodico, doi, url, acesso (AAAA-MM-DD), isbn, issn,
     organizadores (lista de autores) + papel_org ("org." | "ed." | "coord."), titulo_obra, subtitulo_obra,
+    in_mesmo_autor (true: capítulo do próprio autor da obra; repete o autor depois de "In:", sem papel),
+    volume_obra (volume da obra no todo: "v. 14, p. 161-239"),
     tradutor ("Ivo Korytowski" ou lista), titulo_original, ano_original (obra traduzida ou reeditada),
+    responsabilidades ([{"papel": "Organização", "nome": "Richard Tuck"}]) ou os atalhos
+    organizacao, revisao, prefacio, introducao, notas_de, ilustracao (vão depois do título, como a tradução),
     tipo_trabalho ("Tese" | "Dissertação" | "Trabalho de Conclusão de Curso"), grau ("Doutorado em Educação"),
     unidade ("Faculdade de Educação"), instituicao, evento, evento_numero, evento_ano, evento_local,
     titulo_anais ("Anais"), jurisdicao, epigrafe, ementa, publicacao, nota.
@@ -27,7 +33,14 @@ EDICAO_10520_PADRAO = "2023"
 MESES = ["jan.", "fev.", "mar.", "abr.", "maio", "jun.", "jul.", "ago.", "set.", "out.", "nov.", "dez."]
 AGNOMES = {"neto", "netto", "filho", "filha", "junior", "júnior", "jr.", "sobrinho", "segundo", "terceiro"}
 PARTICULAS = {"da", "das", "de", "do", "dos", "e", "d'", "del", "della", "van", "von", "der"}
-TIPOS = ("livro", "capitulo", "artigo", "tese", "site", "evento", "legislacao")
+TIPOS = ("livro", "capitulo", "artigo", "jornal", "tese", "site", "evento", "legislacao")
+# Artigo ou monossílabo inicial entra em maiúsculas junto com a palavra seguinte (NBR 6023 e 10520)
+INICIAIS_FRACAS = {"a", "o", "as", "os", "um", "uma", "uns", "umas", "à", "às", "ao", "aos", "de", "da", "do", "das",
+                   "dos", "em", "no", "na", "nos", "nas", "por", "com", "sem", "sob", "e", "ou", "se", "que", "the",
+                   "an", "le", "la", "les", "l'", "el", "los", "las", "il", "lo", "der", "die", "das", "ein", "eine"}
+# Cidades com homônimas conhecidas: a NBR 6023 manda acrescentar estado ou país
+LOCAIS_HOMONIMOS = {"cambridge", "birmingham", "portland", "springfield", "richmond", "washington", "santa cruz",
+                    "santa maria", "bom jesus", "viçosa", "córdoba", "valença"}
 
 
 def verificar(campo):
@@ -76,7 +89,10 @@ def abreviar_prenome(nome):
 
 def formatar_autor(autor, abreviar=False):
     if "entidade" in autor:
-        return caixa_alta(autor["entidade"])
+        nome = caixa_alta(autor["entidade"])
+        sigla = autor.get("sigla")
+        # Com sigla, a chamada sai (IIMM, 2024): a referência precisa mostrar a sigla para o leitor achar a entrada
+        return f"{nome} ({sigla})" if sigla and caixa_alta(sigla) != nome else nome
     sob = caixa_alta(autor.get("sobrenome", ""))
     nome = autor.get("nome", "")
     if abreviar:
@@ -108,19 +124,40 @@ def destacar(texto, estilo):
     return texto
 
 
-def titulo_completo(titulo, subtitulo, estilo, destaque=True):
+def colchetes(titulo, atribuido):
+    """Título atribuído por quem cita (a obra não tem título) vai entre colchetes."""
+    if atribuido and titulo and not titulo.startswith("["):
+        return f"[{titulo}]"
+    return titulo
+
+
+def titulo_completo(titulo, subtitulo, estilo, destaque=True, atribuido=False):
     """Título em destaque; o subtítulo vem depois de dois-pontos e sem destaque."""
-    t = titulo or verificar("título")
+    t = colchetes(titulo, atribuido) or verificar("título")
     t = destacar(t, estilo) if destaque else t
     return f"{t}: {subtitulo}" if subtitulo else t
 
 
+def palavras_de_entrada(titulo):
+    """Quantas palavras iniciais entram em destaque: 1, ou 2 se a primeira for artigo ou monossílabo."""
+    partes = (titulo or "").split()
+    if len(partes) > 1 and partes[0].lower().strip("\"'“”") in INICIAIS_FRACAS:
+        return 2
+    return 1
+
+
 def entrada_por_titulo(titulo):
-    """Sem autoria, a entrada é pelo título com a primeira palavra em maiúsculas."""
+    """Sem autoria, a entrada é pelo título com a primeira palavra em maiúsculas.
+
+    Artigo ou monossílabo inicial vai em maiúsculas junto com a palavra seguinte: A SOCIEDADE do espetáculo.
+    """
     titulo = titulo or verificar("título")
-    partes = titulo.split(" ", 1)
-    primeira = caixa_alta(partes[0])
-    return primeira + (" " + partes[1] if len(partes) > 1 else "")
+    if titulo.startswith("[VERIFICAR"):
+        return titulo
+    n = palavras_de_entrada(titulo)
+    partes = titulo.split(" ", n)
+    cabeca = caixa_alta(" ".join(partes[:n]))
+    return cabeca + (" " + partes[n] if len(partes) > n else "")
 
 
 def local_editora(ref):
@@ -130,7 +167,7 @@ def local_editora(ref):
 
 
 def ano_de(ref):
-    ano = ref.get("ano")
+    ano = ano_de_data(ref)
     return str(ano) if ano else verificar("ano")
 
 
@@ -140,6 +177,39 @@ def data_acesso(iso):
     except (TypeError, ValueError):
         return verificar("data de acesso (AAAA-MM-DD)")
     return f"{d.day} {MESES[d.month - 1]} {d.year}"
+
+
+def data_publicacao(ref):
+    """'26 out. 2021' (campo data AAAA-MM-DD), 'out. 2021' (AAAA-MM ou mes) ou só o ano."""
+    bruto = str(ref.get("data") or "").strip()
+    m = re.fullmatch(r"(\d{4})-(\d{1,2})(?:-(\d{1,2}))?", bruto)
+    if m and 1 <= int(m.group(2)) <= 12:
+        mes = MESES[int(m.group(2)) - 1]
+        dia = f"{int(m.group(3))} " if m.group(3) else ""
+        return f"{dia}{mes} {m.group(1)}"
+    ano = ano_de(ref)
+    if ref.get("mes"):
+        try:
+            return f"{MESES[int(ref['mes']) - 1]} {ano}"
+        except (ValueError, IndexError):
+            pass
+    return ano
+
+
+def ano_de_data(ref):
+    """Ano para chamada e ordenação: campo ano, ou o ano do campo data."""
+    if ref.get("ano"):
+        return ref["ano"]
+    m = re.match(r"(\d{4})", str(ref.get("data") or ""))
+    return m.group(1) if m else None
+
+
+RE_ELOC = re.compile(r"(?i)(e\d{3,}|[a-z]{2,6}\d{2,}|art\.\s*\d+)")
+
+
+def eh_eloc(valor):
+    """e2023301118, eabe5641, pgaf310, art. 428: identificador de artigo, não página."""
+    return bool(RE_ELOC.fullmatch(str(valor or "").strip()))
 
 
 def paginas(ref, prefixo="p. "):
@@ -177,6 +247,7 @@ def eletronico(ref):
 def juntar(*partes):
     texto = " ".join(p.strip() for p in partes if p and p.strip())
     texto = re.sub(r"(?<!\.)\.\.(?!\.)", ".", texto)  # ponto duplo, preservando reticências
+    texto = re.sub(r"([?!])\.(?=\s|$)", r"\1", texto)  # título interrogativo: "...X?." vira "...X?"
     return re.sub(r"\s+", " ", texto).strip()
 
 
@@ -187,9 +258,10 @@ def responsavel(ref, estilo, abreviar, max_autores, titulo_destacado=True):
         abertura = formatar_autores(autores, abreviar, max_autores)
         if not abertura.endswith("."):
             abertura += "."
-        tit = titulo_completo(ref.get("titulo"), ref.get("subtitulo"), estilo, titulo_destacado)
+        tit = titulo_completo(ref.get("titulo"), ref.get("subtitulo"), estilo, titulo_destacado,
+                              ref.get("titulo_atribuido"))
         return abertura, tit
-    tit = entrada_por_titulo(ref.get("titulo"))
+    tit = entrada_por_titulo(colchetes(ref.get("titulo"), ref.get("titulo_atribuido")))
     if ref.get("subtitulo"):
         tit += ": " + ref["subtitulo"]
     return "", tit
@@ -197,14 +269,30 @@ def responsavel(ref, estilo, abreviar, max_autores, titulo_destacado=True):
 
 # ---------------------------------------------------------------- tipos
 
-def traducao(ref):
-    """'Tradução: Nome.' logo depois do título e antes da edição (NBR 6023)."""
-    t = ref.get("tradutor")
-    if not t:
-        return ""
+PAPEIS_ATALHO = (("tradutor", "Tradução"), ("organizacao", "Organização"), ("revisao", "Revisão"),
+                 ("prefacio", "Prefácio"), ("introducao", "Introdução"), ("notas_de", "Notas"),
+                 ("ilustracao", "Ilustrações"))
+
+
+def _lista_nomes(t):
     if isinstance(t, (list, tuple)):
-        t = " e ".join([", ".join(t[:-1]), t[-1]]) if len(t) > 1 else t[0]
-    return f"Tradução: {str(t).rstrip('.')}."
+        t = [str(x) for x in t if x]
+        return " e ".join([", ".join(t[:-1]), t[-1]]) if len(t) > 1 else (t[0] if t else "")
+    return str(t)
+
+
+def responsabilidades(ref):
+    """[(papel, nomes)] na ordem: atalhos (tradutor primeiro) e depois a lista livre."""
+    saida = [(papel, _lista_nomes(ref[campo])) for campo, papel in PAPEIS_ATALHO if ref.get(campo)]
+    for item in ref.get("responsabilidades") or []:
+        if isinstance(item, dict) and item.get("papel") and item.get("nome"):
+            saida.append((str(item["papel"]).strip().rstrip(":"), _lista_nomes(item["nome"])))
+    return saida
+
+
+def traducao(ref):
+    """'Tradução: Nome. Organização: Nome.' logo depois do título e antes da edição (NBR 6023)."""
+    return " ".join(f"{papel}: {nomes.rstrip('.')}." for papel, nomes in responsabilidades(ref) if nomes)
 
 
 def complementos_originais(ref):
@@ -217,33 +305,56 @@ def complementos_originais(ref):
     return " ".join(partes)
 
 
+def _volume(valor):
+    v = str(valor or "").strip()
+    if not v:
+        return ""
+    return v if re.match(r"(?i)(v|t|vol)\.\s", v) else f"v. {v}"
+
+
 def _livro(ref, estilo, abreviar, max_autores):
     abertura, tit = responsavel(ref, estilo, abreviar, max_autores)
+    vol = _volume(ref.get("volume_obra") or ref.get("volume"))
+    loc = ref.get("_localizador")  # nota de rodapé: a passagem citada no lugar do total de páginas
+    fisica = ", ".join(p for p in [vol, loc] if p) if loc else vol
     return juntar(abertura, tit + ".", traducao(ref), edicao(ref), local_editora(ref) + ",", ano_de(ref) + ".",
-                  f"{ref['paginas_total']} p." if ref.get("paginas_total") else "", complementos_originais(ref),
-                  eletronico(ref))
+                  (fisica + ".") if fisica else "",
+                  f"{ref['paginas_total']} p." if ref.get("paginas_total") and not loc else "",
+                  complementos_originais(ref), eletronico(ref))
+
+
+def _sem_titulo_destaque(ref):
+    """Título do artigo, jornal ou capítulo: sem destaque, com subtítulo e colchetes de título atribuído."""
+    tit = colchetes(ref.get("titulo"), ref.get("titulo_atribuido")) or verificar("título")
+    return f"{tit}: {ref['subtitulo']}" if ref.get("subtitulo") else tit
 
 
 def _capitulo(ref, estilo, abreviar, max_autores):
     abertura, tit = responsavel(ref, estilo, abreviar, max_autores, titulo_destacado=False)
     orgs = ref.get("organizadores")
-    if orgs:
+    if ref.get("in_mesmo_autor") and ref.get("autores"):
+        # Capítulo na obra do próprio autor: In: FREUD, Sigmund. **Obras completas** (sem papel de organizador)
+        quem = formatar_autores(ref["autores"], abreviar, max_autores).rstrip(".") + "."
+    elif orgs:
         papel = ref.get("papel_org", "org.")
         quem = formatar_autores(orgs, abreviar, max_autores) + f" ({papel})."
     else:
         quem = ""
     obra = titulo_completo(ref.get("titulo_obra") or verificar("título da obra"), ref.get("subtitulo_obra"), estilo)
+    vol = _volume(ref.get("volume_obra") or ref.get("volume"))
+    if ref.get("_localizador"):  # nota de rodapé: o localizador entra no lugar das páginas do capítulo
+        pags = ", ".join(p for p in [vol, ref["_localizador"]] if p) + "."
+    else:
+        pags = paginas(ref) if ref.get("paginas") else verificar("páginas do capítulo")
+        pags = (f"{vol}, {pags}" if vol else pags) + "."
     return juntar(abertura, tit + ".", "In:", quem, obra + ".", traducao(ref), edicao(ref), local_editora(ref) + ",",
-                  ano_de(ref) + ".", (paginas(ref) + ".") if ref.get("paginas") else verificar("páginas do capítulo") + ".",
-                  complementos_originais(ref), eletronico(ref))
+                  ano_de(ref) + ".", pags, complementos_originais(ref), eletronico(ref))
 
 
 def _artigo(ref, estilo, abreviar, max_autores):
     abertura, tit = responsavel(ref, estilo, abreviar, max_autores, titulo_destacado=False)
-    if ref.get("subtitulo") and ref.get("autores"):
-        tit = f"{ref.get('titulo')}: {ref['subtitulo']}"
-    elif ref.get("autores"):
-        tit = ref.get("titulo") or verificar("título")
+    if ref.get("autores"):
+        tit = _sem_titulo_destaque(ref)
     per = destacar(ref.get("periodico") or verificar("periódico"), estilo)
     meio = [per]
     if ref.get("local"):
@@ -252,16 +363,32 @@ def _artigo(ref, estilo, abreviar, max_autores):
         meio.append(f"v. {ref['volume']}")
     if ref.get("numero"):
         meio.append(f"n. {ref['numero']}")
-    if ref.get("paginas"):
+    eloc = ref.get("eloc")
+    if not eloc and eh_eloc(ref.get("paginas")):
+        eloc = ref["paginas"]  # identificador de artigo guardado como página: sai sem "p."
+    if eloc:
+        meio.append(str(eloc).strip())
+    elif ref.get("paginas"):
         meio.append(paginas(ref))
-    data = ano_de(ref)
-    if ref.get("mes"):
-        try:
-            data = f"{MESES[int(ref['mes']) - 1]} {data}"
-        except (ValueError, IndexError):
-            pass
-    meio.append(data)
+    meio.append(data_publicacao(ref))
     return juntar(abertura, tit + ".", ", ".join(meio) + ".", eletronico(ref))
+
+
+def _jornal(ref, estilo, abreviar, max_autores):
+    """AUTOR. Título. **Jornal**, Local, ano 131, n. 42656, 1 ago. 2010. Caderno, p. B1."""
+    abertura, tit = responsavel(ref, estilo, abreviar, max_autores, titulo_destacado=False)
+    if ref.get("autores"):
+        tit = _sem_titulo_destaque(ref)
+    meio = [destacar(ref.get("periodico") or verificar("nome do jornal"), estilo)]
+    meio.append(ref.get("local") or "[S. l.]")
+    if ref.get("volume"):
+        v = str(ref["volume"])
+        meio.append(v if re.match(r"(?i)(ano|v\.)\s", v) else f"ano {v}")
+    if ref.get("numero"):
+        meio.append(f"n. {ref['numero']}")
+    meio.append(data_publicacao(ref) if (ref.get("data") or ref.get("mes")) else verificar("data (dia, mês e ano)"))
+    fim = [p for p in [ref.get("caderno"), paginas(ref)] if p]
+    return juntar(abertura, tit + ".", ", ".join(meio) + ".", (", ".join(fim) + ".") if fim else "", eletronico(ref))
 
 
 def _tese(ref, estilo, abreviar, max_autores):
@@ -282,7 +409,7 @@ def _site(ref, estilo, abreviar, max_autores):
     meio = f"{local}: {ref['editora']}," if ref.get("editora") else f"{local},"
     if not ref.get("url"):
         ref = dict(ref, url=verificar("URL"))
-    return juntar(abertura, tit + ".", meio, ano_de(ref) + ".", eletronico(ref))
+    return juntar(abertura, tit + ".", meio, data_publicacao(ref) + ".", eletronico(ref))
 
 
 def _evento(ref, estilo, abreviar, max_autores):
@@ -316,7 +443,7 @@ def _legislacao(ref, estilo, abreviar, max_autores):
 
 
 FORMATADORES = {
-    "livro": _livro, "capitulo": _capitulo, "artigo": _artigo, "tese": _tese,
+    "livro": _livro, "capitulo": _capitulo, "artigo": _artigo, "jornal": _jornal, "tese": _tese,
     "site": _site, "evento": _evento, "legislacao": _legislacao,
 }
 
@@ -357,6 +484,17 @@ def _nome_chamada(autor, edicao_10520):
     return caixa_alta(nome) if edicao_10520 == "2002" else nome
 
 
+def localizador(pagina, separador=""):
+    """'75' -> 'p. 75'; 'B 75', 'local. 264', 'cap. V', '9min 41s' ficam como estão."""
+    if not pagina:
+        return ""
+    pagina = str(pagina).strip()
+    # "p." só para número, intervalo ou romano; o resto já é localizador próprio
+    if re.fullmatch(r"\d+([-–]\d+)?|[ivxlcdm]+([-–][ivxlcdm]+)?", pagina):
+        return f"{separador}p. {pagina.replace('–', '-')}"
+    return f"{separador}{pagina}"
+
+
 def chamada(ref, pagina=None, narrativa=False, edicao_10520=EDICAO_10520_PADRAO, sufixo_ano="", ano_original=False):
     """Chamada autor-data.
 
@@ -373,23 +511,115 @@ def chamada(ref, pagina=None, narrativa=False, edicao_10520=EDICAO_10520_PADRAO,
         else:
             nomes = "; ".join(_nome_chamada(a, edicao_10520) for a in autores)
     else:
-        primeira = (ref.get("titulo") or verificar("título")).split(" ")[0]
-        nomes = (caixa_alta(primeira) if edicao_10520 == "2002" else primeira.capitalize()) + " [...]"
+        titulo = colchetes(ref.get("titulo"), ref.get("titulo_atribuido")) or verificar("título")
+        palavras = titulo.split(" ")[:palavras_de_entrada(titulo)]
+        if edicao_10520 == "2002":
+            cabeca = caixa_alta(" ".join(palavras))
+        else:
+            cabeca = " ".join([palavras[0].capitalize()] + palavras[1:])
+        nomes = cabeca + " [...]"
     ano = ano_de(ref) + sufixo_ano
     if ano_original and ref.get("ano_original"):
         # Costume em filosofia e clássicos: (Kant, 2015 [1781]). A NBR 10520:2023 não prevê; use só se o curso aceitar.
         ano += f" [{ref['ano_original']}]"
-    loc = ""
-    if pagina:
-        pagina = str(pagina)
-        # "p." só para número ou intervalo; o resto já é localizador próprio (B 75, local. 264, cap. V, 9min 41s)
-        loc = f", p. {pagina}" if re.fullmatch(r"\d+([-–]\d+)?|[ivxlcdm]+", pagina) else f", {pagina}"
+    loc = localizador(pagina, ", ")
     if narrativa:
         if len(autores) > 1 and len(autores) <= 3:
             ultimos = [_nome_chamada(a, edicao_10520) for a in autores]
             nomes = ", ".join(ultimos[:-1]) + " e " + ultimos[-1]
         return f"{nomes} ({ano}{loc})"
     return f"({nomes}, {ano}{loc})"
+
+
+# ---------------------------------------------------------------- notas de referência (NBR 10520, 4.4)
+
+FORMAS_NOTA = ("completa", "curta", "ibid", "idem", "opcit", "loccit")
+
+
+def italico(texto, estilo):
+    if estilo == "md":
+        return f"*{texto}*"
+    if estilo == "html":
+        return f"<em>{texto}</em>"
+    return texto
+
+
+def nota_referencia(ref, forma="completa", pagina=None, estilo="md", edicao_6023=EDICAO_6023_PADRAO,
+                    max_autores=None, sufixo_ano="", maiusculas=True):
+    """Texto de uma nota de rodapé de referência.
+
+    completa  referência inteira; o localizador entra no lugar das páginas do capítulo e antes do DOI/URL
+    curta     FREUD, 2010a, p. 20.   (maiusculas=False: Freud, 2010a, p. 20.)
+    ibid      *Ibid.*, p. 80.        mesma obra da nota anterior
+    idem      *Id.*, 2012, p. 30.    mesmo autor da nota anterior, outra obra
+    opcit     FREUD, *op. cit.*, p. 40.
+    loccit    FREUD, *loc. cit.*
+    """
+    if forma not in FORMAS_NOTA:
+        raise ValueError(f"forma de nota desconhecida: {forma} (use {', '.join(FORMAS_NOTA)})")
+    loc = localizador(pagina, ", ")
+    if forma == "completa":
+        base = {k: v for k, v in ref.items() if k not in ("doi", "url", "acesso", "nota")}
+        dentro = ref.get("tipo") in ("livro", "capitulo") and pagina
+        if dentro:
+            base["_localizador"] = localizador(pagina)
+        if ano_de_data(ref) and sufixo_ano:
+            base["ano"] = f"{ano_de_data(ref)}{sufixo_ano}"
+        texto = formatar_referencia(base, estilo=estilo, edicao_6023=edicao_6023, max_autores=max_autores)
+        return juntar(texto, (localizador(pagina) + ".") if pagina and not dentro else "", eletronico(ref),
+                      (ref["nota"].rstrip(".") + ".") if ref.get("nota") else "")
+    if forma == "ibid":
+        return italico("Ibid.", estilo) + (loc + "." if loc else "")
+    if forma == "idem":
+        return italico("Id.", estilo) + f", {ano_de(ref)}{sufixo_ano}{loc}."
+    abreviada = chamada(ref, None, edicao_10520="2002" if maiusculas else "2023", sufixo_ano=sufixo_ano)[1:-1]
+    autor = abreviada.rsplit(", ", 1)[0]
+    if forma == "opcit":
+        return f"{autor}, {italico('op. cit.', estilo)}" + (loc + "." if loc else "")
+    if forma == "loccit":
+        return f"{autor}, {italico('loc. cit.', estilo)}"  # a expressão já termina em ponto
+    return f"{abreviada}{loc}."
+
+
+def _primeiro_autor(ref):
+    autores = ref.get("autores") or []
+    if not autores:
+        return None
+    a = autores[0]
+    return sem_acento(a.get("entidade") or a.get("sobrenome", "")).lower()
+
+
+def notas_em_sequencia(refs, itens, estilo="md", edicao_6023=EDICAO_6023_PADRAO, max_autores=None,
+                       latinas=False, maiusculas=True):
+    """Numera as notas: primeira citação de cada obra completa, as seguintes abreviadas.
+
+    itens: [{"id": "freud2010luto", "pagina": "20"}, ...] na ordem do texto.
+    latinas=True usa *Ibid.* (mesma obra da nota anterior) e *Id.* (mesmo autor, outra obra).
+    Devolve [{"n": 1, "id": ..., "forma": ..., "nota": ...}] ou levanta KeyError com o id desconhecido.
+    """
+    por_id = {r["id"]: r for r in refs}
+    sufixos = sufixos_mesmo_autor_ano(refs)
+    vistos, anterior, saida = set(), None, []
+    for n, item in enumerate(itens, 1):
+        rid = item["id"]
+        if rid not in por_id:
+            raise KeyError(rid)
+        ref = por_id[rid]
+        if rid not in vistos:
+            forma = "completa"
+        elif latinas and anterior == rid:
+            forma = "ibid"
+        elif latinas and anterior and _primeiro_autor(por_id[anterior]) and \
+                _primeiro_autor(por_id[anterior]) == _primeiro_autor(ref):
+            forma = "idem"
+        else:
+            forma = "curta"
+        texto = nota_referencia(ref, forma, item.get("pagina") or item.get("localizador"), estilo, edicao_6023,
+                                max_autores, sufixos.get(rid, ""), maiusculas)
+        saida.append({"n": n, "id": rid, "forma": forma, "nota": texto})
+        vistos.add(rid)
+        anterior = rid
+    return saida
 
 
 # ---------------------------------------------------------------- ordenação e validação
@@ -402,7 +632,7 @@ def chave_ordenacao(ref):
         base = a.get("entidade") or f"{a.get('sobrenome', '')} {a.get('nome', '')}"
     else:
         base = ref.get("titulo") or ""
-    return (sem_acento(base).lower(), str(ref.get("ano") or ""), sem_acento(ref.get("titulo") or "").lower())
+    return (sem_acento(base).lower(), str(ano_de_data(ref) or ""), sem_acento(ref.get("titulo") or "").lower())
 
 
 def ordenar(refs):
@@ -415,7 +645,7 @@ def sufixos_mesmo_autor_ano(refs):
     for r in ordenar(refs):
         autores = r.get("autores") or []
         primeiro = (autores[0].get("entidade") or autores[0].get("sobrenome", "")) if autores else r.get("titulo", "")
-        chave = (sem_acento(primeiro).lower(), str(r.get("ano")))
+        chave = (sem_acento(primeiro).lower(), str(ano_de_data(r)))
         grupos.setdefault(chave, []).append(r.get("id"))
     saida = {}
     for ids in grupos.values():
@@ -432,6 +662,7 @@ OBRIGATORIOS = {
     "tese": ["titulo", "ano", "tipo_trabalho", "instituicao", "local"],
     "site": ["titulo", "url", "acesso"],
     "evento": ["titulo", "evento", "ano"],
+    "jornal": ["titulo", "periodico", "data|mes"],
     "legislacao": ["epigrafe"],
 }
 
@@ -447,6 +678,11 @@ def faltantes(ref):
         falta.append("local (sairá [S. l.])")
     if not ref.get("editora") and ref.get("tipo") in ("livro", "capitulo"):
         falta.append("editora (sairá [s. n.])")
+    local = sem_acento(str(ref.get("local") or "")).lower().strip()
+    if local in {sem_acento(c) for c in LOCAIS_HOMONIMOS}:
+        falta.append(f"local '{ref['local']}' tem homônimos: acrescente estado ou país (Cambridge, MA)")
+    if ref.get("tipo") == "artigo" and eh_eloc(ref.get("paginas")) and not ref.get("eloc"):
+        falta.append(f"'{ref['paginas']}' parece e-localização: mova de paginas para eloc")
     return falta
 
 
@@ -477,7 +713,8 @@ def problemas_texto(referencia_texto):
     if "Disponível em" in referencia_texto and "Acesso em" not in referencia_texto:
         if not any("sem 'Acesso em'" in a for a in achados):
             achados.append("'Disponível em' sem 'Acesso em' (obrigatório para documento online)")
-    if not re.search(r"\b(1[5-9]\d{2}|20\d{2})\b|\[\d{4}\??\]|\[VERIFICAR", referencia_texto):
+    # Anos de 1000 a 2099 (manuscritos e edições antigas também), ano provável entre colchetes ou [VERIFICAR]
+    if not re.search(r"\b(1\d{3}|20\d{2})[a-z]?\b|\[\d{3,4}\??\]|\[ca\. \d{3,4}\]|\[VERIFICAR", referencia_texto):
         achados.append("ano não encontrado")
     return achados
 

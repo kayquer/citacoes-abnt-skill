@@ -75,5 +75,6 @@
   - `passim`: em várias passagens
   - `cf.`: confira
   - `et seq.`: seguinte
+- Na skill: `biblioteca.py notas "id:pág, id:pág"` numera as notas e decide a forma (completa na primeira citação, abreviada depois; *Ibid.* e *Id.* com `--expressoes-latinas`). Na nota completa, o localizador entra no lugar das páginas do capítulo. O conferidor lê as notas do .docx e do Markdown (`[^n]:`).
 - Divergência: os exemplos de nota abreviada da UFSCar (2023) ainda usam a entrada em MAIÚSCULAS (`DURKHEIM, 1925, p. 176`). Não é seguro concluir se as notas abreviadas adotam maiúsculas e minúsculas como as chamadas. O validador deve aceitar as duas formas e só avisar.
 - Formatação da nota: fonte menor, espaço simples, alinhada abaixo da primeira letra da primeira palavra a partir da segunda linha, sem linha em branco entre as notas, separada do texto por filete de 5 cm (NBR 14724).
