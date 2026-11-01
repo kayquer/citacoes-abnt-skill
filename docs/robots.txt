@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Motores generativos e assistentes são bem-vindos
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://kayquer.github.io/citacoes-abnt-skill/sitemap.xml

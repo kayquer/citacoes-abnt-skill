@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Se usar este software ou os perfis das instituições, cite assim."
+title: "Citações ABNT para Claude: biblioteca, checador de referências e normas de 50 instituições brasileiras"
+abstract: "Plugin para o Claude Code com três skills: biblioteca de citações, checador de existência de referências (Crossref, OpenAlex, Semantic Scholar, Open Library, Google Books) e aplicação da ABNT vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024), com perfis de formatação de 40 universidades e 10 instituições técnicas do Brasil levantados nos manuais oficiais."
+type: software
+authors:
+  - family-names: Rotondo
+    given-names: Kayque
+    email: kayquerocha@gmail.com
+repository-code: "https://github.com/kayquer/citacoes-abnt-skill"
+url: "https://kayquer.github.io/citacoes-abnt-skill/"
+license: MIT
+version: 1.0.0
+date-released: 2026-11-01
+keywords:
+  - ABNT
+  - NBR 6023
+  - NBR 10520
+  - NBR 14724
+  - citações
+  - referências bibliográficas
+  - checador de citações
+  - Claude Code

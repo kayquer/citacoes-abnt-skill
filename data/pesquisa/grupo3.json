@@ -1,0 +1,447 @@
+[
+  {
+    "id": "ufg",
+    "manual": {
+      "titulo": "Normalização do trabalho acadêmico: regras da ABNT (orgs. Frederico R. Oliveira, Filipe Reis, Geisa Muller)",
+      "url": "https://files.cercomp.ufg.br/weby/up/366/o/Normaliza%C3%A7%C3%A3o.pdf",
+      "ano": 2016,
+      "orgao": "UFG, Faculdade de Informação e Comunicação (Gráfica UFG); ISBN 978-85-495-0032-8"
+    },
+    "fontes_extras": [
+      {"titulo": "Sibi/UFG: Orientações para normalização de trabalhos acadêmicos", "url": "https://bc.ufg.br/n/35519-orientacoes-para-normalizacao-de-trabalhos-academicos"},
+      {"titulo": "Sibi/UFG: Auxílio para uso das normas ABNT", "url": "https://bc.ufg.br/n/15095-auxilio-para-uso-das-normas-abnt"},
+      {"titulo": "Guia de Normalização Bibliográfica EVZ/UFG (Vancouver), aprovado em 18/08/2023", "url": "https://files.cercomp.ufg.br/weby/up/66/o/Guia_Normalizacao_Bibliografica_EVZ_Aprovado_CD_18_08_2023.pdf"}
+    ],
+    "regras": {
+      "papel": "A4 (21 x 29,7 cm), branco ou reciclado",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "tamanho 12; o guia diz que a NBR 14724 não define o tipo de fonte (recomenda parcimônia)",
+      "fonte_menor": "menor que 12 para notas de rodapé, citações recuadas, paginação, ficha catalográfica, legendas e fontes de ilustrações",
+      "espacamento": "1,5 (texto); 1,0 para notas, citações recuadas e outros",
+      "recuo_paragrafo_cm": 1.5,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": null,
+      "sistema_chamada": "autor-data ou numérico (apresenta os dois)",
+      "edicao_6023": "2002 (anterior às opções listadas)",
+      "edicao_10520": "2002",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [
+      {"area": "Medicina Veterinária e Zootecnia (EVZ/UFG)", "norma": "Vancouver", "fonte": "https://files.cercomp.ufg.br/weby/up/66/o/Guia_Normalizacao_Bibliografica_EVZ_Aprovado_CD_18_08_2023.pdf"}
+    ],
+    "particularidades": [
+      "Ficha catalográfica obrigatória no verso da folha de rosto",
+      "Sibi/UFG oferece treinamentos on-line de normalização e serviço de ficha catalográfica (bc.ufg.br/p/fichatrabalhoscademicos)",
+      "Guia EVZ: Times New Roman 12 na capa/folha de rosto, título em 14"
+    ],
+    "modelos": [],
+    "observacoes": "Não achei manual vigente do Sibi/UFG para toda a universidade nem um baseado na NBR 14724:2024. O documento mais completo hospedado pela UFG é o livro de 2016 da FIC (anterior às normas atuais). Ele indica recuo de parágrafo de 1,5 cm, e não 1,25. O guia da EVZ cita a 'NBR 14724/2021', edição que não existe. A posição da paginação não foi extraída do livro.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufrn",
+    "manual": {
+      "titulo": "Orientações para normalização de Trabalhos de Conclusão de Curso na modalidade de Monografia, Dissertação ou Tese (uso do template)",
+      "url": "https://arquivos.info.ufrn.br/arquivos/2022228061c9d011918632c7f1f84237c2/Orientao_uso_template_Mon_Dissert_Tese.pdf",
+      "ano": 2022,
+      "orgao": "UFRN, Sistema de Bibliotecas (SISBI) / Biblioteca Central Zila Mamede"
+    },
+    "fontes_extras": [
+      {"titulo": "BCZM: Orientações para trabalhos acadêmicos (templates)", "url": "https://sisbi.ufrn.br/biblioteca/bczm/orientacoes/trabalhosacademicos"},
+      {"titulo": "Orientações para TCC na modalidade Artigo", "url": "https://arquivos.info.ufrn.br/arquivos/20221231105ed611918621a53ca8e5232b/Orientao_uso_template_TCC_Artigo.pdf"},
+      {"titulo": "Manual de Normalização de Trabalhos Acadêmicos da Escola de Saúde da UFRN", "url": "https://escoladesaude.ufrn.br/media/files/documentos/Manual_de_Normaliza%C3%A7%C3%A3o_de_Trabalhos_Acad%C3%AAmicos_da_ESUFRN.pdf"}
+    ],
+    "regras": {
+      "papel": null,
+      "margens_cm": null,
+      "fonte": "Arial 12",
+      "fonte_menor": "11 para citações com mais de três linhas e notas de rodapé",
+      "espacamento": "1,5",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": null,
+      "paginacao": "contadas a partir da folha de rosto, numeradas em algarismos arábicos a partir da introdução",
+      "sistema_chamada": null,
+      "edicao_6023": "2018",
+      "edicao_10520": "não informa",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Ficha catalográfica obrigatória, solicitada pelo SIGAA (não entra na contagem de folhas)",
+      "Recomenda licença Creative Commons na folha de rosto",
+      "Versão final obrigatoriamente em PDF/A, nome do arquivo PrimeirasPalavrasdoTitulo_Sobrenome_Ano",
+      "Orientações de acessibilidade: texto alternativo (ALT) para imagens",
+      "Referências sem divisão por tipo de material, espaçamento simples"
+    ],
+    "modelos": [
+      {"tipo": "Word", "url": "https://arquivos.info.ufrn.br/arquivos/20232360188ddb13546721372e90f6a105/Template_TCC_Artigo_DOC_2023.doc"},
+      {"tipo": "Word", "url": "https://gestore.ufrn.br/gestore-web/downloadArquivo?hash=774D5FD7C04C3B1E0CA9B82CB9BA55AC"},
+      {"tipo": "ODT", "url": "https://gestore.ufrn.br/gestore-web/downloadArquivo?hash=4F55DEB9ACC4ADAC368D81ECD36AF737"}
+    ],
+    "observacoes": "O SISBI não publica um manual completo. Publica orientações curtas e templates Word/ODT, e as margens e os recuos estão só nos templates, que não foram abertos. Fora do padrão: a fonte menor é 11, e não 10. A base usa a NBR 14724:2011. Não achei confirmação de uso de Vancouver na Medicina, e o manual da Escola de Saúde usa ABNT.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "unicsul",
+    "manual": null,
+    "fontes_extras": [],
+    "regras": null,
+    "variacoes_area": [],
+    "particularidades": [],
+    "modelos": [],
+    "observacoes": "Não achei manual de normalização público da Universidade Cruzeiro do Sul em buscas abertas nem restritas a cruzeirodosul.edu.br e cruzeirodosulvirtual.com.br. Aparecem só manuais do aluno, revistas e o Pergamum. É provável que o material fique no portal do aluno (meuportal), que exige login. Uma página de iniciação científica aceita referências em ABNT, Vancouver ou APA.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "uninove",
+    "manual": {
+      "titulo": "Apresentação de trabalhos acadêmicos: manual de orientação: guia prático conforme ABNT",
+      "url": "https://img.uninove.br/static/2025/0/0/0/0/0/2/5/7/8/3/4/25783446/manual-abnt-2025-1.pdf",
+      "ano": 2025,
+      "orgao": "UNINOVE, Sistema de Bibliotecas Prof. José Storópoli (atualizado em março/2025)"
+    },
+    "fontes_extras": [
+      {"titulo": "UNINOVE Biblioteca", "url": "https://www.uninove.br/biblioteca"},
+      {"titulo": "Manual anterior (2020)", "url": "https://docs.uninove.br/arte/pdfs/Manual_de_Trabalhos_Academicos_ABNT_UNINOVE.pdf"}
+    ],
+    "regras": {
+      "papel": "A4 (21,0 x 29,7 cm)",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "Arial ou Times New Roman 12 (recomendado), cor preta",
+      "fonte_menor": "10 para citações longas, notas de rodapé, número de páginas, legendas de ilustrações e tabelas",
+      "espacamento": "1,5; simples nas citações longas",
+      "recuo_paragrafo_cm": 1.25,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "contadas a partir da folha de rosto, numeradas a partir da introdução em algarismos arábicos, a 2 cm da borda, canto superior direito (verso: superior esquerdo)",
+      "sistema_chamada": "autor-data para citações e numérico para notas explicativas (não usar numérico quando houver notas)",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2024"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Ficha catalográfica no verso da folha de rosto, feita por bibliotecária (alunos de stricto sensu a solicitam à biblioteca)",
+      "Passo a passo para configurar no Word (margens, parágrafo, numeração)",
+      "Títulos de seção primária em maiúsculas e negrito, começando em folha própria",
+      "Licença CC BY-NC-SA 4.0"
+    ],
+    "modelos": [],
+    "observacoes": "É um manual completo e atualizado (NBR 14724:2024 e 10520:2023). Não achei template Word ou LaTeX público.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufam",
+    "manual": {
+      "titulo": "Manual de Normatização de Trabalhos Acadêmicos",
+      "url": "https://edoc.ufam.edu.br/bitstream/123456789/9331/1/Manual_de_Normalizacao_de_trabalhos_academicos_UFAM.20-06-17.pdf",
+      "ano": 2017,
+      "orgao": "UFAM, PROPESP / EDUA"
+    },
+    "fontes_extras": [
+      {"titulo": "Registro no E-doc UFAM", "url": "https://edoc.ufam.edu.br/handle/123456789/9331"},
+      {"titulo": "Normalização de trabalhos acadêmicos: normas (SISTEBIB, 2020, apresentação)", "url": "https://riu.ufam.edu.br/handle/prefix/5782?mode=full"}
+    ],
+    "regras": {
+      "papel": "A4",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "tamanho 12 (tipo não especificado)",
+      "fonte_menor": "10 para citações longas, numeração de página, notas de rodapé, legendas de tabelas, quadros e ilustrações",
+      "espacamento": "1,5; simples para citações longas, notas, referências, legendas, ficha e natureza do trabalho",
+      "recuo_paragrafo_cm": 1.25,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "contadas a partir da folha de rosto, numeradas a partir da introdução em algarismos arábicos, canto superior direito, a 2 cm da borda superior",
+      "sistema_chamada": "autor-data (adotado pelo guia)",
+      "edicao_6023": "2002 (anterior às opções listadas)",
+      "edicao_10520": "2002",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [
+      {"area": "Programas de pós-graduação que adotam Vancouver (o manual não traz modelos NBR 6023 por isso)", "norma": "Vancouver", "fonte": "https://edoc.ufam.edu.br/bitstream/123456789/9331/1/Manual_de_Normalizacao_de_trabalhos_academicos_UFAM.20-06-17.pdf"}
+    ],
+    "particularidades": [
+      "Ficha catalográfica obrigatória, com sistema on-line de geração",
+      "Epígrafe com recuo de 8 cm, itálico, fonte 10",
+      "Títulos de subseções separados do texto por dois espaços de 1,5",
+      "Indica o MORE/UFSC para gerar referências"
+    ],
+    "modelos": [],
+    "observacoes": "O manual é de 2017 e usa as normas de 2002/2011. Não traz exemplos de referências porque alguns PPGs usam Vancouver: cada programa define a norma. Não achei edição mais nova.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufu",
+    "manual": {
+      "titulo": "Guia para normalização de publicações técnico-científicas, 2. ed. (eds. Maira Nani França e Patrícia de Oliveira Portela)",
+      "url": "https://repositorio.ufu.br/bitstream/123456789/47665/14/GuiaParaNormalizacao.pdf",
+      "ano": 2025,
+      "orgao": "UFU, Sistema de Bibliotecas (SISBI) / EDUFU; ISBN 978-85-7078-515-2"
+    },
+    "fontes_extras": [
+      {"titulo": "SISBI/UFU: página do Guia", "url": "https://bibliotecas.ufu.br/servicos/guia-para-normalizacao-de-publicacoes-tecnico-cientificas"},
+      {"titulo": "Notícia sobre a 2ª edição (2026)", "url": "https://comunica.ufu.br/noticias/2026/07/editora-da-ufu-publica-segunda-edicao-do-guia-para-normalizacao-de-publicacoes"},
+      {"titulo": "Template para trabalhos acadêmicos atualizado em outubro de 2024", "url": "https://bibliotecas.ufu.br/acontece/2024/11/template-para-trabalhos-academicos-atualizado-em-outubro-2024"}
+    ],
+    "regras": {
+      "papel": "A4 (21 x 29,7 cm), branco ou reciclado",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "tamanho 12, tipo padronizado (não nomeia a fonte)",
+      "fonte_menor": "menor e uniforme para citações longas, notas, paginação, ficha catalográfica, legendas e fontes de tabelas e ilustrações",
+      "espacamento": "1,5; simples nas citações longas, notas, referências, legendas e natureza do trabalho (relatórios e artigos: simples)",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "canto superior direito, a 2 cm da borda superior e o último algarismo a 2 cm da borda direita; no verso, canto superior esquerdo; o verso da folha de rosto não é contado",
+      "sistema_chamada": "numérico ou autor-data (um só em toda a obra)",
+      "edicao_6023": "2025",
+      "edicao_10520": "2023",
+      "edicao_14724": "2024"
+    },
+    "variacoes_area": [
+      {"area": "Odontologia (TCC FO/UFU)", "norma": "Vancouver", "fonte": "https://fo.ufu.br/system/files/conteudo/manual_de_normalizacao_tcc_foufu.pdf"}
+    ],
+    "particularidades": [
+      "Já incorpora a NBR 6023:2025 (3. ed., 21 maio 2025) e a NBR 15287:2025",
+      "Inclui referência a produtos de inteligência artificial",
+      "Títulos de seções primárias começam em página ímpar (anverso)",
+      "Ficha catalográfica no verso da folha de rosto",
+      "Uma das editoras integra a comissão CB-14 da ABNT"
+    ],
+    "modelos": [
+      {"tipo": "Word", "url": "https://bibliotecas.ufu.br/sites/bibliotecas.ufu.br/files/media/imagem/template_out._2024.docx"}
+    ],
+    "observacoes": "É o manual mais atual do grupo, o único que já usa a NBR 6023:2025. A notícia da Comunica UFU é de 07/2026, mas o PDF registra 2025. O recuo de parágrafo não foi localizado no trecho lido. A variação Vancouver da Odontologia vem só de resultado de busca (o PDF da FO não foi aberto).",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufpi",
+    "manual": {
+      "titulo": "Manual de normalização de monografia, dissertação e tese, 2. ed.",
+      "url": "https://ufpi.br/images/Biblioteca/Manual_Oficial.pdf",
+      "ano": 2025,
+      "orgao": "UFPI, Sistema Integrado de Bibliotecas (SIBi/UFPI)"
+    },
+    "fontes_extras": [
+      {"titulo": "Normas para entrega de trabalhos acadêmicos (BCCB/UFPI)", "url": "https://ufpi.br/normas-de-trabalhos-academicos"}
+    ],
+    "regras": {
+      "papel": "A4 (21 x 29,7 cm), branco ou reciclado",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "tamanho 12 (tipo não especificado)",
+      "fonte_menor": "menor para citações longas, notas de rodapé, paginação, ficha catalográfica, legendas e fontes",
+      "espacamento": "1,5; simples nas citações longas, notas, ficha, legendas e natureza do trabalho",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "contadas a partir da folha de rosto, numeradas a partir da introdução, canto superior direito, a 2 cm da borda superior e da direita; o verso da folha de rosto não é contado",
+      "sistema_chamada": "autor-data ou numérico (detalha autor-data)",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2024"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Entrega só em PDF, com Termo de Autorização de publicação no RI/SIGAA anexado",
+      "Ficha catalográfica obrigatória no verso da folha de rosto, na parte inferior",
+      "Seções primárias em página ímpar quando o trabalho é impresso frente e verso"
+    ],
+    "modelos": [],
+    "observacoes": "O manual atribui a regra de paginação à 'NBR 6023, 2018', claramente por engano (é a NBR 14724). Não achei template público.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufpb",
+    "manual": {
+      "titulo": "Manual para elaboração de trabalhos acadêmicos de graduação (Manual de TCC CCA)",
+      "url": "https://repositorio.ufpb.br/jspui/bitstream/123456789/34249/1/Manual%20TCC%20-%20Documento%20unico%20revisado%20-%20vers%c3%a3o%2021082023.pdf",
+      "ano": 2023,
+      "orgao": "UFPB, Centro de Ciências Agrárias (Areia), Biblioteca Setorial Francisco Tancredo Torres"
+    },
+    "fontes_extras": [
+      {"titulo": "Biblioteca Central UFPB: orientação à normalização de trabalhos acadêmicos", "url": "https://www.biblioteca.ufpb.br/biblioteca/contents/menu/copy_of_servicos/orientacoes-de-acesso-as-normas-da-abnt"},
+      {"titulo": "Biblioteca Setorial CCEN: padronização e normalização (ABNT, Vancouver, APA)", "url": "http://www.ccen.ufpb.br/bsccen/contents/paginas/servicos/apoio-ao-pesquisador-1/padronizacao-e-normalizacao-de-trabalhos-academicos"}
+    ],
+    "regras": {
+      "papel": null,
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "tamanho 12 em todo o trabalho, inclusive a capa (modelo de capa: Arial ou Times)",
+      "fonte_menor": "10 (recomendado) para citações longas, notas, paginação, ficha catalográfica, legendas e fontes",
+      "espacamento": "1,5; simples nas citações longas, notas, referências, legendas, ficha, capa, folha de rosto e folha de aprovação",
+      "recuo_paragrafo_cm": 2,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": null,
+      "sistema_chamada": null,
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Ficha catalográfica na parte inferior do verso da folha de rosto",
+      "Seções primárias em página ímpar",
+      "Notas de rodapé separadas por filete de 5 cm",
+      "Regras para TCC em CD/DVD (formatos de áudio e vídeo, capa do CD)"
+    ],
+    "modelos": [],
+    "observacoes": "A Biblioteca Central não publica manual próprio: oferece plantão de orientação e acesso ao Target GEDWeb, e lista as NBRs sem edição. O manual registrado aqui é só do CCA (graduação, campus Areia), não vale para toda a UFPB. O documento é inconsistente: em 5.2 manda iniciar o parágrafo a 2 cm, e em outras partes, a 1,25 cm.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufal",
+    "manual": {
+      "titulo": "Manual para normalização de trabalhos acadêmicos da UFAL, 2. ed. rev. e atual. (orgs. Helena Cristina Pimentel do Vale e Lívia Aparecida Ferreira Lenzi)",
+      "url": "https://www.repositorio.ufal.br/jspui/bitstream/123456789/10627/3/Manual%20para%20normaliza%c3%a7%c3%a3o%20de%20trabalhos%20acad%c3%aamicos%20da%20UFAL%20-%202.ed.2025.pdf",
+      "ano": 2025,
+      "orgao": "UFAL, Sistema de Bibliotecas (SIBi/UFAL)"
+    },
+    "fontes_extras": [
+      {"titulo": "SIBi/UFAL: Normalização de Trabalhos Acadêmicos (modelos)", "url": "https://sibi.ufal.br/portal/?page_id=1770"},
+      {"titulo": "Registro no repositório", "url": "https://www.repositorio.ufal.br/jspui/handle/123456789/10627"}
+    ],
+    "regras": {
+      "papel": "A4 (21 x 29,7 cm), sulfite branco ou reciclado",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "tamanho 12 (Times New Roman ou Arial citadas para as referências)",
+      "fonte_menor": "10 para citações diretas longas e notas de rodapé (na seção de citações: 10 ou 11)",
+      "espacamento": "1,5; simples nas citações longas, notas, referências, legendas, ficha, natureza do trabalho e resumos",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "contadas a partir da folha de rosto, numeradas a partir da introdução, canto superior direito, a 2 cm da borda; o verso da folha de rosto não é contado",
+      "sistema_chamada": "autor-data ou numérico",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011 (lista de referências) / 2024 (citada na capa)"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Modelos editáveis em Word e LibreOffice (trabalho acadêmico, artigo, banner) no site do SIBi",
+      "Entrega em PDF/A com ficha catalográfica e folha de aprovação",
+      "Ficha catalográfica feita por bibliotecário",
+      "Minicurso periódico 'Desvendando o manual' pelo SIGAA",
+      "Tabelas seguem as Normas de Apresentação Tabular do IBGE (1993)"
+    ],
+    "modelos": [
+      {"tipo": "Word", "url": "https://sibi.ufal.br/portal/?page_id=1770"}
+    ],
+    "observacoes": "A 1ª edição é de 2022 e a 2ª, de 2025. Há divergência de edição: a lista de referências cita a NBR 14724:2011, e a capa menciona NBR 10520:2023 e 14724:2024. O recuo de 4 cm é recomendação do SIBi. O 'Padrão UFAL de Normalização' (2012) está superado. Os links diretos dos modelos não foram extraídos: registrei a página que os reúne.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufmt",
+    "manual": null,
+    "fontes_extras": [
+      {"titulo": "Biblioteca Central UFMT: Normalização de Trabalhos Acadêmicos (templates)", "url": "https://www.ufmt.br/unidade/biblioteca/pagina/informacoes-aos-usuarios/12961"},
+      {"titulo": "Sistema de Fichas Catalográficas UFMT", "url": "https://www.ufmt.br/unidade/biblioteca/pagina/fichas-catalograficas/3208"}
+    ],
+    "regras": null,
+    "variacoes_area": [],
+    "particularidades": [
+      "Templates Word oficiais para tese/dissertação, TCC (graduação e especialização) e artigo",
+      "Ficha catalográfica gerada por sistema on-line próprio (vale só para o modelo de trabalhos da UFMT)",
+      "Dúvidas: sdpe.bibliotecacentral@ufmt.br"
+    ],
+    "modelos": [
+      {"tipo": "Word", "url": "https://cms.ufmt.br/files/galleries/187/Documentos/Template%20teses%20e%20disserta%C3%A7%C3%B5es.docx"},
+      {"tipo": "Word", "url": "https://cms.ufmt.br/files/galleries/187/Documentos/Template%20TCC.docx"},
+      {"tipo": "Word", "url": "https://cms.ufmt.br/files/galleries/187/Documentos/Template%20artigo.docx"}
+    ],
+    "observacoes": "A Biblioteca Central não publica manual em texto: as regras ficam nos templates Word, que não foram abertos, por isso as regras estão como null. A página cita a NBR 14724 (trabalhos) e a NBR 6022 (artigo), sem edição. Há diretrizes antigas por programa, como Agronomia (3. ed., 2013).",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "uem",
+    "manual": null,
+    "fontes_extras": [
+      {"titulo": "BCE/UEM: Normalização Bibliográfica (serviço)", "url": "https://bce.uem.br/servicos-1/normalizacao-bibliografica"},
+      {"titulo": "PGA/UEM: Normas para elaboração de dissertação e tese", "url": "https://sites.uem.br/pga/normas-e-regulamentos/normas-para-elaboracao-de-dissertacao-e-tese"},
+      {"titulo": "PEU/UEM: ABNT 2023 (manual do programa)", "url": "https://peu.uem.br/abnt-2023.pdf"}
+    ],
+    "regras": null,
+    "variacoes_area": [],
+    "particularidades": [
+      "A BCE normaliza trabalhos como serviço (cobra por página) e elabora a ficha catalográfica",
+      "As normas são definidas por programa ou curso (PGA, PEU, PCV e outros)"
+    ],
+    "modelos": [],
+    "observacoes": "Não achei manual institucional da biblioteca da UEM. A página da BCE cita normas antigas (NBR 14724/2005, 6023/2002, 10520/2001) e menciona Vancouver e normas editoriais como alternativas. Há só documentos por programa, que não foram analisados.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "uel",
+    "manual": {
+      "titulo": "ABNT: manual de normalização de trabalhos acadêmicos",
+      "url": "https://sites.uel.br/bibliotecas/wp-content/uploads/2025/02/ABNT-fev.-2025.pdf",
+      "ano": 2025,
+      "orgao": "UEL, Sistema de Bibliotecas, Divisão de Referência"
+    },
+    "fontes_extras": [
+      {"titulo": "Sistema de Bibliotecas UEL: Serviços (apostilas e Modelo Padrão UEL)", "url": "https://sites.uel.br/bibliotecas/servicos/"}
+    ],
+    "regras": {
+      "papel": "A4, branco ou reciclado quando impresso",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "Times New Roman ou Arial 12, cor preta",
+      "fonte_menor": "10 para notas de rodapé e legendas; citações recuadas em letra menor que a do texto",
+      "espacamento": "1,5; simples nas citações longas, notas, referências, legendas e natureza do trabalho",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "contadas a partir da folha de rosto, numeradas a partir da primeira folha textual, canto superior direito, a 2 cm da borda superior (verso: superior esquerdo)",
+      "sistema_chamada": "autor-data (notas de rodapé com citações no modelo autor-data)",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2024"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Ficha catalográfica no verso da folha de rosto, por geração automática do Sistema de Bibliotecas",
+      "Há um 'Modelo Padrão UEL' na página de serviços",
+      "Texto só no anverso, exceto a ficha catalográfica"
+    ],
+    "modelos": [
+      {"tipo": "Word", "url": "https://sites.uel.br/bibliotecas/servicos/"}
+    ],
+    "observacoes": "Divergência interna: o quadro e o capítulo de citações seguem a NBR 10520:2023 (recuo recomendado de 4 cm), mas a lista final de referências ainda cita a 10520 de 2002. O link direto do Modelo Padrão UEL não foi extraído.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "uerj",
+    "manual": {
+      "titulo": "Roteiro para apresentação das teses e dissertações da Universidade do Estado do Rio de Janeiro, 2. ed. rev. atual. e ampl. (org. Simone Faury Dib e Neusa Cardim da Silva)",
+      "url": "https://www.rsirius.uerj.br/extras/downloads/roteiro_de_teses_e_dissertacoes.pdf",
+      "ano": 2012,
+      "orgao": "UERJ, Rede Sirius (Rede de Bibliotecas UERJ)"
+    },
+    "fontes_extras": [
+      {"titulo": "Rede Sirius: Modelos para trabalhos acadêmicos (pré-textuais por biblioteca)", "url": "https://www.rsirius.uerj.br/servicos/modelos-pre-textuais"},
+      {"titulo": "Deliberação UERJ nº 36/2023 (BDTD/UERJ)", "url": "https://www.rsirius.uerj.br/extras/downloads/Deliberacao_0036_2023.pdf"},
+      {"titulo": "Roteiro, 1. ed. (2007), com capítulo sobre Vancouver", "url": "http://www.desc.eng.uerj.br/tcc/roteiro_uerj_web.pdf"}
+    ],
+    "regras": {
+      "papel": "A4 (mapas: A3 dobrado), branco ou reciclado",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "Times New Roman ou Arial 12 (14 na capa e na lombada)",
+      "fonte_menor": "10 para ficha catalográfica, citações longas, notas de rodapé, legendas, notas e fontes de ilustrações e tabelas",
+      "espacamento": "1,5, com 0 pt antes e depois; simples nas citações longas, notas, referências, ficha, resumos e natureza do trabalho",
+      "recuo_paragrafo_cm": 1.25,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "contadas a partir da folha de rosto (exceto o verso com a ficha), numeradas a partir da primeira folha textual em algarismos arábicos, borda superior direita",
+      "sistema_chamada": "autor-data ou numérico (autor-data no texto e numérico nas notas explicativas)",
+      "edicao_6023": "2002 (anterior às opções listadas)",
+      "edicao_10520": "2002",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [
+      {"area": "Ciências da saúde/biomédicas (capítulo do Roteiro 1. ed., 2007)", "norma": "Vancouver", "fonte": "http://www.desc.eng.uerj.br/tcc/roteiro_uerj_web.pdf"}
+    ],
+    "particularidades": [
+      "Seguir o Roteiro integralmente é exigência para depósito na BDTD/UERJ (Deliberação 36/2023), com Certificado de Revisão Normativa (CRN) emitido pelo bibliotecário",
+      "Ficha catalográfica e autorização de reprodução no verso da folha de rosto, feitas pelos bibliotecários da Rede Sirius",
+      "Alíneas a 2,5 cm; subalíneas mais 1,25 cm",
+      "Modelos pré-textuais Word por biblioteca setorial; LaTeX/Overleaf para Física e Engenharia"
+    ],
+    "modelos": [
+      {"tipo": "Overleaf", "url": "https://www.overleaf.com/latex/templates/modelo-de-dissertacao-uerj-universidade-do-estado-do-rio-de-janeiro/kpjgrmjfpfdw"},
+      {"tipo": "LaTeX", "url": "https://www.ppgem.uerj.br/downloads.html"},
+      {"tipo": "Word", "url": "https://www.rsirius.uerj.br/servicos/modelos-pre-textuais"}
+    ],
+    "observacoes": "O Roteiro vigente é de 2012 e usa as normas de 2002/2011. Nas buscas, a 2ª edição não traz menção a Vancouver: a seção existia na 1ª edição (2007). O roteiro vale para teses e dissertações; não achei manual de TCC da graduação.",
+    "conferido_em": "2026-11"
+  }
+]

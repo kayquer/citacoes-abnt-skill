@@ -1,0 +1,64 @@
+# Citações ABNT para Claude
+
+> Plugin aberto (MIT) para o Claude Code com três skills: biblioteca de citações, checador de referências (detecta referência inventada, quimérica e DOI divergente em Crossref, OpenAlex, Semantic Scholar, Open Library e Google Books) e aplicação da ABNT vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024) com perfis de formatação de 50 instituições brasileiras. Autor: Kayque Rotondo. Atualizado em 2026-11-01.
+
+## Páginas
+
+- [Página inicial](https://kayquer.github.io/citacoes-abnt-skill/index.html): o que o plugin faz, instalação e tabela das instituições
+- [Normas ABNT vigentes em 2026](https://kayquer.github.io/citacoes-abnt-skill/normas-abnt-vigentes.html): edições em vigor e o que mudou
+- [Repositório](https://github.com/kayquer/citacoes-abnt-skill): código, SKILL.md e dados
+- [Dados em JSON](https://raw.githubusercontent.com/kayquer/citacoes-abnt-skill/main/data/instituicoes.json)
+- [Texto completo para LLMs](https://kayquer.github.io/citacoes-abnt-skill/llms-full.txt)
+
+## Instituições
+
+- [USP](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/usp.html): Universidade de São Paulo (USP); ABNT (com diretrizes próprias USP); margens 3/3/2/2 cm; Arial 12
+- [UNICAMP](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/unicamp.html): Universidade Estadual de Campinas (UNICAMP); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [UFRJ](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufrj.html): Universidade Federal do Rio de Janeiro (UFRJ); ABNT (Vancouver em Biomédicas); margens 3/3/2/2 cm; Arial 12
+- [UFMG](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufmg.html): Universidade Federal de Minas Gerais (UFMG); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [UFRGS](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufrgs.html): Universidade Federal do Rio Grande do Sul (UFRGS); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UFSC](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufsc.html): Universidade Federal de Santa Catarina (UFSC); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UnB](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/unb.html): Universidade de Brasília (UnB); ABNT / APA (Psicologia); margens 3/3/2/2 cm; Arial 12
+- [UNIFESP](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/unifesp.html): Universidade Federal de São Paulo (UNIFESP); Vancouver / ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [UFPR](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufpr.html): Universidade Federal do Paraná (UFPR); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [UNESP](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/unesp.html): Universidade Estadual Paulista (UNESP); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UFSCar](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufscar.html): Universidade Federal de São Carlos (UFSCar); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [PUC-Rio](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/puc-rio.html): Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio); ABNT / APA; margens 2.5/3/2.5/4 cm; Times New Roman ou Arial 12
+- [UFPE](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufpe.html): Universidade Federal de Pernambuco (UFPE); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [UFC](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufc.html): Universidade Federal do Ceará (UFC); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [UFBA](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufba.html): Universidade Federal da Bahia (UFBA); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UFV](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufv.html): Universidade Federal de Viçosa (UFV); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [UFF](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/uff.html): Universidade Federal Fluminense (UFF); ABNT; margens 3/3/2/2 cm; Arial 12
+- [PUCRS](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/pucrs.html): Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS); ABNT / APA; margens 3/3/2/2 cm; Arial 12
+- [UFSM](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufsm.html): Universidade Federal de Santa Maria (UFSM); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial ou Liberation Sans ou Liberation Serif ou Helvetica 12
+- [UFPel](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufpel.html): Universidade Federal de Pelotas (UFPel); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UNESA](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/unesa.html): Universidade Estácio de Sá (UNESA); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UNIP](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/unip.html): Universidade Paulista (UNIP); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [UNOPAR](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/unopar.html): Universidade Norte do Paraná (UNOPAR); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UFMA](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufma.html): Universidade Federal do Maranhão (UFMA); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UFPA](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufpa.html): Universidade Federal do Pará (UFPA); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [UFG](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufg.html): Universidade Federal de Goiás (UFG); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UFRN](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufrn.html): Universidade Federal do Rio Grande do Norte (UFRN); ABNT / Vancouver; margens 3/3/2/2 cm; Arial 12
+- [UNICSUL](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/unicsul.html): Universidade Cruzeiro do Sul (UNICSUL); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UNINOVE](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/uninove.html): Universidade Nove de Julho (UNINOVE); ABNT / Vancouver (Medicina); margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [UFAM](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufam.html): Universidade Federal do Amazonas (UFAM); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UFU](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufu.html): Universidade Federal de Uberlândia (UFU); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UFPI](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufpi.html): Universidade Federal do Piauí (UFPI); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UFPB](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufpb.html): Universidade Federal da Paraíba (UFPB); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UFAL](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufal.html): Universidade Federal de Alagoas (UFAL); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [UFMT](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ufmt.html): Universidade Federal de Mato Grosso (UFMT); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UEM](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/uem.html): Universidade Estadual de Maringá (UEM); ABNT; margens 3/3/2/2 cm; Arial 12
+- [UEL](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/uel.html): Universidade Estadual de Londrina (UEL); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [UERJ](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/uerj.html): Universidade do Estado do Rio de Janeiro (UERJ); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [Anhembi Morumbi](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/anhembi-morumbi.html): Universidade Anhembi Morumbi; ABNT / APA; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [UNISINOS](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/unisinos.html): Universidade do Vale do Rio dos Sinos (UNISINOS); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [IFSP](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ifsp.html): Instituto Federal de São Paulo (IFSP); ABNT (Geral) / APA (Áreas Tecnológicas específicas); margens 3/3/2/2 cm; Arial 12
+- [FATEC](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/fatec.html): Faculdade de Tecnologia do Estado de São Paulo (FATEC); ABNT; margens 3/3/2/2 cm; Arial 12
+- [IFRJ](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ifrj.html): Instituto Federal do Rio de Janeiro (IFRJ); ABNT / Vancouver (Cursos da área de Saúde); margens 3/3/2/2 cm; Arial ou Verdana ou Carlito 12
+- [IFMG](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ifmg.html): Instituto Federal de Minas Gerais (IFMG); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [IFRS](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ifrs.html): Instituto Federal do Rio Grande do Sul (IFRS); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [IFSC](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ifsc.html): Instituto Federal de Santa Catarina (IFSC); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [IFPR](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ifpr.html): Instituto Federal do Paraná (IFPR); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [IFCE](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ifce.html): Instituto Federal do Ceará (IFCE); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12
+- [IFPE](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ifpe.html): Instituto Federal de Pernambuco (IFPE); ABNT; margens 3/3/2/2 cm; Arial 12
+- [IFB](https://kayquer.github.io/citacoes-abnt-skill/instituicoes/ifb.html): Instituto Federal de Brasília (IFB); ABNT; margens 3/3/2/2 cm; Times New Roman ou Arial 12

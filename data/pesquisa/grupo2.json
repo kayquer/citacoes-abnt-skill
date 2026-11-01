@@ -1,0 +1,621 @@
+[
+  {
+    "id": "ufc",
+    "manual": {
+      "titulo": "Guia de normalização de trabalhos acadêmicos da Universidade Federal do Ceará",
+      "url": "https://biblioteca.ufc.br/wp-content/uploads/2022/05/guianormalizacaotrabalhosacademicos-17.05.2022.pdf",
+      "ano": 2022,
+      "orgao": "Biblioteca Universitária da UFC – Comissão de Normalização"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Página Normalização de trabalhos acadêmicos (BU/UFC)",
+        "url": "https://biblioteca.ufc.br/servicos/normalizacao-de-trabalhos-academicos/"
+      },
+      {
+        "titulo": "Guia de normalização para elaboração de citações (2025)",
+        "url": "https://biblioteca.ufc.br/wp-content/uploads/2025/06/guianormalizacaocitacoes2025.pdf"
+      },
+      {
+        "titulo": "Guia de normalização para elaboração de referências (2023)",
+        "url": "https://biblioteca.ufc.br/wp-content/uploads/2023/12/guianormalizacaoreferencias.pdf"
+      },
+      {
+        "titulo": "Guia de normalização de artigo em publicação periódica científica (2023)",
+        "url": "https://biblioteca.ufc.br/wp-content/uploads/2023/04/guia-de-normalizacao-de-artigo-corrigido-27.04.2023.pdf"
+      },
+      {
+        "titulo": "Templates da BU/UFC",
+        "url": "https://biblioteca.ufc.br/servicos-e-produtos/templates/"
+      }
+    ],
+    "regras": {
+      "papel": "A4 (210 mm x 297 mm)",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "Arial ou Times New Roman 12 para todo o trabalho, inclusive a capa",
+      "fonte_menor": "tamanho menor e uniforme (recomenda-se 10) para citações com mais de três linhas, notas de rodapé, paginação, ficha catalográfica, legendas e fontes das ilustrações e tabelas",
+      "espacamento": "1,5; simples em citações longas, notas, referências, legendas, ficha catalográfica e natureza do trabalho; sem espaço extra entre parágrafos",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "contagem a partir da folha de rosto (capa e verso da folha de rosto/ficha não contam no modo só anverso); numeração a partir da Introdução, algarismos arábicos, canto superior direito a 2 cm das bordas superior e direita; no verso, canto superior esquerdo",
+      "sistema_chamada": "autor-data | numérico (guia de citações prioriza autor-data)",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Ficha catalográfica gerada no Módulo de Elaboração de Ficha Catalográfica (CATALOG!) e impressa obrigatoriamente no verso da folha de rosto",
+      "Modelos de capa e folha de aprovação distintos para tese, dissertação e TCC/TGI",
+      "Natureza do trabalho na folha de rosto e de aprovação com recuo de 8 cm da margem esquerda",
+      "Notas de rodapé separadas por filete de 5 cm; recomenda-se recuo de 2 cm na primeira linha da nota",
+      "Margens espelhadas no verso (direita e superior 3 cm; esquerda e inferior 2 cm)",
+      "Uso do guia estabelecido pela Resolução nº 17/CEPE/2017"
+    ],
+    "modelos": [
+      {
+        "tipo": "Word",
+        "url": "https://biblioteca.ufc.br/wp-content/uploads/2025/02/template-trabalhos-academicos-word-10.02.2025.doc"
+      },
+      {
+        "tipo": "LibreOffice (ODT)",
+        "url": "https://biblioteca.ufc.br/wp-content/uploads/2021/06/template-trabalhos-academicos-libreoffice.odt"
+      },
+      {
+        "tipo": "Word (artigo)",
+        "url": "https://biblioteca.ufc.br/wp-content/uploads/2023/05/template-de-artigo-corrigido-27.04.2023.docx"
+      }
+    ],
+    "observacoes": "O guia de trabalhos acadêmicos (2022) ainda cita a NBR 10520:2002, mas o guia de citações de 2025 da mesma BU já segue a NBR 10520:2023 (recuo de 4 cm, sistema autor-data priorizado); por isso edicao_10520 = 2023. O guia não fixa recuo de primeira linha de parágrafo. O template LaTeX/Overleaf consta como 'em atualização' na página de templates, sem link.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufba",
+    "manual": {
+      "titulo": "Manual de estilo acadêmico: do trabalho de conclusão de curso à tese doutoral (Nídia M. L. Lubisco; Sônia C. Vieira), 7. ed. rev. e ampl.",
+      "url": null,
+      "ano": 2025,
+      "orgao": "EDUFBA (Editora da UFBA)"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Resenha da 7. ed. na RDBCI (Unicamp)",
+        "url": "https://periodicos.sbu.unicamp.br/ojs/index.php/rdbci/article/view/8682886"
+      },
+      {
+        "titulo": "Cópia da 6. ed. (2019) hospedada em site da UFS (link indisponível na conferência)",
+        "url": "https://secretariado.ufs.br/uploads/page_attach/path/8303/Manual_ABNT_EDUFBA.pdf"
+      },
+      {
+        "titulo": "Modelo de ficha catalográfica do SIBI/UFBA",
+        "url": "https://sibi.ufba.br/sites/sibi.ufba.br/files/modelo_ficha_catalografica.pdf"
+      }
+    ],
+    "regras": {
+      "papel": null,
+      "margens_cm": null,
+      "fonte": null,
+      "fonte_menor": null,
+      "espacamento": null,
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": null,
+      "paginacao": null,
+      "sistema_chamada": null,
+      "edicao_6023": "não informa",
+      "edicao_10520": "não informa",
+      "edicao_14724": "não informa"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "SIBI/UFBA disponibiliza modelo de ficha catalográfica"
+    ],
+    "modelos": [],
+    "observacoes": "Não foi localizado manual de normalização próprio do SIBI/UFBA em página oficial. A referência de fato usada na UFBA é o livro 'Manual de estilo acadêmico' (Lubisco; Vieira, EDUFBA): 6. ed. 2019 (normas ABNT até dez. 2018) e 7. ed. 2025 (normas ABNT publicadas até mar. 2025, segundo resenha da RDBCI). Não há PDF oficial aberto confirmado; a cópia da 6. ed. em site da UFS não respondeu, e o repositório e o site do SIBI/UFBA bloquearam acesso automatizado (WAF/certificado). Nenhuma regra de formatação pôde ser conferida na fonte.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufv",
+    "manual": {
+      "titulo": "Normalização de trabalhos acadêmicos (2025): conforme NBR 14724/2024, NBR 6023/2018, NBR 10520/2023 e NBR 6028/2021",
+      "url": "https://www.bbt.ufv.br/wp-content/uploads/2025/01/Normalizacao-de-trabalhos-academicos-2025.pdf",
+      "ano": 2025,
+      "orgao": "Biblioteca Central da UFV"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Normalização de trabalhos acadêmicos: atualizada conforme ABNTs NBR 14724/2011, NBR 6023/2018 e NBR 10520/2023 (org. Alice Regina Pinto Pires; Bruna Silva) (edição de 2024)",
+        "url": "https://ppg.ufv.br/wp-content/uploads/2024/10/NORMALIZACAO-DE-TRABALHOS-ACADEMICOS-2024.pdf"
+      },
+      {
+        "titulo": "Página do manual na BBT/UFV (citada no próprio manual)",
+        "url": "https://www.bbt.ufv.br/manual-de-normalizacao-de-trabalhos-academicos/"
+      },
+      {
+        "titulo": "Manual de Normas e Procedimentos para Submissão de Dissertações e Teses – PPG/UFV (04/2026)",
+        "url": "https://ppg.ufv.br/wp-content/uploads/2026/04/Manual-de-entrega-de-dissertacoes-e-teses-04_2026.pdf"
+      },
+      {
+        "titulo": "Normas para apresentação de dissertação e tese (CTP/UFV, 2000, atual. 2011)",
+        "url": "https://posagroecologia.ufv.br/wp-content/uploads/2025/07/NORMAS-PARA-REDA%C3%87%C3%83O-DE-DISSERTA%C3%87%C3%83O-ppg-ufv.pdf"
+      },
+      {
+        "titulo": "Ficha catalográfica on-line (BBT/UFV)",
+        "url": "https://www.bbt.ufv.br/ficha-catalografica-on-line/"
+      }
+    ],
+    "regras": {
+      "papel": "A4 (21 cm x 29,7 cm)",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "Arial ou Times New Roman 12",
+      "fonte_menor": "tamanho menor e uniforme para citações com mais de três linhas, notas de rodapé, paginação, ficha catalográfica, legendas e fontes das ilustrações e tabelas (o manual não fixa o tamanho)",
+      "espacamento": "1,5; simples em citações longas, notas, referências, legendas e natureza do trabalho",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "pré-textuais contadas a partir da folha de rosto, mas não numeradas; capa e ficha catalográfica não são contadas nem numeradas (PPG); numeração em arábicos, canto superior direito, a partir da Introdução (ou Introdução Geral)",
+      "sistema_chamada": "autor-data | numérico (numérico não pode ser usado quando houver notas)",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2024"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Teses e dissertações: impressão/digitação só no anverso; ficha catalográfica no verso da folha de rosto (impresso) ou entre folha de rosto e folha de aprovação (digital), sem contar na paginação",
+      "Ficha catalográfica solicitada à Biblioteca Central (BBT) a partir do PDF 'RASCUNHO' gerado pelo Sistema AcademicoPG; prazo de 7 dias",
+      "Desde 28/10/2024 a submissão de dissertações e teses é exclusivamente on-line (AcademicoPG); capa e pré-textuais gerados pelo sistema",
+      "Títulos acadêmicos Magister Scientiae / Doctor Scientiae; corpo pode ser texto corrido, capítulos ou artigos científicos (formatação livre dos artigos, aprovada pela comissão orientadora)",
+      "Manual traz modelos UFV-PPG ao lado dos modelos ABNT (capa, folha de rosto, folha de aprovação, resumo, cotutela)"
+    ],
+    "modelos": [],
+    "observacoes": "A formatação obrigatória do PPG (manual 04/2026) confirma Arial ou Times 12, A4, margens 3/3/2/2, espaçamento 1,5 e numeração no canto superior direito a partir da Introdução. As normas antigas do CTP também admitiam Helvética 12. Não foi encontrado recuo de parágrafo fixado nem template Word/LaTeX oficial. A edição de 2025 do manual da Biblioteca Central passou a seguir a NBR 14724:2024; a de 2024 ainda citava a 2011. O manual de 2025 ainda pede iniciais maiúsculas nas palavras-chave, contra a NBR 6028:2021.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "uff",
+    "manual": {
+      "titulo": "Apresentação de trabalhos monográficos de conclusão de curso (Estela dos Santos Abreu; José Carlos Abreu Teixeira), 10. ed. rev. e atual.",
+      "url": "https://dda.uff.br/wp-content/uploads/sites/66/2021/03/ManualTCCUFF.pdf",
+      "ano": 2012,
+      "orgao": "EdUFF – Editora da Universidade Federal Fluminense (trabalho de comissão instituída pela Portaria nº 16.505/1991 do Reitor)"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "FICA-ON – Gerador de ficha catalográfica (Bibliotecas UFF)",
+        "url": "https://bibliotecas.uff.br/ficha-catalografica-bibliotecas/"
+      },
+      {
+        "titulo": "Target GEDWeb – acesso às normas técnicas (UFF)",
+        "url": "https://www.gedweb.com.br/uff/"
+      }
+    ],
+    "regras": {
+      "papel": "A4 (21 cm x 29,7 cm), branco ou reciclado",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": null
+      },
+      "fonte": "12 (família não especificada)",
+      "fonte_menor": "corpo menor (fonte 10, por exemplo) para citações longas",
+      "espacamento": "1,5; simples em citações longas, notas, referências e resumos; 1,5 entre alíneas e entre referências em lista",
+      "recuo_paragrafo_cm": 1.5,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "todas as folhas contadas, numeradas em arábicos a partir da parte textual; anverso canto superior direito, verso canto superior esquerdo, a 2 cm da borda superior e 2 cm da borda externa",
+      "sistema_chamada": "autor-data | numérico",
+      "edicao_6023": "2002",
+      "edicao_10520": "2002",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Ficha catalográfica no verso da folha de rosto; pode ser elaborada nas Bibliotecas da Superintendência de Documentação (SDC) ou pelo gerador FICA-ON",
+      "Recomenda elementos textuais e pós-textuais no anverso e verso",
+      "Alíneas com tabulação de 1,5 cm; citações longas separadas do texto por dois espaços simples",
+      "Livro com modelos em apêndices/anexos (ficha catalográfica, folha de rosto etc.)"
+    ],
+    "modelos": [],
+    "observacoes": "Não foi localizado manual atualizado nem templates no site das Bibliotecas/SDC da UFF; o documento institucional encontrado é o livro da EdUFF de 2012 (copyright 2003), hospedado em dda.uff.br, desatualizado em relação à NBR 6023:2018 e à NBR 10520:2023. Margens: o texto dá superior 3, inferior 2, lateral do anverso 3 cm a partir da borda esquerda e do verso 2 cm a partir da borda esquerda; a margem direita do anverso não é dita explicitamente. Programas e cursos da UFF têm manuais próprios (ex.: Faculdade de Farmácia).",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "pucrs",
+    "manual": {
+      "titulo": "Modelos de normas técnicas de documentação – Trabalhos acadêmicos (ABNT)",
+      "url": "https://biblioteca.pucrs.br/apoio-a-pesquisa/modelos-de-normas-tecnicas-de-documentacao/trabalhos-academicos-abnt/",
+      "ano": null,
+      "orgao": "Biblioteca Central Irmão José Otão – PUCRS"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Modelos de normas técnicas de documentação (lista)",
+        "url": "https://biblioteca.pucrs.br/apoio-a-pesquisa/modelos-de-normas-tecnicas-de-documentacao/"
+      },
+      {
+        "titulo": "Orientação no uso de normas técnicas de documentação",
+        "url": "https://biblioteca.pucrs.br/apoio-a-pesquisa/orientacao-no-uso-de-normas-tecnicas-de-documentacao/"
+      },
+      {
+        "titulo": "Capas padrão PUCRS",
+        "url": "https://biblioteca.pucrs.br/apoio-a-pesquisa/capas-padrao-pucrs/"
+      },
+      {
+        "titulo": "Ficha catalográfica",
+        "url": "https://biblioteca.pucrs.br/apoio-a-pesquisa/ficha-catalografica/"
+      },
+      {
+        "titulo": "Rota do TCC",
+        "url": "https://biblioteca.pucrs.br/apoio-a-pesquisa/rota-do-tcc/"
+      }
+    ],
+    "regras": {
+      "papel": null,
+      "margens_cm": null,
+      "fonte": null,
+      "fonte_menor": null,
+      "espacamento": null,
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": null,
+      "paginacao": null,
+      "sistema_chamada": null,
+      "edicao_6023": "não informa",
+      "edicao_10520": "não informa",
+      "edicao_14724": "não informa"
+    },
+    "variacoes_area": [
+      {
+        "area": "geral (modelo de referências e citações oferecido pela Biblioteca)",
+        "norma": "APA",
+        "fonte": "https://biblioteca.pucrs.br/apoio-a-pesquisa/modelos-de-normas-tecnicas-de-documentacao/referencias-e-citacoes-apa/"
+      },
+      {
+        "area": "geral (modelo de referências oferecido pela Biblioteca)",
+        "norma": "Vancouver",
+        "fonte": "https://biblioteca.pucrs.br/apoio-a-pesquisa/modelos-de-normas-tecnicas-de-documentacao/referencias-vancouver/"
+      }
+    ],
+    "particularidades": [
+      "Capa padrão PUCRS com arte de fundo, texto centralizado, fonte 12 (Arial, Times New Roman, Calibri ou Cambria), espaçamento simples, título em negrito; contracapa com arte sem texto; modelos separados para TCC, especialização e mestrado/doutorado",
+      "Ficha catalográfica solicitada pelo site da Biblioteca (Apoio à Pesquisa)",
+      "Modelos para trabalhos acadêmicos (NBR 14724), artigos (NBR 6022:2018), projetos (NBR 15287), citações (NBR 10520), referências (NBR 6023), resumos, sumário e numeração progressiva",
+      "Modelo APA segue a 7ª edição do Publication Manual"
+    ],
+    "modelos": [
+      {
+        "tipo": "Word/PDF (capas padrão)",
+        "url": "https://biblioteca.pucrs.br/apoio-a-pesquisa/capas-padrao-pucrs/"
+      }
+    ],
+    "observacoes": "Os modelos da Biblioteca são restritos a usuários vinculados (login com matrícula e senha da Biblioteca), por isso as regras de margens, fonte, espaçamento, paginação e edições das NBR não puderam ser conferidas. As páginas públicas dizem só que os modelos seguem as atualizações mais recentes de ABNT, Vancouver e APA. Há templates LaTeX de programas (ex.: PPGCC), mas não da Biblioteca. A norma_csv 'ABNT / APA' é coerente com a oferta de modelos APA 7.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufsm",
+    "manual": {
+      "titulo": "Manual de Dissertações e Teses da UFSM (MDT): estrutura e apresentação documental para trabalhos acadêmicos",
+      "url": "https://repositorio.ufsm.br/handle/1/24203",
+      "ano": 2021,
+      "orgao": "Biblioteca Central / Pró-Reitoria de Pós-Graduação e Pesquisa – UFSM"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Página MDT da Biblioteca da UFSM",
+        "url": "https://www.ufsm.br/orgaos-suplementares/biblioteca/mdt"
+      },
+      {
+        "titulo": "PDF do MDT 2021",
+        "url": "https://repositorio.ufsm.br/bitstream/handle/1/24203/Manual%20de%20Disserta%c3%a7%c3%b5es%20e%20Teses_MDT_2021.pdf?sequence=4&isAllowed=y"
+      },
+      {
+        "titulo": "MDT 2015 (válido até 2022.1)",
+        "url": "https://www.ufsm.br/app/uploads/sites/362/2019/01/Manual_de_Dissertacoes_e_Teses-2015-3.pdf"
+      },
+      {
+        "titulo": "Ficha catalográfica (geração automática)",
+        "url": "https://www.ufsm.br/orgaos-suplementares/biblioteca/servicos/ficha-catalografica"
+      }
+    ],
+    "regras": {
+      "papel": "A4, orientação retrato, impressão só no anverso (até 100 páginas)",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "12 em Times New Roman, Arial, Liberation Sans, Liberation Serif, Helvetica ou Times (uma só em todo o trabalho)",
+      "fonte_menor": "10 para citações longas, paginação, legendas/títulos de ilustrações e tabelas",
+      "espacamento": "1,5 em pré-textuais, textuais e pós-textuais, incluindo listas; resumo e abstract em espaço simples (1,0)",
+      "recuo_paragrafo_cm": 1.25,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "contagem a partir da folha de rosto (capa não conta); número visível a partir da Introdução, arábicos, fonte 10, canto superior direito; acima de 100 folhas, frente e verso com margens espelhadas e número no canto superior esquerdo no verso",
+      "sistema_chamada": "autor-data (indicado preferencialmente para TCCs da UFSM) | numérico",
+      "edicao_6023": "2018",
+      "edicao_10520": "não informa",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Recuo de parágrafo de 1,25 ou 1,5 cm (escolher um e manter)",
+      "Trabalhos com mais de 100 páginas: impressão frente e verso com margens espelhadas (interna 3, externa 2)",
+      "Capa impressa padrão UFSM (enquanto exigida a entrega impressa): capa dura azul royal em vinil com gravações douradas e lombada",
+      "Ficha catalográfica e declaração de autoria geradas no sistema automático da Biblioteca Central, sem edição da imagem",
+      "Referências não justificadas (alinhadas à esquerda); demais textos justificados",
+      "A partir de 2022.2 vale obrigatoriamente o MDT 2021"
+    ],
+    "modelos": [
+      {
+        "tipo": "LibreOffice (ODT)",
+        "url": "https://www.ufsm.br/app/uploads/sites/362/2019/01/modelo-mdt.odt"
+      }
+    ],
+    "observacoes": "O MDT cita a NBR 10520 e a NBR 14724 como 'vigente', sem ano fixo; usa exemplos 'ABNT 6023, 2018' e 'ABNT 14724, 2011a', por isso 6023 = 2018 e 14724 = 2011; a edição da 10520 não é informada. O modelo ODT é de 2016, anterior ao MDT 2021; não há modelo Word nem LaTeX na página.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufpel",
+    "manual": {
+      "titulo": "Manual de normas UFPel para trabalhos acadêmicos – versão atualizada em 2023",
+      "url": "https://wp.ufpel.edu.br/sisbi/files/2023/11/Manual-versao-final-novembro-1.pdf",
+      "ano": 2023,
+      "orgao": "Coordenação de Bibliotecas (SISBI) – Vice-Reitoria UFPel; aprovado pela Resolução COCEPE nº 61/2023"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Página do manual no SISBI/UFPel",
+        "url": "https://wp.ufpel.edu.br/sisbi/manual-de-normas-ufpel-para-trabalhos-academicos-atualizada-2023/"
+      },
+      {
+        "titulo": "Solicitação de ficha catalográfica",
+        "url": "https://wp.ufpel.edu.br/sisbi/files/2024/10/SOLICITACAO-DE-FICHA.pdf"
+      },
+      {
+        "titulo": "Termos de autorização (TCC/TCCP, dissertações e teses)",
+        "url": "https://wp.ufpel.edu.br/sisbi/documentos/termo-de-autorizacao/"
+      }
+    ],
+    "regras": {
+      "papel": "A4 (21 cm x 29,7 cm), branco ou reciclado",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "Arial 12 (única fonte prevista)",
+      "fonte_menor": "10 para ficha catalográfica, citações com mais de três linhas, notas de rodapé, paginação, figuras (fonte, corpo e legenda) e tabelas (fonte, corpo e título)",
+      "espacamento": "1,5; simples em resumo, abstract, citações longas, legendas/fontes de figuras e tabelas, notas e referências; duplo 1,5 entre capítulos",
+      "recuo_paragrafo_cm": 1.25,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "folhas contadas a partir da folha de rosto; numeração a partir da parte textual, exceto nas páginas iniciais de cada capítulo (contadas, não numeradas); canto superior direito a 2 cm da borda superior; verso, canto superior esquerdo; ficha catalográfica não conta",
+      "sistema_chamada": "autor-data (o numérico fica restrito às notas)",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Fonte obrigatória Arial (não admite Times New Roman)",
+      "Capítulos iniciam a 5 cm da margem superior",
+      "Páginas de abertura de capítulo contadas mas não numeradas",
+      "Ficha catalográfica solicitada via Sistema Cobalto, em Arial 10, no verso da folha de rosto (na versão digital, logo após a folha de rosto)",
+      "Termo de autorização obrigatório para depósito (modelos de 2025)",
+      "Obrigatório para trabalhos defendidos a partir de 01/03/2024"
+    ],
+    "modelos": [
+      {
+        "tipo": "Word (capa e páginas pré e pós-textuais)",
+        "url": "https://wp.ufpel.edu.br/sisbi/files/2024/04/Capa_Paginas_pre_e_pos-textuais_atualizado.docx"
+      }
+    ],
+    "observacoes": "O manual escreve 'espaçamento de 1,5 cm' para o entrelinhas, querendo dizer 1,5 linha. O site wp.ufpel.edu.br tem proteção anti-robô; o PDF foi lido por download via WebFetch. Não há template LaTeX oficial.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "unesa",
+    "manual": {
+      "titulo": "Manual para elaboração de trabalhos acadêmicos",
+      "url": "https://cdn.portal.estacio.br/2019_estacio_normas_para_trabalhos_academicos_doc_15_de_julho_de_2019_dc5fde9251.pdf",
+      "ano": 2019,
+      "orgao": "Universidade Estácio de Sá – Vice-Reitoria de Pós-Graduação, Pesquisa e Extensão"
+    },
+    "fontes_extras": [],
+    "regras": {
+      "papel": "A4 (21 cm x 29,7 cm), branco",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "12 (família não especificada)",
+      "fonte_menor": "tamanho menor para citações com mais de três linhas, notas de rodapé, paginação e legendas de ilustrações e tabelas (sem tamanho fixado)",
+      "espacamento": "duplo no texto; simples em citações longas, notas, referências, legendas, ficha catalográfica e natureza do trabalho; referências separadas por espaço duplo",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "pré-textuais contadas e não numeradas; textuais numeradas em arábicos no canto superior direito; pós-textuais em sequência",
+      "sistema_chamada": null,
+      "edicao_6023": "2018",
+      "edicao_10520": "2002",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Ficha catalográfica no verso da folha de rosto, elaborada pela Biblioteca da Instituição",
+      "Impressão no anverso das folhas",
+      "Notas de rodapé separadas do texto por traço de 4 cm",
+      "Subseções separadas do texto por dois espaços duplos"
+    ],
+    "modelos": [],
+    "observacoes": "O manual de 2019 prescreve 'espaço duplo' para o texto, o que diverge da NBR 14724:2011 (1,5) que ele mesmo cita: provavelmente herança de edições antigas. Não define família de fonte, recuo de parágrafo nem sistema de chamada. Não foi encontrada versão mais recente nem página de biblioteca com templates.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "unip",
+    "manual": {
+      "titulo": "Guia de normalização para apresentação de trabalhos acadêmicos da Universidade Paulista: ABNT",
+      "url": "https://unip.br/servicos/biblioteca/assets/download/manual_de_normalizacao_abnt.pdf",
+      "ano": 2025,
+      "orgao": "Biblioteca da Universidade Paulista – UNIP"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Página do guia na Biblioteca UNIP",
+        "url": "https://unip.br/servicos/biblioteca/guia.aspx"
+      }
+    ],
+    "regras": {
+      "papel": "A4 (21 x 29,7 cm), branco",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "Arial ou Times New Roman 12",
+      "fonte_menor": "10 para citações com mais de três linhas, notas de rodapé, paginação, legenda e fonte das ilustrações e tabelas",
+      "espacamento": "1,5; simples em citações longas, notas, referências, ficha catalográfica, legendas e natureza do trabalho",
+      "recuo_paragrafo_cm": 1.25,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "contagem a partir da folha de rosto, numeração a partir da Introdução, arábicos a 2 cm da margem direita e superior; verso da folha de rosto (ficha) não é contado nem numerado; no verso, canto superior esquerdo",
+      "sistema_chamada": "autor-data | numérico",
+      "edicao_6023": "2025",
+      "edicao_10520": "2023",
+      "edicao_14724": "2024"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Revisado e atualizado em junho de 2025",
+      "Margens espelhadas no verso (direita e superior 3 cm; esquerda e inferior 2 cm)",
+      "Toda seção primária inicia no anverso (página ímpar); pré-textuais no anverso, exceto a ficha catalográfica",
+      "Anexo com passo a passo de configuração de margens no Word"
+    ],
+    "modelos": [],
+    "observacoes": "Primeiro guia do grupo já atualizado para a NBR 6023:2025 (3. ed.) e a NBR 14724:2024 (4. ed.). O host www2.unip.br citado em buscas não resolve; o PDF vigente está em unip.br/servicos/biblioteca/assets/download/.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "unopar",
+    "manual": {
+      "titulo": null,
+      "url": null,
+      "ano": null,
+      "orgao": null
+    },
+    "fontes_extras": [],
+    "regras": {
+      "papel": null,
+      "margens_cm": null,
+      "fonte": null,
+      "fonte_menor": null,
+      "espacamento": null,
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": null,
+      "paginacao": null,
+      "sistema_chamada": null,
+      "edicao_6023": "não informa",
+      "edicao_10520": "não informa",
+      "edicao_14724": "não informa"
+    },
+    "variacoes_area": [],
+    "particularidades": [],
+    "modelos": [],
+    "observacoes": "Nenhum manual ou guia público da UNOPAR (grupo Cogna) foi localizado; as buscas retornam a UNIPAR, que é outra instituição. É provável que o material fique restrito ao ambiente do aluno (AVA/biblioteca virtual), mas isso não foi confirmado.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufma",
+    "manual": {
+      "titulo": null,
+      "url": null,
+      "ano": null,
+      "orgao": "Diretoria Integrada de Bibliotecas (DIB) – UFMA"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Biblioteca Central – DIB/UFMA",
+        "url": "https://portalpadrao.ufma.br/dib/sobre/biblioteca-central"
+      },
+      {
+        "titulo": "Biblioteca Central (portal de unidades)",
+        "url": "https://portais.ufma.br/PortalUnidade/dib/paginas/pagina_estatica.jsf?id=698"
+      }
+    ],
+    "regras": {
+      "papel": null,
+      "margens_cm": null,
+      "fonte": null,
+      "fonte_menor": null,
+      "espacamento": null,
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": null,
+      "paginacao": null,
+      "sistema_chamada": null,
+      "edicao_6023": "não informa",
+      "edicao_10520": "não informa",
+      "edicao_14724": "não informa"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Ficha catalográfica de monografias, dissertações e teses gerada automaticamente pelo SIGAA (Portal do Discente > Biblioteca > Serviços ao Usuário)",
+      "Serviço de orientação à normalização de trabalhos acadêmicos sob agendamento nas bibliotecas"
+    ],
+    "modelos": [],
+    "observacoes": "Não foi localizado manual ou guia de normalização próprio da UFMA nas páginas da DIB nem em buscas; as bibliotecas oferecem orientação presencial com base na ABNT. As regras ficam a cargo da ABNT e de eventuais normas dos cursos e programas.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufpa",
+    "manual": {
+      "titulo": "Guia de elaboração de trabalhos acadêmicos, 3. ed. rev., ampl. e atual. (org. Rose Suellen Lisboa)",
+      "url": "https://facore.ufpa.br/Documentos/TCC/GTA2023.pdf",
+      "ano": 2023,
+      "orgao": "Biblioteca Central da UFPA"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Guia de elaboração de trabalhos acadêmicos, 2. ed. (2019)",
+        "url": "https://www.fei.ufpa.br/publicacoes/documentos/Guia_de_Trabalhos_Academicos_UFPA_2019.pdf"
+      }
+    ],
+    "regras": {
+      "papel": "A4 (21 cm x 29,7 cm), branco ou reciclado",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "Times New Roman ou Arial 12 para todo o trabalho, inclusive a capa",
+      "fonte_menor": "tamanho menor e uniforme para citações longas (fonte 10), notas, paginação, ficha catalográfica, legendas e fontes das ilustrações e tabelas",
+      "espacamento": "1,5 no texto e no resumo; simples em citações longas, notas, referências e legendas",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "folhas contadas a partir da folha de rosto (exceto errata), numeração a partir da parte textual, arábicos, canto superior direito a 2 cm da borda superior e 2 cm da borda direita",
+      "sistema_chamada": "autor-data | numérico (numérico não pode ser usado com notas)",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Resumo em espaço 1,5 (difere da prática comum de espaço simples)",
+      "Recomenda elementos textuais e pós-textuais só no anverso",
+      "Natureza do trabalho na folha de rosto e de aprovação com recuo de 8 cm",
+      "Modelos de capa, folha de rosto, errata e folha de aprovação no próprio guia",
+      "Tabelas segundo as Normas de apresentação tabular do IBGE (3. ed., 1993)"
+    ],
+    "modelos": [],
+    "observacoes": "O PDF da 3. ed. (2023) está hospedado no site de uma faculdade da UFPA (facore.ufpa.br); não foi localizada página da Biblioteca Central com link direto nem templates. O guia não fixa recuo de primeira linha de parágrafo.",
+    "conferido_em": "2026-11"
+  }
+]

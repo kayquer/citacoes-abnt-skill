@@ -1,0 +1,471 @@
+[
+  {
+    "id": "anhembi-morumbi",
+    "manual": {
+      "titulo": "Trabalhos Acadêmicos Ânima Educação: apresentação gráfica (2. ed.)",
+      "url": "https://repositorio.animaeducacao.com.br/assets/dspace/docs/ebook_anima.pdf",
+      "ano": 2024,
+      "orgao": "Ânima Educação (bibliotecárias da UNISUL e demais IES do grupo); indicado pela Biblioteca da Universidade Anhembi Morumbi"
+    },
+    "fontes_extras": [
+      {"titulo": "Biblioteca Anhembi Morumbi (página que aponta o manual Ânima, templates e ficha catalográfica)", "url": "https://portal.anhembi.br/biblioteca"},
+      {"titulo": "Template de artigo científico UAM", "url": "https://estaticos.animaeducacao.com.br/medias/20250725154335/amo-biblioteca-artigo-cientifico-uam-2.pdf"},
+      {"titulo": "Normas para formatação de trabalhos acadêmicos (Sênia Bastos, UAM, 2009; antigo)", "url": "https://portal.anhembi.br/wp-content/uploads/2022/05/Normas-para-formatacao-de-trabalhos-academicos.pdf"}
+    ],
+    "regras": {
+      "papel": "A4 (21,0 x 29,7 cm), branco ou reciclado",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "Times New Roman ou Arial 12",
+      "fonte_menor": "10 para citações longas, notas de rodapé, legendas e fontes das ilustrações e tabelas, paginação",
+      "espacamento": "1,5; simples para citações longas, notas, referências, legendas, ficha catalográfica e natureza do trabalho",
+      "recuo_paragrafo_cm": 1.25,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Pré-textuais contadas sem numeração impressa; numeração impressa a partir dos elementos textuais (quadro 'folhas contadas COM numeração impressa'). No verso, margens esq 2 / dir 3.",
+      "sistema_chamada": "autor-data ou numérico (ABNT); numérico no estilo Vancouver",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [
+      {"area": "Saúde", "norma": "Vancouver", "fonte": "https://repositorio.animaeducacao.com.br/assets/dspace/docs/ebook_anima.pdf"}
+    ],
+    "particularidades": [
+      "Manual é do grupo Ânima (compartilhado com UNISUL, São Judas etc.), não exclusivo da UAM",
+      "Ficha catalográfica obrigatória para dissertação e tese; solicitada por e-mail à bibliotecária",
+      "Seção primária deve iniciar em página ímpar (anverso)",
+      "Nota de rodapé separada por traço de 5 cm",
+      "Capítulos específicos para citações e referências em Vancouver"
+    ],
+    "modelos": [
+      {"tipo": "PDF (template de artigo)", "url": "https://estaticos.animaeducacao.com.br/medias/20250725154335/amo-biblioteca-artigo-cientifico-uam-2.pdf"}
+    ],
+    "observacoes": "A norma_csv diz 'ABNT / APA', mas o manual oficial indicado pela biblioteca traz ABNT e Vancouver (área da saúde); não encontrei menção a APA. A edição da NBR 14724 citada é 2011; NBR 10520 é 2023 (2. ed.).",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "unisinos",
+    "manual": {
+      "titulo": "Manual para elaboração de trabalhos acadêmicos, dissertações e teses da Unisinos (30. ed. rev. e ampl.)",
+      "url": "https://unisinos.br/biblioteca/images/abnt/2024-2/MANUAL_ABNT_BIBLIOTECA_2024-2.pdf",
+      "ano": 2024,
+      "orgao": "Biblioteca da Unisinos - Setor de Serviço de Orientação sobre o uso das Normas da ABNT"
+    },
+    "fontes_extras": [
+      {"titulo": "Biblioteca Unisinos (modelos em Word)", "url": "https://www.unisinos.br/biblioteca/"}
+    ],
+    "regras": {
+      "papel": "A4 (21 x 29,7 cm), branco ou reciclado; entrega final em PDF",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "Arial ou Times New Roman 12",
+      "fonte_menor": "10 nas citações longas (padrão dos modelos Word); notas de rodapé 10; fonte das ilustrações 11; legenda 12; número de página 11",
+      "espacamento": "1,5 (trabalhos acadêmicos e artigos, por adoção da Biblioteca); simples nas citações longas",
+      "recuo_paragrafo_cm": 1.25,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Capa não contada; folhas contadas a partir da folha de rosto; numeração impressa a partir da introdução, canto superior direito, 2 cm da borda superior, fonte 11",
+      "sistema_chamada": "autor-data (e nota de referência, geralmente no curso de Direito)",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Folha de aprovação NÃO é inserida nos TCCs (instrução da Diretoria de Graduação); só em tese e dissertação",
+      "Ficha catalográfica obrigatória somente para dissertação e tese",
+      "Folha de agradecimento à CAPES obrigatória para bolsistas",
+      "Impressão no verso e anverso: margens sup/dir 3 e inf/esq 2",
+      "Curso de Direito: seções até a terciária com regras próprias de caixa e sistema de nota de referência",
+      "Recuo de parágrafo: norma não especifica; manual sugere 1,25 cm",
+      "Sem modelos de relatório técnico (NBR 10719) no site"
+    ],
+    "modelos": [
+      {"tipo": "Word", "url": "https://www.unisinos.br/biblioteca/"}
+    ],
+    "observacoes": "Edição declarada válida apenas para 2024/2; pode haver edição posterior (2025). Regras de formatação no Apêndice A (base NBR 14724:2011).",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ifsp",
+    "manual": {
+      "titulo": "Guia de Orientação à Normalização de Trabalhos Acadêmicos",
+      "url": "https://spo.ifsp.edu.br/images/arquivos/documentos_institucionais/Guia_de_Normalizacao.pdf",
+      "ano": 2011,
+      "orgao": "Biblioteca Francisco Montojos - IFSP Campus São Paulo"
+    },
+    "fontes_extras": [
+      {"titulo": "Biblioteca IFSP São Paulo - Normalização de trabalhos acadêmicos", "url": "https://spo.ifsp.edu.br/biblioteca?id=184"},
+      {"titulo": "Manual para estruturação de trabalhos acadêmicos no IFSP - Campus São Roque (2013)", "url": "https://srq.ifsp.edu.br/attachments/article/108/Manual_TCC_IFSP.pdf"},
+      {"titulo": "Normalização de Trabalhos Acadêmicos - IFSP Campus Araraquara (manuais TCC e relatório técnico)", "url": "https://www.arq.ifsp.edu.br/biblioteca/normalizacao-de-trabalhos-academicos"},
+      {"titulo": "Guia de elaboração de artigos científicos - IFSP Itapetininga", "url": "https://itp.ifsp.edu.br/files/Biblioteca/Guia-elaborao-artigo-cientfico.pdf"}
+    ],
+    "regras": {
+      "papel": "A4 (21,0 x 29,7 cm), branco",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": null,
+      "fonte_menor": "10 para citações longas e notas de rodapé (texto 12)",
+      "espacamento": "1,5; simples para citações longas, notas, referências e resumos",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Contadas a partir da folha de rosto; numeração a partir da primeira folha textual, canto superior direito, 2 cm da borda superior e último algarismo a 2 cm da borda direita",
+      "sistema_chamada": "autor-data ou numérico (qualquer um, mantido em todo o texto)",
+      "edicao_6023": "2002",
+      "edicao_10520": "2002",
+      "edicao_14724": "não informa"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Não há manual único da reitoria; cada campus publica guia próprio (São Paulo, São Roque, Araraquara, Itapetininga, Capivari)",
+      "Campus Araraquara adota templates para cursos técnicos e superiores",
+      "Seções primárias iniciam em folha distinta"
+    ],
+    "modelos": [],
+    "observacoes": "Guia de 2011, baseado em normas anteriores (NBR 6023:2002); desatualizado. Não encontrei manual institucional unificado do IFSP. Tipo de fonte não especificado no guia. A variação APA para áreas tecnológicas (norma_csv) não foi confirmada em nenhuma fonte.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "fatec",
+    "manual": {
+      "titulo": "Manual de normatização para trabalhos acadêmicos da Fatec do Ipiranga",
+      "url": "https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/70/2024/05/2024-ABR-Manual-de-Normatizacao-Trabalhos-Academico-Fatec-Ipiranga.pdf",
+      "ano": 2024,
+      "orgao": "Fatec Ipiranga 'Pastor Enéas Tognini' (Centro Paula Souza)"
+    },
+    "fontes_extras": [
+      {"titulo": "Normalização de trabalhos acadêmicos - Biblioteca Fatec Marília (slides, 2025)", "url": "https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/127/2025/09/Normalizacao-de-trabalhos-academicos.pdf"},
+      {"titulo": "Manual para normalização de trabalhos acadêmicos - Biblioteca Fatec Garça (2023)", "url": "https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/20/2023/08/Manual-para-normalizacao-do-trabalho-academico.pdf"},
+      {"titulo": "Manual de normalização - Fatec São Bernardo do Campo (7. ed., 2023)", "url": "https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/50/2023/09/MANUAL-2023-2.pdf"},
+      {"titulo": "Manual do TG - CST Ciência de Dados para Negócios, Fatec Votorantim (v1.3, fev. 2026)", "url": "https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/37/2026/03/Manual_TG_CDN_v1-3.pdf"},
+      {"titulo": "Trabalho de Graduação - Fatec Piracicaba", "url": "https://fatecpiracicaba.cps.sp.gov.br/trabalho-de-graduacao/"}
+    ],
+    "regras": {
+      "papel": "A4 (210 x 297 mm), somente anverso",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "Arial 12",
+      "fonte_menor": "10 para citações longas",
+      "espacamento": "1,5; simples para citações longas, notas de rodapé, referências, legendas e natureza do trabalho",
+      "recuo_paragrafo_cm": 1.25,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Algarismos arábicos na margem superior direita; pré-textuais contadas a partir da folha de rosto (só anverso), sem numeração",
+      "sistema_chamada": "autor-data",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Não há manual único do Centro Paula Souza: cada Fatec publica o seu",
+      "Fatec Ipiranga: impressão só no anverso; títulos de capítulo em Arial 12 negrito caixa alta; modelo de capa com título Arial 14",
+      "Fatec Marília (2025): margens de 2,5 cm em todos os lados, fonte Arial, recuo 1,25, citação longa 4 cm fonte 10; folha de aprovação é documento à parte; cita NBR 10520:2002",
+      "Fatec Garça: ficha catalográfica pedida à biblioteca",
+      "Trabalho de Graduação (TG) é a denominação usual do TCC"
+    ],
+    "modelos": [],
+    "observacoes": "Regras variam entre unidades (ex.: margens 3/2 na Ipiranga vs 2,5 uniforme em Marília). Registrei a Fatec Ipiranga como referência por ser manual completo e recente; ao usar, confirmar o manual da unidade específica.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ifrj",
+    "manual": {
+      "titulo": "Manual de Apresentação de Trabalhos Acadêmicos (3. ed. rev. e ampl.)",
+      "url": "https://portal.ifrj.edu.br/sites/default/files/IFRJ/ConSup/Resolucoes2025/resolucao_consup_ifrj_no_236-2025_-_completa.pdf",
+      "ano": 2025,
+      "orgao": "IFRJ - Pró-Reitoria de Ensino; aprovado pela Resolução ConSup nº 236/2025"
+    },
+    "fontes_extras": [
+      {"titulo": "Manual de Apresentação de Trabalhos Acadêmicos, 2. ed. (2019)", "url": "https://portal.ifrj.edu.br/sites/default/files/IFRJ/PROGRAD/manual_de_trabalhos_academicos_2a_edicao_revisada_e_ampliada.pdf"},
+      {"titulo": "Trabalhos Acadêmicos e Fichas Catalográficas - Campus Nilópolis (modelos editáveis)", "url": "https://portal.ifrj.edu.br/nilopolis/trabalhos-academicos-e-fichas-catalograficas"}
+    ],
+    "regras": {
+      "papel": "A4 (21 x 29,7 cm), fundo branco, texto preto",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "Arial, Verdana ou Carlito (sem serifa, por acessibilidade) 12",
+      "fonte_menor": "Tamanho menor e uniforme (10 nas citações longas) para citações longas, notas, paginação, ficha catalográfica, legendas de ilustrações, tabelas e quadros",
+      "espacamento": "1,5; simples para citações longas, notas, referências, ficha, títulos/legendas/fontes de ilustrações e tabelas, folha de rosto e de aprovação",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Contada a partir da folha de rosto (verso com ficha não é contado); visível a partir da introdução, canto superior direito, 2 cm da borda",
+      "sistema_chamada": "autor-data (convencionado pelo IFRJ)",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2024"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Fontes recomendadas sem serifa (Arial, Verdana, Carlito) por acessibilidade digital; Times não é citada",
+      "Manual pensado para suporte digital",
+      "Capa inclui campus e programa/curso",
+      "Inclui estrutura de memorial descritivo e artigo; base também em NBR 6029:2023 e 15287:2011",
+      "Resolução 236/2025 revoga a Resolução 48/2019"
+    ],
+    "modelos": [
+      {"tipo": "Word (modelos editáveis, link na página do campus Nilópolis)", "url": "https://portal.ifrj.edu.br/nilopolis/trabalhos-academicos-e-fichas-catalograficas"}
+    ],
+    "observacoes": "A variação Vancouver para Saúde (norma_csv) não aparece no manual; não confirmada. Recuo de parágrafo não localizado no texto extraído.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ifmg",
+    "manual": {
+      "titulo": "Manual de normalização de trabalhos acadêmicos (Rede de Bibliotecas do IFMG)",
+      "url": "https://plone.ifmg.edu.br/portal/ensino/bibliotecas/arquivos-bibliotecas/copy_of_ManualdeNormalizaoIFMG2020.pdf",
+      "ano": 2020,
+      "orgao": "Rede de Bibliotecas do IFMG; oficializado pela Portaria nº 244/2020"
+    },
+    "fontes_extras": [
+      {"titulo": "IFMG lança Manual de Normalização de Trabalhos Acadêmicos (notícia)", "url": "https://www.ifmg.edu.br/portal/noticias/ifmg-lanca-manual-de-normalizacao-de-trabalhos-academicos"},
+      {"titulo": "Página do manual (mirror plone)", "url": "https://plone.ifmg.edu.br/portal/ensino/bibliotecas/manual-de-normalizacao-do-ifmg"}
+    ],
+    "regras": {
+      "papel": "A4 (21 x 29,7 cm), branco ou reciclado",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "Arial ou Times New Roman 12",
+      "fonte_menor": "10 para citações longas, notas de rodapé, legendas, fontes das ilustrações e tabelas e ficha catalográfica",
+      "espacamento": "1,5",
+      "recuo_paragrafo_cm": 2,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Capa não contada; contadas a partir da folha de rosto; numeração a partir da Introdução, canto superior direito no anverso (canto superior esquerdo no verso)",
+      "sistema_chamada": "autor-data",
+      "edicao_6023": "2018",
+      "edicao_10520": "2002",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Recuo de parágrafo de 2 cm (diferente do 1,25 usual)",
+      "Fonte de ilustrações/tabelas com autor em caixa alta (ex.: Fonte: BARRETO, 2011, p. 220)",
+      "Números de 0 a 9 por extenso",
+      "Trabalhos só digitais: textuais e pós-textuais apenas no anverso",
+      "Cobre monografias, dissertações, teses, artigos, relatórios de estágio"
+    ],
+    "modelos": [
+      {"tipo": "Overleaf (não oficial, campus Itabirito)", "url": "https://www.overleaf.com/latex/templates/tcc-template-ifmg-itr-modelo-para-trabalho-de-conclusao-de-curso/wmzyfkygzzyj"},
+      {"tipo": "Overleaf (não oficial, campus Ibirité)", "url": "https://www.overleaf.com/latex/templates/tcc-template-ifmg-ibr-modelo-para-trabalho-de-conclusao-de-curso/kknfnsjxvwst"}
+    ],
+    "observacoes": "Primeira edição (2020), ainda com NBR 10520:2002. O domínio www.ifmg.edu.br bloqueia acesso automatizado (captcha); PDF obtido no espelho plone.ifmg.edu.br. Templates Overleaf são de terceiros.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ifrs",
+    "manual": {
+      "titulo": "Manual para elaboração de trabalhos acadêmicos (SIBIFRS)",
+      "url": "https://ifrs.edu.br/caxias/wp-content/uploads/sites/8/2022/04/Manual-para-elaboracao-de-trabalhos-academicos.pdf",
+      "ano": 2019,
+      "orgao": "Sistema de Bibliotecas do IFRS (SIBIFRS)"
+    },
+    "fontes_extras": [],
+    "regras": {
+      "papel": "A4 (21,0 x 29,7 cm), branco ou reciclado",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "Times New Roman ou Arial 12",
+      "fonte_menor": "10 para citações longas, notas de rodapé, dados de catalogação, legendas e fontes das ilustrações e tabelas e paginação",
+      "espacamento": "1,5; simples para citações longas, notas, referências, legendas e fontes",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Pré-textuais contadas sem numeração impressa; textuais e pós-textuais com numeração impressa",
+      "sistema_chamada": "autor-data",
+      "edicao_6023": "2018",
+      "edicao_10520": "2002",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Ficha catalográfica obrigatória para trabalhos de graduação e pós stricto sensu",
+      "Capa obrigatória",
+      "Folha de aprovação obrigatória",
+      "Verso: margens sup/dir 3, inf/esq 2",
+      "Nota de rodapé separada por traço de 5 cm",
+      "Manual afirma que não existe um único modelo de trabalhos"
+    ],
+    "modelos": [],
+    "observacoes": "Edição de 2019 (PDF hospedado no campus Caxias do Sul em 2022), anterior à NBR 10520:2023. Não localizei edição mais nova.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ifsc",
+    "manual": {
+      "titulo": "Manual de normalização de trabalhos acadêmicos (rev. 08 abr. 2025)",
+      "url": "https://liferay-balanceador.ifsc.edu.br/documents/d/documentos-uteis/manual-de-normalizacao_rev_08abr25-pdf",
+      "ano": 2025,
+      "orgao": "Sistema de Bibliotecas Integradas do IFSC (SiBI/IFSC) - Pró-Reitoria de Ensino"
+    },
+    "fontes_extras": [],
+    "regras": {
+      "papel": "A4 (21 x 29,7 cm)",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "Arial ou Times New Roman 12",
+      "fonte_menor": "10 para citações longas, notas de rodapé, paginação, ficha catalográfica, legendas, fontes das ilustrações e tabelas e natureza do trabalho",
+      "espacamento": "1,5; simples para citações longas, notas, referências, títulos/fontes/legendas de ilustrações e tabelas",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Contadas a partir da folha de rosto; numeração a partir da introdução, canto superior direito, 2 cm das bordas superior e direita, fonte 10",
+      "sistema_chamada": "autor-data",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2024"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Modelos (imagens) de capa, folha de rosto, ficha catalográfica, folha de aprovação e demais elementos",
+      "Artigo acadêmico: parágrafo com recuo de 1,27 cm na primeira linha",
+      "Margens iguais em todo o trabalho (sem regra de verso)"
+    ],
+    "modelos": [],
+    "observacoes": "Um dos poucos manuais já alinhados à NBR 14724:2024. Recuo de parágrafo para TCC não explicitado (só 1,27 cm no artigo). Sistema autor-data inferido dos exemplos; o manual não traz seção sobre sistema numérico.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ifpr",
+    "manual": {
+      "titulo": "Manual de normas para apresentação de trabalhos acadêmicos do Instituto Federal do Paraná: padrão ABNT (edição revisada e atualizada conforme a NBR 10520:2023)",
+      "url": "https://editora.ifpr.edu.br/aeditora/catalog/view/72/34/407",
+      "ano": 2023,
+      "orgao": "Editora IFPR / bibliotecárias do Sistema de Bibliotecas do IFPR"
+    },
+    "fontes_extras": [
+      {"titulo": "Página do livro na Editora IFPR", "url": "https://editora.ifpr.edu.br/index.php/aeditora/catalog/book/72"},
+      {"titulo": "Normas de Apresentação - Reitoria IFPR", "url": "https://reitoria.ifpr.edu.br/servicos/biblioteca/normas-trabalhos-academicos/"},
+      {"titulo": "Normas para apresentação de trabalhos acadêmicos do IFPR (2010, antiga)", "url": "https://ifpr.edu.br/jacarezinho/wp-content/uploads/sites/16/2022/09/Normas-para-Apresentacao-de-Trabalhos-Academicos-do-IFPR.pdf"}
+    ],
+    "regras": {
+      "papel": "A4 (21 x 29,7 cm), branco ou reciclado",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "Arial ou Times New Roman 12 (inclusive capa)",
+      "fonte_menor": "10 para citações longas, notas de rodapé, paginação, legendas das ilustrações e tabelas e natureza do trabalho",
+      "espacamento": "1,5; simples para resumo, referências, citações longas, notas, tabelas, quadros, ficha catalográfica, legendas e natureza do trabalho",
+      "recuo_paragrafo_cm": 1.5,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Algarismos arábicos, canto superior direito, 2 cm das margens superior e direita; pré-textuais contadas e não numeradas; no verso, canto superior esquerdo",
+      "sistema_chamada": "autor-data (obrigatório no IFPR)",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Recuo de parágrafo de 1,5 cm",
+      "Sistema numérico vedado (havendo notas de rodapé, não se usa o numérico)",
+      "Evitar linhas órfãs/viúvas",
+      "Destaque: negrito ou sublinhado; itálico para estrangeirismos"
+    ],
+    "modelos": [],
+    "observacoes": "Publicado em 20/12/2023 pela Editora IFPR. Uma página da reitoria menciona manter a publicação anterior até concluir a atualização, então há ambiguidade sobre qual está em vigor. A versão de 2010 usava NBR 6023/10520/14724 de 2002.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ifce",
+    "manual": {
+      "titulo": "Manual de normalização de trabalhos acadêmicos do IFCE (3. ed. atualizada)",
+      "url": "https://h-portal.ifce.edu.br/documents/3795/Manual_de_normalizacao.pdf",
+      "ano": 2020,
+      "orgao": "IFCE - Pró-Reitoria de Ensino, Departamento de Bibliotecas, Sistema de Bibliotecas (SIBI)"
+    },
+    "fontes_extras": [
+      {"titulo": "Normalização de Trabalhos Acadêmicos - SIBI IFCE", "url": "https://portal.ifce.edu.br/institucional/ensino/sistemas-de-bibliotecas/normalizacao-de-trabalhos-academicos/"},
+      {"titulo": "Juazeiro integra comissão que atualiza o manual (revisão para NBR 14724:2024)", "url": "https://portal.ifce.edu.br/campus/juazeirodonorte/not%C3%ADcias/juazeiro-integra-comissao-que-atualiza-o-manual-de-normalizacao-de-trabalhos-academicos/"}
+    ],
+    "regras": {
+      "papel": "A4 (21 x 29,7 cm), branco ou reciclado",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "Arial ou Times New Roman 12",
+      "fonte_menor": "10 para citações longas, notas de rodapé, paginação, ficha catalográfica, fonte/legenda/notas de ilustrações e tabelas",
+      "espacamento": "1,5; simples para citações longas, notas, referências, ficha, títulos/legendas de ilustrações e tabelas e natureza do trabalho",
+      "recuo_paragrafo_cm": 1.25,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Pré-textuais contadas sem numeração (página da ficha não contada no anverso-só); numeração a partir da parte textual, canto superior direito, 2 cm das bordas; no verso, canto superior esquerdo",
+      "sistema_chamada": "autor-data ou numérico (ambos descritos)",
+      "edicao_6023": "2018",
+      "edicao_10520": "2002",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Natureza do trabalho e orientador com recuo de 8 cm da margem esquerda na folha de rosto e de aprovação",
+      "Capas distintas para TCC e para TCCE/dissertação/tese",
+      "Cobre projeto de pesquisa, relatório, artigo, pôster e plano de negócio",
+      "Cita NBR 6023 com Errata 1:2020",
+      "Verso: margens sup/dir 3, inf/esq 2"
+    ],
+    "modelos": [
+      {"tipo": "Word (trabalho acadêmico)", "url": "https://portal.ifce.edu.br/documents/3285/Modelo_de_trabalho_acad%C3%AAmico_em_Microsoft_Word.docx"},
+      {"tipo": "Word (artigo científico)", "url": "https://portal.ifce.edu.br/documents/3282/Modelo_de_artigo_cient%C3%ADfico_em_Microsoft_Word.docx"},
+      {"tipo": "Overleaf (trabalho acadêmico)", "url": "https://www.overleaf.com/read/pzrvwbmzjmzj"}
+    ],
+    "observacoes": "3ª edição (2020) ainda vigente segundo a página do SIBI; 4ª edição em preparação (alinhada à NBR 14724:2024), sem publicação confirmada. URLs dos modelos montadas a partir de caminhos relativos na página do SIBI (domínio portal.ifce.edu.br presumido).",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ifpe",
+    "manual": {
+      "titulo": null,
+      "url": null,
+      "ano": null,
+      "orgao": null
+    },
+    "fontes_extras": [
+      {"titulo": "Biblioteca IFPE Campus Ipojuca (orientação de normalização agendada)", "url": "https://portal.ifpe.edu.br/ipojuca/ensino/biblioteca/"},
+      {"titulo": "Biblioteca IFPE Campus Barreiros (fichas catalográficas; acesso às NBR via GEDWeb)", "url": "https://portal.ifpe.edu.br/barreiros/ensino/biblioteca/"}
+    ],
+    "regras": {
+      "papel": null,
+      "margens_cm": null,
+      "fonte": null,
+      "fonte_menor": null,
+      "espacamento": null,
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": null,
+      "paginacao": null,
+      "sistema_chamada": null,
+      "edicao_6023": "não informa",
+      "edicao_10520": "não informa",
+      "edicao_14724": "não informa"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Bibliotecas de campus oferecem orientação presencial e elaboram ficha catalográfica de TCC",
+      "Acesso às normas ABNT pela plataforma GEDWeb via Q-Acadêmico"
+    ],
+    "modelos": [],
+    "observacoes": "Não encontrei manual institucional de normalização do IFPE. O catálogo do SIB/IFPE lista apenas um livro externo (Costa, Manual para normatização de trabalhos acadêmicos, INSAF, 2007). Uma página do campus Cabo citava modelo ABNT editável, mas o link redireciona para o portal novo. Recomenda-se seguir a ABNT diretamente.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ifb",
+    "manual": {
+      "titulo": "Manual de normalização de trabalhos acadêmicos (Normaliza IFB)",
+      "url": "https://www.ifb.edu.br/attachments/article/15820/Manual%20de%20normaliza%C3%A7%C3%A3o%20de%20trabalhos%20acad%C3%AAmicos.pdf",
+      "ano": 2017,
+      "orgao": "IFB - Bibliotecas (Alberth Sant'Ana Costa da Silva, Grazielle Pereira da Silva, Laura Cecília dos Santos Cruz)"
+    },
+    "fontes_extras": [
+      {"titulo": "Normaliza IFB (versão online, 2. ed.)", "url": "https://normaliza.ifb.edu.br/doku.php"},
+      {"titulo": "Manual de normalização tem nova edição (2. ed., dez. 2021; Portaria 22/2021)", "url": "https://www.ifb.edu.br/espaco-do-estudante/noticias/29067-manual-de-normalizacao-de-trabalhos-academicos-tem-nova-edicao"},
+      {"titulo": "PDF da 2. ed. (pasta Google Drive)", "url": "https://drive.google.com/drive/folders/1whonZdKj0f5chft-fTn_r38jQltstntu?usp=sharing"}
+    ],
+    "regras": {
+      "papel": "A4",
+      "margens_cm": {"sup": 3, "esq": 3, "inf": 2, "dir": 2},
+      "fonte": "Times New Roman ou Arial 12 (inclusive capa)",
+      "fonte_menor": "10 para citações longas, notas de rodapé, paginação e legendas das ilustrações e tabelas",
+      "espacamento": "1,5; simples para citações longas, notas, referências, legendas, ficha catalográfica e natureza do trabalho",
+      "recuo_paragrafo_cm": 1.25,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Contada a partir da folha de rosto; numeração a partir da Introdução, canto superior direito, 2 cm da borda superior; no verso, canto superior esquerdo",
+      "sistema_chamada": null,
+      "edicao_6023": "2002",
+      "edicao_10520": "2002",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Manual instituído como referência oficial pela Portaria 22/2021",
+      "TCC entregue em capa dura (1. ed.)",
+      "Ficha catalográfica elaborada pela biblioteca do campus (exigida em monografias)",
+      "Nada Consta exige envio do PDF final e da folha de aprovação à biblioteca",
+      "Modelos oficiais de trabalho acadêmico, artigo e projeto de pesquisa no Normaliza IFB"
+    ],
+    "modelos": [
+      {"tipo": "Word (documentos-modelo do Normaliza IFB)", "url": "https://normaliza.ifb.edu.br/doku.php?id=documentos-modelo"}
+    ],
+    "observacoes": "Regras extraídas da 1ª edição (2017, PDF). A 2ª edição (2021) está na plataforma Normaliza IFB, que estava fora do ar (redireciona para aviso de indisponibilidade) na conferência; um resumo de busca indica que a versão online já cita NBR 14724:2024 e NBR 15287:2025, mas não pude verificar.",
+    "conferido_em": "2026-11"
+  }
+]

@@ -1,0 +1,691 @@
+[
+  {
+    "id": "usp",
+    "manual": {
+      "titulo": "Diretrizes para apresentação de dissertações e teses da USP: parte I (ABNT). 5. ed. (Cadernos de Estudos, 9)",
+      "url": "https://www.livrosabertos.abcd.usp.br/portaldelivrosUSP/catalog/book/1353",
+      "ano": 2024,
+      "orgao": "Agência de Bibliotecas e Coleções Digitais da USP (ABCD/USP)"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Portal de Teses USP - Diretrizes (lista as partes I ABNT, II APA, III ISO, IV Vancouver)",
+        "url": "https://teses.usp.br/diretrizes"
+      },
+      {
+        "titulo": "PDF da Parte I (ABNT), 5. ed., 2024",
+        "url": "https://www.livrosabertos.abcd.usp.br/portaldelivrosUSP/catalog/view/1353/1233/7374"
+      }
+    ],
+    "regras": {
+      "papel": "A4 (21 cm x 29,7 cm), papel branco ou reciclado, cor preta",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "tamanho 12 (o manual não fixa tipo de letra)",
+      "fonte_menor": "10 ou 11 para citações de mais de três linhas, notas de rodapé, paginação, ficha catalográfica, legendas e fontes das ilustrações e tabelas",
+      "espacamento": "1,5; simples para citações longas, notas, referências, legendas, ficha catalográfica e natureza do trabalho; referências separadas por um espaço simples em branco",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Folhas contadas a partir da folha de rosto; pré-textuais não numeradas; numeração em arábicos a partir da Introdução, canto superior direito (no verso impresso, canto superior esquerdo); formato digital sempre no canto superior direito",
+      "sistema_chamada": "autor-data (sistema alfabético) ou numérico",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [
+      {
+        "area": "Áreas que usam APA",
+        "norma": "APA (Diretrizes parte II)",
+        "fonte": "https://dx.doi.org/10.11606/9788573140576"
+      },
+      {
+        "area": "Áreas que usam ISO",
+        "norma": "ISO (Diretrizes parte III)",
+        "fonte": "https://dx.doi.org/10.11606/9788573140590"
+      },
+      {
+        "area": "Biomédicas/Saúde",
+        "norma": "Vancouver (Diretrizes parte IV)",
+        "fonte": "https://dx.doi.org/10.11606/9788573140569"
+      }
+    ],
+    "particularidades": [
+      "Margens distintas para formato impresso (verso: direita e superior 3 cm, esquerda e inferior 2 cm) e digital (sempre 3/3/2/2)",
+      "Ficha catalográfica obrigatória, no verso da folha de rosto; para confeccioná-la, consultar a biblioteca da unidade de origem",
+      "Impressão anverso e verso fica a critério do Programa de Pós-Graduação da unidade",
+      "O manual cita a NBR 10520 de 2002 e de 2023 nas referências; o texto de citações segue a de 2023"
+    ],
+    "modelos": [],
+    "observacoes": "Manual oficial lido em PDF. A página teses.usp.br não lista templates Word/LaTeX; unidades da USP têm guias próprios (não levantados aqui). Espaçamento descrito no manual como 'espaço 1,5 cm' (sic).",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "unicamp",
+    "manual": {
+      "titulo": "Manual de normalização de trabalhos acadêmicos: TCC, teses, dissertações (Biblioteca do Instituto de Artes)",
+      "url": "https://www.iar.unicamp.br/wp-content/uploads/2023/10/Manual-de-Normalizacao.pdf",
+      "ano": 2023,
+      "orgao": "Biblioteca do Instituto de Artes (IA) da Unicamp, com base na Instrução Normativa CCPG nº 002/2021"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Instrução Normativa CCPG nº 002/2021 (link citado pelo manual; domínio não respondeu na conferência)",
+        "url": "http://www3.prpg.gr.unicamp.br/sites/site1/wp-content/uploads/2021/03/infccpg002_2021.pdf"
+      },
+      {
+        "titulo": "Manual de normalização e apresentação de teses e dissertações da FCM/Unicamp (2020, não lido)",
+        "url": "https://www.fcm.unicamp.br/fcm/sites/default/files/2020/page/manualtesesfcm2020.pdf"
+      }
+    ],
+    "regras": {
+      "papel": "A4 (21 x 29,7 cm)",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "Times New Roman, Arial ou similar, tamanho 12, cor preta (citando a CCPG 2021)",
+      "fonte_menor": "recomenda-se fonte menor (tamanho não fixado) para citações de mais de três linhas, notas de rodapé, paginação, legendas e fontes das ilustrações e tabelas",
+      "espacamento": "1,5 no texto e nas referências; simples em notas de rodapé e citações longas (opcional para resumo e abstract)",
+      "recuo_paragrafo_cm": 2,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Todas as páginas contadas; pré-textuais (até o sumário) não numeradas; numeração contínua da Introdução até a última folha, em arábicos, no canto superior direito",
+      "sistema_chamada": "autor-data ou numérico (numérico não deve ser usado quando há notas de rodapé)",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Dissertações e teses da pós-graduação devem seguir obrigatoriamente a Instrução Normativa CCPG nº 002/2021 (Comissão Central de Pós-Graduação)",
+      "Recuo de parágrafo de 2,0 cm a partir da margem esquerda, diferente dos 1,25 cm usuais",
+      "Modelo de dissertação/tese em PDF disponibilizado pela Biblioteca do IA; versão Word mediante pedido por e-mail (biarte@unicamp.br)",
+      "Versão digital entregue em arquivo único com folha de aprovação e ficha catalográfica"
+    ],
+    "modelos": [
+      {
+        "tipo": "PDF (modelo de dissertação/tese CCPG 002/2021 + NBR 14724:2011)",
+        "url": "https://www.iar.unicamp.br/wp-content/uploads/2023/03/Modelo-Versao-Final-2023.pdf"
+      }
+    ],
+    "observacoes": "Não foi achado manual central do Sistema de Bibliotecas (SBU) da Unicamp; usado o manual da Biblioteca do IA, que transcreve a IN CCPG 002/2021 (o PDF da IN não abriu: domínio www3.prpg.gr.unicamp.br não resolveu). O manual cita 10520:2023 no texto, mas a lista de referências traz a 10520 de 2002.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufrj",
+    "manual": {
+      "titulo": "Manual para elaboração e normalização de trabalhos acadêmicos. 8. ed. rev. (Série Manual de Procedimentos, n. 5)",
+      "url": "https://ppgci.ibict.br/media/uploads/2024/05/Manual-para-elaboracao-e-normalizacao-de-trabalhos-academicos-SiBI-UFRJ-2023.pdf",
+      "ano": 2023,
+      "orgao": "Sistema de Bibliotecas e Informação (SiBI/UFRJ)"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "SiBI/UFRJ - Manuais e publicações (página oficial indicada pelos programas)",
+        "url": "https://www.sibi.ufrj.br/index.php/manuais-e-publicacoes"
+      }
+    ],
+    "regras": {
+      "papel": "A4 (21 cm x 29,7 cm), branco ou reciclado, posição vertical",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "tamanho 12, cor preta (o manual não fixa tipo de letra)",
+      "fonte_menor": "fonte menor e uniforme (tamanho não fixado) para citações de mais de 3 linhas, notas de rodapé, paginação e legendas de ilustrações e tabelas",
+      "espacamento": "1,5; simples para citações longas, notas, referências, legendas, ficha catalográfica e natureza do trabalho",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Folhas contadas a partir da folha de rosto, numeradas a partir da primeira folha textual, em arábicos, canto superior direito a 2 cm da borda superior e 2 cm da borda direita; em anverso/verso, canto superior externo",
+      "sistema_chamada": "autor-data ou numérico",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Margens de verso espelhadas (direita 3, superior 3, esquerda 2, inferior 2)",
+      "Ficha catalográfica no verso da folha de rosto, com anexo de modelo no manual",
+      "Manual aprovado pelo CEPG (17/10/1997) como fonte para trabalhos baseados na ABNT",
+      "Recomenda-se impressão anverso e verso nos elementos textuais e pós-textuais"
+    ],
+    "modelos": [],
+    "observacoes": "PDF lido a partir de cópia hospedada no PPGCI/IBICT (o mesmo arquivo do SiBI). O manual não menciona Vancouver; a variação Vancouver em Biomédicas indicada no CSV não foi confirmada nesta fonte.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufmg",
+    "manual": {
+      "titulo": "Diretrizes para normalização de trabalhos acadêmicos. 3. ed.",
+      "url": "https://repositorio.ufmg.br/assets/public_html/diretrizes-para-normalizacao-de-trabalhos-academicos-da-UFMG.pdf",
+      "ano": 2025,
+      "orgao": "Biblioteca Universitária - Sistema de Bibliotecas da UFMG / Repositório Institucional (RI-UFMG)"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Normalização de publicações técnico-científicas - Biblioteca da Faculdade de Farmácia (2024)",
+        "url": "https://farmacia.ufmg.br/wp-content/uploads/2024/02/Manual_normalizacao_16_02_2024.pdf"
+      },
+      {
+        "titulo": "Guia de normalização da Pós-graduação FAO/UFMG, 3. ed. 2024 (não lido)",
+        "url": "https://posgrad.odonto.ufmg.br/wp-content/uploads/2023/11/Guia-de-normalizacao-da-Pos-graduacao-FAO-UFMG-3ed.2024.pdf"
+      }
+    ],
+    "regras": {
+      "papel": "A4, retrato (paisagem permitida para quadros, figuras e tabelas)",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "sugere-se Arial ou Times New Roman 12",
+      "fonte_menor": "10 ou 11, espaço simples, para citações de mais de três linhas, notas de rodapé, paginação, legendas e fontes de ilustrações e tabelas",
+      "espacamento": "1,5, justificado",
+      "recuo_paragrafo_cm": 1.25,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Arábicos no canto superior direito, exibida a partir da primeira página textual (Introdução); contagem a partir da folha de rosto",
+      "sistema_chamada": null,
+      "edicao_6023": "2025",
+      "edicao_10520": "2023",
+      "edicao_14724": "2024"
+    },
+    "variacoes_area": [
+      {
+        "area": "Áreas diversas (lista de normativas admitidas)",
+        "norma": "APA, ISO 690:2021, NLM/ICMJE (Vancouver), IBGE para tabelas",
+        "fonte": "https://repositorio.ufmg.br/assets/public_html/diretrizes-para-normalizacao-de-trabalhos-academicos-da-UFMG.pdf"
+      }
+    ],
+    "particularidades": [
+      "As diretrizes valem para o depósito no RI-UFMG e não impõem um padrão de citação único; listam ABNT, APA, ISO, NLM e ICMJE como normativas aceitas",
+      "Parágrafo: espaço de 1,5 cm entre parágrafos OU recuo de 1,25 cm",
+      "Ficha catalográfica obrigatória para teses e dissertações (modelo na seção 3.2.2)",
+      "Arquivo final em PDF/A, nomeado com tipologia e título do trabalho",
+      "Natureza do trabalho e nome do orientador com recuo de 8 cm à esquerda"
+    ],
+    "modelos": [],
+    "observacoes": "Já adota NBR 6023:2025 e NBR 14724:2024 (além de 10520:2023 e 12225:2023). Sistema de chamada não definido pelas diretrizes centrais (o guia da Farmácia, 2024, ainda baseado na 14724:2011, aceita autor-data ou numérico e parágrafo com recuo de 2 cm).",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufrgs",
+    "manual": {
+      "titulo": null,
+      "url": null,
+      "ano": null,
+      "orgao": "Bibliotecas da UFRGS (Sistema de Bibliotecas)"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Modelos ABNT - Bibliotecas da UFRGS",
+        "url": "https://www.ufrgs.br/bibliotecas/ferramentas/modelos-abnt/"
+      },
+      {
+        "titulo": "Apoio à normalização bibliográfica - Bibliotecas da UFRGS",
+        "url": "https://www.ufrgs.br/bibliotecas/servicos/apoio-normalizacao/"
+      },
+      {
+        "titulo": "Biblioteca Central - posts sobre atualização de normas (NBR 14724:2024 em 09/01/2025; NBR 10520:2023 em 21/07/2023)",
+        "url": "https://www.ufrgs.br/bibliotecacentral/categoria/normas-tecnicas/"
+      }
+    ],
+    "regras": {
+      "papel": null,
+      "margens_cm": null,
+      "fonte": null,
+      "fonte_menor": null,
+      "espacamento": null,
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": null,
+      "paginacao": null,
+      "sistema_chamada": null,
+      "edicao_6023": "2018",
+      "edicao_10520": "não informa",
+      "edicao_14724": "não informa"
+    },
+    "variacoes_area": [
+      {
+        "area": "Ciências da saúde",
+        "norma": "Vancouver",
+        "fonte": "https://www.ufrgs.br/bibliotecas/servicos/apoio-normalizacao/"
+      }
+    ],
+    "particularidades": [
+      "Modelo completo de trabalho acadêmico (NBR 14724) em Word, LibreOffice Writer e Google Docs; modelo de artigo (NBR 6022)",
+      "Ficha catalográfica no verso da folha de rosto no impresso; na versão digital, logo após a folha de rosto e não contada na paginação",
+      "Desde out./2019 a Biblioteca Central só recebe teses e dissertações digitais (Resolução CAMPG 02/2019), encaminhadas pelos PPGs",
+      "Várias bibliotecas setoriais têm manuais próprios (ex.: ICBS, Engenharia, Direito)"
+    ],
+    "modelos": [
+      {
+        "tipo": "Word",
+        "url": "https://www.ufrgs.br/bibliotecas/wp-content/uploads/Modelo_Trabalho-Academico_Word.zip"
+      },
+      {
+        "tipo": "LibreOffice Writer",
+        "url": "https://www.ufrgs.br/bibliotecas/wp-content/uploads/Modelo_Trabalho-Academico_LibreOffice.zip"
+      },
+      {
+        "tipo": "Google Docs",
+        "url": "https://docs.google.com/document/d/1lPVnTOULKQdvmm22ha0X8Zr2KjtjFHCULeNYt92v1wI/template/preview"
+      }
+    ],
+    "observacoes": "Não há manual central em PDF; a orientação é por modelos e pelas bibliotecas setoriais. Informação divergente: a página 'Apoio à normalização' lista NBR 14724:2011, 6023:2018 e 10520:2002, mas a Biblioteca Central publicou posts sobre a NBR 14724:2024 (lançada em 16/12/2024) e a 10520:2023; por isso 10520 e 14724 ficaram como 'não informa'. Regras de margem, fonte etc. não aparecem nas páginas consultadas (estão embutidas nos modelos, não abertos).",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufsc",
+    "manual": {
+      "titulo": "Tutorial de trabalhos acadêmicos padrão A4 (Portal de Normalização da BU/UFSC)",
+      "url": "https://repositorio.ufsc.br/handle/123456789/180829",
+      "ano": null,
+      "orgao": "Biblioteca Universitária (BU/UFSC)"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Portal de Normalização da BU/UFSC",
+        "url": "https://portal.bu.ufsc.br/normalizacao/"
+      },
+      {
+        "titulo": "Tutorial de Formatação Word para trabalhos acadêmicos",
+        "url": "https://repositorio.ufsc.br/handle/123456789/198045"
+      },
+      {
+        "titulo": "Tutorial Citações e Referências (padrão ABNT)",
+        "url": "https://repositorio.ufsc.br/xmlui/handle/123456789/180833"
+      },
+      {
+        "titulo": "Procedimentos para a entrega de teses e dissertações",
+        "url": "https://repositorio.ufsc.br/handle/123456789/202114"
+      }
+    ],
+    "regras": {
+      "papel": "A4 (obrigatório para teses e dissertações desde 01/08/2019, Resolução Normativa nº 46/2019/CPG)",
+      "margens_cm": null,
+      "fonte": null,
+      "fonte_menor": null,
+      "espacamento": null,
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": null,
+      "paginacao": null,
+      "sistema_chamada": null,
+      "edicao_6023": "não informa",
+      "edicao_10520": "não informa",
+      "edicao_14724": "não informa"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Ficha catalográfica gerada no sistema da BU: http://ficha.bu.ufsc.br/",
+      "Documento final convertido em PDF/A; certificação digital (tutorial próprio)",
+      "Antes de 2019 a UFSC usava formato A5 para teses e dissertações; hoje é A4",
+      "Formato de TCC é definido por cada curso; o template da BU é sugestão",
+      "MORE - Mecanismo Online para Referências: http://www.more.ufsc.br/",
+      "Modelo específico de folha de rosto para tese em cotutela"
+    ],
+    "modelos": [
+      {
+        "tipo": "Word (teses e dissertações)",
+        "url": "https://repositorio.ufsc.br/handle/123456789/197457"
+      },
+      {
+        "tipo": "ODT (teses e dissertações)",
+        "url": "https://repositorio.ufsc.br/handle/123456789/197456"
+      },
+      {
+        "tipo": "Word (TCC graduação/especialização)",
+        "url": "https://repositorio.ufsc.br/handle/123456789/174345"
+      },
+      {
+        "tipo": "Overleaf (não oficial da BU)",
+        "url": "https://www.overleaf.com/latex/templates/template-trabalhos-academicos-ufsc-a4/vtfjxrcrvnjh"
+      }
+    ],
+    "observacoes": "O repositório da UFSC bloqueou o acesso externo (página de 'Sistema de Prevenção de Ataques da RedeUFSC'), então o tutorial não foi lido e as regras ficaram null. O portal da BU não cita edições das NBR.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "unb",
+    "manual": {
+      "titulo": null,
+      "url": null,
+      "ano": null,
+      "orgao": "Biblioteca Central (BCE/UnB)"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "BCE/UnB - Elaboração de fichas catalográficas",
+        "url": "https://bce.unb.br/elaboracao-de-fichas-catalograficas/"
+      },
+      {
+        "titulo": "BCE/UnB - Acesso às normas ABNT (Target GEDWeb)",
+        "url": "https://www.gedweb.com.br/unb/"
+      },
+      {
+        "titulo": "Slides 'ABNT 2023 - atualizado julho 2024' da BCE (link indexado, retornou 404 na conferência)",
+        "url": "https://bce.unb.br/wp-content/uploads/2024/07/ABNT-2023-Atualizado-julho-2024.pdf"
+      }
+    ],
+    "regras": {
+      "papel": null,
+      "margens_cm": null,
+      "fonte": null,
+      "fonte_menor": null,
+      "espacamento": null,
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": null,
+      "paginacao": null,
+      "sistema_chamada": null,
+      "edicao_6023": "não informa",
+      "edicao_10520": "não informa",
+      "edicao_14724": "não informa"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "BCE oferece serviço de elaboração de ficha catalográfica",
+      "Acesso institucional às normas ABNT pela plataforma Target GEDWeb"
+    ],
+    "modelos": [],
+    "observacoes": "Não foi encontrado manual ou guia de normalização oficial da UnB. A página de tutoriais da BCE não traz material de ABNT; os slides de ABNT da BCE (2021, 2022, 2024) retornam 404. A variação APA em Psicologia indicada no CSV não foi confirmada.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "unifesp",
+    "manual": {
+      "titulo": "Manual de normalização de trabalhos acadêmicos (atualização 2024)",
+      "url": "https://unifesp.br/campus/gua/images/Biblioteca/tutoriais/Manual_de_normalizacao._Atualizacao_2024.pdf",
+      "ano": 2024,
+      "orgao": "Biblioteca Otávio Rangel de Souza - Escola de Filosofia, Letras e Ciências Humanas (EFLCH), Unifesp Campus Guarulhos"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Manual de normalização da Biblioteca Unifesp Campus Diadema (2023, não lido)",
+        "url": "https://site.unifesp.br/diadema.biblioteca/images/Serviços/Manual%20de%20Normatização/ManualNormalizacaoUNIFESPDiadema2023.pdf"
+      }
+    ],
+    "regras": {
+      "papel": "A4 (21,0 cm x 29,7 cm), branco ou reciclado, cor preta",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "Arial ou Times New Roman 12",
+      "fonte_menor": "10 ou 11 para notas de rodapé, paginação, ficha catalográfica, legendas e fontes das ilustrações e tabelas, citações com mais de três linhas",
+      "espacamento": "1,5; simples para notas, natureza do trabalho, legendas, referências e citações longas",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": null,
+      "sistema_chamada": "autor-data ou numérico",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Margens de verso: direita e superior 3 cm, esquerda e inferior 2 cm",
+      "Recuo de 4 cm para citação longa descrito como 'opcional, porém recomendado' após a atualização da NBR 10520",
+      "Template/modelo de ficha catalográfica disponível no site da biblioteca"
+    ],
+    "modelos": [],
+    "observacoes": "Não foi achado manual central da Unifesp; cada campus tem o seu. O manual usado é do campus de Humanidades (Guarulhos), por isso não trata de Vancouver; a variação Vancouver em saúde indicada no CSV não foi confirmada em fonte da Unifesp. O manual comenta a atualização da 10520 de julho de 2023, mas a lista de referências ainda cita a 10520:2002.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufpr",
+    "manual": {
+      "titulo": "Manual de normalização de documentos científicos de acordo com as normas da ABNT. 2. ed.",
+      "url": "https://litoral.ufpr.br/lecampo/wp-content/uploads/sites/10/2025/04/Manual_de_Normalizacao-2024-1.pdf",
+      "ano": 2024,
+      "orgao": "Sistema de Bibliotecas da UFPR (SiBi/UFPR)"
+    },
+    "fontes_extras": [],
+    "regras": {
+      "papel": "A4 (21 cm x 29,7 cm), retrato (paisagem para figuras, quadros e tabelas)",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "sugere-se Arial ou Times New Roman 12",
+      "fonte_menor": "10 para citação direta longa, nota de rodapé, título/fonte/nota/legenda de ilustrações e tabelas, conteúdo de tabela, natureza do trabalho, ficha catalográfica e paginação",
+      "espacamento": "1,5; simples para natureza do trabalho, ficha, resumo/abstract, citação longa, legendas, notas e referências",
+      "recuo_paragrafo_cm": 1.5,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": "Arábicos, tamanho 10, canto superior direito a 2 cm da borda superior (verso: canto superior esquerdo); capa não contada; pré-textuais contadas mas não paginadas; numeração a partir da primeira página textual",
+      "sistema_chamada": "autor-data ou numérico",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Recuo de primeira linha de 1,5 cm (não 1,25)",
+      "Margens de verso espelhadas; em trabalho só digital, todas as páginas como anverso",
+      "Evitar linhas órfãs e viúvas",
+      "Manual traz modelo de trabalho acadêmico e de artigo com explicação passo a passo"
+    ],
+    "modelos": [],
+    "observacoes": "PDF de 414 p. lido a partir de cópia no site do Setor Litoral da UFPR (mesmo documento do SiBi). Remete às NBR 14724:2011, 6023:2018 e 10520:2023.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "unesp",
+    "manual": {
+      "titulo": null,
+      "url": null,
+      "ano": null,
+      "orgao": "Coordenadoria Geral de Bibliotecas (CGB/Unesp) - Grupo de Estudo de Normas Técnicas"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Grupo de Normas Técnicas da CGB/Unesp",
+        "url": "https://www2.unesp.br/portal#!/cgb/normas-tecnicas/grupo-de-normas-tecnicas/"
+      },
+      {
+        "titulo": "Apostila de normalização documentária - Biblioteca FCT/Unesp Presidente Prudente (nov. 2018)",
+        "url": "https://www.fct.unesp.br/Home/Biblioteca/apostila_abnt_word_bpp_2018.pdf"
+      },
+      {
+        "titulo": "CBBD 2024: templates automáticos na FEIS/Unesp Ilha Solteira (cita atualização do template da CGB após a 10520:2023)",
+        "url": "https://anaiscbbd.emnuvens.com.br/cbbd2024/article/download/3567/2918/9642"
+      }
+    ],
+    "regras": {
+      "papel": "A4 (210 mm x 297 mm), branco ou reciclado (apostila FCT 2018)",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "tamanho 12 (tipo não fixado; apostila FCT 2018)",
+      "fonte_menor": "tamanho menor (não fixado) para citações longas, notas, paginação, ficha catalográfica, legendas e fontes",
+      "espacamento": "1,5; simples para citações longas, notas, referências, resumos, legendas e natureza do trabalho",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": null,
+      "sistema_chamada": "numérico ou autor-data",
+      "edicao_6023": "2018",
+      "edicao_10520": "2002",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "A CGB mantém um template de trabalho acadêmico, atualizado após a NBR 10520:2023 (segundo relato CBBD 2024), sem recursos automáticos; bibliotecas de unidades criam versões próprias",
+      "Trabalhos depositados no Repositório Institucional da Unesp",
+      "Acesso às normas ABNT via GEDWeb institucional"
+    ],
+    "modelos": [],
+    "observacoes": "Não foi encontrado manual central da CGB/Unesp em página oficial. O manual 'Manual de normalização de trabalhos acadêmicos: citação e referência: ABNT' (CGB, atualização dez. 2023) só aparece em cópia de terceiros (UFGD), que retornou 404. As regras acima vêm da apostila de 2018 de uma unidade (FCT Presidente Prudente), desatualizada (10520:2002); usar com cautela.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufscar",
+    "manual": {
+      "titulo": "Apresentação do trabalho acadêmico de acordo com NBR 14724/2011 (atualizado em dez. 2023)",
+      "url": "https://www.bco.ufscar.br/arquivos/manual-bco-nbr-14724-2023.pdf",
+      "ano": 2023,
+      "orgao": "SIBi/UFSCar - Biblioteca Comunitária (BCo), Departamento de Referência"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Modelo de trabalho acadêmico em formato de artigo (BSo/UFSCar Sorocaba, 2021)",
+        "url": "https://www.bso.ufscar.br/arquivos/atualizado_em_maio_2021_trabalho_academico_formato_artigo.docx"
+      }
+    ],
+    "regras": {
+      "papel": "A4; impresso em papel branco ou reciclado, anverso e verso permitidos",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "tamanho 12; recomenda-se Times New Roman ou Arial",
+      "fonte_menor": "recomenda-se fonte menor, por exemplo 10, para citações de mais de três linhas, notas, paginação, legendas e fontes de ilustrações e tabelas",
+      "espacamento": "1,5; simples para citações longas, notas, referências, legendas e natureza na folha de rosto",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": null,
+      "paginacao": "Arábicos; anverso no canto superior direito e verso no canto superior esquerdo, a 2 cm da borda superior; pré-textuais contadas, não numeradas; numeração a partir da primeira folha textual",
+      "sistema_chamada": null,
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "2011"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Margem do verso (só impresso) transcrita no manual como 'direita e inferior 3 cm / esquerda e superior 2 cm', o que difere do espelhamento da NBR 14724 (superior 3) e parece erro do manual",
+      "Para citações, o manual remete à NBR 10520/2023 sem detalhar recuo",
+      "Tutoriais complementares da BCo: numeração de página e numeração progressiva"
+    ],
+    "modelos": [
+      {
+        "tipo": "Word (formato artigo, BSo Sorocaba)",
+        "url": "https://www.bso.ufscar.br/arquivos/atualizado_em_maio_2021_trabalho_academico_formato_artigo.docx"
+      }
+    ],
+    "observacoes": "Manual curto (apresentação gráfica). Sistema de chamada e recuo de citação não definidos nele (remete à 10520:2023).",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "puc-rio",
+    "manual": {
+      "titulo": "Normas para apresentação de teses e dissertações (revisado 2020)",
+      "url": "https://www.puc-rio.br/ensinopesq/ccpg/download/normas%20teses%20revisado%202020.pdf",
+      "ano": 2020,
+      "orgao": "Pós-Graduação PUC-Rio (Vice-Reitoria para Assuntos Acadêmicos / CCPG), com a Divisão de Bibliotecas e Documentação"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "Apresentação de teses e dissertações - CCPG/PUC-Rio (página com normas, modelos e instruções)",
+        "url": "https://www.puc-rio.br/ensinopesq/ccpg/apresentacao_ted.html"
+      },
+      {
+        "titulo": "Informações úteis para formatação da dissertação/tese",
+        "url": "https://www.puc-rio.br/ensinopesq/ccpg/download/Informações úteis.pdf"
+      },
+      {
+        "titulo": "Capas de teses e dissertações (modelo branding)",
+        "url": "https://www.puc-rio.br/ensinopesq/ccpg/capas-teses-dissertacoes/"
+      }
+    ],
+    "regras": {
+      "papel": "A4 (210 x 297 mm), vertical",
+      "margens_cm": {
+        "sup": 2.5,
+        "esq": 3,
+        "inf": 2.5,
+        "dir": 4
+      },
+      "fonte": "Times New Roman para texto, citações e referências; Arial para títulos, subtítulos, legendas, tabelas e pré-textuais (alternativas: Humanistic 777/Zurich; Garamond em lugar de Times)",
+      "fonte_menor": "exemplos de corpo 10 e 11 para citações e notas; legendas Arial 10; cabeçalho Arial 10",
+      "espacamento": "1,5 linhas; citações longas em espaço simples",
+      "recuo_paragrafo_cm": 1,
+      "citacao_longa_recuo_cm": 1,
+      "paginacao": "Contagem a partir da folha de rosto; números arábicos nas páginas do texto, junto com o cabeçalho; omitidos nos pré-textuais e nas páginas de abertura de capítulo; numeração visível só a partir da segunda página da Introdução",
+      "sistema_chamada": "numérico ou alfabético (autor-data)",
+      "edicao_6023": "não informa",
+      "edicao_10520": "não informa",
+      "edicao_14724": "não informa"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Projeto gráfico próprio, diferente da NBR 14724: margens 2,5/3/2,5/4 cm, mancha de 13,5 cm, cabeçalho 1 cm, recuo de 1 cm",
+      "Citações de mais de 3 linhas alinhadas pelo recuo da primeira linha do parágrafo (não 4 cm)",
+      "Título de capítulo em Arial 14 negrito; todo capítulo começa em página nova",
+      "Ficha catalográfica pedida à Biblioteca Central por formulário online (www3.dbd.puc-rio.br/sre/solicitacao.asp), entregue em até 48 h úteis; vai na terceira página",
+      "Elementos pré-textuais próprios: direitos autorais e perfil do aluno",
+      "Versão digital em PDF único, mínimo 600 dpi, sem proteção, nomeado 'matrícula_anodefesa_Completo.pdf'"
+    ],
+    "modelos": [
+      {
+        "tipo": "LaTeX (ThesisPUC 1.0.11, jun. 2020)",
+        "url": "https://www.puc-rio.br/ensinopesq/ccpg/download/ThesisPUC-1.0.11.zip"
+      },
+      {
+        "tipo": "Instruções do modelo LaTeX",
+        "url": "https://www.puc-rio.br/ensinopesq/ccpg/download/ThesisPUC-1.0.11.pdf"
+      }
+    ],
+    "observacoes": "Manual da Pós-Graduação (atualizado em 08/06/2020). Cita NBR 14724, 10520 e 6024 sem informar edições. A variação APA indicada no CSV não foi confirmada na fonte.",
+    "conferido_em": "2026-11"
+  },
+  {
+    "id": "ufpe",
+    "manual": {
+      "titulo": "Manual de normalização de trabalhos acadêmicos: elementos pré-textuais (atualizado em 09/08/2023)",
+      "url": "https://www.ufpe.br/documents/39058/3620106/manual_normalizacao_ufpe_09_08_2023.pdf/a12437cc-d38e-4c58-b503-571f5327bf7f",
+      "ano": 2023,
+      "orgao": "Sistema Integrado de Bibliotecas (SIB/UFPE)"
+    },
+    "fontes_extras": [
+      {
+        "titulo": "SIB/UFPE - Pós-graduação: ficha catalográfica e normalização",
+        "url": "https://www.ufpe.br/sib/ficha-catalografica-normalizacao"
+      },
+      {
+        "titulo": "Histórico de atualizações dos documentos de normalização do SIB/UFPE",
+        "url": "https://www.ufpe.br/documents/39058/594591/Atualiza%C3%A7%C3%B5es+dos+documentos+de+normaliza%C3%A7%C3%A3o/ea30b15b-8519-4c1c-b086-9de2ad5dd6e5"
+      }
+    ],
+    "regras": {
+      "papel": "A4, cor preta",
+      "margens_cm": {
+        "sup": 3,
+        "esq": 3,
+        "inf": 2,
+        "dir": 2
+      },
+      "fonte": "recomenda-se Arial ou Times New Roman 12 (inclusive capa)",
+      "fonte_menor": "tamanho menor e uniforme (não fixado) para citações de mais de 3 linhas, notas, paginação, legendas e fontes de ilustrações e tabelas",
+      "espacamento": "1,5; simples para citações longas, notas, referências, legendas e natureza do trabalho",
+      "recuo_paragrafo_cm": null,
+      "citacao_longa_recuo_cm": 4,
+      "paginacao": null,
+      "sistema_chamada": "autor-data ou numérico",
+      "edicao_6023": "2018",
+      "edicao_10520": "2023",
+      "edicao_14724": "não informa"
+    },
+    "variacoes_area": [],
+    "particularidades": [
+      "Manual cobre só os elementos pré-textuais; recomenda usar os modelos do SIB desde o início da escrita",
+      "Modelo geral para teses e dissertações e modelo específico para teses/dissertações formadas por artigos (programas do CCS e CB)",
+      "Ficha catalográfica elaborada pela biblioteca setorial do centro acadêmico, mediante envio de PDFs; obrigatória para o depósito legal",
+      "Resumo preferencialmente de 150 a 500 palavras (NBR 6028:2021)"
+    ],
+    "modelos": [],
+    "observacoes": "Os modelos (geral e por artigos, vigentes desde 25/01/2022) estão na página do SIB, mas os links diretos não foram extraídos. Paginação e edição da 14724 não constam no manual de pré-textuais.",
+    "conferido_em": "2026-11"
+  }
+]

@@ -1,0 +1,764 @@
+[
+  {
+    "id": "usp",
+    "sigla": "USP",
+    "nome": "Universidade de São Paulo (USP)",
+    "grupo": "universidade",
+    "tipo": "Pública (Estadual)",
+    "categoria": "Melhor e Maior",
+    "uf": null,
+    "fomento": [
+      "FAPESP",
+      "CNPq",
+      "CAPES",
+      "Orçamento Próprio Expressivo"
+    ],
+    "norma_csv": "ABNT (com diretrizes próprias USP)"
+  },
+  {
+    "id": "unicamp",
+    "sigla": "UNICAMP",
+    "nome": "Universidade Estadual de Campinas (UNICAMP)",
+    "grupo": "universidade",
+    "tipo": "Pública (Estadual)",
+    "categoria": "Melhor",
+    "uf": null,
+    "fomento": [
+      "FAPESP",
+      "CNPq",
+      "CAPES",
+      "Parcerias Corporativas"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufrj",
+    "sigla": "UFRJ",
+    "nome": "Universidade Federal do Rio de Janeiro (UFRJ)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor e Maior",
+    "uf": null,
+    "fomento": [
+      "FAPERJ",
+      "CNPq",
+      "CAPES",
+      "Fundos Setoriais"
+    ],
+    "norma_csv": "ABNT (Vancouver em Biomédicas)"
+  },
+  {
+    "id": "ufmg",
+    "sigla": "UFMG",
+    "nome": "Universidade Federal de Minas Gerais (UFMG)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor e Maior",
+    "uf": null,
+    "fomento": [
+      "FAPEMIG",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufrgs",
+    "sigla": "UFRGS",
+    "nome": "Universidade Federal do Rio Grande do Sul (UFRGS)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor e Maior",
+    "uf": null,
+    "fomento": [
+      "FAPERGS",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufsc",
+    "sigla": "UFSC",
+    "nome": "Universidade Federal de Santa Catarina (UFSC)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor e Maior",
+    "uf": null,
+    "fomento": [
+      "FAPESC",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "unb",
+    "sigla": "UnB",
+    "nome": "Universidade de Brasília (UnB)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor",
+    "uf": null,
+    "fomento": [
+      "FAPDF",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT / APA (Psicologia)"
+  },
+  {
+    "id": "unifesp",
+    "sigla": "UNIFESP",
+    "nome": "Universidade Federal de São Paulo (UNIFESP)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor",
+    "uf": null,
+    "fomento": [
+      "FAPESP",
+      "CNPq",
+      "CAPES",
+      "Ensaios Clínicos"
+    ],
+    "norma_csv": "Vancouver / ABNT"
+  },
+  {
+    "id": "ufpr",
+    "sigla": "UFPR",
+    "nome": "Universidade Federal do Paraná (UFPR)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor e Maior",
+    "uf": null,
+    "fomento": [
+      "Fundação Araucária",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "unesp",
+    "sigla": "UNESP",
+    "nome": "Universidade Estadual Paulista (UNESP)",
+    "grupo": "universidade",
+    "tipo": "Pública (Estadual)",
+    "categoria": "Melhor e Maior",
+    "uf": null,
+    "fomento": [
+      "FAPESP",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufscar",
+    "sigla": "UFSCar",
+    "nome": "Universidade Federal de São Carlos (UFSCar)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor",
+    "uf": null,
+    "fomento": [
+      "FAPESP",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "puc-rio",
+    "sigla": "PUC-Rio",
+    "nome": "Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio)",
+    "grupo": "universidade",
+    "tipo": "Privada (Filantrópica)",
+    "categoria": "Melhor",
+    "uf": null,
+    "fomento": [
+      "FAPERJ",
+      "CNPq",
+      "CAPES",
+      "Parcerias com Indústria (Óleo e Gás)"
+    ],
+    "norma_csv": "ABNT / APA"
+  },
+  {
+    "id": "ufpe",
+    "sigla": "UFPE",
+    "nome": "Universidade Federal de Pernambuco (UFPE)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor e Maior",
+    "uf": null,
+    "fomento": [
+      "FACEPE",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufc",
+    "sigla": "UFC",
+    "nome": "Universidade Federal do Ceará (UFC)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor e Maior",
+    "uf": null,
+    "fomento": [
+      "FUNCAP",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufba",
+    "sigla": "UFBA",
+    "nome": "Universidade Federal da Bahia (UFBA)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor e Maior",
+    "uf": null,
+    "fomento": [
+      "FAPESB",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufv",
+    "sigla": "UFV",
+    "nome": "Universidade Federal de Viçosa (UFV)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor",
+    "uf": null,
+    "fomento": [
+      "FAPEMIG",
+      "CNPq",
+      "CAPES",
+      "Agronegócio"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "uff",
+    "sigla": "UFF",
+    "nome": "Universidade Federal Fluminense (UFF)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor e Maior",
+    "uf": null,
+    "fomento": [
+      "FAPERJ",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "pucrs",
+    "sigla": "PUCRS",
+    "nome": "Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS)",
+    "grupo": "universidade",
+    "tipo": "Privada (Filantrópica)",
+    "categoria": "Melhor",
+    "uf": null,
+    "fomento": [
+      "FAPERGS",
+      "CNPq",
+      "CAPES",
+      "Tecnopuc"
+    ],
+    "norma_csv": "ABNT / APA"
+  },
+  {
+    "id": "ufsm",
+    "sigla": "UFSM",
+    "nome": "Universidade Federal de Santa Maria (UFSM)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor",
+    "uf": null,
+    "fomento": [
+      "FAPERGS",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufpel",
+    "sigla": "UFPel",
+    "nome": "Universidade Federal de Pelotas (UFPel)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Melhor",
+    "uf": null,
+    "fomento": [
+      "FAPERGS",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "unesa",
+    "sigla": "UNESA",
+    "nome": "Universidade Estácio de Sá (UNESA)",
+    "grupo": "universidade",
+    "tipo": "Privada (Lucrativa)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "Financiamento Próprio Limitado",
+      "FAPERJ"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "unip",
+    "sigla": "UNIP",
+    "nome": "Universidade Paulista (UNIP)",
+    "grupo": "universidade",
+    "tipo": "Privada (Lucrativa)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "Financiamento Próprio",
+      "Bolsas CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "unopar",
+    "sigla": "UNOPAR",
+    "nome": "Universidade Norte do Paraná (UNOPAR)",
+    "grupo": "universidade",
+    "tipo": "Privada (Lucrativa)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "Grupo Cogna",
+      "Pesquisa focada em EAD"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufma",
+    "sigla": "UFMA",
+    "nome": "Universidade Federal do Maranhão (UFMA)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "FAPEMA",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufpa",
+    "sigla": "UFPA",
+    "nome": "Universidade Federal do Pará (UFPA)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "FAPESPA",
+      "CNPq",
+      "CAPES",
+      "Fundos Amazônia"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufg",
+    "sigla": "UFG",
+    "nome": "Universidade Federal de Goiás (UFG)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "FAPEG",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufrn",
+    "sigla": "UFRN",
+    "nome": "Universidade Federal do Rio Grande do Norte (UFRN)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "FAPERN",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT / Vancouver"
+  },
+  {
+    "id": "unicsul",
+    "sigla": "UNICSUL",
+    "nome": "Universidade Cruzeiro do Sul (UNICSUL)",
+    "grupo": "universidade",
+    "tipo": "Privada (Lucrativa)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "Recursos Institucionais",
+      "FAPESP"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "uninove",
+    "sigla": "UNINOVE",
+    "nome": "Universidade Nove de Julho (UNINOVE)",
+    "grupo": "universidade",
+    "tipo": "Privada (Lucrativa)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "FAPESP",
+      "Bolsas de Produtividade"
+    ],
+    "norma_csv": "ABNT / Vancouver (Medicina)"
+  },
+  {
+    "id": "ufam",
+    "sigla": "UFAM",
+    "nome": "Universidade Federal do Amazonas (UFAM)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "FAPEAM",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufu",
+    "sigla": "UFU",
+    "nome": "Universidade Federal de Uberlândia (UFU)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "FAPEMIG",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufpi",
+    "sigla": "UFPI",
+    "nome": "Universidade Federal do Piauí (UFPI)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "FAPEPI",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufpb",
+    "sigla": "UFPB",
+    "nome": "Universidade Federal da Paraíba (UFPB)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "FAPESQ",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufal",
+    "sigla": "UFAL",
+    "nome": "Universidade Federal de Alagoas (UFAL)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "FAPEAL",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ufmt",
+    "sigla": "UFMT",
+    "nome": "Universidade Federal de Mato Grosso (UFMT)",
+    "grupo": "universidade",
+    "tipo": "Pública (Federal)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "FAPEMAT",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "uem",
+    "sigla": "UEM",
+    "nome": "Universidade Estadual de Maringá (UEM)",
+    "grupo": "universidade",
+    "tipo": "Pública (Estadual)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "Fundação Araucária",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "uel",
+    "sigla": "UEL",
+    "nome": "Universidade Estadual de Londrina (UEL)",
+    "grupo": "universidade",
+    "tipo": "Pública (Estadual)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "Fundação Araucária",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "uerj",
+    "sigla": "UERJ",
+    "nome": "Universidade do Estado do Rio de Janeiro (UERJ)",
+    "grupo": "universidade",
+    "tipo": "Pública (Estadual)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "FAPERJ",
+      "CNPq",
+      "CAPES"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "anhembi-morumbi",
+    "sigla": "Anhembi Morumbi",
+    "nome": "Universidade Anhembi Morumbi",
+    "grupo": "universidade",
+    "tipo": "Privada (Lucrativa)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "Ânima Educação",
+      "FAPESP"
+    ],
+    "norma_csv": "ABNT / APA"
+  },
+  {
+    "id": "unisinos",
+    "sigla": "UNISINOS",
+    "nome": "Universidade do Vale do Rio dos Sinos (UNISINOS)",
+    "grupo": "universidade",
+    "tipo": "Privada (Filantrópica)",
+    "categoria": "Maior",
+    "uf": null,
+    "fomento": [
+      "FAPERGS",
+      "CNPq",
+      "CAPES",
+      "Parcerias Tecnológicas"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ifsp",
+    "sigla": "IFSP",
+    "nome": "Instituto Federal de São Paulo (IFSP)",
+    "grupo": "tecnica",
+    "tipo": "Instituto Federal",
+    "categoria": null,
+    "uf": "SP",
+    "fomento": [
+      "CNPq",
+      "CAPES",
+      "FAPESP",
+      "Bolsas de Iniciação Científica (PIBITI/PIBIC)"
+    ],
+    "norma_csv": "ABNT (Geral) / APA (Áreas Tecnológicas específicas)"
+  },
+  {
+    "id": "fatec",
+    "sigla": "FATEC",
+    "nome": "Faculdade de Tecnologia do Estado de São Paulo (FATEC)",
+    "grupo": "tecnica",
+    "tipo": "Faculdade de Tecnologia",
+    "categoria": null,
+    "uf": "SP",
+    "fomento": [
+      "FAPESP (Iniciação Científica)",
+      "Projetos Integradores",
+      "Parcerias com Indústrias"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ifrj",
+    "sigla": "IFRJ",
+    "nome": "Instituto Federal do Rio de Janeiro (IFRJ)",
+    "grupo": "tecnica",
+    "tipo": "Instituto Federal",
+    "categoria": null,
+    "uf": "RJ",
+    "fomento": [
+      "CNPq",
+      "CAPES",
+      "FAPERJ",
+      "Editais Internos de Inovação"
+    ],
+    "norma_csv": "ABNT / Vancouver (Cursos da área de Saúde)"
+  },
+  {
+    "id": "ifmg",
+    "sigla": "IFMG",
+    "nome": "Instituto Federal de Minas Gerais (IFMG)",
+    "grupo": "tecnica",
+    "tipo": "Instituto Federal",
+    "categoria": null,
+    "uf": "MG",
+    "fomento": [
+      "CNPq",
+      "CAPES",
+      "FAPEMIG",
+      "Polos de Inovação EMBRAPII"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ifrs",
+    "sigla": "IFRS",
+    "nome": "Instituto Federal do Rio Grande do Sul (IFRS)",
+    "grupo": "tecnica",
+    "tipo": "Instituto Federal",
+    "categoria": null,
+    "uf": "RS",
+    "fomento": [
+      "CNPq",
+      "CAPES",
+      "FAPERGS",
+      "Auxílios à Publicação de Periódicos"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ifsc",
+    "sigla": "IFSC",
+    "nome": "Instituto Federal de Santa Catarina (IFSC)",
+    "grupo": "tecnica",
+    "tipo": "Instituto Federal",
+    "categoria": null,
+    "uf": "SC",
+    "fomento": [
+      "CNPq",
+      "CAPES",
+      "FAPESC",
+      "Programas de Estímulo à Pesquisa Aplicada"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ifpr",
+    "sigla": "IFPR",
+    "nome": "Instituto Federal do Paraná (IFPR)",
+    "grupo": "tecnica",
+    "tipo": "Instituto Federal",
+    "categoria": null,
+    "uf": "PR",
+    "fomento": [
+      "CNPq",
+      "CAPES",
+      "Fundação Araucária",
+      "Cooperação Técnica Empresarial"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ifce",
+    "sigla": "IFCE",
+    "nome": "Instituto Federal do Ceará (IFCE)",
+    "grupo": "tecnica",
+    "tipo": "Instituto Federal",
+    "categoria": null,
+    "uf": "CE",
+    "fomento": [
+      "CNPq",
+      "CAPES",
+      "FUNCAP",
+      "Projetos de Extensão Tecnológica"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ifpe",
+    "sigla": "IFPE",
+    "nome": "Instituto Federal de Pernambuco (IFPE)",
+    "grupo": "tecnica",
+    "tipo": "Instituto Federal",
+    "categoria": null,
+    "uf": "PE",
+    "fomento": [
+      "CNPq",
+      "CAPES",
+      "FACEPE",
+      "Pesquisa Científica Orientada ao Desenvolvimento Regional"
+    ],
+    "norma_csv": "ABNT"
+  },
+  {
+    "id": "ifb",
+    "sigla": "IFB",
+    "nome": "Instituto Federal de Brasília (IFB)",
+    "grupo": "tecnica",
+    "tipo": "Instituto Federal",
+    "categoria": null,
+    "uf": "DF",
+    "fomento": [
+      "CNPq",
+      "CAPES",
+      "FAPDF",
+      "Programas de Apoio à Propriedade Intelectual"
+    ],
+    "norma_csv": "ABNT"
+  }
+]

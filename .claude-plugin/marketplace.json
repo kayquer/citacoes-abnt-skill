@@ -1,0 +1,13 @@
+{
+  "name": "citacoes-abnt-skill",
+  "owner": { "name": "Kayque Rotondo", "email": "kayquerocha@gmail.com" },
+  "metadata": { "description": "Citações e ABNT para o Claude Code: biblioteca, checador de referências e normas de 50 instituições brasileiras." },
+  "plugins": [
+    {
+      "name": "citacoes-abnt",
+      "source": "./",
+      "description": "Biblioteca de citações, checador de referências e aplicação da ABNT vigente com perfis de 50 universidades e institutos brasileiros.",
+      "category": "escrita-academica"
+    }
+  ]
+}
