@@ -10,6 +10,7 @@ Saídas:
     data/instituicoes.json                                    base + pesquisa + perfil resolvido
     skills/abnt-formatacao/references/instituicoes/*.md       um perfil por instituição + índice
     docs/                                                     site (index, uma página por instituição, sitemap, llms.txt)
+    dist/                                                     pacotes para Claude.ai, ChatGPT, Gemini e outros agentes (tools/portatil.py)
     README.md                                                 tabela entre <!-- instituicoes:inicio/fim -->
 """
 import json
@@ -19,6 +20,7 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "tools"))
+import portatil  # noqa: E402
 import site_gen  # noqa: E402
 
 CONFERIDO = "2026-11"
@@ -259,14 +261,21 @@ def todas_saidas():
     saidas.update(gerar_perfis(dados))
     saidas.update(site_gen.gerar_site(dados, RAIZ, perfil_md))
     saidas.update(gerar_readme(dados))
+    saidas.update(portatil.gerar(RAIZ, dados, perfil_md, saidas))
     return saidas
+
+
+def _igual(p, conteudo):
+    if not p.exists():
+        return False
+    return p.read_bytes() == conteudo if isinstance(conteudo, bytes) else p.read_text(encoding="utf-8") == conteudo
 
 
 def main(argv):
     saidas = todas_saidas()
     if "--verificar" in argv:
         defasados = [str(p.relative_to(RAIZ)) for p, c in saidas.items()
-                     if not p.exists() or p.read_text(encoding="utf-8") != c]
+                     if not _igual(p, c)]
         if defasados:
             print("Defasados (rode py -3 tools/build.py):\n  " + "\n  ".join(defasados))
             return 1
@@ -274,7 +283,11 @@ def main(argv):
         return 0
     for p, c in saidas.items():
         p.parent.mkdir(parents=True, exist_ok=True)
-        if not p.exists() or p.read_text(encoding="utf-8") != c:
+        if _igual(p, c):
+            continue
+        if isinstance(c, bytes):
+            p.write_bytes(c)
+        else:
             p.write_text(c, encoding="utf-8", newline="\n")
     print(f"{len(saidas)} arquivos gerados")
     return 0

@@ -1,0 +1,2955 @@
+# Conhecimento: perfis de formatação de 50 instituições (citacoes-abnt-skill)
+
+Procure a instituição pelo nome ou pela sigla. Fora da lista, use o perfil "Padrão ABNT".
+
+
+---
+
+# Padrão ABNT (sem manual institucional)
+
+Use quando a instituição não está na lista ou não tem manual público. Pergunte se há manual do curso.
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 cm × 29,7 cm) |
+| Margens | anverso: superior e esquerda 3 cm, inferior e direita 2 cm (no verso, invertidas) |
+| Fonte | 12 para o texto; menor (10 recomendado) para citação longa, nota, paginação, legenda e fonte de ilustração. A norma não fixa a família; Arial ou Times New Roman é o costume |
+| Espaçamento | 1,5 no texto; simples em citação longa, nota, referência, legenda, natureza do trabalho e ficha catalográfica |
+| Referências | espaço simples, alinhadas à esquerda, separadas por uma linha em branco de espaço simples |
+| Recuo de parágrafo | 1,25 cm (costume; a NBR 14724 não fixa) |
+| Citação longa | mais de 3 linhas, recuo de 4 cm (recomendado pela NBR 10520:2023), fonte menor, espaço simples, sem aspas |
+| Paginação | arábicos no canto superior direito, a 2 cm das bordas, a partir da parte textual; pré-textuais contadas e não numeradas |
+| Títulos de seção | numeração progressiva (NBR 6024), alinhados à esquerda, separados do texto por um espaço de 1,5; títulos sem indicativo numérico (errata, agradecimentos, listas, resumo, sumário, referências, apêndice, anexo) centralizados |
+| Edições | NBR 6023:2025, NBR 10520:2023, NBR 14724:2024 |
+
+Para os scripts: `--instituicao padrao-abnt`.
+
+
+---
+
+# Perfis de instituições
+
+50 instituições. Conferido em 2026-11. Abra o arquivo `<id>.md` da instituição do usuário.
+
+| id | Instituição | Norma principal | Manual | Edições (6023, 10520, 14724) |
+|---|---|---|---|---|
+| `usp` | Universidade de São Paulo (USP) | ABNT (com diretrizes próprias USP) | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `unicamp` | Universidade Estadual de Campinas (UNICAMP) | ABNT | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `ufrj` | Universidade Federal do Rio de Janeiro (UFRJ) | ABNT (Vancouver em Biomédicas) | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `ufmg` | Universidade Federal de Minas Gerais (UFMG) | ABNT | sim | 6023:2025, 10520:2023, 14724:2024 |
+| `ufrgs` | Universidade Federal do Rio Grande do Sul (UFRGS) | ABNT | não encontrado | 6023:2018, 10520:2023*, 14724:2024* |
+| `ufsc` | Universidade Federal de Santa Catarina (UFSC) | ABNT | sim | 6023:2025*, 10520:2023*, 14724:2024* |
+| `unb` | Universidade de Brasília (UnB) | ABNT / APA (Psicologia) | não encontrado | 6023:2025*, 10520:2023*, 14724:2024* |
+| `unifesp` | Universidade Federal de São Paulo (UNIFESP) | Vancouver / ABNT | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `ufpr` | Universidade Federal do Paraná (UFPR) | ABNT | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `unesp` | Universidade Estadual Paulista (UNESP) | ABNT | não encontrado | 6023:2018, 10520:2002, 14724:2011 |
+| `ufscar` | Universidade Federal de São Carlos (UFSCar) | ABNT | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `puc-rio` | Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio) | ABNT / APA | sim | 6023:2025*, 10520:2023*, 14724:2024* |
+| `ufpe` | Universidade Federal de Pernambuco (UFPE) | ABNT | sim | 6023:2018, 10520:2023, 14724:2024* |
+| `ufc` | Universidade Federal do Ceará (UFC) | ABNT | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `ufba` | Universidade Federal da Bahia (UFBA) | ABNT | não encontrado | 6023:2025*, 10520:2023*, 14724:2024* |
+| `ufv` | Universidade Federal de Viçosa (UFV) | ABNT | sim | 6023:2018, 10520:2023, 14724:2024 |
+| `uff` | Universidade Federal Fluminense (UFF) | ABNT | sim | 6023:2018, 10520:2002, 14724:2011 |
+| `pucrs` | Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS) | ABNT / APA | sim | 6023:2025*, 10520:2023*, 14724:2024* |
+| `ufsm` | Universidade Federal de Santa Maria (UFSM) | ABNT | sim | 6023:2018, 10520:2023*, 14724:2011 |
+| `ufpel` | Universidade Federal de Pelotas (UFPel) | ABNT | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `unesa` | Universidade Estácio de Sá (UNESA) | ABNT | sim | 6023:2018, 10520:2002, 14724:2011 |
+| `unip` | Universidade Paulista (UNIP) | ABNT | sim | 6023:2025, 10520:2023, 14724:2024 |
+| `unopar` | Universidade Norte do Paraná (UNOPAR) | ABNT | não encontrado | 6023:2025*, 10520:2023*, 14724:2024* |
+| `ufma` | Universidade Federal do Maranhão (UFMA) | ABNT | não encontrado | 6023:2025*, 10520:2023*, 14724:2024* |
+| `ufpa` | Universidade Federal do Pará (UFPA) | ABNT | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `ufg` | Universidade Federal de Goiás (UFG) | ABNT | sim | 6023:2018, 10520:2002, 14724:2011 |
+| `ufrn` | Universidade Federal do Rio Grande do Norte (UFRN) | ABNT / Vancouver | sim | 6023:2018, 10520:2023*, 14724:2011 |
+| `unicsul` | Universidade Cruzeiro do Sul (UNICSUL) | ABNT | não encontrado | 6023:2025*, 10520:2023*, 14724:2024* |
+| `uninove` | Universidade Nove de Julho (UNINOVE) | ABNT / Vancouver (Medicina) | sim | 6023:2018, 10520:2023, 14724:2024 |
+| `ufam` | Universidade Federal do Amazonas (UFAM) | ABNT | sim | 6023:2018, 10520:2002, 14724:2011 |
+| `ufu` | Universidade Federal de Uberlândia (UFU) | ABNT | sim | 6023:2025, 10520:2023, 14724:2024 |
+| `ufpi` | Universidade Federal do Piauí (UFPI) | ABNT | sim | 6023:2018, 10520:2023, 14724:2024 |
+| `ufpb` | Universidade Federal da Paraíba (UFPB) | ABNT | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `ufal` | Universidade Federal de Alagoas (UFAL) | ABNT | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `ufmt` | Universidade Federal de Mato Grosso (UFMT) | ABNT | não encontrado | 6023:2025*, 10520:2023*, 14724:2024* |
+| `uem` | Universidade Estadual de Maringá (UEM) | ABNT | não encontrado | 6023:2025*, 10520:2023*, 14724:2024* |
+| `uel` | Universidade Estadual de Londrina (UEL) | ABNT | sim | 6023:2018, 10520:2023, 14724:2024 |
+| `uerj` | Universidade do Estado do Rio de Janeiro (UERJ) | ABNT | sim | 6023:2018, 10520:2002, 14724:2011 |
+| `anhembi-morumbi` | Universidade Anhembi Morumbi | ABNT / APA | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `unisinos` | Universidade do Vale do Rio dos Sinos (UNISINOS) | ABNT | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `ifsp` | Instituto Federal de São Paulo (IFSP) | ABNT (Geral) / APA (Áreas Tecnológicas específicas) | sim | 6023:2018, 10520:2002, 14724:2024* |
+| `fatec` | Faculdade de Tecnologia do Estado de São Paulo (FATEC) | ABNT | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `ifrj` | Instituto Federal do Rio de Janeiro (IFRJ) | ABNT / Vancouver (Cursos da área de Saúde) | sim | 6023:2018, 10520:2023, 14724:2024 |
+| `ifmg` | Instituto Federal de Minas Gerais (IFMG) | ABNT | sim | 6023:2018, 10520:2002, 14724:2011 |
+| `ifrs` | Instituto Federal do Rio Grande do Sul (IFRS) | ABNT | sim | 6023:2018, 10520:2002, 14724:2011 |
+| `ifsc` | Instituto Federal de Santa Catarina (IFSC) | ABNT | sim | 6023:2018, 10520:2023, 14724:2024 |
+| `ifpr` | Instituto Federal do Paraná (IFPR) | ABNT | sim | 6023:2018, 10520:2023, 14724:2011 |
+| `ifce` | Instituto Federal do Ceará (IFCE) | ABNT | sim | 6023:2018, 10520:2002, 14724:2011 |
+| `ifpe` | Instituto Federal de Pernambuco (IFPE) | ABNT | não encontrado | 6023:2025*, 10520:2023*, 14724:2024* |
+| `ifb` | Instituto Federal de Brasília (IFB) | ABNT | sim | 6023:2018, 10520:2002, 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa. Edição antiga sem asterisco (6023:2018, 10520:2002, 14724:2011) vem do manual: pergunte se o curso ainda a exige.
+
+Instituição fora da lista: use o perfil `padrao-abnt` (regras gerais da NBR 14724:2024) e peça o manual.
+
+
+---
+
+# Universidade de São Paulo (USP)
+
+**Sigla**: USP | **Tipo**: Pública (Estadual) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Diretrizes para apresentação de dissertações e teses da USP: parte I (ABNT). 5. ed. (Cadernos de Estudos, 9)](https://www.livrosabertos.abcd.usp.br/portaldelivrosUSP/catalog/book/1353) (Agência de Bibliotecas e Coleções Digitais da USP (ABCD/USP), 2024)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 cm x 29,7 cm), papel branco ou reciclado, cor preta |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | Folhas contadas a partir da folha de rosto; pré-textuais não numeradas; numeração em arábicos a partir da Introdução, canto superior direito (no verso impresso, canto superior esquerdo); formato digital sempre no canto superior direito |
+| Sistema de chamada | autor-data (sistema alfabético) ou numérico |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao usp` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: tamanho 12 (o manual não fixa tipo de letra)
+- **fonte menor**: 10 ou 11 para citações de mais de três linhas, notas de rodapé, paginação, ficha catalográfica, legendas e fontes das ilustrações e tabelas
+- **espacamento**: 1,5; simples para citações longas, notas, referências, legendas, ficha catalográfica e natureza do trabalho; referências separadas por um espaço simples em branco
+
+## Outras normas por área
+
+- Áreas que usam APA: APA (Diretrizes parte II) ([fonte](https://dx.doi.org/10.11606/9788573140576))
+- Áreas que usam ISO: ISO (Diretrizes parte III) ([fonte](https://dx.doi.org/10.11606/9788573140590))
+- Biomédicas/Saúde: Vancouver (Diretrizes parte IV) ([fonte](https://dx.doi.org/10.11606/9788573140569))
+
+## Particularidades
+
+- Margens distintas para formato impresso (verso: direita e superior 3 cm, esquerda e inferior 2 cm) e digital (sempre 3/3/2/2)
+- Ficha catalográfica obrigatória, no verso da folha de rosto; para confeccioná-la, consultar a biblioteca da unidade de origem
+- Impressão anverso e verso fica a critério do Programa de Pós-Graduação da unidade
+- O manual cita a NBR 10520 de 2002 e de 2023 nas referências; o texto de citações segue a de 2023
+
+## Observações da pesquisa
+
+Manual oficial lido em PDF. A página teses.usp.br não lista templates Word/LaTeX; unidades da USP têm guias próprios (não levantados aqui). Espaçamento descrito no manual como 'espaço 1,5 cm' (sic).
+
+## Fontes
+
+- [Diretrizes para apresentação de dissertações e teses da USP: parte I (ABNT). 5. ed. (Cadernos de Estudos, 9)](https://www.livrosabertos.abcd.usp.br/portaldelivrosUSP/catalog/book/1353)
+- [Portal de Teses USP - Diretrizes (lista as partes I ABNT, II APA, III ISO, IV Vancouver)](https://teses.usp.br/diretrizes)
+- [PDF da Parte I (ABNT), 5. ed., 2024](https://www.livrosabertos.abcd.usp.br/portaldelivrosUSP/catalog/view/1353/1233/7374)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Estadual de Campinas (UNICAMP)
+
+**Sigla**: UNICAMP | **Tipo**: Pública (Estadual) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de normalização de trabalhos acadêmicos: TCC, teses, dissertações (Biblioteca do Instituto de Artes)](https://www.iar.unicamp.br/wp-content/uploads/2023/10/Manual-de-Normalizacao.pdf) (Biblioteca do Instituto de Artes (IA) da Unicamp, com base na Instrução Normativa CCPG nº 002/2021, 2023)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 x 29,7 cm) |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 2 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | Todas as páginas contadas; pré-textuais (até o sumário) não numeradas; numeração contínua da Introdução até a última folha, em arábicos, no canto superior direito |
+| Sistema de chamada | autor-data ou numérico (numérico não deve ser usado quando há notas de rodapé) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao unicamp` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Times New Roman, Arial ou similar, tamanho 12, cor preta (citando a CCPG 2021)
+- **fonte menor**: recomenda-se fonte menor (tamanho não fixado) para citações de mais de três linhas, notas de rodapé, paginação, legendas e fontes das ilustrações e tabelas
+- **espacamento**: 1,5 no texto e nas referências; simples em notas de rodapé e citações longas (opcional para resumo e abstract)
+
+## Particularidades
+
+- Dissertações e teses da pós-graduação devem seguir obrigatoriamente a Instrução Normativa CCPG nº 002/2021 (Comissão Central de Pós-Graduação)
+- Recuo de parágrafo de 2,0 cm a partir da margem esquerda, diferente dos 1,25 cm usuais
+- Modelo de dissertação/tese em PDF disponibilizado pela Biblioteca do IA; versão Word mediante pedido por e-mail (biarte@unicamp.br)
+- Versão digital entregue em arquivo único com folha de aprovação e ficha catalográfica
+
+## Modelos oficiais
+
+- PDF (modelo de dissertação/tese CCPG 002/2021 + NBR 14724:2011): https://www.iar.unicamp.br/wp-content/uploads/2023/03/Modelo-Versao-Final-2023.pdf
+
+## Observações da pesquisa
+
+Não foi achado manual central do Sistema de Bibliotecas (SBU) da Unicamp; usado o manual da Biblioteca do IA, que transcreve a IN CCPG 002/2021 (o PDF da IN não abriu: domínio www3.prpg.gr.unicamp.br não resolveu). O manual cita 10520:2023 no texto, mas a lista de referências traz a 10520 de 2002.
+
+## Fontes
+
+- [Manual de normalização de trabalhos acadêmicos: TCC, teses, dissertações (Biblioteca do Instituto de Artes)](https://www.iar.unicamp.br/wp-content/uploads/2023/10/Manual-de-Normalizacao.pdf)
+- [Instrução Normativa CCPG nº 002/2021 (link citado pelo manual; domínio não respondeu na conferência)](http://www3.prpg.gr.unicamp.br/sites/site1/wp-content/uploads/2021/03/infccpg002_2021.pdf)
+- [Manual de normalização e apresentação de teses e dissertações da FCM/Unicamp (2020, não lido)](https://www.fcm.unicamp.br/fcm/sites/default/files/2020/page/manualtesesfcm2020.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal do Rio de Janeiro (UFRJ)
+
+**Sigla**: UFRJ | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual para elaboração e normalização de trabalhos acadêmicos. 8. ed. rev. (Série Manual de Procedimentos, n. 5)](https://ppgci.ibict.br/media/uploads/2024/05/Manual-para-elaboracao-e-normalizacao-de-trabalhos-academicos-SiBI-UFRJ-2023.pdf) (Sistema de Bibliotecas e Informação (SiBI/UFRJ), 2023)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 cm x 29,7 cm), branco ou reciclado, posição vertical |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | Folhas contadas a partir da folha de rosto, numeradas a partir da primeira folha textual, em arábicos, canto superior direito a 2 cm da borda superior e 2 cm da borda direita; em anverso/verso, canto superior externo |
+| Sistema de chamada | autor-data ou numérico |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufrj` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: tamanho 12, cor preta (o manual não fixa tipo de letra)
+- **fonte menor**: fonte menor e uniforme (tamanho não fixado) para citações de mais de 3 linhas, notas de rodapé, paginação e legendas de ilustrações e tabelas
+- **espacamento**: 1,5; simples para citações longas, notas, referências, legendas, ficha catalográfica e natureza do trabalho
+
+## Outras normas por área
+
+- A planilha de origem indica "ABNT (Vancouver em Biomédicas)", mas o manual consultado não confirma. [VERIFICAR: norma exigida pelo programa]
+
+## Particularidades
+
+- Margens de verso espelhadas (direita 3, superior 3, esquerda 2, inferior 2)
+- Ficha catalográfica no verso da folha de rosto, com anexo de modelo no manual
+- Manual aprovado pelo CEPG (17/10/1997) como fonte para trabalhos baseados na ABNT
+- Recomenda-se impressão anverso e verso nos elementos textuais e pós-textuais
+
+## Observações da pesquisa
+
+PDF lido a partir de cópia hospedada no PPGCI/IBICT (o mesmo arquivo do SiBI). O manual não menciona Vancouver; a variação Vancouver em Biomédicas indicada no CSV não foi confirmada nesta fonte.
+
+## Fontes
+
+- [Manual para elaboração e normalização de trabalhos acadêmicos. 8. ed. rev. (Série Manual de Procedimentos, n. 5)](https://ppgci.ibict.br/media/uploads/2024/05/Manual-para-elaboracao-e-normalizacao-de-trabalhos-academicos-SiBI-UFRJ-2023.pdf)
+- [SiBI/UFRJ - Manuais e publicações (página oficial indicada pelos programas)](https://www.sibi.ufrj.br/index.php/manuais-e-publicacoes)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal de Minas Gerais (UFMG)
+
+**Sigla**: UFMG | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Diretrizes para normalização de trabalhos acadêmicos. 3. ed.](https://repositorio.ufmg.br/assets/public_html/diretrizes-para-normalizacao-de-trabalhos-academicos-da-UFMG.pdf) (Biblioteca Universitária - Sistema de Bibliotecas da UFMG / Repositório Institucional (RI-UFMG), 2025)
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4, retrato (paisagem permitida para quadros, figuras e tabelas) |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | Arábicos no canto superior direito, exibida a partir da primeira página textual (Introdução); contagem a partir da folha de rosto |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2025, NBR 10520:2023, NBR 14724:2024 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufmg` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: sugere-se Arial ou Times New Roman 12
+- **fonte menor**: 10 ou 11, espaço simples, para citações de mais de três linhas, notas de rodapé, paginação, legendas e fontes de ilustrações e tabelas
+- **espacamento**: 1,5, justificado
+
+## Outras normas por área
+
+- Áreas diversas (lista de normativas admitidas): APA, ISO 690:2021, NLM/ICMJE (Vancouver), IBGE para tabelas ([fonte](https://repositorio.ufmg.br/assets/public_html/diretrizes-para-normalizacao-de-trabalhos-academicos-da-UFMG.pdf))
+
+## Particularidades
+
+- As diretrizes valem para o depósito no RI-UFMG e não impõem um padrão de citação único; listam ABNT, APA, ISO, NLM e ICMJE como normativas aceitas
+- Parágrafo: espaço de 1,5 cm entre parágrafos OU recuo de 1,25 cm
+- Ficha catalográfica obrigatória para teses e dissertações (modelo na seção 3.2.2)
+- Arquivo final em PDF/A, nomeado com tipologia e título do trabalho
+- Natureza do trabalho e nome do orientador com recuo de 8 cm à esquerda
+
+## Observações da pesquisa
+
+Já adota NBR 6023:2025 e NBR 14724:2024 (além de 10520:2023 e 12225:2023). Sistema de chamada não definido pelas diretrizes centrais (o guia da Farmácia, 2024, ainda baseado na 14724:2011, aceita autor-data ou numérico e parágrafo com recuo de 2 cm).
+
+## Fontes
+
+- [Diretrizes para normalização de trabalhos acadêmicos. 3. ed.](https://repositorio.ufmg.br/assets/public_html/diretrizes-para-normalizacao-de-trabalhos-academicos-da-UFMG.pdf)
+- [Normalização de publicações técnico-científicas - Biblioteca da Faculdade de Farmácia (2024)](https://farmacia.ufmg.br/wp-content/uploads/2024/02/Manual_normalizacao_16_02_2024.pdf)
+- [Guia de normalização da Pós-graduação FAO/UFMG, 3. ed. 2024 (não lido)](https://posgrad.odonto.ufmg.br/wp-content/uploads/2023/11/Guia-de-normalizacao-da-Pos-graduacao-FAO-UFMG-3ed.2024.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal do Rio Grande do Sul (UFRGS)
+
+**Sigla**: UFRGS | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: não encontrado em fonte pública. Aplique a ABNT vigente e peça ao usuário o manual do curso ou do programa. [VERIFICAR: manual da instituição]
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm *(padrão ABNT: o manual não especifica)* |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 *(padrão ABNT: o manual não especifica)* |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm *(padrão ABNT: o manual não especifica)* |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023*, NBR 14724:2024* |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufrgs` (perfil em `data/instituicoes.json`).
+
+## Outras normas por área
+
+- Ciências da saúde: Vancouver ([fonte](https://www.ufrgs.br/bibliotecas/servicos/apoio-normalizacao/))
+
+## Particularidades
+
+- Modelo completo de trabalho acadêmico (NBR 14724) em Word, LibreOffice Writer e Google Docs; modelo de artigo (NBR 6022)
+- Ficha catalográfica no verso da folha de rosto no impresso; na versão digital, logo após a folha de rosto e não contada na paginação
+- Desde out./2019 a Biblioteca Central só recebe teses e dissertações digitais (Resolução CAMPG 02/2019), encaminhadas pelos PPGs
+- Várias bibliotecas setoriais têm manuais próprios (ex.: ICBS, Engenharia, Direito)
+
+## Modelos oficiais
+
+- Word: https://www.ufrgs.br/bibliotecas/wp-content/uploads/Modelo_Trabalho-Academico_Word.zip
+- LibreOffice Writer: https://www.ufrgs.br/bibliotecas/wp-content/uploads/Modelo_Trabalho-Academico_LibreOffice.zip
+- Google Docs: https://docs.google.com/document/d/1lPVnTOULKQdvmm22ha0X8Zr2KjtjFHCULeNYt92v1wI/template/preview
+
+## Observações da pesquisa
+
+Não há manual central em PDF; a orientação é por modelos e pelas bibliotecas setoriais. Informação divergente: a página 'Apoio à normalização' lista NBR 14724:2011, 6023:2018 e 10520:2002, mas a Biblioteca Central publicou posts sobre a NBR 14724:2024 (lançada em 16/12/2024) e a 10520:2023; por isso 10520 e 14724 ficaram como 'não informa'. Regras de margem, fonte etc. não aparecem nas páginas consultadas (estão embutidas nos modelos, não abertos).
+
+## Fontes
+
+- [Modelos ABNT - Bibliotecas da UFRGS](https://www.ufrgs.br/bibliotecas/ferramentas/modelos-abnt/)
+- [Apoio à normalização bibliográfica - Bibliotecas da UFRGS](https://www.ufrgs.br/bibliotecas/servicos/apoio-normalizacao/)
+- [Biblioteca Central - posts sobre atualização de normas (NBR 14724:2024 em 09/01/2025; NBR 10520:2023 em 21/07/2023)](https://www.ufrgs.br/bibliotecacentral/categoria/normas-tecnicas/)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal de Santa Catarina (UFSC)
+
+**Sigla**: UFSC | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Tutorial de trabalhos acadêmicos padrão A4 (Portal de Normalização da BU/UFSC)](https://repositorio.ufsc.br/handle/123456789/180829) (Biblioteca Universitária (BU/UFSC), None)
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (obrigatório para teses e dissertações desde 01/08/2019, Resolução Normativa nº 46/2019/CPG) |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm *(padrão ABNT: o manual não especifica)* |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 *(padrão ABNT: o manual não especifica)* |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm *(padrão ABNT: o manual não especifica)* |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2025*, NBR 10520:2023*, NBR 14724:2024* |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufsc` (perfil em `data/instituicoes.json`).
+
+## Particularidades
+
+- Ficha catalográfica gerada no sistema da BU: http://ficha.bu.ufsc.br/
+- Documento final convertido em PDF/A; certificação digital (tutorial próprio)
+- Antes de 2019 a UFSC usava formato A5 para teses e dissertações; hoje é A4
+- Formato de TCC é definido por cada curso; o template da BU é sugestão
+- MORE - Mecanismo Online para Referências: http://www.more.ufsc.br/
+- Modelo específico de folha de rosto para tese em cotutela
+
+## Modelos oficiais
+
+- Word (teses e dissertações): https://repositorio.ufsc.br/handle/123456789/197457
+- ODT (teses e dissertações): https://repositorio.ufsc.br/handle/123456789/197456
+- Word (TCC graduação/especialização): https://repositorio.ufsc.br/handle/123456789/174345
+- Overleaf (não oficial da BU): https://www.overleaf.com/latex/templates/template-trabalhos-academicos-ufsc-a4/vtfjxrcrvnjh
+
+## Observações da pesquisa
+
+O repositório da UFSC bloqueou o acesso externo (página de 'Sistema de Prevenção de Ataques da RedeUFSC'), então o tutorial não foi lido e as regras ficaram null. O portal da BU não cita edições das NBR.
+
+## Fontes
+
+- [Tutorial de trabalhos acadêmicos padrão A4 (Portal de Normalização da BU/UFSC)](https://repositorio.ufsc.br/handle/123456789/180829)
+- [Portal de Normalização da BU/UFSC](https://portal.bu.ufsc.br/normalizacao/)
+- [Tutorial de Formatação Word para trabalhos acadêmicos](https://repositorio.ufsc.br/handle/123456789/198045)
+- [Tutorial Citações e Referências (padrão ABNT)](https://repositorio.ufsc.br/xmlui/handle/123456789/180833)
+- [Procedimentos para a entrega de teses e dissertações](https://repositorio.ufsc.br/handle/123456789/202114)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade de Brasília (UnB)
+
+**Sigla**: UnB | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: não encontrado em fonte pública. Aplique a ABNT vigente e peça ao usuário o manual do curso ou do programa. [VERIFICAR: manual da instituição]
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm *(padrão ABNT: o manual não especifica)* |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 *(padrão ABNT: o manual não especifica)* |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm *(padrão ABNT: o manual não especifica)* |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2025*, NBR 10520:2023*, NBR 14724:2024* |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao unb` (perfil em `data/instituicoes.json`).
+
+## Outras normas por área
+
+- A planilha de origem indica "ABNT / APA (Psicologia)", mas o manual consultado não confirma. [VERIFICAR: norma exigida pelo programa]
+
+## Particularidades
+
+- BCE oferece serviço de elaboração de ficha catalográfica
+- Acesso institucional às normas ABNT pela plataforma Target GEDWeb
+
+## Observações da pesquisa
+
+Não foi encontrado manual ou guia de normalização oficial da UnB. A página de tutoriais da BCE não traz material de ABNT; os slides de ABNT da BCE (2021, 2022, 2024) retornam 404. A variação APA em Psicologia indicada no CSV não foi confirmada.
+
+## Fontes
+
+- [BCE/UnB - Elaboração de fichas catalográficas](https://bce.unb.br/elaboracao-de-fichas-catalograficas/)
+- [BCE/UnB - Acesso às normas ABNT (Target GEDWeb)](https://www.gedweb.com.br/unb/)
+- [Slides 'ABNT 2023 - atualizado julho 2024' da BCE (link indexado, retornou 404 na conferência)](https://bce.unb.br/wp-content/uploads/2024/07/ABNT-2023-Atualizado-julho-2024.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal de São Paulo (UNIFESP)
+
+**Sigla**: UNIFESP | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de normalização de trabalhos acadêmicos (atualização 2024)](https://unifesp.br/campus/gua/images/Biblioteca/tutoriais/Manual_de_normalizacao._Atualizacao_2024.pdf) (Biblioteca Otávio Rangel de Souza - Escola de Filosofia, Letras e Ciências Humanas (EFLCH), Unifesp Campus Guarulhos, 2024)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21,0 cm x 29,7 cm), branco ou reciclado, cor preta |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data ou numérico |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao unifesp` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Arial ou Times New Roman 12
+- **fonte menor**: 10 ou 11 para notas de rodapé, paginação, ficha catalográfica, legendas e fontes das ilustrações e tabelas, citações com mais de três linhas
+- **espacamento**: 1,5; simples para notas, natureza do trabalho, legendas, referências e citações longas
+
+## Outras normas por área
+
+- A planilha de origem indica "Vancouver / ABNT", mas o manual consultado não confirma. [VERIFICAR: norma exigida pelo programa]
+
+## Particularidades
+
+- Margens de verso: direita e superior 3 cm, esquerda e inferior 2 cm
+- Recuo de 4 cm para citação longa descrito como 'opcional, porém recomendado' após a atualização da NBR 10520
+- Template/modelo de ficha catalográfica disponível no site da biblioteca
+
+## Observações da pesquisa
+
+Não foi achado manual central da Unifesp; cada campus tem o seu. O manual usado é do campus de Humanidades (Guarulhos), por isso não trata de Vancouver; a variação Vancouver em saúde indicada no CSV não foi confirmada em fonte da Unifesp. O manual comenta a atualização da 10520 de julho de 2023, mas a lista de referências ainda cita a 10520:2002.
+
+## Fontes
+
+- [Manual de normalização de trabalhos acadêmicos (atualização 2024)](https://unifesp.br/campus/gua/images/Biblioteca/tutoriais/Manual_de_normalizacao._Atualizacao_2024.pdf)
+- [Manual de normalização da Biblioteca Unifesp Campus Diadema (2023, não lido)](https://site.unifesp.br/diadema.biblioteca/images/Serviços/Manual%20de%20Normatização/ManualNormalizacaoUNIFESPDiadema2023.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal do Paraná (UFPR)
+
+**Sigla**: UFPR | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de normalização de documentos científicos de acordo com as normas da ABNT. 2. ed.](https://litoral.ufpr.br/lecampo/wp-content/uploads/sites/10/2025/04/Manual_de_Normalizacao-2024-1.pdf) (Sistema de Bibliotecas da UFPR (SiBi/UFPR), 2024)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 cm x 29,7 cm), retrato (paisagem para figuras, quadros e tabelas) |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,5 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | Arábicos, tamanho 10, canto superior direito a 2 cm da borda superior (verso: canto superior esquerdo); capa não contada; pré-textuais contadas mas não paginadas; numeração a partir da primeira página textual |
+| Sistema de chamada | autor-data ou numérico |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufpr` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: sugere-se Arial ou Times New Roman 12
+- **fonte menor**: 10 para citação direta longa, nota de rodapé, título/fonte/nota/legenda de ilustrações e tabelas, conteúdo de tabela, natureza do trabalho, ficha catalográfica e paginação
+- **espacamento**: 1,5; simples para natureza do trabalho, ficha, resumo/abstract, citação longa, legendas, notas e referências
+
+## Particularidades
+
+- Recuo de primeira linha de 1,5 cm (não 1,25)
+- Margens de verso espelhadas; em trabalho só digital, todas as páginas como anverso
+- Evitar linhas órfãs e viúvas
+- Manual traz modelo de trabalho acadêmico e de artigo com explicação passo a passo
+
+## Observações da pesquisa
+
+PDF de 414 p. lido a partir de cópia no site do Setor Litoral da UFPR (mesmo documento do SiBi). Remete às NBR 14724:2011, 6023:2018 e 10520:2023.
+
+## Fontes
+
+- [Manual de normalização de documentos científicos de acordo com as normas da ABNT. 2. ed.](https://litoral.ufpr.br/lecampo/wp-content/uploads/sites/10/2025/04/Manual_de_Normalizacao-2024-1.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Estadual Paulista (UNESP)
+
+**Sigla**: UNESP | **Tipo**: Pública (Estadual) | **Conferido em**: 2026-11
+
+**Manual de referência**: não encontrado em fonte pública. Aplique a ABNT vigente e peça ao usuário o manual do curso ou do programa. [VERIFICAR: manual da instituição]
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (210 mm x 297 mm), branco ou reciclado (apostila FCT 2018) |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | numérico ou autor-data |
+| Edições usadas | NBR 6023:2018, NBR 10520:2002, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao unesp` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: tamanho 12 (tipo não fixado; apostila FCT 2018)
+- **fonte menor**: tamanho menor (não fixado) para citações longas, notas, paginação, ficha catalográfica, legendas e fontes
+- **espacamento**: 1,5; simples para citações longas, notas, referências, resumos, legendas e natureza do trabalho
+
+## Particularidades
+
+- A CGB mantém um template de trabalho acadêmico, atualizado após a NBR 10520:2023 (segundo relato CBBD 2024), sem recursos automáticos; bibliotecas de unidades criam versões próprias
+- Trabalhos depositados no Repositório Institucional da Unesp
+- Acesso às normas ABNT via GEDWeb institucional
+
+## Observações da pesquisa
+
+Não foi encontrado manual central da CGB/Unesp em página oficial. O manual 'Manual de normalização de trabalhos acadêmicos: citação e referência: ABNT' (CGB, atualização dez. 2023) só aparece em cópia de terceiros (UFGD), que retornou 404. As regras acima vêm da apostila de 2018 de uma unidade (FCT Presidente Prudente), desatualizada (10520:2002); usar com cautela.
+
+## Fontes
+
+- [Grupo de Normas Técnicas da CGB/Unesp](https://www2.unesp.br/portal#!/cgb/normas-tecnicas/grupo-de-normas-tecnicas/)
+- [Apostila de normalização documentária - Biblioteca FCT/Unesp Presidente Prudente (nov. 2018)](https://www.fct.unesp.br/Home/Biblioteca/apostila_abnt_word_bpp_2018.pdf)
+- [CBBD 2024: templates automáticos na FEIS/Unesp Ilha Solteira (cita atualização do template da CGB após a 10520:2023)](https://anaiscbbd.emnuvens.com.br/cbbd2024/article/download/3567/2918/9642)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal de São Carlos (UFSCar)
+
+**Sigla**: UFSCar | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Apresentação do trabalho acadêmico de acordo com NBR 14724/2011 (atualizado em dez. 2023)](https://www.bco.ufscar.br/arquivos/manual-bco-nbr-14724-2023.pdf) (SIBi/UFSCar - Biblioteca Comunitária (BCo), Departamento de Referência, 2023)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4; impresso em papel branco ou reciclado, anverso e verso permitidos |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm *(padrão ABNT: o manual não especifica)* |
+| Paginação | Arábicos; anverso no canto superior direito e verso no canto superior esquerdo, a 2 cm da borda superior; pré-textuais contadas, não numeradas; numeração a partir da primeira folha textual |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufscar` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: tamanho 12; recomenda-se Times New Roman ou Arial
+- **fonte menor**: recomenda-se fonte menor, por exemplo 10, para citações de mais de três linhas, notas, paginação, legendas e fontes de ilustrações e tabelas
+- **espacamento**: 1,5; simples para citações longas, notas, referências, legendas e natureza na folha de rosto
+
+## Particularidades
+
+- Margem do verso (só impresso) transcrita no manual como 'direita e inferior 3 cm / esquerda e superior 2 cm', o que difere do espelhamento da NBR 14724 (superior 3) e parece erro do manual
+- Para citações, o manual remete à NBR 10520/2023 sem detalhar recuo
+- Tutoriais complementares da BCo: numeração de página e numeração progressiva
+
+## Modelos oficiais
+
+- Word (formato artigo, BSo Sorocaba): https://www.bso.ufscar.br/arquivos/atualizado_em_maio_2021_trabalho_academico_formato_artigo.docx
+
+## Observações da pesquisa
+
+Manual curto (apresentação gráfica). Sistema de chamada e recuo de citação não definidos nele (remete à 10520:2023).
+
+## Fontes
+
+- [Apresentação do trabalho acadêmico de acordo com NBR 14724/2011 (atualizado em dez. 2023)](https://www.bco.ufscar.br/arquivos/manual-bco-nbr-14724-2023.pdf)
+- [Modelo de trabalho acadêmico em formato de artigo (BSo/UFSCar Sorocaba, 2021)](https://www.bso.ufscar.br/arquivos/atualizado_em_maio_2021_trabalho_academico_formato_artigo.docx)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio)
+
+**Sigla**: PUC-Rio | **Tipo**: Privada (Filantrópica) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Normas para apresentação de teses e dissertações (revisado 2020)](https://www.puc-rio.br/ensinopesq/ccpg/download/normas%20teses%20revisado%202020.pdf) (Pós-Graduação PUC-Rio (Vice-Reitoria para Assuntos Acadêmicos / CCPG), com a Divisão de Bibliotecas e Documentação, 2020)
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (210 x 297 mm), vertical |
+| Margens | superior 2,5 cm, esquerda 3 cm, inferior 2,5 cm, direita 4 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1 cm |
+| Recuo da citação longa | 1 cm |
+| Paginação | Contagem a partir da folha de rosto; números arábicos nas páginas do texto, junto com o cabeçalho; omitidos nos pré-textuais e nas páginas de abertura de capítulo; numeração visível só a partir da segunda página da Introdução |
+| Sistema de chamada | numérico ou alfabético (autor-data) |
+| Edições usadas | NBR 6023:2025*, NBR 10520:2023*, NBR 14724:2024* |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao puc-rio` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Times New Roman para texto, citações e referências; Arial para títulos, subtítulos, legendas, tabelas e pré-textuais (alternativas: Humanistic 777/Zurich; Garamond em lugar de Times)
+- **fonte menor**: exemplos de corpo 10 e 11 para citações e notas; legendas Arial 10; cabeçalho Arial 10
+- **espacamento**: 1,5 linhas; citações longas em espaço simples
+
+## Outras normas por área
+
+- A planilha de origem indica "ABNT / APA", mas o manual consultado não confirma. [VERIFICAR: norma exigida pelo programa]
+
+## Particularidades
+
+- Projeto gráfico próprio, diferente da NBR 14724: margens 2,5/3/2,5/4 cm, mancha de 13,5 cm, cabeçalho 1 cm, recuo de 1 cm
+- Citações de mais de 3 linhas alinhadas pelo recuo da primeira linha do parágrafo (não 4 cm)
+- Título de capítulo em Arial 14 negrito; todo capítulo começa em página nova
+- Ficha catalográfica pedida à Biblioteca Central por formulário online (www3.dbd.puc-rio.br/sre/solicitacao.asp), entregue em até 48 h úteis; vai na terceira página
+- Elementos pré-textuais próprios: direitos autorais e perfil do aluno
+- Versão digital em PDF único, mínimo 600 dpi, sem proteção, nomeado 'matrícula_anodefesa_Completo.pdf'
+
+## Modelos oficiais
+
+- LaTeX (ThesisPUC 1.0.11, jun. 2020): https://www.puc-rio.br/ensinopesq/ccpg/download/ThesisPUC-1.0.11.zip
+- Instruções do modelo LaTeX: https://www.puc-rio.br/ensinopesq/ccpg/download/ThesisPUC-1.0.11.pdf
+
+## Observações da pesquisa
+
+Manual da Pós-Graduação (atualizado em 08/06/2020). Cita NBR 14724, 10520 e 6024 sem informar edições. A variação APA indicada no CSV não foi confirmada na fonte.
+
+## Fontes
+
+- [Normas para apresentação de teses e dissertações (revisado 2020)](https://www.puc-rio.br/ensinopesq/ccpg/download/normas%20teses%20revisado%202020.pdf)
+- [Apresentação de teses e dissertações - CCPG/PUC-Rio (página com normas, modelos e instruções)](https://www.puc-rio.br/ensinopesq/ccpg/apresentacao_ted.html)
+- [Informações úteis para formatação da dissertação/tese](https://www.puc-rio.br/ensinopesq/ccpg/download/Informações úteis.pdf)
+- [Capas de teses e dissertações (modelo branding)](https://www.puc-rio.br/ensinopesq/ccpg/capas-teses-dissertacoes/)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal de Pernambuco (UFPE)
+
+**Sigla**: UFPE | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de normalização de trabalhos acadêmicos: elementos pré-textuais (atualizado em 09/08/2023)](https://www.ufpe.br/documents/39058/3620106/manual_normalizacao_ufpe_09_08_2023.pdf/a12437cc-d38e-4c58-b503-571f5327bf7f) (Sistema Integrado de Bibliotecas (SIB/UFPE), 2023)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4, cor preta |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data ou numérico |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2024* |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufpe` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: recomenda-se Arial ou Times New Roman 12 (inclusive capa)
+- **fonte menor**: tamanho menor e uniforme (não fixado) para citações de mais de 3 linhas, notas, paginação, legendas e fontes de ilustrações e tabelas
+- **espacamento**: 1,5; simples para citações longas, notas, referências, legendas e natureza do trabalho
+
+## Particularidades
+
+- Manual cobre só os elementos pré-textuais; recomenda usar os modelos do SIB desde o início da escrita
+- Modelo geral para teses e dissertações e modelo específico para teses/dissertações formadas por artigos (programas do CCS e CB)
+- Ficha catalográfica elaborada pela biblioteca setorial do centro acadêmico, mediante envio de PDFs; obrigatória para o depósito legal
+- Resumo preferencialmente de 150 a 500 palavras (NBR 6028:2021)
+
+## Observações da pesquisa
+
+Os modelos (geral e por artigos, vigentes desde 25/01/2022) estão na página do SIB, mas os links diretos não foram extraídos. Paginação e edição da 14724 não constam no manual de pré-textuais.
+
+## Fontes
+
+- [Manual de normalização de trabalhos acadêmicos: elementos pré-textuais (atualizado em 09/08/2023)](https://www.ufpe.br/documents/39058/3620106/manual_normalizacao_ufpe_09_08_2023.pdf/a12437cc-d38e-4c58-b503-571f5327bf7f)
+- [SIB/UFPE - Pós-graduação: ficha catalográfica e normalização](https://www.ufpe.br/sib/ficha-catalografica-normalizacao)
+- [Histórico de atualizações dos documentos de normalização do SIB/UFPE](https://www.ufpe.br/documents/39058/594591/Atualiza%C3%A7%C3%B5es+dos+documentos+de+normaliza%C3%A7%C3%A3o/ea30b15b-8519-4c1c-b086-9de2ad5dd6e5)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal do Ceará (UFC)
+
+**Sigla**: UFC | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Guia de normalização de trabalhos acadêmicos da Universidade Federal do Ceará](https://biblioteca.ufc.br/wp-content/uploads/2022/05/guianormalizacaotrabalhosacademicos-17.05.2022.pdf) (Biblioteca Universitária da UFC – Comissão de Normalização, 2022)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (210 mm x 297 mm) |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | contagem a partir da folha de rosto (capa e verso da folha de rosto/ficha não contam no modo só anverso); numeração a partir da Introdução, algarismos arábicos, canto superior direito a 2 cm das bordas superior e direita; no verso, canto superior esquerdo |
+| Sistema de chamada | autor-data | numérico (guia de citações prioriza autor-data) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufc` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Arial ou Times New Roman 12 para todo o trabalho, inclusive a capa
+- **fonte menor**: tamanho menor e uniforme (recomenda-se 10) para citações com mais de três linhas, notas de rodapé, paginação, ficha catalográfica, legendas e fontes das ilustrações e tabelas
+- **espacamento**: 1,5; simples em citações longas, notas, referências, legendas, ficha catalográfica e natureza do trabalho; sem espaço extra entre parágrafos
+
+## Particularidades
+
+- Ficha catalográfica gerada no Módulo de Elaboração de Ficha Catalográfica (CATALOG!) e impressa obrigatoriamente no verso da folha de rosto
+- Modelos de capa e folha de aprovação distintos para tese, dissertação e TCC/TGI
+- Natureza do trabalho na folha de rosto e de aprovação com recuo de 8 cm da margem esquerda
+- Notas de rodapé separadas por filete de 5 cm; recomenda-se recuo de 2 cm na primeira linha da nota
+- Margens espelhadas no verso (direita e superior 3 cm; esquerda e inferior 2 cm)
+- Uso do guia estabelecido pela Resolução nº 17/CEPE/2017
+
+## Modelos oficiais
+
+- Word: https://biblioteca.ufc.br/wp-content/uploads/2025/02/template-trabalhos-academicos-word-10.02.2025.doc
+- LibreOffice (ODT): https://biblioteca.ufc.br/wp-content/uploads/2021/06/template-trabalhos-academicos-libreoffice.odt
+- Word (artigo): https://biblioteca.ufc.br/wp-content/uploads/2023/05/template-de-artigo-corrigido-27.04.2023.docx
+
+## Observações da pesquisa
+
+O guia de trabalhos acadêmicos (2022) ainda cita a NBR 10520:2002, mas o guia de citações de 2025 da mesma BU já segue a NBR 10520:2023 (recuo de 4 cm, sistema autor-data priorizado); por isso edicao_10520 = 2023. O guia não fixa recuo de primeira linha de parágrafo. O template LaTeX/Overleaf consta como 'em atualização' na página de templates, sem link.
+
+## Fontes
+
+- [Guia de normalização de trabalhos acadêmicos da Universidade Federal do Ceará](https://biblioteca.ufc.br/wp-content/uploads/2022/05/guianormalizacaotrabalhosacademicos-17.05.2022.pdf)
+- [Página Normalização de trabalhos acadêmicos (BU/UFC)](https://biblioteca.ufc.br/servicos/normalizacao-de-trabalhos-academicos/)
+- [Guia de normalização para elaboração de citações (2025)](https://biblioteca.ufc.br/wp-content/uploads/2025/06/guianormalizacaocitacoes2025.pdf)
+- [Guia de normalização para elaboração de referências (2023)](https://biblioteca.ufc.br/wp-content/uploads/2023/12/guianormalizacaoreferencias.pdf)
+- [Guia de normalização de artigo em publicação periódica científica (2023)](https://biblioteca.ufc.br/wp-content/uploads/2023/04/guia-de-normalizacao-de-artigo-corrigido-27.04.2023.pdf)
+- [Templates da BU/UFC](https://biblioteca.ufc.br/servicos-e-produtos/templates/)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal da Bahia (UFBA)
+
+**Sigla**: UFBA | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: não encontrado em fonte pública. Aplique a ABNT vigente e peça ao usuário o manual do curso ou do programa. [VERIFICAR: manual da instituição]
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm *(padrão ABNT: o manual não especifica)* |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 *(padrão ABNT: o manual não especifica)* |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm *(padrão ABNT: o manual não especifica)* |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2025*, NBR 10520:2023*, NBR 14724:2024* |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufba` (perfil em `data/instituicoes.json`).
+
+## Particularidades
+
+- SIBI/UFBA disponibiliza modelo de ficha catalográfica
+
+## Observações da pesquisa
+
+Não foi localizado manual de normalização próprio do SIBI/UFBA em página oficial. A referência de fato usada na UFBA é o livro 'Manual de estilo acadêmico' (Lubisco; Vieira, EDUFBA): 6. ed. 2019 (normas ABNT até dez. 2018) e 7. ed. 2025 (normas ABNT publicadas até mar. 2025, segundo resenha da RDBCI). Não há PDF oficial aberto confirmado; a cópia da 6. ed. em site da UFS não respondeu, e o repositório e o site do SIBI/UFBA bloquearam acesso automatizado (WAF/certificado). Nenhuma regra de formatação pôde ser conferida na fonte.
+
+## Fontes
+
+- [Resenha da 7. ed. na RDBCI (Unicamp)](https://periodicos.sbu.unicamp.br/ojs/index.php/rdbci/article/view/8682886)
+- [Cópia da 6. ed. (2019) hospedada em site da UFS (link indisponível na conferência)](https://secretariado.ufs.br/uploads/page_attach/path/8303/Manual_ABNT_EDUFBA.pdf)
+- [Modelo de ficha catalográfica do SIBI/UFBA](https://sibi.ufba.br/sites/sibi.ufba.br/files/modelo_ficha_catalografica.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal de Viçosa (UFV)
+
+**Sigla**: UFV | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Normalização de trabalhos acadêmicos (2025): conforme NBR 14724/2024, NBR 6023/2018, NBR 10520/2023 e NBR 6028/2021](https://www.bbt.ufv.br/wp-content/uploads/2025/01/Normalizacao-de-trabalhos-academicos-2025.pdf) (Biblioteca Central da UFV, 2025)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 cm x 29,7 cm) |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | pré-textuais contadas a partir da folha de rosto, mas não numeradas; capa e ficha catalográfica não são contadas nem numeradas (PPG); numeração em arábicos, canto superior direito, a partir da Introdução (ou Introdução Geral) |
+| Sistema de chamada | autor-data | numérico (numérico não pode ser usado quando houver notas) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2024 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufv` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Arial ou Times New Roman 12
+- **fonte menor**: tamanho menor e uniforme para citações com mais de três linhas, notas de rodapé, paginação, ficha catalográfica, legendas e fontes das ilustrações e tabelas (o manual não fixa o tamanho)
+- **espacamento**: 1,5; simples em citações longas, notas, referências, legendas e natureza do trabalho
+
+## Particularidades
+
+- Teses e dissertações: impressão/digitação só no anverso; ficha catalográfica no verso da folha de rosto (impresso) ou entre folha de rosto e folha de aprovação (digital), sem contar na paginação
+- Ficha catalográfica solicitada à Biblioteca Central (BBT) a partir do PDF 'RASCUNHO' gerado pelo Sistema AcademicoPG; prazo de 7 dias
+- Desde 28/10/2024 a submissão de dissertações e teses é exclusivamente on-line (AcademicoPG); capa e pré-textuais gerados pelo sistema
+- Títulos acadêmicos Magister Scientiae / Doctor Scientiae; corpo pode ser texto corrido, capítulos ou artigos científicos (formatação livre dos artigos, aprovada pela comissão orientadora)
+- Manual traz modelos UFV-PPG ao lado dos modelos ABNT (capa, folha de rosto, folha de aprovação, resumo, cotutela)
+
+## Observações da pesquisa
+
+A formatação obrigatória do PPG (manual 04/2026) confirma Arial ou Times 12, A4, margens 3/3/2/2, espaçamento 1,5 e numeração no canto superior direito a partir da Introdução. As normas antigas do CTP também admitiam Helvética 12. Não foi encontrado recuo de parágrafo fixado nem template Word/LaTeX oficial. A edição de 2025 do manual da Biblioteca Central passou a seguir a NBR 14724:2024; a de 2024 ainda citava a 2011. O manual de 2025 ainda pede iniciais maiúsculas nas palavras-chave, contra a NBR 6028:2021.
+
+## Fontes
+
+- [Normalização de trabalhos acadêmicos (2025): conforme NBR 14724/2024, NBR 6023/2018, NBR 10520/2023 e NBR 6028/2021](https://www.bbt.ufv.br/wp-content/uploads/2025/01/Normalizacao-de-trabalhos-academicos-2025.pdf)
+- [Normalização de trabalhos acadêmicos: atualizada conforme ABNTs NBR 14724/2011, NBR 6023/2018 e NBR 10520/2023 (org. Alice Regina Pinto Pires; Bruna Silva) (edição de 2024)](https://ppg.ufv.br/wp-content/uploads/2024/10/NORMALIZACAO-DE-TRABALHOS-ACADEMICOS-2024.pdf)
+- [Página do manual na BBT/UFV (citada no próprio manual)](https://www.bbt.ufv.br/manual-de-normalizacao-de-trabalhos-academicos/)
+- [Manual de Normas e Procedimentos para Submissão de Dissertações e Teses – PPG/UFV (04/2026)](https://ppg.ufv.br/wp-content/uploads/2026/04/Manual-de-entrega-de-dissertacoes-e-teses-04_2026.pdf)
+- [Normas para apresentação de dissertação e tese (CTP/UFV, 2000, atual. 2011)](https://posagroecologia.ufv.br/wp-content/uploads/2025/07/NORMAS-PARA-REDA%C3%87%C3%83O-DE-DISSERTA%C3%87%C3%83O-ppg-ufv.pdf)
+- [Ficha catalográfica on-line (BBT/UFV)](https://www.bbt.ufv.br/ficha-catalografica-on-line/)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal Fluminense (UFF)
+
+**Sigla**: UFF | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Apresentação de trabalhos monográficos de conclusão de curso (Estela dos Santos Abreu; José Carlos Abreu Teixeira), 10. ed. rev. e atual.](https://dda.uff.br/wp-content/uploads/sites/66/2021/03/ManualTCCUFF.pdf) (EdUFF – Editora da Universidade Federal Fluminense (trabalho de comissão instituída pela Portaria nº 16.505/1991 do Reitor), 2012)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 cm x 29,7 cm), branco ou reciclado |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm *(padrão ABNT: o manual não especifica)* |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,5 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | todas as folhas contadas, numeradas em arábicos a partir da parte textual; anverso canto superior direito, verso canto superior esquerdo, a 2 cm da borda superior e 2 cm da borda externa |
+| Sistema de chamada | autor-data | numérico |
+| Edições usadas | NBR 6023:2018, NBR 10520:2002, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao uff` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: 12 (família não especificada)
+- **fonte menor**: corpo menor (fonte 10, por exemplo) para citações longas
+- **espacamento**: 1,5; simples em citações longas, notas, referências e resumos; 1,5 entre alíneas e entre referências em lista
+
+## Particularidades
+
+- Ficha catalográfica no verso da folha de rosto; pode ser elaborada nas Bibliotecas da Superintendência de Documentação (SDC) ou pelo gerador FICA-ON
+- Recomenda elementos textuais e pós-textuais no anverso e verso
+- Alíneas com tabulação de 1,5 cm; citações longas separadas do texto por dois espaços simples
+- Livro com modelos em apêndices/anexos (ficha catalográfica, folha de rosto etc.)
+
+## Observações da pesquisa
+
+Não foi localizado manual atualizado nem templates no site das Bibliotecas/SDC da UFF; o documento institucional encontrado é o livro da EdUFF de 2012 (copyright 2003), hospedado em dda.uff.br, desatualizado em relação à NBR 6023:2018 e à NBR 10520:2023. Margens: o texto dá superior 3, inferior 2, lateral do anverso 3 cm a partir da borda esquerda e do verso 2 cm a partir da borda esquerda; a margem direita do anverso não é dita explicitamente. Programas e cursos da UFF têm manuais próprios (ex.: Faculdade de Farmácia).
+
+## Fontes
+
+- [Apresentação de trabalhos monográficos de conclusão de curso (Estela dos Santos Abreu; José Carlos Abreu Teixeira), 10. ed. rev. e atual.](https://dda.uff.br/wp-content/uploads/sites/66/2021/03/ManualTCCUFF.pdf)
+- [FICA-ON – Gerador de ficha catalográfica (Bibliotecas UFF)](https://bibliotecas.uff.br/ficha-catalografica-bibliotecas/)
+- [Target GEDWeb – acesso às normas técnicas (UFF)](https://www.gedweb.com.br/uff/)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS)
+
+**Sigla**: PUCRS | **Tipo**: Privada (Filantrópica) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Modelos de normas técnicas de documentação – Trabalhos acadêmicos (ABNT)](https://biblioteca.pucrs.br/apoio-a-pesquisa/modelos-de-normas-tecnicas-de-documentacao/trabalhos-academicos-abnt/) (Biblioteca Central Irmão José Otão – PUCRS, None)
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm *(padrão ABNT: o manual não especifica)* |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 *(padrão ABNT: o manual não especifica)* |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm *(padrão ABNT: o manual não especifica)* |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2025*, NBR 10520:2023*, NBR 14724:2024* |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao pucrs` (perfil em `data/instituicoes.json`).
+
+## Outras normas por área
+
+- geral (modelo de referências e citações oferecido pela Biblioteca): APA ([fonte](https://biblioteca.pucrs.br/apoio-a-pesquisa/modelos-de-normas-tecnicas-de-documentacao/referencias-e-citacoes-apa/))
+- geral (modelo de referências oferecido pela Biblioteca): Vancouver ([fonte](https://biblioteca.pucrs.br/apoio-a-pesquisa/modelos-de-normas-tecnicas-de-documentacao/referencias-vancouver/))
+
+## Particularidades
+
+- Capa padrão PUCRS com arte de fundo, texto centralizado, fonte 12 (Arial, Times New Roman, Calibri ou Cambria), espaçamento simples, título em negrito; contracapa com arte sem texto; modelos separados para TCC, especialização e mestrado/doutorado
+- Ficha catalográfica solicitada pelo site da Biblioteca (Apoio à Pesquisa)
+- Modelos para trabalhos acadêmicos (NBR 14724), artigos (NBR 6022:2018), projetos (NBR 15287), citações (NBR 10520), referências (NBR 6023), resumos, sumário e numeração progressiva
+- Modelo APA segue a 7ª edição do Publication Manual
+
+## Modelos oficiais
+
+- Word/PDF (capas padrão): https://biblioteca.pucrs.br/apoio-a-pesquisa/capas-padrao-pucrs/
+
+## Observações da pesquisa
+
+Os modelos da Biblioteca são restritos a usuários vinculados (login com matrícula e senha da Biblioteca), por isso as regras de margens, fonte, espaçamento, paginação e edições das NBR não puderam ser conferidas. As páginas públicas dizem só que os modelos seguem as atualizações mais recentes de ABNT, Vancouver e APA. Há templates LaTeX de programas (ex.: PPGCC), mas não da Biblioteca. A norma_csv 'ABNT / APA' é coerente com a oferta de modelos APA 7.
+
+## Fontes
+
+- [Modelos de normas técnicas de documentação – Trabalhos acadêmicos (ABNT)](https://biblioteca.pucrs.br/apoio-a-pesquisa/modelos-de-normas-tecnicas-de-documentacao/trabalhos-academicos-abnt/)
+- [Modelos de normas técnicas de documentação (lista)](https://biblioteca.pucrs.br/apoio-a-pesquisa/modelos-de-normas-tecnicas-de-documentacao/)
+- [Orientação no uso de normas técnicas de documentação](https://biblioteca.pucrs.br/apoio-a-pesquisa/orientacao-no-uso-de-normas-tecnicas-de-documentacao/)
+- [Capas padrão PUCRS](https://biblioteca.pucrs.br/apoio-a-pesquisa/capas-padrao-pucrs/)
+- [Ficha catalográfica](https://biblioteca.pucrs.br/apoio-a-pesquisa/ficha-catalografica/)
+- [Rota do TCC](https://biblioteca.pucrs.br/apoio-a-pesquisa/rota-do-tcc/)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal de Santa Maria (UFSM)
+
+**Sigla**: UFSM | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de Dissertações e Teses da UFSM (MDT): estrutura e apresentação documental para trabalhos acadêmicos](https://repositorio.ufsm.br/handle/1/24203) (Biblioteca Central / Pró-Reitoria de Pós-Graduação e Pesquisa – UFSM, 2021)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4, orientação retrato, impressão só no anverso (até 100 páginas) |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial, Liberation Sans, Liberation Serif, Helvetica) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | contagem a partir da folha de rosto (capa não conta); número visível a partir da Introdução, arábicos, fonte 10, canto superior direito; acima de 100 folhas, frente e verso com margens espelhadas e número no canto superior esquerdo no verso |
+| Sistema de chamada | autor-data (indicado preferencialmente para TCCs da UFSM) | numérico |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023*, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufsm` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: 12 em Times New Roman, Arial, Liberation Sans, Liberation Serif, Helvetica ou Times (uma só em todo o trabalho)
+- **fonte menor**: 10 para citações longas, paginação, legendas/títulos de ilustrações e tabelas
+- **espacamento**: 1,5 em pré-textuais, textuais e pós-textuais, incluindo listas; resumo e abstract em espaço simples (1,0)
+
+## Particularidades
+
+- Recuo de parágrafo de 1,25 ou 1,5 cm (escolher um e manter)
+- Trabalhos com mais de 100 páginas: impressão frente e verso com margens espelhadas (interna 3, externa 2)
+- Capa impressa padrão UFSM (enquanto exigida a entrega impressa): capa dura azul royal em vinil com gravações douradas e lombada
+- Ficha catalográfica e declaração de autoria geradas no sistema automático da Biblioteca Central, sem edição da imagem
+- Referências não justificadas (alinhadas à esquerda); demais textos justificados
+- A partir de 2022.2 vale obrigatoriamente o MDT 2021
+
+## Modelos oficiais
+
+- LibreOffice (ODT): https://www.ufsm.br/app/uploads/sites/362/2019/01/modelo-mdt.odt
+
+## Observações da pesquisa
+
+O MDT cita a NBR 10520 e a NBR 14724 como 'vigente', sem ano fixo; usa exemplos 'ABNT 6023, 2018' e 'ABNT 14724, 2011a', por isso 6023 = 2018 e 14724 = 2011; a edição da 10520 não é informada. O modelo ODT é de 2016, anterior ao MDT 2021; não há modelo Word nem LaTeX na página.
+
+## Fontes
+
+- [Manual de Dissertações e Teses da UFSM (MDT): estrutura e apresentação documental para trabalhos acadêmicos](https://repositorio.ufsm.br/handle/1/24203)
+- [Página MDT da Biblioteca da UFSM](https://www.ufsm.br/orgaos-suplementares/biblioteca/mdt)
+- [PDF do MDT 2021](https://repositorio.ufsm.br/bitstream/handle/1/24203/Manual%20de%20Disserta%c3%a7%c3%b5es%20e%20Teses_MDT_2021.pdf?sequence=4&isAllowed=y)
+- [MDT 2015 (válido até 2022.1)](https://www.ufsm.br/app/uploads/sites/362/2019/01/Manual_de_Dissertacoes_e_Teses-2015-3.pdf)
+- [Ficha catalográfica (geração automática)](https://www.ufsm.br/orgaos-suplementares/biblioteca/servicos/ficha-catalografica)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal de Pelotas (UFPel)
+
+**Sigla**: UFPel | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de normas UFPel para trabalhos acadêmicos – versão atualizada em 2023](https://wp.ufpel.edu.br/sisbi/files/2023/11/Manual-versao-final-novembro-1.pdf) (Coordenação de Bibliotecas (SISBI) – Vice-Reitoria UFPel; aprovado pela Resolução COCEPE nº 61/2023, 2023)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 cm x 29,7 cm), branco ou reciclado |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Arial 12 |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | folhas contadas a partir da folha de rosto; numeração a partir da parte textual, exceto nas páginas iniciais de cada capítulo (contadas, não numeradas); canto superior direito a 2 cm da borda superior; verso, canto superior esquerdo; ficha catalográfica não conta |
+| Sistema de chamada | autor-data (o numérico fica restrito às notas) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufpel` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Arial 12 (única fonte prevista)
+- **fonte menor**: 10 para ficha catalográfica, citações com mais de três linhas, notas de rodapé, paginação, figuras (fonte, corpo e legenda) e tabelas (fonte, corpo e título)
+- **espacamento**: 1,5; simples em resumo, abstract, citações longas, legendas/fontes de figuras e tabelas, notas e referências; duplo 1,5 entre capítulos
+
+## Particularidades
+
+- Fonte obrigatória Arial (não admite Times New Roman)
+- Capítulos iniciam a 5 cm da margem superior
+- Páginas de abertura de capítulo contadas mas não numeradas
+- Ficha catalográfica solicitada via Sistema Cobalto, em Arial 10, no verso da folha de rosto (na versão digital, logo após a folha de rosto)
+- Termo de autorização obrigatório para depósito (modelos de 2025)
+- Obrigatório para trabalhos defendidos a partir de 01/03/2024
+
+## Modelos oficiais
+
+- Word (capa e páginas pré e pós-textuais): https://wp.ufpel.edu.br/sisbi/files/2024/04/Capa_Paginas_pre_e_pos-textuais_atualizado.docx
+
+## Observações da pesquisa
+
+O manual escreve 'espaçamento de 1,5 cm' para o entrelinhas, querendo dizer 1,5 linha. O site wp.ufpel.edu.br tem proteção anti-robô; o PDF foi lido por download via WebFetch. Não há template LaTeX oficial.
+
+## Fontes
+
+- [Manual de normas UFPel para trabalhos acadêmicos – versão atualizada em 2023](https://wp.ufpel.edu.br/sisbi/files/2023/11/Manual-versao-final-novembro-1.pdf)
+- [Página do manual no SISBI/UFPel](https://wp.ufpel.edu.br/sisbi/manual-de-normas-ufpel-para-trabalhos-academicos-atualizada-2023/)
+- [Solicitação de ficha catalográfica](https://wp.ufpel.edu.br/sisbi/files/2024/10/SOLICITACAO-DE-FICHA.pdf)
+- [Termos de autorização (TCC/TCCP, dissertações e teses)](https://wp.ufpel.edu.br/sisbi/documentos/termo-de-autorizacao/)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Estácio de Sá (UNESA)
+
+**Sigla**: UNESA | **Tipo**: Privada (Lucrativa) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual para elaboração de trabalhos acadêmicos](https://cdn.portal.estacio.br/2019_estacio_normas_para_trabalhos_academicos_doc_15_de_julho_de_2019_dc5fde9251.pdf) (Universidade Estácio de Sá – Vice-Reitoria de Pós-Graduação, Pesquisa e Extensão, 2019)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 cm x 29,7 cm), branco |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 2,0 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | pré-textuais contadas e não numeradas; textuais numeradas em arábicos no canto superior direito; pós-textuais em sequência |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2018, NBR 10520:2002, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao unesa` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: 12 (família não especificada)
+- **fonte menor**: tamanho menor para citações com mais de três linhas, notas de rodapé, paginação e legendas de ilustrações e tabelas (sem tamanho fixado)
+- **espacamento**: duplo no texto; simples em citações longas, notas, referências, legendas, ficha catalográfica e natureza do trabalho; referências separadas por espaço duplo
+
+## Particularidades
+
+- Ficha catalográfica no verso da folha de rosto, elaborada pela Biblioteca da Instituição
+- Impressão no anverso das folhas
+- Notas de rodapé separadas do texto por traço de 4 cm
+- Subseções separadas do texto por dois espaços duplos
+
+## Observações da pesquisa
+
+O manual de 2019 prescreve 'espaço duplo' para o texto, o que diverge da NBR 14724:2011 (1,5) que ele mesmo cita: provavelmente herança de edições antigas. Não define família de fonte, recuo de parágrafo nem sistema de chamada. Não foi encontrada versão mais recente nem página de biblioteca com templates.
+
+## Fontes
+
+- [Manual para elaboração de trabalhos acadêmicos](https://cdn.portal.estacio.br/2019_estacio_normas_para_trabalhos_academicos_doc_15_de_julho_de_2019_dc5fde9251.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Paulista (UNIP)
+
+**Sigla**: UNIP | **Tipo**: Privada (Lucrativa) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Guia de normalização para apresentação de trabalhos acadêmicos da Universidade Paulista: ABNT](https://unip.br/servicos/biblioteca/assets/download/manual_de_normalizacao_abnt.pdf) (Biblioteca da Universidade Paulista – UNIP, 2025)
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 x 29,7 cm), branco |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | contagem a partir da folha de rosto, numeração a partir da Introdução, arábicos a 2 cm da margem direita e superior; verso da folha de rosto (ficha) não é contado nem numerado; no verso, canto superior esquerdo |
+| Sistema de chamada | autor-data | numérico |
+| Edições usadas | NBR 6023:2025, NBR 10520:2023, NBR 14724:2024 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao unip` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Arial ou Times New Roman 12
+- **fonte menor**: 10 para citações com mais de três linhas, notas de rodapé, paginação, legenda e fonte das ilustrações e tabelas
+- **espacamento**: 1,5; simples em citações longas, notas, referências, ficha catalográfica, legendas e natureza do trabalho
+
+## Particularidades
+
+- Revisado e atualizado em junho de 2025
+- Margens espelhadas no verso (direita e superior 3 cm; esquerda e inferior 2 cm)
+- Toda seção primária inicia no anverso (página ímpar); pré-textuais no anverso, exceto a ficha catalográfica
+- Anexo com passo a passo de configuração de margens no Word
+
+## Observações da pesquisa
+
+Primeiro guia do grupo já atualizado para a NBR 6023:2025 (3. ed.) e a NBR 14724:2024 (4. ed.). O host www2.unip.br citado em buscas não resolve; o PDF vigente está em unip.br/servicos/biblioteca/assets/download/.
+
+## Fontes
+
+- [Guia de normalização para apresentação de trabalhos acadêmicos da Universidade Paulista: ABNT](https://unip.br/servicos/biblioteca/assets/download/manual_de_normalizacao_abnt.pdf)
+- [Página do guia na Biblioteca UNIP](https://unip.br/servicos/biblioteca/guia.aspx)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Norte do Paraná (UNOPAR)
+
+**Sigla**: UNOPAR | **Tipo**: Privada (Lucrativa) | **Conferido em**: 2026-11
+
+**Manual de referência**: não encontrado em fonte pública. Aplique a ABNT vigente e peça ao usuário o manual do curso ou do programa. [VERIFICAR: manual da instituição]
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm *(padrão ABNT: o manual não especifica)* |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 *(padrão ABNT: o manual não especifica)* |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm *(padrão ABNT: o manual não especifica)* |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2025*, NBR 10520:2023*, NBR 14724:2024* |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao unopar` (perfil em `data/instituicoes.json`).
+
+## Observações da pesquisa
+
+Nenhum manual ou guia público da UNOPAR (grupo Cogna) foi localizado; as buscas retornam a UNIPAR, que é outra instituição. É provável que o material fique restrito ao ambiente do aluno (AVA/biblioteca virtual), mas isso não foi confirmado.
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal do Maranhão (UFMA)
+
+**Sigla**: UFMA | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: não encontrado em fonte pública. Aplique a ABNT vigente e peça ao usuário o manual do curso ou do programa. [VERIFICAR: manual da instituição]
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm *(padrão ABNT: o manual não especifica)* |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 *(padrão ABNT: o manual não especifica)* |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm *(padrão ABNT: o manual não especifica)* |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2025*, NBR 10520:2023*, NBR 14724:2024* |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufma` (perfil em `data/instituicoes.json`).
+
+## Particularidades
+
+- Ficha catalográfica de monografias, dissertações e teses gerada automaticamente pelo SIGAA (Portal do Discente > Biblioteca > Serviços ao Usuário)
+- Serviço de orientação à normalização de trabalhos acadêmicos sob agendamento nas bibliotecas
+
+## Observações da pesquisa
+
+Não foi localizado manual ou guia de normalização próprio da UFMA nas páginas da DIB nem em buscas; as bibliotecas oferecem orientação presencial com base na ABNT. As regras ficam a cargo da ABNT e de eventuais normas dos cursos e programas.
+
+## Fontes
+
+- [Biblioteca Central – DIB/UFMA](https://portalpadrao.ufma.br/dib/sobre/biblioteca-central)
+- [Biblioteca Central (portal de unidades)](https://portais.ufma.br/PortalUnidade/dib/paginas/pagina_estatica.jsf?id=698)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal do Pará (UFPA)
+
+**Sigla**: UFPA | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Guia de elaboração de trabalhos acadêmicos, 3. ed. rev., ampl. e atual. (org. Rose Suellen Lisboa)](https://facore.ufpa.br/Documentos/TCC/GTA2023.pdf) (Biblioteca Central da UFPA, 2023)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 cm x 29,7 cm), branco ou reciclado |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | folhas contadas a partir da folha de rosto (exceto errata), numeração a partir da parte textual, arábicos, canto superior direito a 2 cm da borda superior e 2 cm da borda direita |
+| Sistema de chamada | autor-data | numérico (numérico não pode ser usado com notas) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufpa` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Times New Roman ou Arial 12 para todo o trabalho, inclusive a capa
+- **fonte menor**: tamanho menor e uniforme para citações longas (fonte 10), notas, paginação, ficha catalográfica, legendas e fontes das ilustrações e tabelas
+- **espacamento**: 1,5 no texto e no resumo; simples em citações longas, notas, referências e legendas
+
+## Particularidades
+
+- Resumo em espaço 1,5 (difere da prática comum de espaço simples)
+- Recomenda elementos textuais e pós-textuais só no anverso
+- Natureza do trabalho na folha de rosto e de aprovação com recuo de 8 cm
+- Modelos de capa, folha de rosto, errata e folha de aprovação no próprio guia
+- Tabelas segundo as Normas de apresentação tabular do IBGE (3. ed., 1993)
+
+## Observações da pesquisa
+
+O PDF da 3. ed. (2023) está hospedado no site de uma faculdade da UFPA (facore.ufpa.br); não foi localizada página da Biblioteca Central com link direto nem templates. O guia não fixa recuo de primeira linha de parágrafo.
+
+## Fontes
+
+- [Guia de elaboração de trabalhos acadêmicos, 3. ed. rev., ampl. e atual. (org. Rose Suellen Lisboa)](https://facore.ufpa.br/Documentos/TCC/GTA2023.pdf)
+- [Guia de elaboração de trabalhos acadêmicos, 2. ed. (2019)](https://www.fei.ufpa.br/publicacoes/documentos/Guia_de_Trabalhos_Academicos_UFPA_2019.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal de Goiás (UFG)
+
+**Sigla**: UFG | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Normalização do trabalho acadêmico: regras da ABNT (orgs. Frederico R. Oliveira, Filipe Reis, Geisa Muller)](https://files.cercomp.ufg.br/weby/up/366/o/Normaliza%C3%A7%C3%A3o.pdf) (UFG, Faculdade de Informação e Comunicação (Gráfica UFG); ISBN 978-85-495-0032-8, 2016)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 x 29,7 cm), branco ou reciclado |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,5 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data ou numérico (apresenta os dois) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2002, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufg` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: tamanho 12; o guia diz que a NBR 14724 não define o tipo de fonte (recomenda parcimônia)
+- **fonte menor**: menor que 12 para notas de rodapé, citações recuadas, paginação, ficha catalográfica, legendas e fontes de ilustrações
+- **espacamento**: 1,5 (texto); 1,0 para notas, citações recuadas e outros
+
+## Outras normas por área
+
+- Medicina Veterinária e Zootecnia (EVZ/UFG): Vancouver ([fonte](https://files.cercomp.ufg.br/weby/up/66/o/Guia_Normalizacao_Bibliografica_EVZ_Aprovado_CD_18_08_2023.pdf))
+
+## Particularidades
+
+- Ficha catalográfica obrigatória no verso da folha de rosto
+- Sibi/UFG oferece treinamentos on-line de normalização e serviço de ficha catalográfica (bc.ufg.br/p/fichatrabalhoscademicos)
+- Guia EVZ: Times New Roman 12 na capa/folha de rosto, título em 14
+
+## Observações da pesquisa
+
+Não achei manual vigente do Sibi/UFG para toda a universidade nem um baseado na NBR 14724:2024. O documento mais completo hospedado pela UFG é o livro de 2016 da FIC (anterior às normas atuais). Ele indica recuo de parágrafo de 1,5 cm, e não 1,25. O guia da EVZ cita a 'NBR 14724/2021', edição que não existe. A posição da paginação não foi extraída do livro.
+
+## Fontes
+
+- [Normalização do trabalho acadêmico: regras da ABNT (orgs. Frederico R. Oliveira, Filipe Reis, Geisa Muller)](https://files.cercomp.ufg.br/weby/up/366/o/Normaliza%C3%A7%C3%A3o.pdf)
+- [Sibi/UFG: Orientações para normalização de trabalhos acadêmicos](https://bc.ufg.br/n/35519-orientacoes-para-normalizacao-de-trabalhos-academicos)
+- [Sibi/UFG: Auxílio para uso das normas ABNT](https://bc.ufg.br/n/15095-auxilio-para-uso-das-normas-abnt)
+- [Guia de Normalização Bibliográfica EVZ/UFG (Vancouver), aprovado em 18/08/2023](https://files.cercomp.ufg.br/weby/up/66/o/Guia_Normalizacao_Bibliografica_EVZ_Aprovado_CD_18_08_2023.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal do Rio Grande do Norte (UFRN)
+
+**Sigla**: UFRN | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Orientações para normalização de Trabalhos de Conclusão de Curso na modalidade de Monografia, Dissertação ou Tese (uso do template)](https://arquivos.info.ufrn.br/arquivos/2022228061c9d011918632c7f1f84237c2/Orientao_uso_template_Mon_Dissert_Tese.pdf) (UFRN, Sistema de Bibliotecas (SISBI) / Biblioteca Central Zila Mamede, 2022)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm *(padrão ABNT: o manual não especifica)* |
+| Fonte | Arial 12 |
+| Fonte menor | 11 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm *(padrão ABNT: o manual não especifica)* |
+| Paginação | contadas a partir da folha de rosto, numeradas em algarismos arábicos a partir da introdução |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023*, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufrn` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Arial 12
+- **fonte menor**: 11 para citações com mais de três linhas e notas de rodapé
+- **espacamento**: 1,5
+
+## Outras normas por área
+
+- A planilha de origem indica "ABNT / Vancouver", mas o manual consultado não confirma. [VERIFICAR: norma exigida pelo programa]
+
+## Particularidades
+
+- Ficha catalográfica obrigatória, solicitada pelo SIGAA (não entra na contagem de folhas)
+- Recomenda licença Creative Commons na folha de rosto
+- Versão final obrigatoriamente em PDF/A, nome do arquivo PrimeirasPalavrasdoTitulo_Sobrenome_Ano
+- Orientações de acessibilidade: texto alternativo (ALT) para imagens
+- Referências sem divisão por tipo de material, espaçamento simples
+
+## Modelos oficiais
+
+- Word: https://arquivos.info.ufrn.br/arquivos/20232360188ddb13546721372e90f6a105/Template_TCC_Artigo_DOC_2023.doc
+- Word: https://gestore.ufrn.br/gestore-web/downloadArquivo?hash=774D5FD7C04C3B1E0CA9B82CB9BA55AC
+- ODT: https://gestore.ufrn.br/gestore-web/downloadArquivo?hash=4F55DEB9ACC4ADAC368D81ECD36AF737
+
+## Observações da pesquisa
+
+O SISBI não publica um manual completo. Publica orientações curtas e templates Word/ODT, e as margens e os recuos estão só nos templates, que não foram abertos. Fora do padrão: a fonte menor é 11, e não 10. A base usa a NBR 14724:2011. Não achei confirmação de uso de Vancouver na Medicina, e o manual da Escola de Saúde usa ABNT.
+
+## Fontes
+
+- [Orientações para normalização de Trabalhos de Conclusão de Curso na modalidade de Monografia, Dissertação ou Tese (uso do template)](https://arquivos.info.ufrn.br/arquivos/2022228061c9d011918632c7f1f84237c2/Orientao_uso_template_Mon_Dissert_Tese.pdf)
+- [BCZM: Orientações para trabalhos acadêmicos (templates)](https://sisbi.ufrn.br/biblioteca/bczm/orientacoes/trabalhosacademicos)
+- [Orientações para TCC na modalidade Artigo](https://arquivos.info.ufrn.br/arquivos/20221231105ed611918621a53ca8e5232b/Orientao_uso_template_TCC_Artigo.pdf)
+- [Manual de Normalização de Trabalhos Acadêmicos da Escola de Saúde da UFRN](https://escoladesaude.ufrn.br/media/files/documentos/Manual_de_Normaliza%C3%A7%C3%A3o_de_Trabalhos_Acad%C3%AAmicos_da_ESUFRN.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Cruzeiro do Sul (UNICSUL)
+
+**Sigla**: UNICSUL | **Tipo**: Privada (Lucrativa) | **Conferido em**: 2026-11
+
+**Manual de referência**: não encontrado em fonte pública. Aplique a ABNT vigente e peça ao usuário o manual do curso ou do programa. [VERIFICAR: manual da instituição]
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm *(padrão ABNT: o manual não especifica)* |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 *(padrão ABNT: o manual não especifica)* |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm *(padrão ABNT: o manual não especifica)* |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2025*, NBR 10520:2023*, NBR 14724:2024* |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao unicsul` (perfil em `data/instituicoes.json`).
+
+## Observações da pesquisa
+
+Não achei manual de normalização público da Universidade Cruzeiro do Sul em buscas abertas nem restritas a cruzeirodosul.edu.br e cruzeirodosulvirtual.com.br. Aparecem só manuais do aluno, revistas e o Pergamum. É provável que o material fique no portal do aluno (meuportal), que exige login. Uma página de iniciação científica aceita referências em ABNT, Vancouver ou APA.
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Nove de Julho (UNINOVE)
+
+**Sigla**: UNINOVE | **Tipo**: Privada (Lucrativa) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Apresentação de trabalhos acadêmicos: manual de orientação: guia prático conforme ABNT](https://img.uninove.br/static/2025/0/0/0/0/0/2/5/7/8/3/4/25783446/manual-abnt-2025-1.pdf) (UNINOVE, Sistema de Bibliotecas Prof. José Storópoli (atualizado em março/2025), 2025)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21,0 x 29,7 cm) |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | contadas a partir da folha de rosto, numeradas a partir da introdução em algarismos arábicos, a 2 cm da borda, canto superior direito (verso: superior esquerdo) |
+| Sistema de chamada | autor-data para citações e numérico para notas explicativas (não usar numérico quando houver notas) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2024 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao uninove` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Arial ou Times New Roman 12 (recomendado), cor preta
+- **fonte menor**: 10 para citações longas, notas de rodapé, número de páginas, legendas de ilustrações e tabelas
+- **espacamento**: 1,5; simples nas citações longas
+
+## Outras normas por área
+
+- A planilha de origem indica "ABNT / Vancouver (Medicina)", mas o manual consultado não confirma. [VERIFICAR: norma exigida pelo programa]
+
+## Particularidades
+
+- Ficha catalográfica no verso da folha de rosto, feita por bibliotecária (alunos de stricto sensu a solicitam à biblioteca)
+- Passo a passo para configurar no Word (margens, parágrafo, numeração)
+- Títulos de seção primária em maiúsculas e negrito, começando em folha própria
+- Licença CC BY-NC-SA 4.0
+
+## Observações da pesquisa
+
+É um manual completo e atualizado (NBR 14724:2024 e 10520:2023). Não achei template Word ou LaTeX público.
+
+## Fontes
+
+- [Apresentação de trabalhos acadêmicos: manual de orientação: guia prático conforme ABNT](https://img.uninove.br/static/2025/0/0/0/0/0/2/5/7/8/3/4/25783446/manual-abnt-2025-1.pdf)
+- [UNINOVE Biblioteca](https://www.uninove.br/biblioteca)
+- [Manual anterior (2020)](https://docs.uninove.br/arte/pdfs/Manual_de_Trabalhos_Academicos_ABNT_UNINOVE.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal do Amazonas (UFAM)
+
+**Sigla**: UFAM | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de Normatização de Trabalhos Acadêmicos](https://edoc.ufam.edu.br/bitstream/123456789/9331/1/Manual_de_Normalizacao_de_trabalhos_academicos_UFAM.20-06-17.pdf) (UFAM, PROPESP / EDUA, 2017)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | contadas a partir da folha de rosto, numeradas a partir da introdução em algarismos arábicos, canto superior direito, a 2 cm da borda superior |
+| Sistema de chamada | autor-data (adotado pelo guia) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2002, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufam` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: tamanho 12 (tipo não especificado)
+- **fonte menor**: 10 para citações longas, numeração de página, notas de rodapé, legendas de tabelas, quadros e ilustrações
+- **espacamento**: 1,5; simples para citações longas, notas, referências, legendas, ficha e natureza do trabalho
+
+## Outras normas por área
+
+- Programas de pós-graduação que adotam Vancouver (o manual não traz modelos NBR 6023 por isso): Vancouver ([fonte](https://edoc.ufam.edu.br/bitstream/123456789/9331/1/Manual_de_Normalizacao_de_trabalhos_academicos_UFAM.20-06-17.pdf))
+
+## Particularidades
+
+- Ficha catalográfica obrigatória, com sistema on-line de geração
+- Epígrafe com recuo de 8 cm, itálico, fonte 10
+- Títulos de subseções separados do texto por dois espaços de 1,5
+- Indica o MORE/UFSC para gerar referências
+
+## Observações da pesquisa
+
+O manual é de 2017 e usa as normas de 2002/2011. Não traz exemplos de referências porque alguns PPGs usam Vancouver: cada programa define a norma. Não achei edição mais nova.
+
+## Fontes
+
+- [Manual de Normatização de Trabalhos Acadêmicos](https://edoc.ufam.edu.br/bitstream/123456789/9331/1/Manual_de_Normalizacao_de_trabalhos_academicos_UFAM.20-06-17.pdf)
+- [Registro no E-doc UFAM](https://edoc.ufam.edu.br/handle/123456789/9331)
+- [Normalização de trabalhos acadêmicos: normas (SISTEBIB, 2020, apresentação)](https://riu.ufam.edu.br/handle/prefix/5782?mode=full)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal de Uberlândia (UFU)
+
+**Sigla**: UFU | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Guia para normalização de publicações técnico-científicas, 2. ed. (eds. Maira Nani França e Patrícia de Oliveira Portela)](https://repositorio.ufu.br/bitstream/123456789/47665/14/GuiaParaNormalizacao.pdf) (UFU, Sistema de Bibliotecas (SISBI) / EDUFU; ISBN 978-85-7078-515-2, 2025)
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 x 29,7 cm), branco ou reciclado |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | canto superior direito, a 2 cm da borda superior e o último algarismo a 2 cm da borda direita; no verso, canto superior esquerdo; o verso da folha de rosto não é contado |
+| Sistema de chamada | numérico ou autor-data (um só em toda a obra) |
+| Edições usadas | NBR 6023:2025, NBR 10520:2023, NBR 14724:2024 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufu` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: tamanho 12, tipo padronizado (não nomeia a fonte)
+- **fonte menor**: menor e uniforme para citações longas, notas, paginação, ficha catalográfica, legendas e fontes de tabelas e ilustrações
+- **espacamento**: 1,5; simples nas citações longas, notas, referências, legendas e natureza do trabalho (relatórios e artigos: simples)
+
+## Outras normas por área
+
+- Odontologia (TCC FO/UFU): Vancouver ([fonte](https://fo.ufu.br/system/files/conteudo/manual_de_normalizacao_tcc_foufu.pdf))
+
+## Particularidades
+
+- Já incorpora a NBR 6023:2025 (3. ed., 21 maio 2025) e a NBR 15287:2025
+- Inclui referência a produtos de inteligência artificial
+- Títulos de seções primárias começam em página ímpar (anverso)
+- Ficha catalográfica no verso da folha de rosto
+- Uma das editoras integra a comissão CB-14 da ABNT
+
+## Modelos oficiais
+
+- Word: https://bibliotecas.ufu.br/sites/bibliotecas.ufu.br/files/media/imagem/template_out._2024.docx
+
+## Observações da pesquisa
+
+É o manual mais atual do grupo, o único que já usa a NBR 6023:2025. A notícia da Comunica UFU é de 07/2026, mas o PDF registra 2025. O recuo de parágrafo não foi localizado no trecho lido. A variação Vancouver da Odontologia vem só de resultado de busca (o PDF da FO não foi aberto).
+
+## Fontes
+
+- [Guia para normalização de publicações técnico-científicas, 2. ed. (eds. Maira Nani França e Patrícia de Oliveira Portela)](https://repositorio.ufu.br/bitstream/123456789/47665/14/GuiaParaNormalizacao.pdf)
+- [SISBI/UFU: página do Guia](https://bibliotecas.ufu.br/servicos/guia-para-normalizacao-de-publicacoes-tecnico-cientificas)
+- [Notícia sobre a 2ª edição (2026)](https://comunica.ufu.br/noticias/2026/07/editora-da-ufu-publica-segunda-edicao-do-guia-para-normalizacao-de-publicacoes)
+- [Template para trabalhos acadêmicos atualizado em outubro de 2024](https://bibliotecas.ufu.br/acontece/2024/11/template-para-trabalhos-academicos-atualizado-em-outubro-2024)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal do Piauí (UFPI)
+
+**Sigla**: UFPI | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de normalização de monografia, dissertação e tese, 2. ed.](https://ufpi.br/images/Biblioteca/Manual_Oficial.pdf) (UFPI, Sistema Integrado de Bibliotecas (SIBi/UFPI), 2025)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 x 29,7 cm), branco ou reciclado |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | contadas a partir da folha de rosto, numeradas a partir da introdução, canto superior direito, a 2 cm da borda superior e da direita; o verso da folha de rosto não é contado |
+| Sistema de chamada | autor-data ou numérico (detalha autor-data) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2024 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufpi` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: tamanho 12 (tipo não especificado)
+- **fonte menor**: menor para citações longas, notas de rodapé, paginação, ficha catalográfica, legendas e fontes
+- **espacamento**: 1,5; simples nas citações longas, notas, ficha, legendas e natureza do trabalho
+
+## Particularidades
+
+- Entrega só em PDF, com Termo de Autorização de publicação no RI/SIGAA anexado
+- Ficha catalográfica obrigatória no verso da folha de rosto, na parte inferior
+- Seções primárias em página ímpar quando o trabalho é impresso frente e verso
+
+## Observações da pesquisa
+
+O manual atribui a regra de paginação à 'NBR 6023, 2018', claramente por engano (é a NBR 14724). Não achei template público.
+
+## Fontes
+
+- [Manual de normalização de monografia, dissertação e tese, 2. ed.](https://ufpi.br/images/Biblioteca/Manual_Oficial.pdf)
+- [Normas para entrega de trabalhos acadêmicos (BCCB/UFPI)](https://ufpi.br/normas-de-trabalhos-academicos)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal da Paraíba (UFPB)
+
+**Sigla**: UFPB | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual para elaboração de trabalhos acadêmicos de graduação (Manual de TCC CCA)](https://repositorio.ufpb.br/jspui/bitstream/123456789/34249/1/Manual%20TCC%20-%20Documento%20unico%20revisado%20-%20vers%c3%a3o%2021082023.pdf) (UFPB, Centro de Ciências Agrárias (Areia), Biblioteca Setorial Francisco Tancredo Torres, 2023)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Arial 12 |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 2 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufpb` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: tamanho 12 em todo o trabalho, inclusive a capa (modelo de capa: Arial ou Times)
+- **fonte menor**: 10 (recomendado) para citações longas, notas, paginação, ficha catalográfica, legendas e fontes
+- **espacamento**: 1,5; simples nas citações longas, notas, referências, legendas, ficha, capa, folha de rosto e folha de aprovação
+
+## Particularidades
+
+- Ficha catalográfica na parte inferior do verso da folha de rosto
+- Seções primárias em página ímpar
+- Notas de rodapé separadas por filete de 5 cm
+- Regras para TCC em CD/DVD (formatos de áudio e vídeo, capa do CD)
+
+## Observações da pesquisa
+
+A Biblioteca Central não publica manual próprio: oferece plantão de orientação e acesso ao Target GEDWeb, e lista as NBRs sem edição. O manual registrado aqui é só do CCA (graduação, campus Areia), não vale para toda a UFPB. O documento é inconsistente: em 5.2 manda iniciar o parágrafo a 2 cm, e em outras partes, a 1,25 cm.
+
+## Fontes
+
+- [Manual para elaboração de trabalhos acadêmicos de graduação (Manual de TCC CCA)](https://repositorio.ufpb.br/jspui/bitstream/123456789/34249/1/Manual%20TCC%20-%20Documento%20unico%20revisado%20-%20vers%c3%a3o%2021082023.pdf)
+- [Biblioteca Central UFPB: orientação à normalização de trabalhos acadêmicos](https://www.biblioteca.ufpb.br/biblioteca/contents/menu/copy_of_servicos/orientacoes-de-acesso-as-normas-da-abnt)
+- [Biblioteca Setorial CCEN: padronização e normalização (ABNT, Vancouver, APA)](http://www.ccen.ufpb.br/bsccen/contents/paginas/servicos/apoio-ao-pesquisador-1/padronizacao-e-normalizacao-de-trabalhos-academicos)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal de Alagoas (UFAL)
+
+**Sigla**: UFAL | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual para normalização de trabalhos acadêmicos da UFAL, 2. ed. rev. e atual. (orgs. Helena Cristina Pimentel do Vale e Lívia Aparecida Ferreira Lenzi)](https://www.repositorio.ufal.br/jspui/bitstream/123456789/10627/3/Manual%20para%20normaliza%c3%a7%c3%a3o%20de%20trabalhos%20acad%c3%aamicos%20da%20UFAL%20-%202.ed.2025.pdf) (UFAL, Sistema de Bibliotecas (SIBi/UFAL), 2025)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 x 29,7 cm), sulfite branco ou reciclado |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | contadas a partir da folha de rosto, numeradas a partir da introdução, canto superior direito, a 2 cm da borda; o verso da folha de rosto não é contado |
+| Sistema de chamada | autor-data ou numérico |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufal` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: tamanho 12 (Times New Roman ou Arial citadas para as referências)
+- **fonte menor**: 10 para citações diretas longas e notas de rodapé (na seção de citações: 10 ou 11)
+- **espacamento**: 1,5; simples nas citações longas, notas, referências, legendas, ficha, natureza do trabalho e resumos
+
+## Particularidades
+
+- Modelos editáveis em Word e LibreOffice (trabalho acadêmico, artigo, banner) no site do SIBi
+- Entrega em PDF/A com ficha catalográfica e folha de aprovação
+- Ficha catalográfica feita por bibliotecário
+- Minicurso periódico 'Desvendando o manual' pelo SIGAA
+- Tabelas seguem as Normas de Apresentação Tabular do IBGE (1993)
+
+## Modelos oficiais
+
+- Word: https://sibi.ufal.br/portal/?page_id=1770
+
+## Observações da pesquisa
+
+A 1ª edição é de 2022 e a 2ª, de 2025. Há divergência de edição: a lista de referências cita a NBR 14724:2011, e a capa menciona NBR 10520:2023 e 14724:2024. O recuo de 4 cm é recomendação do SIBi. O 'Padrão UFAL de Normalização' (2012) está superado. Os links diretos dos modelos não foram extraídos: registrei a página que os reúne.
+
+## Fontes
+
+- [Manual para normalização de trabalhos acadêmicos da UFAL, 2. ed. rev. e atual. (orgs. Helena Cristina Pimentel do Vale e Lívia Aparecida Ferreira Lenzi)](https://www.repositorio.ufal.br/jspui/bitstream/123456789/10627/3/Manual%20para%20normaliza%c3%a7%c3%a3o%20de%20trabalhos%20acad%c3%aamicos%20da%20UFAL%20-%202.ed.2025.pdf)
+- [SIBi/UFAL: Normalização de Trabalhos Acadêmicos (modelos)](https://sibi.ufal.br/portal/?page_id=1770)
+- [Registro no repositório](https://www.repositorio.ufal.br/jspui/handle/123456789/10627)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Federal de Mato Grosso (UFMT)
+
+**Sigla**: UFMT | **Tipo**: Pública (Federal) | **Conferido em**: 2026-11
+
+**Manual de referência**: não encontrado em fonte pública. Aplique a ABNT vigente e peça ao usuário o manual do curso ou do programa. [VERIFICAR: manual da instituição]
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm *(padrão ABNT: o manual não especifica)* |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 *(padrão ABNT: o manual não especifica)* |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm *(padrão ABNT: o manual não especifica)* |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2025*, NBR 10520:2023*, NBR 14724:2024* |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ufmt` (perfil em `data/instituicoes.json`).
+
+## Particularidades
+
+- Templates Word oficiais para tese/dissertação, TCC (graduação e especialização) e artigo
+- Ficha catalográfica gerada por sistema on-line próprio (vale só para o modelo de trabalhos da UFMT)
+- Dúvidas: sdpe.bibliotecacentral@ufmt.br
+
+## Modelos oficiais
+
+- Word: https://cms.ufmt.br/files/galleries/187/Documentos/Template%20teses%20e%20disserta%C3%A7%C3%B5es.docx
+- Word: https://cms.ufmt.br/files/galleries/187/Documentos/Template%20TCC.docx
+- Word: https://cms.ufmt.br/files/galleries/187/Documentos/Template%20artigo.docx
+
+## Observações da pesquisa
+
+A Biblioteca Central não publica manual em texto: as regras ficam nos templates Word, que não foram abertos, por isso as regras estão como null. A página cita a NBR 14724 (trabalhos) e a NBR 6022 (artigo), sem edição. Há diretrizes antigas por programa, como Agronomia (3. ed., 2013).
+
+## Fontes
+
+- [Biblioteca Central UFMT: Normalização de Trabalhos Acadêmicos (templates)](https://www.ufmt.br/unidade/biblioteca/pagina/informacoes-aos-usuarios/12961)
+- [Sistema de Fichas Catalográficas UFMT](https://www.ufmt.br/unidade/biblioteca/pagina/fichas-catalograficas/3208)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Estadual de Maringá (UEM)
+
+**Sigla**: UEM | **Tipo**: Pública (Estadual) | **Conferido em**: 2026-11
+
+**Manual de referência**: não encontrado em fonte pública. Aplique a ABNT vigente e peça ao usuário o manual do curso ou do programa. [VERIFICAR: manual da instituição]
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm *(padrão ABNT: o manual não especifica)* |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 *(padrão ABNT: o manual não especifica)* |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm *(padrão ABNT: o manual não especifica)* |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2025*, NBR 10520:2023*, NBR 14724:2024* |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao uem` (perfil em `data/instituicoes.json`).
+
+## Particularidades
+
+- A BCE normaliza trabalhos como serviço (cobra por página) e elabora a ficha catalográfica
+- As normas são definidas por programa ou curso (PGA, PEU, PCV e outros)
+
+## Observações da pesquisa
+
+Não achei manual institucional da biblioteca da UEM. A página da BCE cita normas antigas (NBR 14724/2005, 6023/2002, 10520/2001) e menciona Vancouver e normas editoriais como alternativas. Há só documentos por programa, que não foram analisados.
+
+## Fontes
+
+- [BCE/UEM: Normalização Bibliográfica (serviço)](https://bce.uem.br/servicos-1/normalizacao-bibliografica)
+- [PGA/UEM: Normas para elaboração de dissertação e tese](https://sites.uem.br/pga/normas-e-regulamentos/normas-para-elaboracao-de-dissertacao-e-tese)
+- [PEU/UEM: ABNT 2023 (manual do programa)](https://peu.uem.br/abnt-2023.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Estadual de Londrina (UEL)
+
+**Sigla**: UEL | **Tipo**: Pública (Estadual) | **Conferido em**: 2026-11
+
+**Manual de referência**: [ABNT: manual de normalização de trabalhos acadêmicos](https://sites.uel.br/bibliotecas/wp-content/uploads/2025/02/ABNT-fev.-2025.pdf) (UEL, Sistema de Bibliotecas, Divisão de Referência, 2025)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4, branco ou reciclado quando impresso |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | contadas a partir da folha de rosto, numeradas a partir da primeira folha textual, canto superior direito, a 2 cm da borda superior (verso: superior esquerdo) |
+| Sistema de chamada | autor-data (notas de rodapé com citações no modelo autor-data) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2024 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao uel` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Times New Roman ou Arial 12, cor preta
+- **fonte menor**: 10 para notas de rodapé e legendas; citações recuadas em letra menor que a do texto
+- **espacamento**: 1,5; simples nas citações longas, notas, referências, legendas e natureza do trabalho
+
+## Particularidades
+
+- Ficha catalográfica no verso da folha de rosto, por geração automática do Sistema de Bibliotecas
+- Há um 'Modelo Padrão UEL' na página de serviços
+- Texto só no anverso, exceto a ficha catalográfica
+
+## Modelos oficiais
+
+- Word: https://sites.uel.br/bibliotecas/servicos/
+
+## Observações da pesquisa
+
+Divergência interna: o quadro e o capítulo de citações seguem a NBR 10520:2023 (recuo recomendado de 4 cm), mas a lista final de referências ainda cita a 10520 de 2002. O link direto do Modelo Padrão UEL não foi extraído.
+
+## Fontes
+
+- [ABNT: manual de normalização de trabalhos acadêmicos](https://sites.uel.br/bibliotecas/wp-content/uploads/2025/02/ABNT-fev.-2025.pdf)
+- [Sistema de Bibliotecas UEL: Serviços (apostilas e Modelo Padrão UEL)](https://sites.uel.br/bibliotecas/servicos/)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade do Estado do Rio de Janeiro (UERJ)
+
+**Sigla**: UERJ | **Tipo**: Pública (Estadual) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Roteiro para apresentação das teses e dissertações da Universidade do Estado do Rio de Janeiro, 2. ed. rev. atual. e ampl. (org. Simone Faury Dib e Neusa Cardim da Silva)](https://www.rsirius.uerj.br/extras/downloads/roteiro_de_teses_e_dissertacoes.pdf) (UERJ, Rede Sirius (Rede de Bibliotecas UERJ), 2012)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (mapas: A3 dobrado), branco ou reciclado |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | contadas a partir da folha de rosto (exceto o verso com a ficha), numeradas a partir da primeira folha textual em algarismos arábicos, borda superior direita |
+| Sistema de chamada | autor-data ou numérico (autor-data no texto e numérico nas notas explicativas) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2002, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao uerj` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Times New Roman ou Arial 12 (14 na capa e na lombada)
+- **fonte menor**: 10 para ficha catalográfica, citações longas, notas de rodapé, legendas, notas e fontes de ilustrações e tabelas
+- **espacamento**: 1,5, com 0 pt antes e depois; simples nas citações longas, notas, referências, ficha, resumos e natureza do trabalho
+
+## Outras normas por área
+
+- Ciências da saúde/biomédicas (capítulo do Roteiro 1. ed., 2007): Vancouver ([fonte](http://www.desc.eng.uerj.br/tcc/roteiro_uerj_web.pdf))
+
+## Particularidades
+
+- Seguir o Roteiro integralmente é exigência para depósito na BDTD/UERJ (Deliberação 36/2023), com Certificado de Revisão Normativa (CRN) emitido pelo bibliotecário
+- Ficha catalográfica e autorização de reprodução no verso da folha de rosto, feitas pelos bibliotecários da Rede Sirius
+- Alíneas a 2,5 cm; subalíneas mais 1,25 cm
+- Modelos pré-textuais Word por biblioteca setorial; LaTeX/Overleaf para Física e Engenharia
+
+## Modelos oficiais
+
+- Overleaf: https://www.overleaf.com/latex/templates/modelo-de-dissertacao-uerj-universidade-do-estado-do-rio-de-janeiro/kpjgrmjfpfdw
+- LaTeX: https://www.ppgem.uerj.br/downloads.html
+- Word: https://www.rsirius.uerj.br/servicos/modelos-pre-textuais
+
+## Observações da pesquisa
+
+O Roteiro vigente é de 2012 e usa as normas de 2002/2011. Nas buscas, a 2ª edição não traz menção a Vancouver: a seção existia na 1ª edição (2007). O roteiro vale para teses e dissertações; não achei manual de TCC da graduação.
+
+## Fontes
+
+- [Roteiro para apresentação das teses e dissertações da Universidade do Estado do Rio de Janeiro, 2. ed. rev. atual. e ampl. (org. Simone Faury Dib e Neusa Cardim da Silva)](https://www.rsirius.uerj.br/extras/downloads/roteiro_de_teses_e_dissertacoes.pdf)
+- [Rede Sirius: Modelos para trabalhos acadêmicos (pré-textuais por biblioteca)](https://www.rsirius.uerj.br/servicos/modelos-pre-textuais)
+- [Deliberação UERJ nº 36/2023 (BDTD/UERJ)](https://www.rsirius.uerj.br/extras/downloads/Deliberacao_0036_2023.pdf)
+- [Roteiro, 1. ed. (2007), com capítulo sobre Vancouver](http://www.desc.eng.uerj.br/tcc/roteiro_uerj_web.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade Anhembi Morumbi
+
+**Sigla**: Anhembi Morumbi | **Tipo**: Privada (Lucrativa) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Trabalhos Acadêmicos Ânima Educação: apresentação gráfica (2. ed.)](https://repositorio.animaeducacao.com.br/assets/dspace/docs/ebook_anima.pdf) (Ânima Educação (bibliotecárias da UNISUL e demais IES do grupo); indicado pela Biblioteca da Universidade Anhembi Morumbi, 2024)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21,0 x 29,7 cm), branco ou reciclado |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | Pré-textuais contadas sem numeração impressa; numeração impressa a partir dos elementos textuais (quadro 'folhas contadas COM numeração impressa'). No verso, margens esq 2 / dir 3. |
+| Sistema de chamada | autor-data ou numérico (ABNT); numérico no estilo Vancouver |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao anhembi-morumbi` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Times New Roman ou Arial 12
+- **fonte menor**: 10 para citações longas, notas de rodapé, legendas e fontes das ilustrações e tabelas, paginação
+- **espacamento**: 1,5; simples para citações longas, notas, referências, legendas, ficha catalográfica e natureza do trabalho
+
+## Outras normas por área
+
+- Saúde: Vancouver ([fonte](https://repositorio.animaeducacao.com.br/assets/dspace/docs/ebook_anima.pdf))
+
+## Particularidades
+
+- Manual é do grupo Ânima (compartilhado com UNISUL, São Judas etc.), não exclusivo da UAM
+- Ficha catalográfica obrigatória para dissertação e tese; solicitada por e-mail à bibliotecária
+- Seção primária deve iniciar em página ímpar (anverso)
+- Nota de rodapé separada por traço de 5 cm
+- Capítulos específicos para citações e referências em Vancouver
+
+## Modelos oficiais
+
+- PDF (template de artigo): https://estaticos.animaeducacao.com.br/medias/20250725154335/amo-biblioteca-artigo-cientifico-uam-2.pdf
+
+## Observações da pesquisa
+
+A norma_csv diz 'ABNT / APA', mas o manual oficial indicado pela biblioteca traz ABNT e Vancouver (área da saúde); não encontrei menção a APA. A edição da NBR 14724 citada é 2011; NBR 10520 é 2023 (2. ed.).
+
+## Fontes
+
+- [Trabalhos Acadêmicos Ânima Educação: apresentação gráfica (2. ed.)](https://repositorio.animaeducacao.com.br/assets/dspace/docs/ebook_anima.pdf)
+- [Biblioteca Anhembi Morumbi (página que aponta o manual Ânima, templates e ficha catalográfica)](https://portal.anhembi.br/biblioteca)
+- [Template de artigo científico UAM](https://estaticos.animaeducacao.com.br/medias/20250725154335/amo-biblioteca-artigo-cientifico-uam-2.pdf)
+- [Normas para formatação de trabalhos acadêmicos (Sênia Bastos, UAM, 2009; antigo)](https://portal.anhembi.br/wp-content/uploads/2022/05/Normas-para-formatacao-de-trabalhos-academicos.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Universidade do Vale do Rio dos Sinos (UNISINOS)
+
+**Sigla**: UNISINOS | **Tipo**: Privada (Filantrópica) | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual para elaboração de trabalhos acadêmicos, dissertações e teses da Unisinos (30. ed. rev. e ampl.)](https://unisinos.br/biblioteca/images/abnt/2024-2/MANUAL_ABNT_BIBLIOTECA_2024-2.pdf) (Biblioteca da Unisinos - Setor de Serviço de Orientação sobre o uso das Normas da ABNT, 2024)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 x 29,7 cm), branco ou reciclado; entrega final em PDF |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | Capa não contada; folhas contadas a partir da folha de rosto; numeração impressa a partir da introdução, canto superior direito, 2 cm da borda superior, fonte 11 |
+| Sistema de chamada | autor-data (e nota de referência, geralmente no curso de Direito) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao unisinos` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Arial ou Times New Roman 12
+- **fonte menor**: 10 nas citações longas (padrão dos modelos Word); notas de rodapé 10; fonte das ilustrações 11; legenda 12; número de página 11
+- **espacamento**: 1,5 (trabalhos acadêmicos e artigos, por adoção da Biblioteca); simples nas citações longas
+
+## Particularidades
+
+- Folha de aprovação NÃO é inserida nos TCCs (instrução da Diretoria de Graduação); só em tese e dissertação
+- Ficha catalográfica obrigatória somente para dissertação e tese
+- Folha de agradecimento à CAPES obrigatória para bolsistas
+- Impressão no verso e anverso: margens sup/dir 3 e inf/esq 2
+- Curso de Direito: seções até a terciária com regras próprias de caixa e sistema de nota de referência
+- Recuo de parágrafo: norma não especifica; manual sugere 1,25 cm
+- Sem modelos de relatório técnico (NBR 10719) no site
+
+## Modelos oficiais
+
+- Word: https://www.unisinos.br/biblioteca/
+
+## Observações da pesquisa
+
+Edição declarada válida apenas para 2024/2; pode haver edição posterior (2025). Regras de formatação no Apêndice A (base NBR 14724:2011).
+
+## Fontes
+
+- [Manual para elaboração de trabalhos acadêmicos, dissertações e teses da Unisinos (30. ed. rev. e ampl.)](https://unisinos.br/biblioteca/images/abnt/2024-2/MANUAL_ABNT_BIBLIOTECA_2024-2.pdf)
+- [Biblioteca Unisinos (modelos em Word)](https://www.unisinos.br/biblioteca/)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Instituto Federal de São Paulo (IFSP)
+
+**Sigla**: IFSP | **Tipo**: Instituto Federal | **UF**: SP | **Conferido em**: 2026-11
+
+**Manual de referência**: [Guia de Orientação à Normalização de Trabalhos Acadêmicos](https://spo.ifsp.edu.br/images/arquivos/documentos_institucionais/Guia_de_Normalizacao.pdf) (Biblioteca Francisco Montojos - IFSP Campus São Paulo, 2011)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21,0 x 29,7 cm), branco |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | Contadas a partir da folha de rosto; numeração a partir da primeira folha textual, canto superior direito, 2 cm da borda superior e último algarismo a 2 cm da borda direita |
+| Sistema de chamada | autor-data ou numérico (qualquer um, mantido em todo o texto) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2002, NBR 14724:2024* |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ifsp` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte menor**: 10 para citações longas e notas de rodapé (texto 12)
+- **espacamento**: 1,5; simples para citações longas, notas, referências e resumos
+
+## Outras normas por área
+
+- A planilha de origem indica "ABNT (Geral) / APA (Áreas Tecnológicas específicas)", mas o manual consultado não confirma. [VERIFICAR: norma exigida pelo programa]
+
+## Particularidades
+
+- Não há manual único da reitoria; cada campus publica guia próprio (São Paulo, São Roque, Araraquara, Itapetininga, Capivari)
+- Campus Araraquara adota templates para cursos técnicos e superiores
+- Seções primárias iniciam em folha distinta
+
+## Observações da pesquisa
+
+Guia de 2011, baseado em normas anteriores (NBR 6023:2002); desatualizado. Não encontrei manual institucional unificado do IFSP. Tipo de fonte não especificado no guia. A variação APA para áreas tecnológicas (norma_csv) não foi confirmada em nenhuma fonte.
+
+## Fontes
+
+- [Guia de Orientação à Normalização de Trabalhos Acadêmicos](https://spo.ifsp.edu.br/images/arquivos/documentos_institucionais/Guia_de_Normalizacao.pdf)
+- [Biblioteca IFSP São Paulo - Normalização de trabalhos acadêmicos](https://spo.ifsp.edu.br/biblioteca?id=184)
+- [Manual para estruturação de trabalhos acadêmicos no IFSP - Campus São Roque (2013)](https://srq.ifsp.edu.br/attachments/article/108/Manual_TCC_IFSP.pdf)
+- [Normalização de Trabalhos Acadêmicos - IFSP Campus Araraquara (manuais TCC e relatório técnico)](https://www.arq.ifsp.edu.br/biblioteca/normalizacao-de-trabalhos-academicos)
+- [Guia de elaboração de artigos científicos - IFSP Itapetininga](https://itp.ifsp.edu.br/files/Biblioteca/Guia-elaborao-artigo-cientfico.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Faculdade de Tecnologia do Estado de São Paulo (FATEC)
+
+**Sigla**: FATEC | **Tipo**: Faculdade de Tecnologia | **UF**: SP | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de normatização para trabalhos acadêmicos da Fatec do Ipiranga](https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/70/2024/05/2024-ABR-Manual-de-Normatizacao-Trabalhos-Academico-Fatec-Ipiranga.pdf) (Fatec Ipiranga 'Pastor Enéas Tognini' (Centro Paula Souza), 2024)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (210 x 297 mm), somente anverso |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Arial 12 |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | Algarismos arábicos na margem superior direita; pré-textuais contadas a partir da folha de rosto (só anverso), sem numeração |
+| Sistema de chamada | autor-data |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao fatec` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Arial 12
+- **fonte menor**: 10 para citações longas
+- **espacamento**: 1,5; simples para citações longas, notas de rodapé, referências, legendas e natureza do trabalho
+
+## Particularidades
+
+- Não há manual único do Centro Paula Souza: cada Fatec publica o seu
+- Fatec Ipiranga: impressão só no anverso; títulos de capítulo em Arial 12 negrito caixa alta; modelo de capa com título Arial 14
+- Fatec Marília (2025): margens de 2,5 cm em todos os lados, fonte Arial, recuo 1,25, citação longa 4 cm fonte 10; folha de aprovação é documento à parte; cita NBR 10520:2002
+- Fatec Garça: ficha catalográfica pedida à biblioteca
+- Trabalho de Graduação (TG) é a denominação usual do TCC
+
+## Observações da pesquisa
+
+Regras variam entre unidades (ex.: margens 3/2 na Ipiranga vs 2,5 uniforme em Marília). Registrei a Fatec Ipiranga como referência por ser manual completo e recente; ao usar, confirmar o manual da unidade específica.
+
+## Fontes
+
+- [Manual de normatização para trabalhos acadêmicos da Fatec do Ipiranga](https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/70/2024/05/2024-ABR-Manual-de-Normatizacao-Trabalhos-Academico-Fatec-Ipiranga.pdf)
+- [Normalização de trabalhos acadêmicos - Biblioteca Fatec Marília (slides, 2025)](https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/127/2025/09/Normalizacao-de-trabalhos-academicos.pdf)
+- [Manual para normalização de trabalhos acadêmicos - Biblioteca Fatec Garça (2023)](https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/20/2023/08/Manual-para-normalizacao-do-trabalho-academico.pdf)
+- [Manual de normalização - Fatec São Bernardo do Campo (7. ed., 2023)](https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/50/2023/09/MANUAL-2023-2.pdf)
+- [Manual do TG - CST Ciência de Dados para Negócios, Fatec Votorantim (v1.3, fev. 2026)](https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/37/2026/03/Manual_TG_CDN_v1-3.pdf)
+- [Trabalho de Graduação - Fatec Piracicaba](https://fatecpiracicaba.cps.sp.gov.br/trabalho-de-graduacao/)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Instituto Federal do Rio de Janeiro (IFRJ)
+
+**Sigla**: IFRJ | **Tipo**: Instituto Federal | **UF**: RJ | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de Apresentação de Trabalhos Acadêmicos (3. ed. rev. e ampl.)](https://portal.ifrj.edu.br/sites/default/files/IFRJ/ConSup/Resolucoes2025/resolucao_consup_ifrj_no_236-2025_-_completa.pdf) (IFRJ - Pró-Reitoria de Ensino; aprovado pela Resolução ConSup nº 236/2025, 2025)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 x 29,7 cm), fundo branco, texto preto |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Arial 12 (aceitas: Arial, Verdana, Carlito) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | Contada a partir da folha de rosto (verso com ficha não é contado); visível a partir da introdução, canto superior direito, 2 cm da borda |
+| Sistema de chamada | autor-data (convencionado pelo IFRJ) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2024 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ifrj` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Arial, Verdana ou Carlito (sem serifa, por acessibilidade) 12
+- **fonte menor**: Tamanho menor e uniforme (10 nas citações longas) para citações longas, notas, paginação, ficha catalográfica, legendas de ilustrações, tabelas e quadros
+- **espacamento**: 1,5; simples para citações longas, notas, referências, ficha, títulos/legendas/fontes de ilustrações e tabelas, folha de rosto e de aprovação
+
+## Outras normas por área
+
+- A planilha de origem indica "ABNT / Vancouver (Cursos da área de Saúde)", mas o manual consultado não confirma. [VERIFICAR: norma exigida pelo programa]
+
+## Particularidades
+
+- Fontes recomendadas sem serifa (Arial, Verdana, Carlito) por acessibilidade digital; Times não é citada
+- Manual pensado para suporte digital
+- Capa inclui campus e programa/curso
+- Inclui estrutura de memorial descritivo e artigo; base também em NBR 6029:2023 e 15287:2011
+- Resolução 236/2025 revoga a Resolução 48/2019
+
+## Modelos oficiais
+
+- Word (modelos editáveis, link na página do campus Nilópolis): https://portal.ifrj.edu.br/nilopolis/trabalhos-academicos-e-fichas-catalograficas
+
+## Observações da pesquisa
+
+A variação Vancouver para Saúde (norma_csv) não aparece no manual; não confirmada. Recuo de parágrafo não localizado no texto extraído.
+
+## Fontes
+
+- [Manual de Apresentação de Trabalhos Acadêmicos (3. ed. rev. e ampl.)](https://portal.ifrj.edu.br/sites/default/files/IFRJ/ConSup/Resolucoes2025/resolucao_consup_ifrj_no_236-2025_-_completa.pdf)
+- [Manual de Apresentação de Trabalhos Acadêmicos, 2. ed. (2019)](https://portal.ifrj.edu.br/sites/default/files/IFRJ/PROGRAD/manual_de_trabalhos_academicos_2a_edicao_revisada_e_ampliada.pdf)
+- [Trabalhos Acadêmicos e Fichas Catalográficas - Campus Nilópolis (modelos editáveis)](https://portal.ifrj.edu.br/nilopolis/trabalhos-academicos-e-fichas-catalograficas)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Instituto Federal de Minas Gerais (IFMG)
+
+**Sigla**: IFMG | **Tipo**: Instituto Federal | **UF**: MG | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de normalização de trabalhos acadêmicos (Rede de Bibliotecas do IFMG)](https://plone.ifmg.edu.br/portal/ensino/bibliotecas/arquivos-bibliotecas/copy_of_ManualdeNormalizaoIFMG2020.pdf) (Rede de Bibliotecas do IFMG; oficializado pela Portaria nº 244/2020, 2020)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 x 29,7 cm), branco ou reciclado |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 2 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | Capa não contada; contadas a partir da folha de rosto; numeração a partir da Introdução, canto superior direito no anverso (canto superior esquerdo no verso) |
+| Sistema de chamada | autor-data |
+| Edições usadas | NBR 6023:2018, NBR 10520:2002, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ifmg` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Arial ou Times New Roman 12
+- **fonte menor**: 10 para citações longas, notas de rodapé, legendas, fontes das ilustrações e tabelas e ficha catalográfica
+- **espacamento**: 1,5
+
+## Particularidades
+
+- Recuo de parágrafo de 2 cm (diferente do 1,25 usual)
+- Fonte de ilustrações/tabelas com autor em caixa alta (ex.: Fonte: BARRETO, 2011, p. 220)
+- Números de 0 a 9 por extenso
+- Trabalhos só digitais: textuais e pós-textuais apenas no anverso
+- Cobre monografias, dissertações, teses, artigos, relatórios de estágio
+
+## Modelos oficiais
+
+- Overleaf (não oficial, campus Itabirito): https://www.overleaf.com/latex/templates/tcc-template-ifmg-itr-modelo-para-trabalho-de-conclusao-de-curso/wmzyfkygzzyj
+- Overleaf (não oficial, campus Ibirité): https://www.overleaf.com/latex/templates/tcc-template-ifmg-ibr-modelo-para-trabalho-de-conclusao-de-curso/kknfnsjxvwst
+
+## Observações da pesquisa
+
+Primeira edição (2020), ainda com NBR 10520:2002. O domínio www.ifmg.edu.br bloqueia acesso automatizado (captcha); PDF obtido no espelho plone.ifmg.edu.br. Templates Overleaf são de terceiros.
+
+## Fontes
+
+- [Manual de normalização de trabalhos acadêmicos (Rede de Bibliotecas do IFMG)](https://plone.ifmg.edu.br/portal/ensino/bibliotecas/arquivos-bibliotecas/copy_of_ManualdeNormalizaoIFMG2020.pdf)
+- [IFMG lança Manual de Normalização de Trabalhos Acadêmicos (notícia)](https://www.ifmg.edu.br/portal/noticias/ifmg-lanca-manual-de-normalizacao-de-trabalhos-academicos)
+- [Página do manual (mirror plone)](https://plone.ifmg.edu.br/portal/ensino/bibliotecas/manual-de-normalizacao-do-ifmg)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Instituto Federal do Rio Grande do Sul (IFRS)
+
+**Sigla**: IFRS | **Tipo**: Instituto Federal | **UF**: RS | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual para elaboração de trabalhos acadêmicos (SIBIFRS)](https://ifrs.edu.br/caxias/wp-content/uploads/sites/8/2022/04/Manual-para-elaboracao-de-trabalhos-academicos.pdf) (Sistema de Bibliotecas do IFRS (SIBIFRS), 2019)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21,0 x 29,7 cm), branco ou reciclado |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | Pré-textuais contadas sem numeração impressa; textuais e pós-textuais com numeração impressa |
+| Sistema de chamada | autor-data |
+| Edições usadas | NBR 6023:2018, NBR 10520:2002, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ifrs` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Times New Roman ou Arial 12
+- **fonte menor**: 10 para citações longas, notas de rodapé, dados de catalogação, legendas e fontes das ilustrações e tabelas e paginação
+- **espacamento**: 1,5; simples para citações longas, notas, referências, legendas e fontes
+
+## Particularidades
+
+- Ficha catalográfica obrigatória para trabalhos de graduação e pós stricto sensu
+- Capa obrigatória
+- Folha de aprovação obrigatória
+- Verso: margens sup/dir 3, inf/esq 2
+- Nota de rodapé separada por traço de 5 cm
+- Manual afirma que não existe um único modelo de trabalhos
+
+## Observações da pesquisa
+
+Edição de 2019 (PDF hospedado no campus Caxias do Sul em 2022), anterior à NBR 10520:2023. Não localizei edição mais nova.
+
+## Fontes
+
+- [Manual para elaboração de trabalhos acadêmicos (SIBIFRS)](https://ifrs.edu.br/caxias/wp-content/uploads/sites/8/2022/04/Manual-para-elaboracao-de-trabalhos-academicos.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Instituto Federal de Santa Catarina (IFSC)
+
+**Sigla**: IFSC | **Tipo**: Instituto Federal | **UF**: SC | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de normalização de trabalhos acadêmicos (rev. 08 abr. 2025)](https://liferay-balanceador.ifsc.edu.br/documents/d/documentos-uteis/manual-de-normalizacao_rev_08abr25-pdf) (Sistema de Bibliotecas Integradas do IFSC (SiBI/IFSC) - Pró-Reitoria de Ensino, 2025)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 x 29,7 cm) |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm |
+| Paginação | Contadas a partir da folha de rosto; numeração a partir da introdução, canto superior direito, 2 cm das bordas superior e direita, fonte 10 |
+| Sistema de chamada | autor-data |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2024 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ifsc` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Arial ou Times New Roman 12
+- **fonte menor**: 10 para citações longas, notas de rodapé, paginação, ficha catalográfica, legendas, fontes das ilustrações e tabelas e natureza do trabalho
+- **espacamento**: 1,5; simples para citações longas, notas, referências, títulos/fontes/legendas de ilustrações e tabelas
+
+## Particularidades
+
+- Modelos (imagens) de capa, folha de rosto, ficha catalográfica, folha de aprovação e demais elementos
+- Artigo acadêmico: parágrafo com recuo de 1,27 cm na primeira linha
+- Margens iguais em todo o trabalho (sem regra de verso)
+
+## Observações da pesquisa
+
+Um dos poucos manuais já alinhados à NBR 14724:2024. Recuo de parágrafo para TCC não explicitado (só 1,27 cm no artigo). Sistema autor-data inferido dos exemplos; o manual não traz seção sobre sistema numérico.
+
+## Fontes
+
+- [Manual de normalização de trabalhos acadêmicos (rev. 08 abr. 2025)](https://liferay-balanceador.ifsc.edu.br/documents/d/documentos-uteis/manual-de-normalizacao_rev_08abr25-pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Instituto Federal do Paraná (IFPR)
+
+**Sigla**: IFPR | **Tipo**: Instituto Federal | **UF**: PR | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de normas para apresentação de trabalhos acadêmicos do Instituto Federal do Paraná: padrão ABNT (edição revisada e atualizada conforme a NBR 10520:2023)](https://editora.ifpr.edu.br/aeditora/catalog/view/72/34/407) (Editora IFPR / bibliotecárias do Sistema de Bibliotecas do IFPR, 2023)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 x 29,7 cm), branco ou reciclado |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,5 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | Algarismos arábicos, canto superior direito, 2 cm das margens superior e direita; pré-textuais contadas e não numeradas; no verso, canto superior esquerdo |
+| Sistema de chamada | autor-data (obrigatório no IFPR) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2023, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ifpr` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Arial ou Times New Roman 12 (inclusive capa)
+- **fonte menor**: 10 para citações longas, notas de rodapé, paginação, legendas das ilustrações e tabelas e natureza do trabalho
+- **espacamento**: 1,5; simples para resumo, referências, citações longas, notas, tabelas, quadros, ficha catalográfica, legendas e natureza do trabalho
+
+## Particularidades
+
+- Recuo de parágrafo de 1,5 cm
+- Sistema numérico vedado (havendo notas de rodapé, não se usa o numérico)
+- Evitar linhas órfãs/viúvas
+- Destaque: negrito ou sublinhado; itálico para estrangeirismos
+
+## Observações da pesquisa
+
+Publicado em 20/12/2023 pela Editora IFPR. Uma página da reitoria menciona manter a publicação anterior até concluir a atualização, então há ambiguidade sobre qual está em vigor. A versão de 2010 usava NBR 6023/10520/14724 de 2002.
+
+## Fontes
+
+- [Manual de normas para apresentação de trabalhos acadêmicos do Instituto Federal do Paraná: padrão ABNT (edição revisada e atualizada conforme a NBR 10520:2023)](https://editora.ifpr.edu.br/aeditora/catalog/view/72/34/407)
+- [Página do livro na Editora IFPR](https://editora.ifpr.edu.br/index.php/aeditora/catalog/book/72)
+- [Normas de Apresentação - Reitoria IFPR](https://reitoria.ifpr.edu.br/servicos/biblioteca/normas-trabalhos-academicos/)
+- [Normas para apresentação de trabalhos acadêmicos do IFPR (2010, antiga)](https://ifpr.edu.br/jacarezinho/wp-content/uploads/sites/16/2022/09/Normas-para-Apresentacao-de-Trabalhos-Academicos-do-IFPR.pdf)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Instituto Federal do Ceará (IFCE)
+
+**Sigla**: IFCE | **Tipo**: Instituto Federal | **UF**: CE | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de normalização de trabalhos acadêmicos do IFCE (3. ed. atualizada)](https://h-portal.ifce.edu.br/documents/3795/Manual_de_normalizacao.pdf) (IFCE - Pró-Reitoria de Ensino, Departamento de Bibliotecas, Sistema de Bibliotecas (SIBI), 2020)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 (21 x 29,7 cm), branco ou reciclado |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | Pré-textuais contadas sem numeração (página da ficha não contada no anverso-só); numeração a partir da parte textual, canto superior direito, 2 cm das bordas; no verso, canto superior esquerdo |
+| Sistema de chamada | autor-data ou numérico (ambos descritos) |
+| Edições usadas | NBR 6023:2018, NBR 10520:2002, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ifce` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Arial ou Times New Roman 12
+- **fonte menor**: 10 para citações longas, notas de rodapé, paginação, ficha catalográfica, fonte/legenda/notas de ilustrações e tabelas
+- **espacamento**: 1,5; simples para citações longas, notas, referências, ficha, títulos/legendas de ilustrações e tabelas e natureza do trabalho
+
+## Particularidades
+
+- Natureza do trabalho e orientador com recuo de 8 cm da margem esquerda na folha de rosto e de aprovação
+- Capas distintas para TCC e para TCCE/dissertação/tese
+- Cobre projeto de pesquisa, relatório, artigo, pôster e plano de negócio
+- Cita NBR 6023 com Errata 1:2020
+- Verso: margens sup/dir 3, inf/esq 2
+
+## Modelos oficiais
+
+- Word (trabalho acadêmico): https://portal.ifce.edu.br/documents/3285/Modelo_de_trabalho_acad%C3%AAmico_em_Microsoft_Word.docx
+- Word (artigo científico): https://portal.ifce.edu.br/documents/3282/Modelo_de_artigo_cient%C3%ADfico_em_Microsoft_Word.docx
+- Overleaf (trabalho acadêmico): https://www.overleaf.com/read/pzrvwbmzjmzj
+
+## Observações da pesquisa
+
+3ª edição (2020) ainda vigente segundo a página do SIBI; 4ª edição em preparação (alinhada à NBR 14724:2024), sem publicação confirmada. URLs dos modelos montadas a partir de caminhos relativos na página do SIBI (domínio portal.ifce.edu.br presumido).
+
+## Fontes
+
+- [Manual de normalização de trabalhos acadêmicos do IFCE (3. ed. atualizada)](https://h-portal.ifce.edu.br/documents/3795/Manual_de_normalizacao.pdf)
+- [Normalização de Trabalhos Acadêmicos - SIBI IFCE](https://portal.ifce.edu.br/institucional/ensino/sistemas-de-bibliotecas/normalizacao-de-trabalhos-academicos/)
+- [Juazeiro integra comissão que atualiza o manual (revisão para NBR 14724:2024)](https://portal.ifce.edu.br/campus/juazeirodonorte/not%C3%ADcias/juazeiro-integra-comissao-que-atualiza-o-manual-de-normalizacao-de-trabalhos-academicos/)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Instituto Federal de Pernambuco (IFPE)
+
+**Sigla**: IFPE | **Tipo**: Instituto Federal | **UF**: PE | **Conferido em**: 2026-11
+
+**Manual de referência**: não encontrado em fonte pública. Aplique a ABNT vigente e peça ao usuário o manual do curso ou do programa. [VERIFICAR: manual da instituição]
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm *(padrão ABNT: o manual não especifica)* |
+| Fonte | Arial 12 *(costume: a NBR 14724 não fixa a família e o manual não especifica)* |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração *(padrão ABNT: o manual não especifica)* |
+| Espaçamento | 1,5 *(padrão ABNT: o manual não especifica)* |
+| Recuo de parágrafo | 1,25 cm *(padrão ABNT: o manual não especifica)* |
+| Recuo da citação longa | 4 cm *(padrão ABNT: o manual não especifica)* |
+| Paginação | algarismos arábicos no canto superior direito, a 2 cm das bordas, a partir da primeira folha da parte textual; as folhas pré-textuais são contadas, mas não numeradas *(padrão ABNT: o manual não especifica)* |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2025*, NBR 10520:2023*, NBR 14724:2024* |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ifpe` (perfil em `data/instituicoes.json`).
+
+## Particularidades
+
+- Bibliotecas de campus oferecem orientação presencial e elaboram ficha catalográfica de TCC
+- Acesso às normas ABNT pela plataforma GEDWeb via Q-Acadêmico
+
+## Observações da pesquisa
+
+Não encontrei manual institucional de normalização do IFPE. O catálogo do SIB/IFPE lista apenas um livro externo (Costa, Manual para normatização de trabalhos acadêmicos, INSAF, 2007). Uma página do campus Cabo citava modelo ABNT editável, mas o link redireciona para o portal novo. Recomenda-se seguir a ABNT diretamente.
+
+## Fontes
+
+- [Biblioteca IFPE Campus Ipojuca (orientação de normalização agendada)](https://portal.ifpe.edu.br/ipojuca/ensino/biblioteca/)
+- [Biblioteca IFPE Campus Barreiros (fichas catalográficas; acesso às NBR via GEDWeb)](https://portal.ifpe.edu.br/barreiros/ensino/biblioteca/)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.
+
+
+---
+
+# Instituto Federal de Brasília (IFB)
+
+**Sigla**: IFB | **Tipo**: Instituto Federal | **UF**: DF | **Conferido em**: 2026-11
+
+**Manual de referência**: [Manual de normalização de trabalhos acadêmicos (Normaliza IFB)](https://www.ifb.edu.br/attachments/article/15820/Manual%20de%20normaliza%C3%A7%C3%A3o%20de%20trabalhos%20acad%C3%AAmicos.pdf) (IFB - Bibliotecas (Alberth Sant'Ana Costa da Silva, Grazielle Pereira da Silva, Laura Cecília dos Santos Cruz), 2017)
+
+> **Atenção**: o manual cita edição anterior de alguma norma ABNT. Pergunte ao usuário se o curso ainda exige essa edição ou se aceita a vigente (NBR 6023:2025, NBR 10520:2023, NBR 14724:2024).
+
+## Perfil aplicado
+
+| Elemento | Regra |
+|---|---|
+| Papel | A4 |
+| Margens | superior 3 cm, esquerda 3 cm, inferior 2 cm, direita 2 cm |
+| Fonte | Times New Roman 12 (aceitas: Times New Roman, Arial) |
+| Fonte menor | 10 pt em citação longa, nota, legenda e fonte de ilustração |
+| Espaçamento | 1,5 |
+| Recuo de parágrafo | 1,25 cm |
+| Recuo da citação longa | 4 cm |
+| Paginação | Contada a partir da folha de rosto; numeração a partir da Introdução, canto superior direito, 2 cm da borda superior; no verso, canto superior esquerdo |
+| Sistema de chamada | autor-data *(padrão ABNT: o manual não especifica)* |
+| Edições usadas | NBR 6023:2018, NBR 10520:2002, NBR 14724:2011 |
+
+\* edição vigente aplicada porque o manual não informa qual usa.
+
+Id para os scripts: `--instituicao ifb` (perfil em `data/instituicoes.json`).
+
+## Texto do manual (resumo)
+
+- **fonte**: Times New Roman ou Arial 12 (inclusive capa)
+- **fonte menor**: 10 para citações longas, notas de rodapé, paginação e legendas das ilustrações e tabelas
+- **espacamento**: 1,5; simples para citações longas, notas, referências, legendas, ficha catalográfica e natureza do trabalho
+
+## Particularidades
+
+- Manual instituído como referência oficial pela Portaria 22/2021
+- TCC entregue em capa dura (1. ed.)
+- Ficha catalográfica elaborada pela biblioteca do campus (exigida em monografias)
+- Nada Consta exige envio do PDF final e da folha de aprovação à biblioteca
+- Modelos oficiais de trabalho acadêmico, artigo e projeto de pesquisa no Normaliza IFB
+
+## Modelos oficiais
+
+- Word (documentos-modelo do Normaliza IFB): https://normaliza.ifb.edu.br/doku.php?id=documentos-modelo
+
+## Observações da pesquisa
+
+Regras extraídas da 1ª edição (2017, PDF). A 2ª edição (2021) está na plataforma Normaliza IFB, que estava fora do ar (redireciona para aviso de indisponibilidade) na conferência; um resumo de busca indica que a versão online já cita NBR 14724:2024 e NBR 15287:2025, mas não pude verificar.
+
+## Fontes
+
+- [Manual de normalização de trabalhos acadêmicos (Normaliza IFB)](https://www.ifb.edu.br/attachments/article/15820/Manual%20de%20normaliza%C3%A7%C3%A3o%20de%20trabalhos%20acad%C3%AAmicos.pdf)
+- [Normaliza IFB (versão online, 2. ed.)](https://normaliza.ifb.edu.br/doku.php)
+- [Manual de normalização tem nova edição (2. ed., dez. 2021; Portaria 22/2021)](https://www.ifb.edu.br/espaco-do-estudante/noticias/29067-manual-de-normalizacao-de-trabalhos-academicos-tem-nova-edicao)
+- [PDF da 2. ed. (pasta Google Drive)](https://drive.google.com/drive/folders/1whonZdKj0f5chft-fTn_r38jQltstntu?usp=sharing)
+
+---
+Perfil gerado por `tools/build.py` a partir de `data/`. Regras de manual mudam: confira a data acima e o manual do seu programa antes da entrega.

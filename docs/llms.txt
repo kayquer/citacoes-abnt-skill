@@ -9,6 +9,8 @@
 - [Repositório](https://github.com/kayquer/citacoes-abnt-skill): código, SKILL.md e dados
 - [Dados em JSON](https://raw.githubusercontent.com/kayquer/citacoes-abnt-skill/main/data/instituicoes.json)
 - [Texto completo para LLMs](https://kayquer.github.io/citacoes-abnt-skill/llms-full.txt)
+- [Instruções para ChatGPT, Gemini e outros chats](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/chat/instrucoes.txt)
+- [Skills autocontidas para .agents/skills](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/citacoes-abnt-skills.zip)
 
 ## Instituições
 

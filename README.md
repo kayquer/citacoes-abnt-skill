@@ -4,7 +4,7 @@
 [![Licença MIT](https://img.shields.io/badge/licença-MIT-blue)](LICENSE)
 [![ABNT](https://img.shields.io/badge/NBR%206023%3A2025%20%C2%B7%2010520%3A2023%20%C2%B7%2014724%3A2024-ABNT-555)](https://kayquer.github.io/citacoes-abnt-skill/normas-abnt-vigentes.html)
 
-Plugin para o Claude Code com três skills:
+Plugin com três skills para o Claude Code, o Claude na web, o ChatGPT, o Gemini e outros agentes:
 - organiza suas referências numa biblioteca;
 - descobre referência inventada por IA;
 - aplica a ABNT vigente com as regras do manual da sua universidade.
@@ -46,12 +46,19 @@ Os scripts são Python 3 e usam só a biblioteca padrão. Funcionam também sem 
 
 ## Instalação
 
-No Claude Code:
+As skills seguem o padrão aberto [Agent Skills](https://agentskills.io) e funcionam fora do Claude Code. Os pacotes ficam em [`dist/`](dist/) e são gerados por `tools/build.py`. O passo a passo com links de download está na [página do projeto](https://kayquer.github.io/citacoes-abnt-skill/#instalar).
 
-```
-/plugin marketplace add kayquer/citacoes-abnt-skill
-/plugin install citacoes-abnt@citacoes-abnt-skill
-```
+| Onde | Como |
+|---|---|
+| **Claude Code** | `/plugin marketplace add kayquer/citacoes-abnt-skill` e depois `/plugin install citacoes-abnt@citacoes-abnt-skill` |
+| **Claude na web e no app** | Envie [`checador-citacoes.zip`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/claude-ai/checador-citacoes.zip), [`biblioteca-citacoes.zip`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/claude-ai/biblioteca-citacoes.zip) e [`abnt-formatacao.zip`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/claude-ai/abnt-formatacao.zip) em *Configurações › Capacidades › Skills*, com a execução de código ativada |
+| **ChatGPT** (GPT ou Projeto) | Cole [`instrucoes.txt`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/chat/instrucoes.txt) nas instruções. Anexe [`conhecimento-instituicoes.md`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/chat/conhecimento-instituicoes.md) e [`conhecimento-normas.md`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/chat/conhecimento-normas.md). Ative a busca na web. Para usar os scripts, anexe [`citacoes-abnt-scripts.zip`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/chat/citacoes-abnt-scripts.zip) e ative a análise de código |
+| **Gemini** (Gem) | Igual ao ChatGPT: instruções mais os dois arquivos de conhecimento |
+| **Gemini CLI** | `gemini extensions install https://github.com/kayquer/citacoes-abnt-skill` |
+| **Codex, Cursor, Copilot, opencode** | Descompacte [`citacoes-abnt-skills.zip`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/citacoes-abnt-skills.zip) em `.agents/skills/` no projeto. Sem suporte a skills, salve [`citacoes-abnt-agents.md`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/citacoes-abnt-agents.md) como `AGENTS.md`, `GEMINI.md` ou regra do Cursor |
+| **Perplexity, Copilot e outros chats** | Cole `instrucoes.txt` nas instruções do espaço e anexe os arquivos de conhecimento |
+
+A checagem de existência depende de acesso à internet: busca na web no chat, ou os scripts com rede. Sem acesso, o assistente avisa que não conseguiu verificar e não marca nenhuma referência como verificada. Formatar e conferir citação × referência funcionam sem internet.
 
 Para usar só os scripts:
 
@@ -200,15 +207,18 @@ citacoes-abnt-skill/
 ├── data/                    instituicoes.json (gerado), base dos CSVs e pesquisa nos manuais
 ├── tools/                   build.py (perfis, site e tabela do README), site_gen.py, og_image.py
 ├── docs/                    GitHub Pages (gerado)
+├── dist/                    pacotes para Claude.ai, ChatGPT, Gemini, Codex e outros (gerado)
+├── portatil/instrucoes.md   instruções para chats, base do pacote dist/chat/
+├── gemini-extension.json    manifesto da extensão do Gemini CLI
 └── tests/                   testes de unidade e fixtures
 ```
 
-`py -3 tools/build.py` gera os perfis, o site e a tabela acima a partir de `data/`. `--verificar` falha se algum arquivo gerado estiver defasado.
+`py -3 tools/build.py` gera os perfis, o site, os pacotes de `dist/` e a tabela acima a partir de `data/`. `--verificar` falha se algum arquivo gerado estiver defasado.
 
 ## Testes
 
 ```bash
-python3 -m unittest discover tests     # 52 testes, sem rede (as bases são simuladas)
+python3 -m unittest discover tests     # 55 testes, sem rede (as bases são simuladas)
 python3 tools/build.py --verificar
 python3 scripts/checar_referencias.py tests/fixtures/referencias-mistas.md   # teste real, com rede
 ```

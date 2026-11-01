@@ -214,5 +214,30 @@ class TestDados(unittest.TestCase):
                 self.assertIn(campo, i["perfil"], i["id"])
 
 
+class TestPacotesPortateis(unittest.TestCase):
+    """dist/ fora do Claude Code: skills autocontidas e pacote de chat."""
+
+    def test_instrucoes_cabem_no_gpt(self):
+        texto = (RAIZ / "dist" / "chat" / "instrucoes.txt").read_text(encoding="utf-8")
+        self.assertLessEqual(len(texto), 8000)
+        self.assertIn("não verificada", texto)
+
+    def test_skill_autocontida(self):
+        import zipfile
+        for nome in ("biblioteca-citacoes", "checador-citacoes", "abnt-formatacao"):
+            with zipfile.ZipFile(RAIZ / "dist" / "claude-ai" / f"{nome}.zip") as z:
+                nomes = set(z.namelist())
+                skill = z.read(f"{nome}/SKILL.md").decode("utf-8")
+            for obrigatorio in ("SKILL.md", "scripts/checar_referencias.py", "data/instituicoes.json",
+                                "references/instituicoes/usp.md", "references/normas/vigencia.md", "LICENSE"):
+                self.assertIn(f"{nome}/{obrigatorio}", nomes)
+            self.assertNotIn("../", skill)
+            self.assertNotIn("CLAUDE_PLUGIN_ROOT", skill)
+
+    def test_extensao_gemini(self):
+        manifesto = json.loads((RAIZ / "gemini-extension.json").read_text(encoding="utf-8"))
+        self.assertEqual(manifesto["name"], "citacoes-abnt-skill")  # igual ao nome da pasta clonada
+
+
 if __name__ == "__main__":
     unittest.main()

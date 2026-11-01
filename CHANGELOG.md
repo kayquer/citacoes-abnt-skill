@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.0 (2026-11-01)
+
+- Funciona fora do Claude Code. `tools/portatil.py` gera os pacotes de `dist/`:
+  - **skills autocontidas**, com scripts, dados e referências dentro de cada pasta: uma por zip, para o Claude.ai, e as três juntas, para `.agents/skills` (Codex, Gemini CLI, Cursor, Copilot);
+  - **pacote de chat** para ChatGPT, Gemini, Copilot e Perplexity: instruções com no máximo 8.000 caracteres, dois arquivos de conhecimento e os scripts para quem tem análise de código;
+  - **`citacoes-abnt-agents.md`**, para salvar como `AGENTS.md` ou `GEMINI.md`.
+- `gemini-extension.json`: extensão do Gemini CLI, que carrega as skills da pasta `skills/`.
+- Sem acesso à internet, as instruções mandam declarar a referência como não verificada.
+
 ## 1.0.0 (2026-11-01)
 
 - Três skills: `biblioteca-citacoes`, `checador-citacoes` e `abnt-formatacao`.

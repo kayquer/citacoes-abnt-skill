@@ -10,7 +10,7 @@ authors:
 repository-code: "https://github.com/kayquer/citacoes-abnt-skill"
 url: "https://kayquer.github.io/citacoes-abnt-skill/"
 license: MIT
-version: 1.0.0
+version: 1.1.0
 date-released: 2026-11-01
 keywords:
   - ABNT

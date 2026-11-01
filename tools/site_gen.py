@@ -9,6 +9,7 @@ import json
 
 BASE = "https://kayquer.github.io/citacoes-abnt-skill/"
 REPO = "https://github.com/kayquer/citacoes-abnt-skill"
+DIST = REPO + "/raw/main/dist/"
 AUTOR = {"@type": "Person", "name": "Kayque Rotondo", "url": "https://github.com/kayquer"}
 ATUALIZADO = "2026-11-01"
 ATUALIZADO_TXT = "1º de novembro de 2026"
@@ -72,6 +73,11 @@ FAQ_INDEX = [
      "40 universidades, entre elas USP, Unicamp, UFRJ, UFMG, UFRGS, UFSC, UnB e UNESP, e 10 instituições técnicas (institutos "
      "federais e Fatec). Cada perfil traz margens, fonte, espaçamento, recuo, paginação, sistema de chamada e o link do manual "
      "oficial consultado."),
+    ("Funciona no ChatGPT, no Gemini e no Claude na web?",
+     "Sim. No Claude.ai, envie os três arquivos .zip da pasta dist/claude-ai como Skills. No ChatGPT (GPT ou Projeto), "
+     "no Gemini (Gem), no Copilot e no Perplexity, cole o arquivo instrucoes.txt nas instruções e anexe os dois arquivos de "
+     "conhecimento. No Gemini CLI, instale como extensão; no Codex e em outros agentes compatíveis com Agent Skills, "
+     "descompacte as skills em .agents/skills. A verificação de existência das referências precisa de busca na web ou dos scripts."),
     ("Preciso do Claude para usar?",
      "Não. Os scripts de Python funcionam sozinhos: formatar referência, exportar para BibTeX, RIS ou CSL-JSON, checar "
      "existência das obras, conferir citação contra referência e gerar um modelo .docx com o perfil da instituição."),
@@ -217,11 +223,26 @@ O plugin formata referências pela NBR 6023:2025 (ou 2018), cita pela NBR 10520:
 <div class="card"><h3>Aplicação da ABNT</h3><p>Aplica NBR 14724:2024, 10520:2023, 6023:2025, 6024, 6027 e 6028 com o perfil da instituição e gera um modelo .docx com margens, fonte, espaçamento e paginação já configurados.</p></div>
 </div>
 
-<h2 id="instalar">Instalar</h2>
+<h2 id="instalar">Instalar no Claude, ChatGPT, Gemini e outros</h2>
+<p>As skills seguem o padrão aberto <a href="https://agentskills.io">Agent Skills</a>. Os arquivos ficam na pasta <a href="{REPO}/tree/main/dist"><code>dist/</code></a> do repositório.</p>
+<div class="grid">
+<div class="card"><h3>Claude Code</h3>
 <pre>/plugin marketplace add kayquer/citacoes-abnt-skill
-/plugin install citacoes-abnt@citacoes-abnt-skill</pre>
+/plugin install citacoes-abnt@citacoes-abnt-skill</pre></div>
+<div class="card"><h3>Claude na web e no app</h3>
+<p>Baixe <a href="{DIST}claude-ai/checador-citacoes.zip">checador-citacoes.zip</a>, <a href="{DIST}claude-ai/biblioteca-citacoes.zip">biblioteca-citacoes.zip</a> e <a href="{DIST}claude-ai/abnt-formatacao.zip">abnt-formatacao.zip</a>. Envie cada um em <em>Configurações › Capacidades › Skills</em>, com a execução de código ativada.</p></div>
+<div class="card"><h3>ChatGPT</h3>
+<p>Crie um GPT ou um Projeto. Cole <a href="{DIST}chat/instrucoes.txt">instrucoes.txt</a> nas instruções e anexe <a href="{DIST}chat/conhecimento-instituicoes.md">conhecimento-instituicoes.md</a> e <a href="{DIST}chat/conhecimento-normas.md">conhecimento-normas.md</a>. Ative a busca na web, que é o que permite checar se as referências existem. Para formatar e conferir com os scripts, anexe também <a href="{DIST}chat/citacoes-abnt-scripts.zip">citacoes-abnt-scripts.zip</a> e ative a análise de código.</p></div>
+<div class="card"><h3>Gemini</h3>
+<p><strong>No navegador:</strong> crie um Gem, cole <a href="{DIST}chat/instrucoes.txt">instrucoes.txt</a> e anexe os dois arquivos de conhecimento. <strong>No Gemini CLI:</strong></p>
+<pre>gemini extensions install https://github.com/kayquer/citacoes-abnt-skill</pre></div>
+<div class="card"><h3>Codex, Cursor, Copilot e outros agentes</h3>
+<p>Descompacte <a href="{DIST}citacoes-abnt-skills.zip">citacoes-abnt-skills.zip</a> em <code>.agents/skills/</code> no projeto. Agente sem suporte a skills: salve <a href="{DIST}citacoes-abnt-agents.md">citacoes-abnt-agents.md</a> como <code>AGENTS.md</code>, <code>GEMINI.md</code> ou regra do Cursor.</p></div>
+<div class="card"><h3>Copilot, Perplexity e outros chats</h3>
+<p>Cole <a href="{DIST}chat/instrucoes.txt">instrucoes.txt</a> nas instruções do espaço ou do agente e anexe os arquivos de conhecimento. Sem busca na web, o assistente avisa que não conseguiu verificar as referências e não as dá como verificadas.</p></div>
+</div>
 <p>Depois peça, por exemplo: <em>“Confira se as referências deste TCC existem e formate tudo no padrão da UFMG.”</em></p>
-<h3>Sem o Claude</h3>
+<h3>Só os scripts (Python 3, sem dependências)</h3>
 <pre>py -3 scripts/biblioteca.py adicionar --doi 10.1590/0102-4698214500
 py -3 scripts/checar_referencias.py tcc.docx
 py -3 scripts/conferir_citacoes.py tcc.docx
@@ -249,7 +270,7 @@ rows.forEach(function(r){{var t=r.getAttribute('data-busca').normalize('NFD').re
     ld = [
         {"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": NOME,
          "alternateName": "citacoes-abnt-skill", "description": FAQ_INDEX[0][1], "codeRepository": REPO, "url": BASE,
-         "programmingLanguage": "Python", "runtimePlatform": "Claude Code", "license": "https://opensource.org/licenses/MIT",
+         "programmingLanguage": "Python", "runtimePlatform": ["Claude Code", "Claude.ai", "ChatGPT", "Gemini", "Gemini CLI", "Codex"], "license": "https://opensource.org/licenses/MIT",
          "author": AUTOR, "dateModified": ATUALIZADO, "inLanguage": "pt-BR",
          "keywords": "ABNT, NBR 6023, NBR 10520, NBR 14724, citações, referências bibliográficas, TCC, checador de citações, Claude Code, skill",
          "isBasedOn": [u for _, u, _ in CREDITOS]},
@@ -412,7 +433,9 @@ def llms_txt(dados):
               f"- [Normas ABNT vigentes em 2026]({BASE}normas-abnt-vigentes.html): edições em vigor e o que mudou",
               f"- [Repositório]({REPO}): código, SKILL.md e dados",
               f"- [Dados em JSON](https://raw.githubusercontent.com/kayquer/citacoes-abnt-skill/main/data/instituicoes.json)",
-              f"- [Texto completo para LLMs]({BASE}llms-full.txt)", "", "## Instituições", ""]
+              f"- [Texto completo para LLMs]({BASE}llms-full.txt)",
+              f"- [Instruções para ChatGPT, Gemini e outros chats]({DIST}chat/instrucoes.txt)",
+              f"- [Skills autocontidas para .agents/skills]({DIST}citacoes-abnt-skills.zip)", "", "## Instituições", ""]
     for i in dados:
         p = i["perfil"]
         linhas.append(f"- [{i['sigla']}]({BASE}instituicoes/{i['id']}.html): {i['nome']}; {i['norma_csv']}; margens "

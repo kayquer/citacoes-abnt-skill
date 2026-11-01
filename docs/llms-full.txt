@@ -9,6 +9,8 @@
 - [Repositório](https://github.com/kayquer/citacoes-abnt-skill): código, SKILL.md e dados
 - [Dados em JSON](https://raw.githubusercontent.com/kayquer/citacoes-abnt-skill/main/data/instituicoes.json)
 - [Texto completo para LLMs](https://kayquer.github.io/citacoes-abnt-skill/llms-full.txt)
+- [Instruções para ChatGPT, Gemini e outros chats](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/chat/instrucoes.txt)
+- [Skills autocontidas para .agents/skills](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/citacoes-abnt-skills.zip)
 
 ## Instituições
 
@@ -96,6 +98,9 @@ A principal mudança: o sobrenome dentro dos parênteses passa a ser escrito em 
 
 ### Quais universidades estão incluídas?
 40 universidades, entre elas USP, Unicamp, UFRJ, UFMG, UFRGS, UFSC, UnB e UNESP, e 10 instituições técnicas (institutos federais e Fatec). Cada perfil traz margens, fonte, espaçamento, recuo, paginação, sistema de chamada e o link do manual oficial consultado.
+
+### Funciona no ChatGPT, no Gemini e no Claude na web?
+Sim. No Claude.ai, envie os três arquivos .zip da pasta dist/claude-ai como Skills. No ChatGPT (GPT ou Projeto), no Gemini (Gem), no Copilot e no Perplexity, cole o arquivo instrucoes.txt nas instruções e anexe os dois arquivos de conhecimento. No Gemini CLI, instale como extensão; no Codex e em outros agentes compatíveis com Agent Skills, descompacte as skills em .agents/skills. A verificação de existência das referências precisa de busca na web ou dos scripts.
 
 ### Preciso do Claude para usar?
 Não. Os scripts de Python funcionam sozinhos: formatar referência, exportar para BibTeX, RIS ou CSL-JSON, checar existência das obras, conferir citação contra referência e gerar um modelo .docx com o perfil da instituição.
