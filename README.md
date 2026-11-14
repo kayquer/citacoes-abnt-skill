@@ -4,7 +4,7 @@
 [![Licença MIT](https://img.shields.io/badge/licença-MIT-blue)](LICENSE)
 [![ABNT](https://img.shields.io/badge/NBR%206023%3A2025%20%C2%B7%2010520%3A2023%20%C2%B7%2014724%3A2024-ABNT-555)](https://kayquer.github.io/citacoes-abnt-skill/normas-abnt-vigentes.html)
 
-Plugin com três skills para o Claude Code, o Claude na web, o ChatGPT, o Gemini e outros agentes:
+Plugin com três skills para Claude Code, Claude na web, ChatGPT, Gemini e outros agentes:
 - organiza suas referências numa biblioteca;
 - descobre referência inventada por IA;
 - aplica a ABNT vigente com as regras do manual da sua universidade.
