@@ -55,7 +55,9 @@ As skills seguem o padrão aberto [Agent Skills](https://agentskills.io) e funci
 | **ChatGPT** (GPT ou Projeto) | Cole [`instrucoes.txt`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/chat/instrucoes.txt) nas instruções. Anexe [`conhecimento-instituicoes.md`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/chat/conhecimento-instituicoes.md) e [`conhecimento-normas.md`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/chat/conhecimento-normas.md). Ative a busca na web. Para usar os scripts, anexe [`citacoes-abnt-scripts.zip`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/chat/citacoes-abnt-scripts.zip) e ative a análise de código |
 | **Gemini** (Gem) | Igual ao ChatGPT: instruções mais os dois arquivos de conhecimento |
 | **Gemini CLI** | `gemini extensions install https://github.com/kayquer/citacoes-abnt-skill` |
-| **Codex, Cursor, Copilot, opencode** | Descompacte [`citacoes-abnt-skills.zip`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/citacoes-abnt-skills.zip) em `.agents/skills/` no projeto. Sem suporte a skills, salve [`citacoes-abnt-agents.md`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/citacoes-abnt-agents.md) como `AGENTS.md`, `GEMINI.md` ou regra do Cursor |
+| **Hermes** | `hermes plugins install kayquer/citacoes-abnt-skill` e depois `hermes plugins enable citacoes-abnt`. O Hermes lê o `plugin.json` da raiz (formato [Agent Plugins](https://agent-plugins.org/) v1) e instala o plugin desativado. Como skill avulsa: descompacte [`citacoes-abnt-skills.zip`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/citacoes-abnt-skills.zip) em `~/.hermes/skills/` |
+| **Codex, Copilot CLI, OpenClaw** | Como plugin, pelo mesmo `.claude-plugin/plugin.json` do Claude Code. Como skill: descompacte [`citacoes-abnt-skills.zip`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/citacoes-abnt-skills.zip) em `.agents/skills/` no projeto ou em `~/.agents/skills/` (o OpenClaw também lê `~/.openclaw/skills/`) |
+| **OpenCode, Cursor** | Descompacte [`citacoes-abnt-skills.zip`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/citacoes-abnt-skills.zip) em `.agents/skills/` no projeto (o OpenCode também lê `.opencode/skills/` e `~/.config/opencode/skills/`). O OpenCode não instala plugin de manifesto, só skill. Sem suporte a skills, salve [`citacoes-abnt-agents.md`](https://github.com/kayquer/citacoes-abnt-skill/raw/main/dist/citacoes-abnt-agents.md) como `AGENTS.md`, `GEMINI.md` ou regra do Cursor |
 | **Perplexity, Copilot e outros chats** | Cole `instrucoes.txt` nas instruções do espaço e anexe os arquivos de conhecimento |
 
 No Claude Code, as skills aparecem a partir da sessão seguinte à instalação. Depois de instalar ou atualizar, reinicie o Claude Code ou abra uma nova sessão.
@@ -261,7 +263,7 @@ citacoes-abnt-skill/
 ## Testes
 
 ```bash
-python3 -m unittest discover tests     # 55 testes, sem rede (as bases são simuladas)
+python3 -m unittest discover tests     # 89 testes, sem rede (as bases são simuladas)
 python3 tools/build.py --verificar
 python3 scripts/checar_referencias.py tests/fixtures/referencias-mistas.md   # teste real, com rede
 ```

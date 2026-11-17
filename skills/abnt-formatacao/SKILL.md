@@ -1,7 +1,11 @@
 ---
 name: abnt-formatacao
-description: "Formata trabalho acadêmico nas normas da ABNT vigentes (NBR 14724:2024, 10520:2023, 6023:2025 ou 2018) com o perfil de 50 instituições brasileiras (USP, Unicamp, UFMG, UFRJ, PUC, institutos federais, Fatec). Use quando pedirem para formatar ou deixar nas normas da ABNT um TCC, monografia, dissertação, tese, projeto ou artigo; corrigir margens, fonte, espaçamento, recuo, paginação, capa, folha de rosto, resumo, palavras-chave ou sumário; padronizar a forma das citações e referências; gerar modelo Word da universidade; ou perguntarem qual é a regra da universidade X. Para conferir se as obras existem, use checador-citacoes; para montar a bibliografia a partir de DOI ou ISBN, biblioteca-citacoes."
+description: "Use quando pedirem para formatar ou deixar nas normas da ABNT um TCC, monografia, dissertação, tese, projeto ou artigo; corrigir margens, fonte, espaçamento, recuo, paginação, capa, folha de rosto, resumo, palavras-chave ou sumário; padronizar a forma das citações e referências; gerar modelo Word da universidade; ou perguntarem qual é a regra da universidade X. Aplica as normas vigentes (NBR 14724:2024, 10520:2023, 6023:2025 ou 2018) com o perfil de 50 instituições brasileiras (USP, Unicamp, UFMG, UFRJ, PUC, institutos federais, Fatec). Para conferir se as obras existem, use checador-citacoes; para montar a bibliografia a partir de DOI ou ISBN, biblioteca-citacoes."
 argument-hint: "[instituição] [tipo de trabalho] [arquivo]"
+metadata:
+  author: "Kayque Rotondo"
+  version: "1.3.0"
+  tags: "abnt, formatação, tcc, dissertação, normas"
 ---
 # Aplicação da ABNT com perfil da instituição
 
@@ -92,6 +96,25 @@ python3 "$SCRIPTS/biblioteca.py" --arquivo biblioteca.json --edicao-6023 2018 --
 - Superior 2,5 cm, esquerda 3 cm, inferior 2,5 cm, direita 4 cm.
 - É o projeto gráfico próprio da pós-graduação, diferente da NBR 14724. A citação longa fica alinhada ao recuo do parágrafo (1 cm).
 - Fonte: perfil `puc-rio`, que traz o link do manual.
+
+## Requisitos
+
+- Python 3 com a biblioteca padrão para os scripts (no Windows, `py -3`). Sem Python os scripts não rodam, e os perfis e resumos de norma em `references/` continuam valendo para orientar a formatação.
+- A pasta `scripts/` e o `data/instituicoes.json` junto da skill: instale o plugin inteiro ou o pacote autocontido `citacoes-abnt-skills.zip`.
+
+## Limites
+
+- As normas ABNT são pagas e não estão reproduzidas aqui. `references/normas/` traz resumos próprios, feitos a partir de guias públicos de bibliotecas.
+- Os perfis vêm dos manuais públicos das instituições. Regra própria do curso, do programa ou do periódico prevalece e precisa vir do usuário.
+- Não reescreve o conteúdo, não muda o argumento e não confere se as obras existem (isso é a `checador-citacoes`).
+
+## Problemas comuns
+
+| Sintoma | Causa | O que fazer |
+|---|---|---|
+| `python3` não é reconhecido no Windows | o Python do Windows usa o lançador `py` | rode `py -3` |
+| O script não é encontrado | o caminho da pasta `scripts/` não foi resolvido | resolva o caminho absoluto como manda a seção Scripts |
+| A instituição não está no índice | ainda sem perfil próprio | use `references/instituicoes/padrao-abnt.md` e peça o manual do curso |
 
 ## Créditos
 

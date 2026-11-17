@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.3.0 (2026-11-16)
+
+Compatibilidade com mais agentes e ajustes apontados pelo [SkillEvaluator](https://github.com/NVIDIA/SkillEvaluator) da NVIDIA.
+
+- **Hermes:** `plugin.json` na raiz, no formato [Agent Plugins](https://agent-plugins.org/) v1. `hermes plugins install kayquer/citacoes-abnt-skill` e depois `hermes plugins enable citacoes-abnt`.
+- **OpenClaw, OpenCode e Copilot CLI:** instruções de instalação no README e na página. O `.claude-plugin/plugin.json` já servia Codex, Copilot CLI e OpenClaw como plugin; o OpenCode instala as skills de `dist/citacoes-abnt-skills.zip`.
+- A `description` de cada skill abre com o gatilho (`Use quando…`). O Hermes mostra só os primeiros ~60 caracteres na lista de skills.
+- `metadata` no frontmatter (autor, versão e tags, todos como texto, que é o que o Hermes aceita).
+- Seções Requisitos, Limites e Problemas comuns nas três skills.
+- `tests/test_versao.py` exige a mesma versão em `.claude-plugin/plugin.json`, `plugin.json`, `gemini-extension.json`, `CITATION.cff` e no `metadata` das skills.
+
 ## 1.2.0 (2026-11-01)
 
 Correções e campos novos a partir do relatório de uso num livro de humanidades: 92 obras, 122 notas de rodapé, conversão de Chicago para ABNT.
