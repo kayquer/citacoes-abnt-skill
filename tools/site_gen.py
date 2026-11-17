@@ -241,8 +241,12 @@ O plugin formata referências pela NBR 6023:2025 (ou 2018), cita pela NBR 10520:
 <div class="card"><h3>Gemini</h3>
 <p><strong>No navegador:</strong> crie um Gem, cole <a href="{DIST}chat/instrucoes.txt">instrucoes.txt</a> e anexe os dois arquivos de conhecimento. <strong>No Gemini CLI:</strong></p>
 <pre>gemini extensions install https://github.com/kayquer/citacoes-abnt-skill</pre></div>
-<div class="card"><h3>Codex, Cursor, Copilot e outros agentes</h3>
-<p>Descompacte <a href="{DIST}citacoes-abnt-skills.zip">citacoes-abnt-skills.zip</a> em <code>.agents/skills/</code> no projeto. Agente sem suporte a skills: salve <a href="{DIST}citacoes-abnt-agents.md">citacoes-abnt-agents.md</a> como <code>AGENTS.md</code>, <code>GEMINI.md</code> ou regra do Cursor.</p></div>
+<div class="card"><h3>Hermes</h3>
+<pre>hermes plugins install kayquer/citacoes-abnt-skill
+hermes plugins enable citacoes-abnt</pre>
+<p>O Hermes instala o plugin desativado; o segundo comando ativa. Como skill avulsa, descompacte <a href="{DIST}citacoes-abnt-skills.zip">citacoes-abnt-skills.zip</a> em <code>~/.hermes/skills/</code>.</p></div>
+<div class="card"><h3>Codex, OpenClaw, OpenCode, Cursor, Copilot e outros agentes</h3>
+<p>Descompacte <a href="{DIST}citacoes-abnt-skills.zip">citacoes-abnt-skills.zip</a> em <code>.agents/skills/</code> no projeto ou em <code>~/.agents/skills/</code>. O OpenClaw também lê <code>~/.openclaw/skills/</code>, e o OpenCode, <code>~/.config/opencode/skills/</code>. Codex, Copilot CLI e OpenClaw também instalam o repositório como plugin. Agente sem suporte a skills: salve <a href="{DIST}citacoes-abnt-agents.md">citacoes-abnt-agents.md</a> como <code>AGENTS.md</code>, <code>GEMINI.md</code> ou regra do Cursor.</p></div>
 <div class="card"><h3>Copilot, Perplexity e outros chats</h3>
 <p>Cole <a href="{DIST}chat/instrucoes.txt">instrucoes.txt</a> nas instruções do espaço ou do agente e anexe os arquivos de conhecimento. Sem busca na web, o assistente avisa que não conseguiu verificar as referências e não as dá como verificadas.</p></div>
 </div>
@@ -275,7 +279,7 @@ rows.forEach(function(r){{var t=r.getAttribute('data-busca').normalize('NFD').re
     ld = [
         {"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": NOME,
          "alternateName": "citacoes-abnt-skill", "description": FAQ_INDEX[0][1], "codeRepository": REPO, "url": BASE,
-         "programmingLanguage": "Python", "runtimePlatform": ["Claude Code", "Claude.ai", "ChatGPT", "Gemini", "Gemini CLI", "Codex"], "license": "https://opensource.org/licenses/MIT",
+         "programmingLanguage": "Python", "runtimePlatform": ["Claude Code", "Claude.ai", "ChatGPT", "Gemini", "Gemini CLI", "Codex", "Copilot CLI", "OpenCode", "OpenClaw", "Hermes"], "license": "https://opensource.org/licenses/MIT",
          "author": AUTOR, "dateModified": ATUALIZADO, "inLanguage": "pt-BR",
          "keywords": "ABNT, NBR 6023, NBR 10520, NBR 14724, citações, referências bibliográficas, TCC, checador de citações, Claude Code, skill",
          "isBasedOn": [u for _, u, _ in CREDITOS]},

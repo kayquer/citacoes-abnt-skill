@@ -1,7 +1,11 @@
 ---
 name: biblioteca-citacoes
-description: "Monta e mantém a bibliografia do trabalho em biblioteca.json: adiciona obra por DOI, ISBN, link ou dados manuais (inclusive tradução, capítulo de obras completas, jornal e e-localização), importa .bib, .ris e CSL-JSON, remove duplicatas, gera a chamada (Silva, 2020, p. 15) ou as notas de rodapé (completa, depois abreviada) e exporta a lista em ABNT (NBR 6023:2025 ou 2018), BibTeX, RIS ou CSL-JSON para Zotero, Mendeley, LaTeX e Pandoc. Use quando pedirem: faz a referência ABNT desse DOI, link ou livro; como cito essa obra; organiza minhas referências; gera a lista de referências; exporta para o Zotero. Para verificar se as referências existem, use checador-citacoes."
+description: "Use quando pedirem a referência ABNT de um DOI, link ou livro, perguntarem como citar uma obra, ou pedirem para organizar as referências, gerar a lista de referências ou exportar para o Zotero. Monta e mantém a bibliografia do trabalho em biblioteca.json: adiciona obra por DOI, ISBN, link ou dados manuais (inclusive tradução, capítulo de obras completas, jornal e e-localização), importa .bib, .ris e CSL-JSON, remove duplicatas, gera a chamada (Silva, 2020, p. 15) ou as notas de rodapé (completa, depois abreviada) e exporta a lista em ABNT (NBR 6023:2025 ou 2018), BibTeX, RIS ou CSL-JSON para Zotero, Mendeley, LaTeX e Pandoc. Para verificar se as referências existem, use checador-citacoes."
 argument-hint: "[DOI | ISBN | URL | arquivo .bib/.ris/.json]"
+metadata:
+  author: "Kayque Rotondo"
+  version: "1.3.0"
+  tags: "abnt, referências, bibliografia, doi, zotero"
 ---
 # Biblioteca de citações
 
@@ -99,6 +103,25 @@ Resposta:
 
 - Chamada: `(LeCun; Bengio; Hinton, 2015, p. 438)`
 - Referência: `LECUN, Yann; BENGIO, Yoshua; HINTON, Geoffrey. Deep learning. **Nature**, v. 521, n. 7553, p. 436-444, maio 2015. DOI: https://doi.org/10.1038/nature14539.`
+
+## Requisitos
+
+- Python 3 com a biblioteca padrão (no Windows, `py -3`).
+- Internet para buscar o metadado por DOI, ISBN ou link. Entrada por `--json`, importação de arquivo e exportação funcionam sem rede.
+
+## Limites
+
+- O metadado vem da base consultada e pode chegar incompleto. O que faltava fica marcado em `revisar`, e quem confirma é o usuário.
+- A lista formatada sai só em ABNT. Para outro estilo (APA, Chicago, Vancouver), exporte em CSL-JSON ou BibTeX e formate no gerenciador de referências.
+- Não verifica se a obra existe (isso é a `checador-citacoes`).
+
+## Problemas comuns
+
+| Sintoma | Causa | O que fazer |
+|---|---|---|
+| `--json` inline falha no PowerShell | o PowerShell perde as aspas internas | grave o JSON num arquivo e passe o caminho |
+| O DOI não é encontrado | DOI digitado errado ou obra sem DOI | confira o DOI; sem ele, use ISBN, link ou `--json` |
+| A referência sai com campo faltando | a base não tinha o dado | complete pelos campos da tabela do Fluxo; não escreva o dado em `nota` |
 
 ## Créditos
 

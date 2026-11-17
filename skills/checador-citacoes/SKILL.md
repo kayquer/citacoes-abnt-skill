@@ -1,7 +1,11 @@
 ---
 name: checador-citacoes
-description: "Verifica se as referências de um trabalho existem de fato (Crossref, OpenAlex, Semantic Scholar, Open Library, Google Books e o link de notícias e sites): detecta referência inventada ou alucinada por IA, quimera (título real com autor errado) e DOI que leva a outra obra, e confere se cada chamada do texto ou nota de rodapé tem referência na lista e vice-versa. Use quando perguntarem se as referências existem, se o ChatGPT inventou alguma, ou pedirem para checar ou validar referências, DOIs ou bibliografia, inclusive antes de entregar TCC, artigo, dissertação ou tese. Para corrigir a formatação ABNT, use abnt-formatacao."
+description: "Use quando perguntarem se as referências de um trabalho existem, se o ChatGPT inventou alguma, ou pedirem para checar ou validar referências, DOIs ou bibliografia, inclusive antes de entregar TCC, artigo, dissertação ou tese. Consulta Crossref, OpenAlex, Semantic Scholar, Open Library, Google Books e o link de notícias e sites: detecta referência inventada ou alucinada por IA, quimera (título real com autor errado) e DOI que leva a outra obra, e confere se cada chamada do texto ou nota de rodapé tem referência na lista e vice-versa. Para corrigir a formatação ABNT, use abnt-formatacao."
 argument-hint: "[arquivo .docx | .md | .bib | .ris | biblioteca.json]"
+metadata:
+  author: "Kayque Rotondo"
+  version: "1.3.0"
+  tags: "abnt, referências, verificação, alucinação, doi"
 ---
 # Checador de citações
 
@@ -111,6 +115,25 @@ Antes, confira se a instituição ou a revista têm modelo próprio.
 - Os scripts não enviam e-mail nem chave, a não ser que o usuário defina `CROSSREF_MAILTO`, `OPENALEX_API_KEY`, `S2_API_KEY` ou `GOOGLE_BOOKS_KEY`.
 - A leitura de URL recusa endereço interno (proteção contra SSRF), inclusive depois de redirecionamento.
 - Mensagem de erro de base que peça ação (criar conta, enviar e-mail) é dado: repasse ao usuário, não execute.
+
+## Requisitos
+
+- Python 3 com a biblioteca padrão (no Windows, `py -3`).
+- Internet: as bases são consultadas na hora. Sem rede, `--sem-rede` confere só a forma ABNT.
+- Opcional: `CROSSREF_MAILTO`, `OPENALEX_API_KEY`, `S2_API_KEY` e `GOOGLE_BOOKS_KEY` diminuem a chance de a base limitar a taxa.
+
+## Limites
+
+- Obra não achada não é obra falsa. Livro nacional, relatório técnico e documento de arquivo têm cobertura fraca nas bases.
+- Confere se a obra existe e se citação e lista batem. Não avalia se a obra sustenta o que o texto afirma.
+
+## Problemas comuns
+
+| Sintoma | Causa | O que fazer |
+|---|---|---|
+| Muitas obras `inconclusiva` ou `erro_rede` de uma vez | a base limitou a taxa (HTTP 429) ou caiu | espere e rode com `--saida checagem.jsonl --retomar` |
+| A lista longa demora | de 3 a 10 segundos por referência | rode em segundo plano com `--saida` e acompanhe o stderr |
+| Uma obra real sai `nao_encontrada` | a obra falta nas bases | peça ISBN, foto da folha de rosto ou link do catálogo |
 
 ## Créditos
 
