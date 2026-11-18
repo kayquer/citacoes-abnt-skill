@@ -1,0 +1,89 @@
+@article{bento2018necrobiopoder,
+  author = {Bento, Berenice},
+  title = {Necrobiopoder: quem pode habitar o Estado-nação?},
+  year = {2018},
+  journal = {Cadernos Pagu},
+  number = {53},
+  address = {Campinas},
+  doi = {10.1590/18094449201800530005},
+  eid = {e185305}
+}
+
+@incollection{freud2010luto,
+  author = {Freud, Sigmund},
+  title = {Luto e melancolia},
+  year = {2010},
+  booktitle = {Obras completas},
+  pages = {170--194},
+  publisher = {Companhia das Letras},
+  address = {São Paulo},
+  translator = {Paulo César de Souza},
+  origdate = {1917},
+  volume = {12}
+}
+
+@book{freud2010mal,
+  author = {Freud, Sigmund},
+  title = {O mal-estar na civilização},
+  year = {2010},
+  publisher = {Companhia das Letras},
+  address = {São Paulo},
+  translator = {Paulo César de Souza},
+  origdate = {1930}
+}
+
+@book{hobbes2003leviata,
+  author = {Hobbes, Thomas},
+  title = {Leviatã: ou matéria, forma e poder de um Estado eclesiástico e civil},
+  year = {2003},
+  publisher = {Martins Fontes},
+  address = {São Paulo},
+  translator = {João Paulo Monteiro and Maria Beatriz Nizza da Silva},
+  origtitle = {Leviathan},
+  origdate = {1651}
+}
+
+@misc{iimm2024report,
+  author = {{Independent Investigative Mechanism for Myanmar}},
+  title = {Annual report},
+  year = {2024},
+  url = {https://iimm.un.org},
+  urldate = {2026-11-01},
+  date = {2024-03-27}
+}
+
+@article{lewandowsky2012misinformation,
+  author = {Lewandowsky, Stephan and Ecker, Ullrich K. H. and Seifert, Colleen M. and Schwarz, Norbert and Cook, John},
+  title = {Misinformation and its correction: continued influence and successful debiasing},
+  year = {2012},
+  journal = {Psychological Science in the Public Interest},
+  volume = {13},
+  number = {3},
+  pages = {106--131},
+  doi = {10.1177/1529100612451018}
+}
+
+@article{otta2010parcela,
+  author = {Otta, Lu Aiko},
+  title = {Parcela do Tesouro nos empréstimos do BNDES cresce 566% em oito anos},
+  year = {2010},
+  journal = {O Estado de S. Paulo},
+  volume = {131},
+  number = {42656},
+  pages = {B1},
+  address = {São Paulo},
+  date = {2010-08-01},
+  section = {Economia & Negócios},
+  entrysubtype = {newspaper}
+}
+
+@article{swift1710mentira,
+  author = {Swift, Jonathan},
+  title = {Sobre a mentira política},
+  year = {1710},
+  journal = {The Examiner},
+  number = {14},
+  address = {London},
+  date = {1710-11-09},
+  entrysubtype = {newspaper}
+}

@@ -26,9 +26,9 @@ Aviso sobre o catálogo Target (normas.com.br / target.com.br): toda página de 
 | NBR 6034 | Índice: apresentação | **NBR 6034:2026** (nova edição; substitui a 2004) | 08/09/2026 (catálogo: 09/2026) | Histórico Target (normas.com.br e target.com.br); blog DSI Biblio. Ainda não há guia de biblioteca que descreva as mudanças |
 | NBR 12225 | Lombada: apresentação | **NBR 12225:2023** | 04/2023 | Histórico Target |
 
-Consequências para o projeto:
+O que isso muda na formatação:
 
-- Muitas instituições ainda indicam a NBR 6023:2018 (o manual da UFV de 2025, por exemplo). O validador deve aceitar um perfil "2018" e um perfil "2025". Para os tipos mais comuns, as duas edições quase não diferem (ver seção 2).
+- Muitas instituições ainda indicam a NBR 6023:2018 (o manual da UFV de 2025, por exemplo). Os scripts aceitam as duas edições (`--edicao-6023 2018` ou `2025`); fique com a antiga só se o usuário confirmar que o curso a exige. Para os tipos mais comuns, as duas edições quase não diferem (ver seção 2).
 - A NBR 6034 mudou em setembro de 2026, e as NBR 6022, 6024 e 6027 podem mudar ainda em 2026 ou 2027. Vale rever esta tabela no começo de 2027.
 
 ## 2. O que mudou em cada norma
@@ -111,7 +111,7 @@ Não mudaram até agora. Há projetos em consulta nacional (ver tabela). Regras 
 - **6034**: a nova edição é de 08/09/2026. Ainda não há resumo público do que mudou em relação à 2004. Acompanhe os guias de biblioteca.
 - **12225**: nova edição em 04/2023, que substitui a 2004. Vale para documentos em caracteres latinos, gregos ou cirílicos e, no que couber, para outros suportes. Não encontrei resumo das mudanças.
 
-## 6. Fontes
+## 3. Fontes
 
 **Catálogos e textos das normas**
 - Target / normas.com.br, NBR 6023 (histórico até 05/2025): https://normas.com.br/visualizar/abnt-nbr-nm/5262/abnt-nbr6023-informacao-e-documentacao-referencias-elaboracao
@@ -301,7 +301,7 @@ Revise este quadro se a data de conferência tiver mais de 12 meses.
 - **Autor no corpo da frase**: maiúsculas e minúsculas, com o ano (e a página) entre parênteses: `Segundo Silva (2009, p. 73), "..."`. Era assim também em 2002.
 - **Autor dentro dos parênteses**: maiúsculas e minúsculas (nova regra): `(Silva, 2009, p. 73)`.
   - Perfil 2002 (legado): `(SILVA, 2009, p. 73)`.
-  - O validador deve marcar caixa alta em chamada como erro no perfil 2023, a não ser que seja sigla.
+  - O conferidor (`conferir_citacoes.py`) marca caixa alta em chamada como erro no perfil 2023, a não ser que seja sigla.
 - **Separadores dentro da chamada**: vírgula entre autor e ano e entre ano e página (`Autor, ano, p. N`).
 - **Dois ou três autores**:
   - Nos parênteses, separados por `;`: `(Juliani; Cavaglieri; Machado, 2016, p. 69)`.
@@ -446,9 +446,11 @@ Título e subtítulo no idioma do texto (e em língua estrangeira, conforme o pe
 
 # Regras de conferência por perfil
 
-> Resumo com palavras próprias de guias públicos de bibliotecas (as normas ABNT são pagas). Conferido em 2026-11-01. Fontes em `vigencia.md`.
+> Resumo com palavras próprias de guias públicos de bibliotecas (as normas ABNT são pagas). Conferido em 2026-11-01; tabela revista em 2026-11-17. Fontes em `vigencia.md`.
 
-Perfil **atual**: NBR 10520:2023 e NBR 6023:2025. Perfil **legado**: NBR 10520:2002 e NBR 6023:2018, usado quando o manual da instituição o fixa.
+Perfil **atual**: NBR 10520:2023 e NBR 6023:2025. Perfil **legado**: NBR 10520:2002 e NBR 6023:2018, usado quando o usuário confirma que o curso o exige (o manual da instituição sozinho não basta). No perfil legado, as palavras-chave seguem a NBR 6028:2003.
+
+No `conferir_citacoes.py`, a coluna **legado** só vale com `--edicao-10520 2002`. Instituição que mistura edições (6023:2018 com 10520:2023, como a UFPR) usa a coluna **atual** no conferidor; a edição da 6023 só muda a lista exportada pela `biblioteca.py`. As linhas de NBR 14724 abaixo são para conferência manual.
 
 A coluna **Script** diz se `conferir_citacoes.py` confere a regra. Quando a resposta é "não", confira à mão e **não** diga ao usuário que o script verificou.
 
@@ -465,10 +467,15 @@ A coluna **Script** diz se `conferir_citacoes.py` confere a regra. Quando a resp
 | Mesmo autor e ano sem `a`/`b` | erro | erro | sim |
 | `[s.d.]`, `s/d` ou referência sem ano | erro | erro | sim |
 | `Disponível em: <URL>` com `< >` | erro | erro | sim |
-| Mês por extenso ou abreviado errado (`mai.`, `Jun.`) | erro | erro | sim |
+| Mês por extenso em "Acesso em" (`10 janeiro 2024`) | erro | erro | sim |
+| Mês abreviado errado em qualquer data (`mai. 2020`, `Jun. 2020`) | erro | erro | sim |
+| Mês por extenso na data de publicação (`janeiro 2024`) | erro | erro | não |
+| `Disponível em` sem `Acesso em` | erro | erro | sim |
+| Grafia `et. al` em vez de `et al.` | erro | erro | sim |
 | `Anais...` em vez de `Anais [...]` | erro | erro | sim |
 | `doi:10.` em vez de `DOI: https://doi.org/10.` | erro | erro | sim |
 | `[S.l.]` e `[s.n.]` sem espaço | erro | erro | sim |
+| `[S. l.]: [s. n.]` em colchetes separados (o certo é `[S. l.: s. n.]`) | erro | erro | sim |
 | Dia com zero à esquerda em "Acesso em" (`07 abr.`) | aviso | aviso | sim |
 | Citação direta (entre aspas) sem localizador | aviso | aviso | sim |
 | Ponto final dobrado: `." (Autor, ano).` | aviso | aceitar | sim |

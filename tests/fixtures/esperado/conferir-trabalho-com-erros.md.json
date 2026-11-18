@@ -1,0 +1,72 @@
+{
+  "citacoes": 12,
+  "notas": 0,
+  "referencias": 10,
+  "achados": [
+    {
+      "nivel": "erro",
+      "tipo": "caixa_alta_na_chamada",
+      "mensagem": "NBR 10520:2023 pede maiúsculas e minúsculas: use (Silva, 2020) em vez de (SILVA, 2020). Sigla (IBGE, UFMG) continua em maiúsculas.",
+      "onde": "parágrafo 4: (SILVA, 2020, p. 15)"
+    },
+    {
+      "nivel": "erro",
+      "tipo": "citacao_sem_referencia",
+      "mensagem": "Souza; Lima, 2019 não tem referência na lista",
+      "onde": "parágrafo 5: (Souza; Lima, 2019, s.p.)"
+    },
+    {
+      "nivel": "erro",
+      "tipo": "sp_na_chamada",
+      "mensagem": "'s.p.' não existe na NBR 10520:2023: sem paginação, omita o localizador",
+      "onde": "parágrafo 5: (Souza; Lima, 2019, s.p.)"
+    },
+    {
+      "nivel": "erro",
+      "tipo": "palavras_chave",
+      "mensagem": "NBR 6028:2021: separe as palavras-chave por ponto e vírgula",
+      "onde": "parágrafo 3"
+    },
+    {
+      "nivel": "aviso",
+      "tipo": "ponto_duplicado",
+      "mensagem": "ponto antes das aspas e depois da chamada: deixe só o ponto final depois da chamada",
+      "onde": "parágrafo 4: .\" (Freire, 1987)."
+    },
+    {
+      "nivel": "aviso",
+      "tipo": "direta_sem_pagina",
+      "mensagem": "citação direta sem localizador (p. N), obrigatório quando o documento é paginado",
+      "onde": "parágrafo 6: …\"a leitura do mundo precede a leitura da palavra\" (Costa, 2018)"
+    },
+    {
+      "nivel": "aviso",
+      "tipo": "et_al_misturado",
+      "mensagem": "o documento usa et al. e também lista quatro ou mais autores: escolha uma forma"
+    },
+    {
+      "nivel": "erro",
+      "tipo": "forma_referencia",
+      "mensagem": "URL entre < >: a NBR 6023 atual não usa sinais de menor e maior",
+      "onde": "INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE). **Censo 2022**. Rio de Janeiro: IBGE, 2023. Disponível em: <http"
+    },
+    {
+      "nivel": "erro",
+      "tipo": "forma_referencia",
+      "mensagem": "mês por extenso em 'Acesso em': abrevie (jan., fev., mar., abr., maio, jun., jul., ago., set., out., nov., dez.)",
+      "onde": "INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE). **Censo 2022**. Rio de Janeiro: IBGE, 2023. Disponível em: <http"
+    },
+    {
+      "nivel": "aviso",
+      "tipo": "referencia_nao_citada",
+      "mensagem": "referência não citada no texto (decorativa): cite ou retire",
+      "onde": "TAVARES, Paulo. **Livro nunca citado**. Recife: UFPE, 2015."
+    },
+    {
+      "nivel": "erro",
+      "tipo": "mesmo_autor_ano",
+      "mensagem": "2 obras de PASSOS em 2016: diferencie com 2016a, 2016b na referência e na chamada",
+      "onde": "PASSOS, Rita. **Escrita escolar**. Campinas: Mercado de Letras, 2016."
+    }
+  ]
+}

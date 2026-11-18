@@ -39,7 +39,7 @@ class TestReferencias(unittest.TestCase):
     def test_livro_subtitulo_sem_local(self):
         ref = {"tipo": "livro", "autores": [SILVA], "titulo": "Método", "subtitulo": "um guia", "ano": 2020}
         self.assertEqual(A.formatar_referencia(ref, estilo="texto"),
-                         "SILVA, João Carlos. Método: um guia. [S. l.]: [s. n.], 2020.")
+                         "SILVA, João Carlos. Método: um guia. [S. l.: s. n.], 2020.")
 
     def test_artigo_doi(self):
         ref = {"tipo": "artigo", "autores": [SILVA, SOUZA], "titulo": "Leitura e escrita", "periodico": "Educação em Revista",

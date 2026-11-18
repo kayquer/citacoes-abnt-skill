@@ -1,0 +1,35 @@
+{
+  "notas": [
+    {
+      "n": 1,
+      "id": "freud2010luto",
+      "forma": "completa",
+      "nota": "FREUD, Sigmund. Luto e melancolia. In: FREUD, Sigmund. **Obras completas**. Tradução: Paulo César de Souza. São Paulo: Companhia das Letras, 2010a. v. 12, p. 172. Publicação original: 1917."
+    },
+    {
+      "n": 2,
+      "id": "freud2010luto",
+      "forma": "ibid",
+      "nota": "*Ibid.*, p. 180."
+    },
+    {
+      "n": 3,
+      "id": "freud2010mal",
+      "forma": "completa",
+      "nota": "FREUD, Sigmund. **O mal-estar na civilização**. Tradução: Paulo César de Souza. São Paulo: Companhia das Letras, 2010b. p. 20. Publicação original: 1930."
+    },
+    {
+      "n": 4,
+      "id": "freud2010luto",
+      "forma": "idem",
+      "nota": "*Id.*, 2010a, p. 190."
+    },
+    {
+      "n": 5,
+      "id": "hobbes2003leviata",
+      "forma": "completa",
+      "nota": "HOBBES, Thomas. **Leviatã**: ou matéria, forma e poder de um Estado eclesiástico e civil. Tradução: João Paulo Monteiro e Maria Beatriz Nizza da Silva. Organização: Richard Tuck. São Paulo: Martins Fontes, 2003. cap. XIII. Título original: Leviathan. Publicação original: 1651."
+    }
+  ],
+  "aviso": "notas curtas em MAIÚSCULAS seguem os exemplos de guias de 2023 (UFSCar); a NBR 10520:2023 não fixa a caixa da nota abreviada. Use --minusculas se o curso pedir."
+}

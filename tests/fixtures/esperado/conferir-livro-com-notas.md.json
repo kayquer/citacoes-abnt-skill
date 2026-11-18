@@ -1,0 +1,25 @@
+{
+  "citacoes": 0,
+  "notas": 5,
+  "referencias": 4,
+  "achados": [
+    {
+      "nivel": "aviso",
+      "tipo": "nota_abreviada_antes_da_completa",
+      "mensagem": "primeira citação da obra em nota deve trazer a referência completa (NBR 10520:2023)",
+      "onde": "nota 3: HOBBES, 2003, p. 106."
+    },
+    {
+      "nivel": "aviso",
+      "tipo": "nota_sem_referencia",
+      "mensagem": "a nota cita DELEUZE, que não está na lista de referências",
+      "onde": "nota 4: FREUD, 2010a, p. 190. Ver também DELEUZE, 2018, p. 3."
+    },
+    {
+      "nivel": "aviso",
+      "tipo": "referencia_nao_citada",
+      "mensagem": "referência não citada no texto nem em nota (decorativa): cite ou retire",
+      "onde": "FREUD, Sigmund. **O mal-estar na civilização**. Tradução: Paulo César de Souza. São Paulo: Companhia das Letras, 2010b."
+    }
+  ]
+}

@@ -1,8 +1,10 @@
 # Regras de conferência por perfil
 
-> Resumo com palavras próprias de guias públicos de bibliotecas (as normas ABNT são pagas). Conferido em 2026-11-01. Fontes em `vigencia.md`.
+> Resumo com palavras próprias de guias públicos de bibliotecas (as normas ABNT são pagas). Conferido em 2026-11-01; tabela revista em 2026-11-17. Fontes em `vigencia.md`.
 
-Perfil **atual**: NBR 10520:2023 e NBR 6023:2025. Perfil **legado**: NBR 10520:2002 e NBR 6023:2018, usado quando o manual da instituição o fixa.
+Perfil **atual**: NBR 10520:2023 e NBR 6023:2025. Perfil **legado**: NBR 10520:2002 e NBR 6023:2018, usado quando o usuário confirma que o curso o exige (o manual da instituição sozinho não basta). No perfil legado, as palavras-chave seguem a NBR 6028:2003.
+
+No `conferir_citacoes.py`, a coluna **legado** só vale com `--edicao-10520 2002`. Instituição que mistura edições (6023:2018 com 10520:2023, como a UFPR) usa a coluna **atual** no conferidor; a edição da 6023 só muda a lista exportada pela `biblioteca.py`. As linhas de NBR 14724 abaixo são para conferência manual.
 
 A coluna **Script** diz se `conferir_citacoes.py` confere a regra. Quando a resposta é "não", confira à mão e **não** diga ao usuário que o script verificou.
 
@@ -19,10 +21,15 @@ A coluna **Script** diz se `conferir_citacoes.py` confere a regra. Quando a resp
 | Mesmo autor e ano sem `a`/`b` | erro | erro | sim |
 | `[s.d.]`, `s/d` ou referência sem ano | erro | erro | sim |
 | `Disponível em: <URL>` com `< >` | erro | erro | sim |
-| Mês por extenso ou abreviado errado (`mai.`, `Jun.`) | erro | erro | sim |
+| Mês por extenso em "Acesso em" (`10 janeiro 2024`) | erro | erro | sim |
+| Mês abreviado errado em qualquer data (`mai. 2020`, `Jun. 2020`) | erro | erro | sim |
+| Mês por extenso na data de publicação (`janeiro 2024`) | erro | erro | não |
+| `Disponível em` sem `Acesso em` | erro | erro | sim |
+| Grafia `et. al` em vez de `et al.` | erro | erro | sim |
 | `Anais...` em vez de `Anais [...]` | erro | erro | sim |
 | `doi:10.` em vez de `DOI: https://doi.org/10.` | erro | erro | sim |
 | `[S.l.]` e `[s.n.]` sem espaço | erro | erro | sim |
+| `[S. l.]: [s. n.]` em colchetes separados (o certo é `[S. l.: s. n.]`) | erro | erro | sim |
 | Dia com zero à esquerda em "Acesso em" (`07 abr.`) | aviso | aviso | sim |
 | Citação direta (entre aspas) sem localizador | aviso | aviso | sim |
 | Ponto final dobrado: `." (Autor, ano).` | aviso | aceitar | sim |

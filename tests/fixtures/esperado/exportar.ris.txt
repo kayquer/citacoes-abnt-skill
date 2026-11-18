@@ -1,0 +1,83 @@
+TY  - JOUR
+AU  - Bento, Berenice
+TI  - Necrobiopoder: quem pode habitar o Estado-nação?
+T2  - Cadernos Pagu
+PY  - 2018
+IS  - 53
+CY  - Campinas
+DO  - 10.1590/18094449201800530005
+SP  - e185305
+ER  - 
+
+TY  - CHAP
+AU  - Freud, Sigmund
+TI  - Luto e melancolia
+T2  - Obras completas
+PY  - 2010
+PB  - Companhia das Letras
+CY  - São Paulo
+SP  - 170
+EP  - 194
+ER  - 
+
+TY  - BOOK
+AU  - Freud, Sigmund
+TI  - O mal-estar na civilização
+PY  - 2010
+PB  - Companhia das Letras
+CY  - São Paulo
+ER  - 
+
+TY  - BOOK
+AU  - Hobbes, Thomas
+TI  - Leviatã: ou matéria, forma e poder de um Estado eclesiástico e civil
+PY  - 2003
+PB  - Martins Fontes
+CY  - São Paulo
+ER  - 
+
+TY  - ELEC
+AU  - Independent Investigative Mechanism for Myanmar
+TI  - Annual report
+PY  - 2024
+UR  - https://iimm.un.org
+DA  - 2024/03/27
+ER  - 
+
+TY  - JOUR
+AU  - Lewandowsky, Stephan
+AU  - Ecker, Ullrich K. H.
+AU  - Seifert, Colleen M.
+AU  - Schwarz, Norbert
+AU  - Cook, John
+TI  - Misinformation and its correction: continued influence and successful debiasing
+T2  - Psychological Science in the Public Interest
+PY  - 2012
+VL  - 13
+IS  - 3
+DO  - 10.1177/1529100612451018
+SP  - 106
+EP  - 131
+ER  - 
+
+TY  - NEWS
+AU  - Otta, Lu Aiko
+TI  - Parcela do Tesouro nos empréstimos do BNDES cresce 566% em oito anos
+T2  - O Estado de S. Paulo
+PY  - 2010
+VL  - 131
+IS  - 42656
+CY  - São Paulo
+DA  - 2010/08/01
+SP  - B1
+ER  - 
+
+TY  - NEWS
+AU  - Swift, Jonathan
+TI  - Sobre a mentira política
+T2  - The Examiner
+PY  - 1710
+IS  - 14
+CY  - London
+DA  - 1710/11/09
+ER  - 

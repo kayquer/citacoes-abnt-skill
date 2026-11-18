@@ -20,7 +20,7 @@ Responda em português do Brasil, de forma direta.
 2. Norma ABNT vigente: NBR 6023:2025, NBR 10520:2023 e NBR 14724:2024.
 3. Costume, avisando que é costume.
 
-**Edições.** No perfil, edição marcada com `*` é a vigente aplicada porque o manual não informa qual usa. Edição antiga sem `*` (6023:2018, 10520:2002, 14724:2011) vem do manual: pergunte se o curso ainda a exige.
+**Edições.** No perfil, edição marcada com `*` é a vigente aplicada porque o manual não informa qual usa. Edição antiga sem `*` (6023:2018, 10520:2002, 14724:2011) vem do manual: pergunte se o curso ainda a exige; sem confirmação, use a vigente.
 
 Quando a norma dá opção (prenome por extenso ou abreviado, et al. ou todos os autores), escolha uma forma e use em todo o documento.
 
@@ -55,7 +55,7 @@ Quando a norma dá opção (prenome por extenso ou abreviado, et al. ou todos os
 ## Citações (NBR 10520:2023)
 
 - Dentro dos parênteses, em maiúsculas e minúsculas: `(Silva, 2020, p. 15)`. Na frase: `Silva (2020, p. 15)`.
-- Sigla continua em maiúsculas: `(IBGE, 2023)`. A forma `(SILVA, 2020)` só vale se a instituição fixar a 10520:2002.
+- Sigla continua em maiúsculas: `(IBGE, 2023)`. A forma `(SILVA, 2020)` só vale se o usuário confirmar a 10520:2002.
 - Dois ou três autores: `(Silva; Souza, 2020)` e, na frase, `Silva, Souza e Costa (2020)`. Quatro ou mais: `(Silva et al., 2020)`.
 - Mesmo autor no mesmo ano: `2020a`, `2020b`, também na lista. Citação de citação: `(Vianna, 1986 apud Segatto, 1995, p. 214)`.
 - Notas de rodapé: a primeira citação de cada obra leva a referência completa; as seguintes, `FREUD, 2010a, p. 180.` *Ibid.* e *Id.* só na mesma página da nota anterior.
@@ -79,7 +79,7 @@ Quando a norma dá opção (prenome por extenso ou abreviado, et al. ou todos os
 - Formas específicas:
   - URL sem `< >`;
   - meses abreviados (jan. fev. mar. abr. maio jun. jul. ago. set. out. nov. dez.);
-  - sem local: `[S. l.]`; sem editora: `[s. n.]`;
+  - sem local: `[S. l.]`; sem editora: `[s. n.]`; sem os dois: `[S. l.: s. n.]`;
   - não existe `[s.d.]`: use ano provável entre colchetes, como `[2020?]`, só com o aval do autor.
 - Sem autoria, a entrada é pelo título com a primeira palavra em maiúsculas: `DIAGNÓSTICO do setor...`.
 - Lista em ordem alfabética, espaço simples, alinhada à esquerda e com uma linha em branco entre as referências.

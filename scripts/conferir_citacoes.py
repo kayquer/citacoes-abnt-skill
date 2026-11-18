@@ -8,10 +8,11 @@ Lê o corpo e a seção REFERÊNCIAS e aponta:
   erro   sobrenome em MAIÚSCULAS dentro dos parênteses (perfil 10520:2023; sigla é aceita)
   erro   "s.p." / "[s.p.]" na chamada
   erro   mesmo autor e ano com duas obras sem a/b
-  erro   palavras-chave separadas por ponto (NBR 6028:2021)
-  erro   problemas de forma na referência (URL entre < >, mês por extenso, s.d., Anais...)
+  erro   palavras-chave separadas por ponto (NBR 6028:2021; aceitas no perfil 2002)
+  erro   problemas de forma na referência (URL entre < >, mês por extenso, s.d., Anais..., [S. l.]: [s. n.])
   aviso  referência nunca citada no texto nem em nota ("decorativa")
-  aviso  nota abreviada antes da completa (sistema de notas, NBR 10520:2023, 4.4)
+  aviso  nota abreviada antes da completa (sistema de notas, NBR 10520)
+  aviso  ponto dobrado ." (Autor, ano). (só no perfil 2023)
   aviso  nota que parece citar obra fora da lista; Ibid./Id. sem nota anterior
 
 Notas de rodapé (.docx: word/footnotes.xml e endnotes.xml; Markdown: [^n]:) são lidas sempre.
@@ -148,7 +149,7 @@ def _casa_nota(texto_norm, texto_bruto, r):
     return None
 
 
-def conferir_notas(notas, indice, add):
+def conferir_notas(notas, indice, add, edicao_10520="2023"):
     """Sistema de notas de referência (NBR 10520, 4.4): casa notas com a lista e confere a ordem completa/abreviada."""
     completas, anterior = set(), []
     for nota in notas:
@@ -175,7 +176,7 @@ def conferir_notas(notas, indice, add):
                 completas.add(i)
             elif i not in completas:
                 add("aviso", "nota_abreviada_antes_da_completa",
-                    "primeira citação da obra em nota deve trazer a referência completa (NBR 10520:2023, 4.4)", onde)
+                    f"primeira citação da obra em nota deve trazer a referência completa (NBR 10520:{edicao_10520})", onde)
                 completas.add(i)  # avisa uma vez por obra
         # Entrada em MAIÚSCULAS seguida de vírgula (FREUD, / DELEUZE, 2018) sem nenhuma referência com esse nome
         conhecidos = {w for r in indice for w in r["nomes"] | {r["primeira"]}}
@@ -202,7 +203,7 @@ def conferir(corpo, refs_texto, edicao_10520="2023", notas=None):
         achados.append({"nivel": nivel, "tipo": tipo, "mensagem": msg, **({"onde": onde} if onde else {})})
 
     if notas:
-        conferir_notas(notas, indice, add)
+        conferir_notas(notas, indice, add, edicao_10520)
     vistos_formato = set()
     for c in citacoes:
         lugar = c["paragrafo"] if isinstance(c["paragrafo"], str) else f"parágrafo {c['paragrafo']}"
@@ -214,7 +215,7 @@ def conferir(corpo, refs_texto, edicao_10520="2023", notas=None):
             for r in alvo:
                 r["citada"] = True
         elif not c["apud_original"]:
-            add("erro", "citacao_sem_referencia", f"{' ; '.join(c['nomes'])}, {c['ano']}{c['sufixo']} não tem referência na lista", onde)
+            add("erro", "citacao_sem_referencia", f"{'; '.join(c['nomes'])}, {c['ano']}{c['sufixo']} não tem referência na lista", onde)
         # Caixa alta dentro dos parênteses
         if c["parenteses"] and edicao_10520 == "2023" and c["texto"] not in vistos_formato:
             for n in c["nomes"]:
@@ -226,21 +227,24 @@ def conferir(corpo, refs_texto, edicao_10520="2023", notas=None):
                         f"({n_limpo}, {c['ano']}). Sigla (IBGE, UFMG) continua em maiúsculas.", onde)
                     break
         if re.search(r"\[?\bs\.\s?p\.\]?|\bs/p\b", c["localizador"]):
-            add("erro", "sp_na_chamada", "'s.p.' não existe na NBR 10520:2023: sem paginação, omita o localizador", onde)
+            add("erro", "sp_na_chamada", f"'s.p.' não existe na NBR 10520:{edicao_10520}: sem paginação, omita o "
+                "localizador", onde)
         vistos_formato.add(c["texto"])
 
-    # Citação direta sem página e ponto duplicado
+    # Citação direta sem página e ponto duplicado. No perfil legado (10520:2002, 6028:2003) o ponto dobrado e
+    # as palavras-chave separadas por ponto e com inicial maiúscula são aceitos (regras-do-validador.md).
+    legado = edicao_10520 == "2002"
     for i, par in enumerate(corpo):
         texto = par.replace("**", "")
         for m in re.finditer(r"[\"“]([^\"”]{15,})[\"”]\s*\(([^()]*?" + ANO + r"[a-z]?)([^()]*)\)", texto):
             if not re.search(r"\b(p|f|local|cap|art)\.\s*\w", m.group(3)):
                 add("aviso", "direta_sem_pagina", "citação direta sem localizador (p. N), obrigatório quando o documento é paginado",
                     f"parágrafo {i + 1}: …{m.group(0)[-80:]}")
-        for m in re.finditer(r"\.[\"”]\s*\([^()]*" + ANO + r"[^()]*\)\.", texto):
+        for m in [] if legado else re.finditer(r"\.[\"”]\s*\([^()]*" + ANO + r"[^()]*\)\.", texto):
             add("aviso", "ponto_duplicado", "ponto antes das aspas e depois da chamada: deixe só o ponto final depois da chamada",
                 f"parágrafo {i + 1}: {m.group(0)}")
         m = re.match(r"^\s*(Palavras-chave|Palavras chave)\s*:\s*(.+)$", texto, re.I)
-        if m:
+        if m and not legado:
             termos = m.group(2).strip().rstrip(".")
             if "." in termos and ";" not in termos:
                 add("erro", "palavras_chave", "NBR 6028:2021: separe as palavras-chave por ponto e vírgula", f"parágrafo {i + 1}")

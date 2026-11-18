@@ -1,0 +1,236 @@
+[
+  {
+    "id": "bento2018necrobiopoder",
+    "type": "article-journal",
+    "title": "Necrobiopoder",
+    "author": [
+      {
+        "family": "Bento",
+        "given": "Berenice"
+      }
+    ],
+    "container-title": "Cadernos Pagu",
+    "publisher-place": "Campinas",
+    "issue": 53,
+    "page": "e185305",
+    "DOI": "10.1590/18094449201800530005",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    }
+  },
+  {
+    "id": "freud2010luto",
+    "type": "chapter",
+    "title": "Luto e melancolia",
+    "author": [
+      {
+        "family": "Freud",
+        "given": "Sigmund"
+      }
+    ],
+    "container-title": "Obras completas",
+    "publisher": "Companhia das Letras",
+    "publisher-place": "São Paulo",
+    "volume": 12,
+    "page": "170-194",
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "translator": [
+      {
+        "literal": "Paulo César de Souza"
+      }
+    ],
+    "original-date": {
+      "date-parts": [
+        [
+          1917
+        ]
+      ]
+    }
+  },
+  {
+    "id": "freud2010mal",
+    "type": "book",
+    "title": "O mal-estar na civilização",
+    "author": [
+      {
+        "family": "Freud",
+        "given": "Sigmund"
+      }
+    ],
+    "publisher": "Companhia das Letras",
+    "publisher-place": "São Paulo",
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "translator": [
+      {
+        "literal": "Paulo César de Souza"
+      }
+    ],
+    "original-date": {
+      "date-parts": [
+        [
+          1930
+        ]
+      ]
+    }
+  },
+  {
+    "id": "hobbes2003leviata",
+    "type": "book",
+    "title": "Leviatã",
+    "author": [
+      {
+        "family": "Hobbes",
+        "given": "Thomas"
+      }
+    ],
+    "publisher": "Martins Fontes",
+    "publisher-place": "São Paulo",
+    "issued": {
+      "date-parts": [
+        [
+          2003
+        ]
+      ]
+    },
+    "translator": [
+      {
+        "literal": "João Paulo Monteiro"
+      },
+      {
+        "literal": "Maria Beatriz Nizza da Silva"
+      }
+    ],
+    "original-title": "Leviathan",
+    "original-date": {
+      "date-parts": [
+        [
+          1651
+        ]
+      ]
+    }
+  },
+  {
+    "id": "iimm2024report",
+    "type": "webpage",
+    "title": "Annual report",
+    "author": [
+      {
+        "literal": "Independent Investigative Mechanism for Myanmar"
+      }
+    ],
+    "URL": "https://iimm.un.org",
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          3,
+          27
+        ]
+      ]
+    }
+  },
+  {
+    "id": "lewandowsky2012misinformation",
+    "type": "article-journal",
+    "title": "Misinformation and its correction",
+    "author": [
+      {
+        "family": "Lewandowsky",
+        "given": "Stephan"
+      },
+      {
+        "family": "Ecker",
+        "given": "Ullrich K. H."
+      },
+      {
+        "family": "Seifert",
+        "given": "Colleen M."
+      },
+      {
+        "family": "Schwarz",
+        "given": "Norbert"
+      },
+      {
+        "family": "Cook",
+        "given": "John"
+      }
+    ],
+    "container-title": "Psychological Science in the Public Interest",
+    "volume": 13,
+    "issue": 3,
+    "page": "106-131",
+    "DOI": "10.1177/1529100612451018",
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    }
+  },
+  {
+    "id": "otta2010parcela",
+    "type": "article-newspaper",
+    "title": "Parcela do Tesouro nos empréstimos do BNDES cresce 566% em oito anos",
+    "author": [
+      {
+        "family": "Otta",
+        "given": "Lu Aiko"
+      }
+    ],
+    "container-title": "O Estado de S. Paulo",
+    "publisher-place": "São Paulo",
+    "volume": 131,
+    "section": "Economia & Negócios",
+    "issue": 42656,
+    "page": "B1",
+    "issued": {
+      "date-parts": [
+        [
+          2010,
+          8,
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "swift1710mentira",
+    "type": "article-newspaper",
+    "title": "Sobre a mentira política",
+    "author": [
+      {
+        "family": "Swift",
+        "given": "Jonathan"
+      }
+    ],
+    "container-title": "The Examiner",
+    "publisher-place": "London",
+    "issue": 14,
+    "issued": {
+      "date-parts": [
+        [
+          1710,
+          11,
+          9
+        ]
+      ]
+    }
+  }
+]

@@ -1,5 +1,40 @@
 # Changelog
 
+## 1.3.1 (2026-11-17)
+
+Correções a partir de uma revisão das três skills e de uma bateria nova de testes de regressão.
+
+**Correções**
+- Sem local e sem editora, a referência sai `[S. l.: s. n.]`, num colchete só, como pede a NBR 6023. Antes saía `[S. l.]: [s. n.]`. O conferidor aponta a forma separada.
+- `faltantes` deixava de avisar sobre local e editora só quando o campo era preenchido, e o agente podia insistir na mesma pergunta. Com `sem_local: true` ou `sem_editora: true` (obra conferida, sem o dado), o aviso não volta.
+- Páginas salteadas levam `p.`: `(Silva, 2020, p. 45, 47)`. Antes saíam sem.
+- DOI de preprint: o prefixo agora termina na barra. `10.11019/...` ou `10.21390/...` não são mais tomados por bioRxiv ou SSRN, o que fazia recusar a sugestão de DOI de uma obra publicada.
+- O checador lê CSL-JSON (export do Zotero ou do Mendeley), como o `biblioteca.py importar`. Antes o arquivo entrava cru, sem título nem tipo.
+- No perfil legado (`--edicao-10520 2002`), o conferidor aceita o ponto dobrado e as palavras-chave da NBR 6028:2003, como já dizia `regras-do-validador.md`. As mensagens citam a edição escolhida.
+- `notas --minusculas` não repete mais o aviso que recomenda `--minusculas`.
+- Mensagem de chamada sem referência: `Souza; Lima`, sem espaço antes do ponto e vírgula.
+- A nota abreviada antes da completa também cita a edição escolhida da NBR 10520.
+- `notas "freud2010luto:45, 47, hobbes2003leviata:12"`: número solto depois da vírgula continua a página da citação anterior. Antes virava um id inexistente.
+- Romano só quando é número romano válido: `civil` ou `mil` não viram `p. civil`.
+- DOI de preprint recusado em qualquer tipo de obra (tese, evento, site), salvo quando a própria referência cita o servidor de preprint.
+- `faltantes` também avisa sobre local e editora em `evento`, que usa os dois nos anais.
+- `[s.l.]` e `[S.L.]` sem espaço são apontados em qualquer caixa.
+- O checador não quebra com .json sem a chave `referencias`.
+- Docstring de `abnt_lib.py` com `paginas_total`, `orientador`, `folhas` e os metadados de controle (`fonte`, `revisar`, `tags`).
+
+**Skills**
+- Edição antiga da norma (6023:2018, 10520:2002) só com a confirmação do usuário, nas três skills. O perfil da instituição sozinho não basta. Confirmada, a edição vai para todos os scripts.
+- Descriptions delimitadas pela entrada: documento já escrito (abnt-formatacao), identificador ou arquivo de bibliografia (biblioteca-citacoes), existência da obra (checador-citacoes).
+- abnt-formatacao: plano B para .docx sem a skill docx; referências a partir de DOI ou ISBN passam pela biblioteca-citacoes.
+- biblioteca-citacoes: `--arquivo` com caminho absoluto quando o ambiente muda de pasta; códigos de saída de `importar` e `buscar`.
+- checador-citacoes: o conferidor só roda sobre o trabalho, não sobre a lista; a lista de erros e avisos aponta para `regras-do-validador.md`, em vez de repeti-la pela metade.
+- `regras-do-validador.md`: linhas para `Disponível em` sem `Acesso em`, `et. al` e mês por extenso fora de "Acesso em" (não conferido pelo script); explica que a coluna legado do conferidor só vale com `--edicao-10520 2002`.
+- Regras inegociáveis da abnt-formatacao com a exceção do perfil legado; exemplo da UFPR com a NBR 14724:2011; limites da exportação BibTeX/RIS/CSL na biblioteca-citacoes.
+- README: o exemplo do IBGE não completa mais local e ano por conta própria.
+
+**Testes**
+- `tests/test_regressao.py`: estrutura das skills (frontmatter, tamanhos, e cada comando e flag citado no SKILL.md conferido contra o `--help` do script), snapshots das saídas sobre os fixtures em `tests/fixtures/esperado/` e as correções acima. `REGRESSAO_ATUALIZAR=1` regenera os snapshots.
+
 ## 1.3.0 (2026-11-16)
 
 Compatibilidade com mais agentes e ajustes apontados pelo [SkillEvaluator](https://github.com/NVIDIA/SkillEvaluator) da NVIDIA.
