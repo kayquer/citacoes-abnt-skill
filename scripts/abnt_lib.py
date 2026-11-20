@@ -6,7 +6,7 @@ Modelo de referência (dict, campos opcionais exceto "tipo"):
     id, tipo (livro | capitulo | artigo | jornal | tese | site | evento | legislacao),
     autores: [{"sobrenome": "Silva", "nome": "João Carlos"} | {"entidade": "Universidade de São Paulo", "sigla": "USP"}],
     titulo, subtitulo, titulo_atribuido (true: título dado por quem cita, sai entre colchetes),
-    edicao, local, editora, ano, mes, data (AAAA-MM-DD ou AAAA-MM: jornal, site, periódico diário),
+    edicao, local, editora, sem_local / sem_editora (true: conferido, a obra não traz; sai [S. l.] / [s. n.]), ano, mes, data (AAAA-MM-DD ou AAAA-MM: jornal, site, periódico diário),
     volume, numero, paginas, eloc (e-localização: e2023301118, art. 428), caderno (jornal),
     periodico, doi, url, acesso (AAAA-MM-DD), isbn, issn,
     organizadores (lista de autores) + papel_org ("org." | "ed." | "coord."), titulo_obra, subtitulo_obra,
@@ -15,9 +15,13 @@ Modelo de referência (dict, campos opcionais exceto "tipo"):
     tradutor ("Ivo Korytowski" ou lista), titulo_original, ano_original (obra traduzida ou reeditada),
     responsabilidades ([{"papel": "Organização", "nome": "Richard Tuck"}]) ou os atalhos
     organizacao, revisao, prefacio, introducao, notas_de, ilustracao (vão depois do título, como a tradução),
+    paginas_total (livro: "320" vira "320 p."),
     tipo_trabalho ("Tese" | "Dissertação" | "Trabalho de Conclusão de Curso"), grau ("Doutorado em Educação"),
-    unidade ("Faculdade de Educação"), instituicao, evento, evento_numero, evento_ano, evento_local,
+    orientador, folhas (tese: "180" vira "180 f."), unidade ("Faculdade de Educação"), instituicao, evento, evento_numero, evento_ano, evento_local,
     titulo_anais ("Anais"), jurisdicao, epigrafe, ementa, publicacao, nota.
+
+Metadados de controle (gravados pela biblioteca, não saem na referência): fonte (base de onde veio),
+revisar (o que faltava quando entrou), tags.
 
 Regra de ouro: nada é inventado. Campo obrigatório ausente vira "[VERIFICAR: campo]".
 """
@@ -161,9 +165,10 @@ def entrada_por_titulo(titulo):
 
 
 def local_editora(ref):
-    local = ref.get("local") or "[S. l.]"
-    editora = ref.get("editora") or "[s. n.]"
-    return f"{local}: {editora}"
+    local, editora = ref.get("local"), ref.get("editora")
+    if not local and not editora:
+        return "[S. l.: s. n.]"  # NBR 6023: sem local e sem editora, num colchete só
+    return f"{local or '[S. l.]'}: {editora or '[s. n.]'}"
 
 
 def ano_de(ref):
@@ -484,13 +489,19 @@ def _nome_chamada(autor, edicao_10520):
     return caixa_alta(nome) if edicao_10520 == "2002" else nome
 
 
+# Romano minúsculo válido (xiv, cxl): "civil" ou "mil" não viram página
+ROMANO = r"(?=[ivxlcdm])m{0,3}(?:cm|cd|d?c{0,3})(?:xc|xl|l?x{0,3})(?:ix|iv|v?i{0,3})"
+
+
 def localizador(pagina, separador=""):
     """'75' -> 'p. 75'; 'B 75', 'local. 264', 'cap. V', '9min 41s' ficam como estão."""
     if not pagina:
         return ""
     pagina = str(pagina).strip()
-    # "p." só para número, intervalo ou romano; o resto já é localizador próprio
-    if re.fullmatch(r"\d+([-–]\d+)?|[ivxlcdm]+([-–][ivxlcdm]+)?", pagina):
+    # "p." só para número, intervalo ou romano, sozinhos ou em lista ("45, 47", "45-50 e 62");
+    # o resto já é localizador próprio
+    item = rf"(?:\d+(?:[-–]\d+)?|{ROMANO}(?:[-–]{ROMANO})?)"
+    if re.fullmatch(rf"{item}(?:(?:,\s*|\s+e\s+){item})*", pagina):
         return f"{separador}p. {pagina.replace('–', '-')}"
     return f"{separador}{pagina}"
 
@@ -674,10 +685,12 @@ def faltantes(ref):
         opcoes = campo.split("|")
         if not any(ref.get(c) for c in opcoes):
             falta.append(campo)
-    if not ref.get("local") and ref.get("tipo") in ("livro", "capitulo"):
-        falta.append("local (sairá [S. l.])")
-    if not ref.get("editora") and ref.get("tipo") in ("livro", "capitulo"):
-        falta.append("editora (sairá [s. n.])")
+    # sem_local / sem_editora: o usuário conferiu a obra e ela não traz o dado; o aviso não volta
+    com_editora = ("livro", "capitulo", "evento")  # os que passam por local_editora
+    if not ref.get("local") and not ref.get("sem_local") and ref.get("tipo") in com_editora:
+        falta.append("local (sairá [S. l.]; se a obra não traz, grave sem_local: true)")
+    if not ref.get("editora") and not ref.get("sem_editora") and ref.get("tipo") in com_editora:
+        falta.append("editora (sairá [s. n.]; se a obra não traz, grave sem_editora: true)")
     local = sem_acento(str(ref.get("local") or "")).lower().strip()
     if local in {sem_acento(c) for c in LOCAIS_HOMONIMOS}:
         falta.append(f"local '{ref['local']}' tem homônimos: acrescente estado ou país (Cambridge, MA)")
@@ -694,7 +707,8 @@ PADROES_TEXTO = [
     (r"\b[Ss]\.\s?d\.", "'s.d.' não é aceito: indique ano provável entre colchetes, como [2020?]"),
     (r"\bdoi:\s*10\.", "DOI no formato antigo 'doi:10.': use 'DOI: https://doi.org/10.'"),
     (r"\bDisponível em:\s*https?://\S+\s*$", "'Disponível em' sem 'Acesso em' (obrigatório para documento online)"),
-    (r"\[\s*S\.l\.\s*\]|\[\s*s\.n\.\s*\]", "use [S. l.] e [s. n.], com espaço depois do ponto"),
+    (r"(?i)\[\s*S\.l\.\s*[\]:]|[\[:]\s*s\.n\.\s*\]", "use [S. l.] e [s. n.], com espaço depois do ponto"),
+    (r"\[S\. l\.\]:\s*\[s\. n\.\]", "sem local e sem editora: use [S. l.: s. n.], num colchete só"),
     (r"\bet\. al\b", "grafia 'et. al': o correto é 'et al.'"),
     (r"\bAnais\s*\.\.\.", "'Anais...' é forma antiga: use 'Anais [...]'"),
     (r"\b(mai|Jan|Fev|Mar|Abr|Jun|Jul|Ago|Set|Out|Nov|Dez)\.\s*\d{4}",

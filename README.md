@@ -95,7 +95,7 @@ Referência pela NBR 6023:
 
 ```diff
 - IBGE. Censo 2022. Disponível em: <https://censo2022.ibge.gov.br>. Acesso em: 10 janeiro 2024.
-+ INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. **Censo 2022**. Rio de Janeiro, 2023. Disponível em: https://censo2022.ibge.gov.br. Acesso em: 10 jan. 2024.
++ INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE). **Censo 2022**. [VERIFICAR: local]: IBGE, [VERIFICAR: ano]. Disponível em: https://censo2022.ibge.gov.br. Acesso em: 10 jan. 2024.
 ```
 
 ### Humanidades: tradução, obras completas, jornal e notas de rodapé
@@ -263,7 +263,7 @@ citacoes-abnt-skill/
 ## Testes
 
 ```bash
-python3 -m unittest discover tests     # 89 testes, sem rede (as bases são simuladas)
+python3 -m unittest discover tests     # 129 testes, sem rede (as bases são simuladas)
 python3 tools/build.py --verificar
 python3 scripts/checar_referencias.py tests/fixtures/referencias-mistas.md   # teste real, com rede
 ```

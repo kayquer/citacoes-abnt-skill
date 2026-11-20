@@ -1,10 +1,10 @@
 ---
 name: checador-citacoes
-description: "Use quando perguntarem se as referências de um trabalho existem, se o ChatGPT inventou alguma, ou pedirem para checar ou validar referências, DOIs ou bibliografia, inclusive antes de entregar TCC, artigo, dissertação ou tese. Consulta Crossref, OpenAlex, Semantic Scholar, Open Library, Google Books e o link de notícias e sites: detecta referência inventada ou alucinada por IA, quimera (título real com autor errado) e DOI que leva a outra obra, e confere se cada chamada do texto ou nota de rodapé tem referência na lista e vice-versa. Para corrigir a formatação ABNT, use abnt-formatacao."
-argument-hint: "[arquivo .docx | .md | .bib | .ris | biblioteca.json]"
+description: "Use quando perguntarem se referências existem ou foram inventadas, se o ChatGPT inventou alguma, ou pedirem para checar se as referências, DOIs ou a bibliografia são reais, inclusive antes de entregar TCC, artigo, dissertação ou tese. Consulta Crossref, OpenAlex, Semantic Scholar, Open Library, Google Books e o link de notícias e sites: detecta referência inventada ou alucinada por IA, quimera (título real com autor errado) e DOI que leva a outra obra, e confere se cada chamada do texto ou nota de rodapé tem referência na lista e vice-versa. Para corrigir a formatação ABNT, use abnt-formatacao."
+argument-hint: "[arquivo .docx | .md | .bib | .ris | biblioteca.json | CSL-JSON]"
 metadata:
   author: "Kayque Rotondo"
-  version: "1.3.0"
+  version: "1.3.1"
   tags: "abnt, referências, verificação, alucinação, doi"
 ---
 # Checador de citações
@@ -27,7 +27,7 @@ Uma referência só é dada como **verificada** quando duas ou mais bases batem 
 
 Os scripts ficam na pasta `scripts/` da raiz do plugin: `${CLAUDE_PLUGIN_ROOT}/scripts`, ou `../../scripts` a partir da pasta desta skill. Resolva o caminho absoluto, que os exemplos chamam de `$SCRIPTS`. Rode com `python3` ou, no Windows, com `py -3`.
 
-1. **Rode o checador de existência.** Ele aceita .docx, .md e .txt com a seção REFERÊNCIAS, além de .bib, .ris e `biblioteca.json`.
+1. **Rode o checador de existência.** Ele aceita .docx, .md e .txt com a seção REFERÊNCIAS, além de .bib, .ris, `biblioteca.json` e CSL-JSON (export do Zotero ou do Mendeley).
    ```bash
    python3 "$SCRIPTS/checar_referencias.py" trabalho.docx --json
    ```
@@ -37,11 +37,11 @@ Os scripts ficam na pasta `scripts/` da raiz do plugin: `${CLAUDE_PLUGIN_ROOT}/s
    - Sem chave, o OpenAlex usa uma cota diária dividida por todos no mesmo IP. Quando ela acaba, a base fica de fora da rodada, e o alerta diz como definir `OPENALEX_API_KEY` (gratuita). Não peça a chave em nome do usuário: diga a ele onde criar.
    - Sem internet, use `--sem-rede`: só confere a forma ABNT e devolve o status `nao_checada`.
    - Para lista só de artigos, use `--bases crossref,openalex,semantic`. Com `tipo` definido (em `biblioteca.json`), o checador já pula as bases de livros para artigos e as bases acadêmicas para notícia e site.
-2. **Rode o conferidor de citações** no mesmo arquivo.
+2. **Rode o conferidor de citações** no mesmo arquivo, quando ele tem corpo de texto além da lista (.docx, .md, .txt). Com .bib, .ris, biblioteca.json ou um arquivo só com a lista não há chamadas para conferir: pule este passo. Se a `abnt-formatacao` já rodou o conferidor sobre o mesmo arquivo nesta conversa, reaproveite o resultado. Aqui o foco é a correspondência entre chamada e lista; a forma da chamada é assunto da `abnt-formatacao`.
    ```bash
    python3 "$SCRIPTS/conferir_citacoes.py" trabalho.docx --json
    ```
-   Use `--edicao-10520 2002` se o perfil da instituição fixar essa edição. Os perfis estão em `../abnt-formatacao/references/instituicoes/index.md`.
+   Use `--edicao-10520 2002` só se o usuário confirmar que o curso exige essa edição; o perfil sozinho não basta (veja o passo 2 da `abnt-formatacao`). Os perfis estão em `../abnt-formatacao/references/instituicoes/index.md`.
    - **Notas de rodapé** são lidas sempre (.docx: notas de rodapé e de fim; Markdown: `[^n]:`). Obra citada só em nota conta como citada. Em texto com sistema de notas, o conferidor também avisa quando a primeira citação de uma obra vem abreviada e quando a nota cita autor que não está na lista. `--sem-notas` desliga a leitura.
 3. **Leia os códigos de saída.** Código 1 ou 2 indica achados, não falha do script. Leia o JSON:
    - `checar_referencias.py`: 0 quando todas foram verificadas; 1 quando há referência não encontrada, quimera ou DOI divergente; 2 quando só há casos a conferir à mão (parcial, homônimo, link, falha de rede).
@@ -59,7 +59,7 @@ Os scripts ficam na pasta `scripts/` da raiz do plugin: `${CLAUDE_PLUGIN_ROOT}/s
 
 | Status | Significa | Ação |
 |---|---|---|
-| `verificada` | 2 ou mais bases batem título e autoria | Nenhuma. Se vier `sugestao_doi`, ofereça incluir o DOI |
+| `verificada` | 2 ou mais bases batem título e autoria | Nenhuma. Se vier `sugestao_doi`, ofereça incluir o DOI: em `biblioteca.json`, grave o campo `doi` mantendo o id; em documento, mostre a referência corrigida |
 | `verificada` com `autoria_nao_comparada` | confirmada só pelo título | Relate como "verificada pelo título" e peça ao usuário para conferir o autor |
 | `parcial` | só 1 base achou | Comum em livro nacional e tradução. Peça ISBN, foto da folha de rosto ou link do catálogo |
 | `nao_encontrada` | nenhuma base achou, e pelo menos 2 responderam | **Possível referência inventada.** Peça a fonte. Se veio de IA, recomende retirar |
@@ -68,19 +68,18 @@ Os scripts ficam na pasta `scripts/` da raiz do plugin: `${CLAUDE_PLUGIN_ROOT}/s
 | `doi_divergente` | o DOI não existe ou aponta para outra obra | Mostre o título a que o DOI leva. Corrija ou remova o DOI |
 | `url_verificada` | notícia, site ou relatório: o link responde e o título da página bate | Nenhuma |
 | `url_divergente` / `url_inacessivel` | o link leva a outra página, ou não respondeu (404, 403, bloqueio a robôs) | Peça para abrir no navegador; link quebrado pede o endereço novo ou uma cópia no Internet Archive |
-| `nao_verificavel` | notícia sem URL, ou título atribuído `[entre colchetes]` | Conferência manual: periódico, número e data |
+| `nao_verificavel` | notícia, site ou lei sem URL, ou título atribuído `[entre colchetes]` | Conferência manual: periódico, número e data |
 | `fora_de_cobertura` | obra anterior a 1800 sem resultado | As bases não cobrem edições históricas. Indique catálogo de biblioteca |
 | `inconclusiva` / `erro_rede` | as bases não responderam | Rode de novo com `--retomar`. Não conclua nada |
 
 O alerta de ano divergente costuma indicar outra edição: peça para conferir a folha de rosto.
 
-`sugestao_doi` só aparece quando o candidato tem o mesmo primeiro autor, ano com até um de diferença e periódico compatível. DOI de preprint (SSRN, arXiv, bioRxiv...) ou de reedição é recusado e vira alerta. Mesmo assim, mostre o DOI ao usuário antes de gravar.
+`sugestao_doi` só aparece quando o candidato tem o mesmo primeiro autor, ano com até um de diferença e periódico compatível. DOI de preprint (SSRN, arXiv, bioRxiv...) ou de reedição é recusado e vira alerta, a não ser que a própria referência cite o servidor de preprint. Mesmo assim, mostre o DOI ao usuário antes de gravar.
 
 No conferidor:
 
-- **Erro**: chamada sem referência, caixa alta no perfil 2023, s.p., mesmo autor e ano sem a/b, URL entre `< >`, mês por extenso, `[s.d.]`, `Anais...`, palavras-chave separadas por ponto.
-- **Aviso**: referência nunca citada no texto nem em nota (decorativa), citação direta sem página, ponto duplicado, mistura de et al. com lista completa, nota abreviada antes da completa, nota que cita autor fora da lista.
-- O que o script **não** confere está em `../abnt-formatacao/references/normas/regras-do-validador.md`. Não diga ao usuário que esses itens foram verificados.
+- A lista completa do que é erro e do que é aviso, por perfil (2023 ou legado 2002), e do que o script **não** confere está em `../abnt-formatacao/references/normas/regras-do-validador.md`. Não diga ao usuário que os itens não conferidos foram verificados.
+- Os mais comuns: chamada sem referência e referência nunca citada (decorativa), caixa alta no perfil 2023, `s.p.`, mesmo autor e ano sem a/b, citação direta sem página.
 
 ## Relatório ao usuário
 
@@ -124,7 +123,6 @@ Antes, confira se a instituição ou a revista têm modelo próprio.
 
 ## Limites
 
-- Obra não achada não é obra falsa. Livro nacional, relatório técnico e documento de arquivo têm cobertura fraca nas bases.
 - Confere se a obra existe e se citação e lista batem. Não avalia se a obra sustenta o que o texto afirma.
 
 ## Problemas comuns

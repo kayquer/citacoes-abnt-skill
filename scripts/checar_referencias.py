@@ -2,7 +2,7 @@
 
     py -3 scripts/checar_referencias.py trabalho.docx        (lê a seção REFERÊNCIAS)
     py -3 scripts/checar_referencias.py refs.md | refs.txt   (uma referência por parágrafo)
-    py -3 scripts/checar_referencias.py refs.bib | biblioteca.json
+    py -3 scripts/checar_referencias.py refs.bib | refs.ris | biblioteca.json | zotero.json (CSL-JSON)
     opções: --json  --sem-rede (só forma ABNT)  --bases crossref,openalex,semantic,openlibrary,googlebooks
             --saida checagem.jsonl (grava cada obra assim que termina)  --retomar (pula as já checadas)
             --sem-cache  --sem-paralelo  --silencioso (sem progresso no stderr)
@@ -153,8 +153,10 @@ def buscar_em(base, ref):
 
 def preprint(doi):
     doi = (doi or "").lower()
-    return next((nome for prefixo, nome in PREPRINTS.items() if doi.startswith(prefixo + "/") or doi.startswith(prefixo)),
-                None)
+    # O prefixo do registrante termina na barra (10.1101/ não pode casar com 10.11019/); o da SciELO Preprints
+    # inclui o começo do sufixo (10.1590/SciELOPreprints.1234) e casa pelo começo.
+    return next((nome for prefixo, nome in PREPRINTS.items()
+                 if doi.startswith(prefixo if "/" in prefixo else prefixo + "/")), None)
 
 
 def avaliar_sugestao_doi(ref, cand):
@@ -166,7 +168,10 @@ def avaliar_sugestao_doi(ref, cand):
     if a1 and a2 and abs(a1 - a2) > 1:
         return None, f"DOI {doi} recusado: é de {a2}, a referência é de {a1} (reedição ou outra versão?)"
     origem = preprint(doi)
-    if origem and (ref.get("periodico") or ref.get("tipo") in ("artigo", "livro", "capitulo")):
+    citado = A.sem_acento(" ".join(str(ref.get(c) or "") for c in ("periodico", "editora", "url"))).lower()
+    # Recusa sempre, salvo quando a própria referência cita esse servidor (bioRxiv, arXiv...) no periódico,
+    # na editora ou no link: aí a obra citada é o preprint.
+    if origem and not any(nome.lower() in citado for nome in origem.split("/")):
         return None, f"DOI {doi} recusado: é da versão em {origem}, não da obra publicada"
     if ref.get("periodico") and cand.get("periodico") and \
             SequenceMatcher(None, A.sem_acento(ref["periodico"]).lower(), A.sem_acento(cand["periodico"]).lower()).ratio() < 0.6:
@@ -354,8 +359,10 @@ def carregar_refs(caminho):
     if ext == ".ris":
         return B.ler_ris(Path(caminho).read_text(encoding="utf-8"))
     if ext == ".json":
+        # biblioteca.json ou CSL-JSON (export do Zotero, Mendeley, Pandoc), como no `biblioteca.py importar`
         dados = B.carregar(caminho)
-        return dados["referencias"]
+        refs = dados.get("referencias", []) if isinstance(dados, dict) else dados
+        return [B.ler_csl(r) if "type" in r and "tipo" not in r else r for r in refs]
     corpo, refs = D.ler(caminho)
     if not refs:  # arquivo só com referências
         refs = [p for p in corpo if p.strip() and not p.lstrip().startswith("#")]

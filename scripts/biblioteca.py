@@ -526,8 +526,13 @@ def cmd_notas(args, dados):
         itens = json.loads(bruto)
     except ValueError:
         # Formato curto: "freud2010luto:172, freud2010luto:180, hobbes1651leviata:cap. XIII"
+        # Página salteada continua a citação anterior: "freud2010luto:45, 47, hobbes2003leviata:12"
         itens = []
         for parte in [p.strip() for p in bruto.split(",") if p.strip()]:
+            if itens and ":" not in parte and re.fullmatch(rf"\d+([-–]\d+)?|{A.ROMANO}", parte) \
+                    and itens[-1]["pagina"]:
+                itens[-1]["pagina"] += f", {parte}"
+                continue
             rid, _, pag = parte.partition(":")
             itens.append({"id": rid.strip(), "pagina": pag.strip() or None})
     try:
@@ -540,9 +545,11 @@ def cmd_notas(args, dados):
         Path(args.saida).write_text("\n".join(f"{n['n']}. {n['nota']}" for n in notas) + "\n", encoding="utf-8")
         print(f"{len(notas)} notas -> {args.saida}")
     else:
-        _imprimir({"notas": notas,
-                   "aviso": "notas curtas em MAIÚSCULAS seguem os exemplos de guias de 2023 (UFSCar); a NBR 10520:2023 "
-                            "não fixa a caixa da nota abreviada. Use --minusculas se o curso pedir."})
+        resposta = {"notas": notas}
+        if not args.minusculas:
+            resposta["aviso"] = ("notas curtas em MAIÚSCULAS seguem os exemplos de guias de 2023 (UFSCar); a NBR "
+                                 "10520:2023 não fixa a caixa da nota abreviada. Use --minusculas se o curso pedir.")
+        _imprimir(resposta)
     return 0
 
 

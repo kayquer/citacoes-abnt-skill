@@ -9,7 +9,7 @@
 - **Autor no corpo da frase**: maiúsculas e minúsculas, com o ano (e a página) entre parênteses: `Segundo Silva (2009, p. 73), "..."`. Era assim também em 2002.
 - **Autor dentro dos parênteses**: maiúsculas e minúsculas (nova regra): `(Silva, 2009, p. 73)`.
   - Perfil 2002 (legado): `(SILVA, 2009, p. 73)`.
-  - O validador deve marcar caixa alta em chamada como erro no perfil 2023, a não ser que seja sigla.
+  - O conferidor (`conferir_citacoes.py`) marca caixa alta em chamada como erro no perfil 2023, a não ser que seja sigla.
 - **Separadores dentro da chamada**: vírgula entre autor e ano e entre ano e página (`Autor, ano, p. N`).
 - **Dois ou três autores**:
   - Nos parênteses, separados por `;`: `(Juliani; Cavaglieri; Machado, 2016, p. 69)`.

@@ -19,9 +19,9 @@ Aviso sobre o catálogo Target (normas.com.br / target.com.br): toda página de 
 | NBR 6034 | Índice: apresentação | **NBR 6034:2026** (nova edição; substitui a 2004) | 08/09/2026 (catálogo: 09/2026) | Histórico Target (normas.com.br e target.com.br); blog DSI Biblio. Ainda não há guia de biblioteca que descreva as mudanças |
 | NBR 12225 | Lombada: apresentação | **NBR 12225:2023** | 04/2023 | Histórico Target |
 
-Consequências para o projeto:
+O que isso muda na formatação:
 
-- Muitas instituições ainda indicam a NBR 6023:2018 (o manual da UFV de 2025, por exemplo). O validador deve aceitar um perfil "2018" e um perfil "2025". Para os tipos mais comuns, as duas edições quase não diferem (ver seção 2).
+- Muitas instituições ainda indicam a NBR 6023:2018 (o manual da UFV de 2025, por exemplo). Os scripts aceitam as duas edições (`--edicao-6023 2018` ou `2025`); fique com a antiga só se o usuário confirmar que o curso a exige. Para os tipos mais comuns, as duas edições quase não diferem (ver seção 2).
 - A NBR 6034 mudou em setembro de 2026, e as NBR 6022, 6024 e 6027 podem mudar ainda em 2026 ou 2027. Vale rever esta tabela no começo de 2027.
 
 ## 2. O que mudou em cada norma
@@ -104,7 +104,7 @@ Não mudaram até agora. Há projetos em consulta nacional (ver tabela). Regras 
 - **6034**: a nova edição é de 08/09/2026. Ainda não há resumo público do que mudou em relação à 2004. Acompanhe os guias de biblioteca.
 - **12225**: nova edição em 04/2023, que substitui a 2004. Vale para documentos em caracteres latinos, gregos ou cirílicos e, no que couber, para outros suportes. Não encontrei resumo das mudanças.
 
-## 6. Fontes
+## 3. Fontes
 
 **Catálogos e textos das normas**
 - Target / normas.com.br, NBR 6023 (histórico até 05/2025): https://normas.com.br/visualizar/abnt-nbr-nm/5262/abnt-nbr6023-informacao-e-documentacao-referencias-elaboracao

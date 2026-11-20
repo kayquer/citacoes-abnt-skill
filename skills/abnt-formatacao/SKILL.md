@@ -1,10 +1,10 @@
 ---
 name: abnt-formatacao
-description: "Use quando pedirem para formatar ou deixar nas normas da ABNT um TCC, monografia, dissertação, tese, projeto ou artigo; corrigir margens, fonte, espaçamento, recuo, paginação, capa, folha de rosto, resumo, palavras-chave ou sumário; padronizar a forma das citações e referências; gerar modelo Word da universidade; ou perguntarem qual é a regra da universidade X. Aplica as normas vigentes (NBR 14724:2024, 10520:2023, 6023:2025 ou 2018) com o perfil de 50 instituições brasileiras (USP, Unicamp, UFMG, UFRJ, PUC, institutos federais, Fatec). Para conferir se as obras existem, use checador-citacoes; para montar a bibliografia a partir de DOI ou ISBN, biblioteca-citacoes."
+description: "Use quando pedirem para formatar na ABNT um TCC, monografia, dissertação, tese, projeto ou artigo já escrito; corrigir margens, fonte, espaçamento, recuo, paginação, capa, folha de rosto, resumo, palavras-chave ou sumário; padronizar a forma das citações e de uma lista de referências já escrita (texto colado ou documento); gerar modelo Word da universidade; ou perguntarem qual é a regra da universidade X. Aplica as normas vigentes (NBR 14724:2024, 10520:2023, 6023:2025 ou 2018) com o perfil de 50 instituições brasileiras (USP, Unicamp, UFMG, UFRJ, PUC, institutos federais, Fatec). Para conferir se as obras existem, use checador-citacoes; para montar a bibliografia a partir de DOI ou ISBN, biblioteca-citacoes."
 argument-hint: "[instituição] [tipo de trabalho] [arquivo]"
 metadata:
   author: "Kayque Rotondo"
-  version: "1.3.0"
+  version: "1.3.1"
   tags: "abnt, formatação, tcc, dissertação, normas"
 ---
 # Aplicação da ABNT com perfil da instituição
@@ -24,7 +24,7 @@ Quando a norma oferece opção (prenome abreviado ou por extenso, et al. ou todo
 1. **Identifique a instituição, o tipo de trabalho e o curso.** Se o usuário não disse, pergunte uma vez. Procure o id em `references/instituicoes/index.md`. Se a instituição não estiver lá, use `references/instituicoes/padrao-abnt.md` e peça o manual do curso.
 2. **Leia o perfil da instituição.**
    - Item marcado *padrão ABNT* ou *costume* não vem do manual: diga isso ao usuário.
-   - **Edições usadas.** Edição marcada com `*` é a vigente, aplicada porque o manual não informa qual usa. Edição antiga sem `*` (NBR 6023:2018, 10520:2002 ou 14724:2011) vem do manual. Nesse caso, pergunte se o curso ainda a exige. Sem resposta, use a vigente e registre a escolha nas premissas. Se ficar a 10520:2002, rode o conferidor com `--edicao-10520 2002`.
+   - **Edições usadas.** Edição marcada com `*` é a vigente, aplicada porque o manual não informa qual usa. Edição antiga sem `*` (NBR 6023:2018, 10520:2002 ou 14724:2011) vem do manual. Nesse caso, pergunte se o curso ainda a exige. Sem resposta, use a vigente e registre a escolha nas premissas. O perfil sozinho não basta para ficar com a edição antiga: precisa da confirmação do usuário. Confirmada a edição antiga, passe-a aos scripts que têm a opção: `--edicao-10520 2002` ao `conferir_citacoes.py` e `--edicao-6023 2018` / `--edicao-10520 2002` ao `biblioteca.py` (opções globais, antes do subcomando).
    - **Outra norma por área** (Vancouver em saúde, APA em psicologia): confirme qual norma o programa exige antes de aplicar a ABNT.
 3. **Leia só a norma do assunto em pauta.**
    - `references/normas/nbr-14724-estrutura.md`: estrutura, margens, paginação, seções (6024), sumário (6027), resumo (6028), projeto (15287) e artigo (6022).
@@ -33,10 +33,10 @@ Quando a norma oferece opção (prenome abreviado ou por extenso, et al. ou todo
    - `references/normas/vigencia.md`: edições em vigor e o que mudou.
    - `references/normas/regras-do-validador.md`: o que é erro e o que é aviso, e o que o script confere sozinho.
 4. **Aplique.**
-   - Em .docx: edite uma **cópia**, nunca o original, aplicando os estilos do modelo gerado por `gerar_modelo_docx.py`. Se a skill `docx` estiver disponível, use-a para editar com controle de alterações.
+   - Em .docx: edite uma **cópia**, nunca o original, aplicando os estilos do modelo gerado por `gerar_modelo_docx.py`. Se a skill `docx` estiver disponível, use-a para editar com controle de alterações. Sem ela, nenhum script reformata um .docx existente: entregue a lista de mudanças por seção e o modelo gerado, para o usuário colar o texto nele. Não edite o XML do .docx à mão.
    - Em .md ou .txt: corrija direto.
-   - Para formatar referências a partir de dados (DOI, ISBN, campos), use `biblioteca.py`. Nenhum script reformata sozinho um .docx existente.
-5. **Confira** com `conferir_citacoes.py`. Para saber se as obras existem, acione a skill `checador-citacoes`.
+   - Para montar referências a partir de dados (DOI, ISBN, campos), acione a skill `biblioteca-citacoes`.
+5. **Confira** com `python3 "$SCRIPTS/conferir_citacoes.py" arquivo --json` (no Windows, `py -3`; o caminho de `$SCRIPTS` está na seção Scripts). Para saber se as obras existem, acione a skill `checador-citacoes`.
 6. **Entregue** com as três seções a seguir.
 
 ## Entrega (sempre)
@@ -49,11 +49,11 @@ Quando a norma oferece opção (prenome abreviado ou por extenso, et al. ou todo
 
 - **Nada é inventado.** Dado ausente vira `[VERIFICAR: campo]`. Não deduza editora, cidade, página, ano nem DOI.
 - **Não existe `[s.d.]` nem `s.p.`.** Sem data, peça ao autor uma data provável e use entre colchetes (`[2020?]`, `[ca. 2015]`). Sem resposta, use `[VERIFICAR: ano]`. Sem paginação, omita o localizador.
-- **Chamada pela NBR 10520:2023.** Dentro dos parênteses, maiúsculas e minúsculas: `(Silva, 2020, p. 15)`. Sigla continua em maiúsculas: `(IBGE, 2023)`. Use `(SILVA, 2020)` só se o perfil ou o usuário fixar a 10520:2002.
-- **Ponto final só depois da chamada:** `"... trecho" (Silva, 2020, p. 15).`
+- **Chamada pela NBR 10520:2023.** Dentro dos parênteses, maiúsculas e minúsculas: `(Silva, 2020, p. 15)`. Sigla continua em maiúsculas: `(IBGE, 2023)`. Use `(SILVA, 2020)` só se o usuário confirmar que o curso exige a 10520:2002 (ver o passo 2).
+- **Ponto final só depois da chamada:** `"... trecho" (Silva, 2020, p. 15).` No perfil legado confirmado (10520:2002), o ponto dobrado é aceito.
 - **Citação longa** (mais de 3 linhas): recuo do perfil (4 cm, salvo outra regra do manual), fonte menor, espaço simples, sem aspas.
 - **Paginação** no canto superior direito, contada desde a folha de rosto e mostrada a partir da parte textual, salvo outra regra do manual.
-- **Palavras-chave** separadas por ponto e vírgula, com inicial minúscula e ponto final (NBR 6028:2021).
+- **Palavras-chave** separadas por ponto e vírgula, com inicial minúscula e ponto final (NBR 6028:2021). No perfil legado confirmado vale a 6028:2003 (ver `references/normas/regras-do-validador.md`).
 - **Ilustração e tabela** sempre com "Fonte:", mesmo quando for "elaborado pelo próprio autor" (NBR 14724:2024).
 
 ## Scripts
@@ -86,8 +86,8 @@ python3 "$SCRIPTS/biblioteca.py" --arquivo biblioteca.json --edicao-6023 2018 --
 - Antes: `Segundo SILVA (2020) a escola é diálogo (SOUZA; LIMA, 2019, s.p.).`
 - Depois: `Segundo Silva (2020), a escola é diálogo (Souza; Lima, 2019).`
 - Premissas:
-  - perfil `ufpr`, cujo manual segue a NBR 10520:2023 e a NBR 6023:2018;
-  - perguntar se o curso aceita a NBR 6023:2025;
+  - perfil `ufpr`, cujo manual segue a NBR 10520:2023, a NBR 6023:2018 e a NBR 14724:2011;
+  - perguntar se o curso aceita a NBR 6023:2025 e a NBR 14724:2024;
   - "s.p." removido porque a norma não usa essa forma.
 - `[VERIFICAR: página da citação de Souza e Lima, se for citação direta]`.
 
@@ -100,7 +100,7 @@ python3 "$SCRIPTS/biblioteca.py" --arquivo biblioteca.json --edicao-6023 2018 --
 ## Requisitos
 
 - Python 3 com a biblioteca padrão para os scripts (no Windows, `py -3`). Sem Python os scripts não rodam, e os perfis e resumos de norma em `references/` continuam valendo para orientar a formatação.
-- A pasta `scripts/` e o `data/instituicoes.json` junto da skill: instale o plugin inteiro ou o pacote autocontido `citacoes-abnt-skills.zip`.
+- As pastas `scripts/` e `data/` (com `instituicoes.json`) na raiz do plugin, ou dentro da pasta da skill no pacote autocontido `citacoes-abnt-skills.zip`. Instale o plugin inteiro ou o pacote.
 
 ## Limites
 
